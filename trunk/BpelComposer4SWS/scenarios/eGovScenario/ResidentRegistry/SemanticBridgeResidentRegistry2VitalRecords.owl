@@ -1,0 +1,1322 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:temporal="http://swrl.stanford.edu/ontologies/built-ins/3.3/temporal.owl#"
+    xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"
+    xmlns:target_vro="http://localhost:8080/PublicServices/VitalRecordsOffice/VitalRecordsOfficeOntology.owl#"
+    xmlns:source_rr="http://localhost:8080/PublicServices/ResidentRegistry/ResidentRegistryOntology.owl#"
+    xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+    xmlns:swrlxml="http://swrl.stanford.edu/ontologies/built-ins/3.4/swrlxml.owl#"
+    xmlns:swrlx="http://swrl.stanford.edu/ontologies/built-ins/3.3/swrlx.owl#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:swrlm="http://swrl.stanford.edu/ontologies/built-ins/3.4/swrlm.owl#"
+    xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+    xmlns:abox="http://swrl.stanford.edu/ontologies/built-ins/3.3/abox.owl#"
+    xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:sqwrl="http://sqwrl.stanford.edu/ontologies/built-ins/3.4/sqwrl.owl#"
+    xmlns="http://localhost:8080/PublicServices/ResidentRegistry/SemanticBridgeResidentRegistry2VitalRecords.owl#"
+    xmlns:tbox="http://swrl.stanford.edu/ontologies/built-ins/3.3/tbox.owl#"
+  xml:base="http://localhost:8080/PublicServices/ResidentRegistry/SemanticBridgeResidentRegistry2VitalRecords.owl">
+  <owl:Ontology rdf:about="">
+    <owl:imports rdf:resource="http://swrl.stanford.edu/ontologies/built-ins/3.4/swrlxml.owl"/>
+    <owl:imports rdf:resource="http://swrl.stanford.edu/ontologies/built-ins/3.3/tbox.owl"/>
+    <owl:imports rdf:resource="http://swrl.stanford.edu/ontologies/built-ins/3.3/abox.owl"/>
+    <owl:imports rdf:resource="http://swrl.stanford.edu/ontologies/built-ins/3.3/temporal.owl"/>
+    <owl:imports rdf:resource="http://localhost:8080/PublicServices/ResidentRegistry/ResidentRegistryOntology.owl"/>
+    <owl:imports rdf:resource="http://swrl.stanford.edu/ontologies/built-ins/3.3/swrlx.owl"/>
+    <owl:imports rdf:resource="http://swrl.stanford.edu/ontologies/3.3/swrla.owl"/>
+    <owl:imports rdf:resource="http://localhost:8080/PublicServices/VitalRecordsOffice/VitalRecordsOfficeOntology.owl"/>
+    <owl:imports rdf:resource="http://sqwrl.stanford.edu/ontologies/built-ins/3.4/sqwrl.owl"/>
+    <owl:imports rdf:resource="http://swrl.stanford.edu/ontologies/built-ins/3.4/swrlm.owl"/>
+  </owl:Ontology>
+  <swrl:Variable rdf:ID="streetNumberRef"/>
+  <swrl:Variable rdf:ID="x"/>
+  <rdf:List>
+    <rdf:first>
+      <swrl:Variable rdf:ID="accountOwner"/>
+    </rdf:first>
+    <rdf:rest>
+      <rdf:List>
+        <rdf:first>
+          <swrl:Variable rdf:ID="name"/>
+        </rdf:first>
+        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+      </rdf:List>
+    </rdf:rest>
+  </rdf:List>
+  <rdf:List>
+    <rdf:first>
+      <swrl:Variable rdf:ID="accountOwnerRef"/>
+    </rdf:first>
+    <rdf:rest>
+      <rdf:List>
+        <rdf:rest>
+          <rdf:List>
+            <rdf:rest>
+              <rdf:List>
+                <rdf:first>
+                  <swrl:Variable rdf:ID="surnameRef"/>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+              </rdf:List>
+            </rdf:rest>
+            <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            > </rdf:first>
+          </rdf:List>
+        </rdf:rest>
+        <rdf:first>
+          <swrl:Variable rdf:ID="givenNameRef"/>
+        </rdf:first>
+      </rdf:List>
+    </rdf:rest>
+  </rdf:List>
+  <rdf:List>
+    <rdf:rest>
+      <rdf:List>
+        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+        <rdf:first>
+          <swrl:Variable rdf:ID="X"/>
+        </rdf:first>
+      </rdf:List>
+    </rdf:rest>
+    <rdf:first>
+      <swrl:Variable rdf:ID="Person"/>
+    </rdf:first>
+  </rdf:List>
+  <swrl:Variable rdf:ID="placeOfBirth"/>
+  <swrl:Variable rdf:ID="streetNumber"/>
+  <swrl:Imp rdf:ID="Address.Street-Address.StreetNumber_2_Address.StreetAddress">
+    <swrl:head>
+      <swrl:AtomList>
+        <rdf:rest>
+          <swrl:AtomList>
+            <rdf:rest>
+              <swrl:AtomList>
+                <rdf:first>
+                  <swrl:DatavaluedPropertyAtom>
+                    <swrl:propertyPredicate rdf:resource="http://localhost:8080/PublicServices/VitalRecordsOffice/VitalRecordsOfficeOntology.owl#hasRef"/>
+                    <swrl:argument1>
+                      <swrl:Variable rdf:ID="steetAddress"/>
+                    </swrl:argument1>
+                    <swrl:argument2>
+                      <swrl:Variable rdf:ID="streetAddressRef"/>
+                    </swrl:argument2>
+                  </swrl:DatavaluedPropertyAtom>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+              </swrl:AtomList>
+            </rdf:rest>
+            <rdf:first>
+              <swrl:IndividualPropertyAtom>
+                <swrl:propertyPredicate rdf:resource="http://localhost:8080/PublicServices/VitalRecordsOffice/VitalRecordsOfficeOntology.owl#hasStreetAddress"/>
+                <swrl:argument2 rdf:resource="#steetAddress"/>
+                <swrl:argument1>
+                  <swrl:Variable rdf:ID="address"/>
+                </swrl:argument1>
+              </swrl:IndividualPropertyAtom>
+            </rdf:first>
+          </swrl:AtomList>
+        </rdf:rest>
+        <rdf:first>
+          <swrl:ClassAtom>
+            <swrl:classPredicate rdf:resource="http://localhost:8080/PublicServices/VitalRecordsOffice/VitalRecordsOfficeOntology.owl#StreetAddress"/>
+            <swrl:argument1 rdf:resource="#steetAddress"/>
+          </swrl:ClassAtom>
+        </rdf:first>
+      </swrl:AtomList>
+    </swrl:head>
+    <swrl:body>
+      <swrl:AtomList>
+        <rdf:rest>
+          <swrl:AtomList>
+            <rdf:first>
+              <swrl:IndividualPropertyAtom>
+                <swrl:argument2>
+                  <swrl:Variable rdf:ID="street"/>
+                </swrl:argument2>
+                <swrl:argument1 rdf:resource="#address"/>
+                <swrl:propertyPredicate rdf:resource="http://localhost:8080/PublicServices/ResidentRegistry/ResidentRegistryOntology.owl#hasStreet"/>
+              </swrl:IndividualPropertyAtom>
+            </rdf:first>
+            <rdf:rest>
+              <swrl:AtomList>
+                <rdf:first>
+                  <swrl:DatavaluedPropertyAtom>
+                    <swrl:propertyPredicate rdf:resource="http://localhost:8080/PublicServices/ResidentRegistry/ResidentRegistryOntology.owl#hasRef"/>
+                    <swrl:argument1 rdf:resource="#street"/>
+                    <swrl:argument2>
+                      <swrl:Variable rdf:ID="streetRef"/>
+                    </swrl:argument2>
+                  </swrl:DatavaluedPropertyAtom>
+                </rdf:first>
+                <rdf:rest>
+                  <swrl:AtomList>
+                    <rdf:first>
+                      <swrl:IndividualPropertyAtom>
+                        <swrl:propertyPredicate rdf:resource="http://localhost:8080/PublicServices/ResidentRegistry/ResidentRegistryOntology.owl#hasStreetNumber"/>
+                        <swrl:argument2 rdf:resource="#streetNumber"/>
+                        <swrl:argument1 rdf:resource="#address"/>
+                      </swrl:IndividualPropertyAtom>
+                    </rdf:first>
+                    <rdf:rest>
+                      <swrl:AtomList>
+                        <rdf:rest>
+                          <swrl:AtomList>
+                            <rdf:first>
+                              <swrl:BuiltinAtom>
+                                <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#stringConcat"/>
+                                <swrl:arguments>
+                                  <rdf:List>
+                                    <rdf:rest>
+                                      <rdf:List>
+                                        <rdf:first rdf:resource="#streetRef"/>
+                                        <rdf:rest>
+                                          <rdf:List>
+                                            <rdf:first rdf:resource="#streetNumberRef"/>
+                                            <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                          </rdf:List>
+                                        </rdf:rest>
+                                      </rdf:List>
+                                    </rdf:rest>
+                                    <rdf:first rdf:resource="#streetAddressRef"/>
+                                  </rdf:List>
+                                </swrl:arguments>
+                              </swrl:BuiltinAtom>
+                            </rdf:first>
+                            <rdf:rest>
+                              <swrl:AtomList>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                <rdf:first>
+                                  <swrl:BuiltinAtom>
+                                    <swrl:arguments>
+                                      <rdf:List>
+                                        <rdf:first rdf:resource="#steetAddress"/>
+                                        <rdf:rest>
+                                          <rdf:List>
+                                            <rdf:first rdf:resource="#address"/>
+                                            <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                          </rdf:List>
+                                        </rdf:rest>
+                                      </rdf:List>
+                                    </swrl:arguments>
+                                    <swrl:builtin rdf:resource="http://swrl.stanford.edu/ontologies/built-ins/3.3/swrlx.owl#makeOWLThing"/>
+                                  </swrl:BuiltinAtom>
+                                </rdf:first>
+                              </swrl:AtomList>
+                            </rdf:rest>
+                          </swrl:AtomList>
+                        </rdf:rest>
+                        <rdf:first>
+                          <swrl:DatavaluedPropertyAtom>
+                            <swrl:propertyPredicate rdf:resource="http://localhost:8080/PublicServices/ResidentRegistry/ResidentRegistryOntology.owl#hasRef"/>
+                            <swrl:argument1 rdf:resource="#streetNumber"/>
+                            <swrl:argument2 rdf:resource="#streetNumberRef"/>
+                          </swrl:DatavaluedPropertyAtom>
+                        </rdf:first>
+                      </swrl:AtomList>
+                    </rdf:rest>
+                  </swrl:AtomList>
+                </rdf:rest>
+              </swrl:AtomList>
+            </rdf:rest>
+          </swrl:AtomList>
+        </rdf:rest>
+        <rdf:first>
+          <swrl:IndividualPropertyAtom>
+            <swrl:argument2 rdf:resource="#address"/>
+            <swrl:propertyPredicate rdf:resource="http://localhost:8080/PublicServices/ResidentRegistry/ResidentRegistryOntology.owl#hasAddress"/>
+            <swrl:argument1 rdf:resource="#X"/>
+          </swrl:IndividualPropertyAtom>
+        </rdf:first>
+      </swrl:AtomList>
+    </swrl:body>
+  </swrl:Imp>
+  <swrl:Variable rdf:ID="placeOfBirthString"/>
+  <swrl:Imp rdf:ID="Address.ZipCode-Address.Locality_2_Address.ZipcodeAndPostalDistrict">
+    <swrl:head>
+      <swrl:AtomList>
+        <rdf:first>
+          <swrl:DatavaluedPropertyAtom>
+            <swrl:propertyPredicate rdf:resource="http://localhost:8080/PublicServices/VitalRecordsOffice/VitalRecordsOfficeOntology.owl#hasRef"/>
+            <swrl:argument1>
+              <swrl:Variable rdf:ID="ZipcodeAndPostalDistrict"/>
+            </swrl:argument1>
+            <swrl:argument2>
+              <swrl:Variable rdf:ID="ZipcodeAndPostalDistrictRef"/>
+            </swrl:argument2>
+          </swrl:DatavaluedPropertyAtom>
+        </rdf:first>
+        <rdf:rest>
+          <swrl:AtomList>
+            <rdf:rest>
+              <swrl:AtomList>
+                <rdf:first>
+                  <swrl:IndividualPropertyAtom>
+                    <swrl:argument1>
+                      <swrl:Variable rdf:ID="Address"/>
+                    </swrl:argument1>
+                    <swrl:argument2 rdf:resource="#ZipcodeAndPostalDistrict"/>
+                    <swrl:propertyPredicate rdf:resource="http://localhost:8080/PublicServices/VitalRecordsOffice/VitalRecordsOfficeOntology.owl#hasZipcodeAndPostalDistrict"/>
+                  </swrl:IndividualPropertyAtom>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+              </swrl:AtomList>
+            </rdf:rest>
+            <rdf:first>
+              <swrl:ClassAtom>
+                <swrl:classPredicate rdf:resource="http://localhost:8080/PublicServices/VitalRecordsOffice/VitalRecordsOfficeOntology.owl#ZipcodeAndPostalDistrict"/>
+                <swrl:argument1 rdf:resource="#ZipcodeAndPostalDistrict"/>
+              </swrl:ClassAtom>
+            </rdf:first>
+          </swrl:AtomList>
+        </rdf:rest>
+      </swrl:AtomList>
+    </swrl:head>
+    <swrl:body>
+      <swrl:AtomList>
+        <rdf:first>
+          <swrl:IndividualPropertyAtom>
+            <swrl:argument1 rdf:resource="#X"/>
+            <swrl:argument2 rdf:resource="#Address"/>
+            <swrl:propertyPredicate rdf:resource="http://localhost:8080/PublicServices/ResidentRegistry/ResidentRegistryOntology.owl#hasAddress"/>
+          </swrl:IndividualPropertyAtom>
+        </rdf:first>
+        <rdf:rest>
+          <swrl:AtomList>
+            <rdf:first>
+              <swrl:IndividualPropertyAtom>
+                <swrl:propertyPredicate rdf:resource="http://localhost:8080/PublicServices/ResidentRegistry/ResidentRegistryOntology.owl#hasZipCode"/>
+                <swrl:argument2>
+                  <swrl:Variable rdf:ID="ZipCode"/>
+                </swrl:argument2>
+                <swrl:argument1 rdf:resource="#Address"/>
+              </swrl:IndividualPropertyAtom>
+            </rdf:first>
+            <rdf:rest>
+              <swrl:AtomList>
+                <rdf:rest>
+                  <swrl:AtomList>
+                    <rdf:first>
+                      <swrl:IndividualPropertyAtom>
+                        <swrl:argument2>
+                          <swrl:Variable rdf:ID="Locality"/>
+                        </swrl:argument2>
+                        <swrl:propertyPredicate rdf:resource="http://localhost:8080/PublicServices/ResidentRegistry/ResidentRegistryOntology.owl#hasLocality"/>
+                        <swrl:argument1 rdf:resource="#Address"/>
+                      </swrl:IndividualPropertyAtom>
+                    </rdf:first>
+                    <rdf:rest>
+                      <swrl:AtomList>
+                        <rdf:rest>
+                          <swrl:AtomList>
+                            <rdf:rest>
+                              <swrl:AtomList>
+                                <rdf:first>
+                                  <swrl:BuiltinAtom>
+                                    <swrl:builtin rdf:resource="http://swrl.stanford.edu/ontologies/built-ins/3.3/swrlx.owl#makeOWLThing"/>
+                                    <swrl:arguments>
+                                      <rdf:List>
+                                        <rdf:first rdf:resource="#ZipcodeAndPostalDistrict"/>
+                                        <rdf:rest>
+                                          <rdf:List>
+                                            <rdf:first rdf:resource="#Address"/>
+                                            <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                          </rdf:List>
+                                        </rdf:rest>
+                                      </rdf:List>
+                                    </swrl:arguments>
+                                  </swrl:BuiltinAtom>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                              </swrl:AtomList>
+                            </rdf:rest>
+                            <rdf:first>
+                              <swrl:BuiltinAtom>
+                                <swrl:arguments>
+                                  <rdf:List>
+                                    <rdf:rest>
+                                      <rdf:List>
+                                        <rdf:first>
+                                          <swrl:Variable rdf:ID="ZipCodeRef"/>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                          <rdf:List>
+                                            <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                            <rdf:first>
+                                              <swrl:Variable rdf:ID="LocalityRef"/>
+                                            </rdf:first>
+                                          </rdf:List>
+                                        </rdf:rest>
+                                      </rdf:List>
+                                    </rdf:rest>
+                                    <rdf:first rdf:resource="#ZipcodeAndPostalDistrictRef"/>
+                                  </rdf:List>
+                                </swrl:arguments>
+                                <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#stringConcat"/>
+                              </swrl:BuiltinAtom>
+                            </rdf:first>
+                          </swrl:AtomList>
+                        </rdf:rest>
+                        <rdf:first>
+                          <swrl:DatavaluedPropertyAtom>
+                            <swrl:argument1 rdf:resource="#Locality"/>
+                            <swrl:argument2 rdf:resource="#LocalityRef"/>
+                            <swrl:propertyPredicate rdf:resource="http://localhost:8080/PublicServices/ResidentRegistry/ResidentRegistryOntology.owl#hasRef"/>
+                          </swrl:DatavaluedPropertyAtom>
+                        </rdf:first>
+                      </swrl:AtomList>
+                    </rdf:rest>
+                  </swrl:AtomList>
+                </rdf:rest>
+                <rdf:first>
+                  <swrl:DatavaluedPropertyAtom>
+                    <swrl:propertyPredicate rdf:resource="http://localhost:8080/PublicServices/ResidentRegistry/ResidentRegistryOntology.owl#hasRef"/>
+                    <swrl:argument1 rdf:resource="#ZipCode"/>
+                    <swrl:argument2 rdf:resource="#ZipCodeRef"/>
+                  </swrl:DatavaluedPropertyAtom>
+                </rdf:first>
+              </swrl:AtomList>
+            </rdf:rest>
+          </swrl:AtomList>
+        </rdf:rest>
+      </swrl:AtomList>
+    </swrl:body>
+  </swrl:Imp>
+  <rdf:List>
+    <rdf:first rdf:resource="#accountOwnerRef"/>
+    <rdf:rest>
+      <rdf:List>
+        <rdf:rest>
+          <rdf:List>
+            <rdf:rest>
+              <rdf:List>
+                <rdf:first rdf:resource="#surnameRef"/>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+              </rdf:List>
+            </rdf:rest>
+            <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            > </rdf:first>
+          </rdf:List>
+        </rdf:rest>
+        <rdf:first rdf:resource="#givenNameRef"/>
+      </rdf:List>
+    </rdf:rest>
+  </rdf:List>
+  <swrl:Imp rdf:ID="Name.GivenName-Name.SurName_2_Recipient">
+    <swrl:head>
+      <swrl:AtomList>
+        <rdf:rest>
+          <swrl:AtomList>
+            <rdf:first>
+              <swrl:IndividualPropertyAtom>
+                <swrl:propertyPredicate rdf:resource="http://localhost:8080/PublicServices/VitalRecordsOffice/VitalRecordsOfficeOntology.owl#hasRecipient"/>
+                <swrl:argument2>
+                  <swrl:Variable rdf:ID="Recipient"/>
+                </swrl:argument2>
+                <swrl:argument1 rdf:resource="#Address"/>
+              </swrl:IndividualPropertyAtom>
+            </rdf:first>
+            <rdf:rest>
+              <swrl:AtomList>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                <rdf:first>
+                  <swrl:DatavaluedPropertyAtom>
+                    <swrl:argument1 rdf:resource="#Recipient"/>
+                    <swrl:propertyPredicate rdf:resource="http://localhost:8080/PublicServices/VitalRecordsOffice/VitalRecordsOfficeOntology.owl#hasRef"/>
+                    <swrl:argument2>
+                      <swrl:Variable rdf:ID="RecipientRef"/>
+                    </swrl:argument2>
+                  </swrl:DatavaluedPropertyAtom>
+                </rdf:first>
+              </swrl:AtomList>
+            </rdf:rest>
+          </swrl:AtomList>
+        </rdf:rest>
+        <rdf:first>
+          <swrl:ClassAtom>
+            <swrl:argument1 rdf:resource="#Recipient"/>
+            <swrl:classPredicate rdf:resource="http://localhost:8080/PublicServices/VitalRecordsOffice/VitalRecordsOfficeOntology.owl#Recipient"/>
+          </swrl:ClassAtom>
+        </rdf:first>
+      </swrl:AtomList>
+    </swrl:head>
+    <swrl:body>
+      <swrl:AtomList>
+        <rdf:first>
+          <swrl:IndividualPropertyAtom>
+            <swrl:argument1 rdf:resource="#X"/>
+            <swrl:argument2 rdf:resource="#Address"/>
+            <swrl:propertyPredicate rdf:resource="http://localhost:8080/PublicServices/ResidentRegistry/ResidentRegistryOntology.owl#hasAddress"/>
+          </swrl:IndividualPropertyAtom>
+        </rdf:first>
+        <rdf:rest>
+          <swrl:AtomList>
+            <rdf:rest>
+              <swrl:AtomList>
+                <rdf:first>
+                  <swrl:IndividualPropertyAtom>
+                    <swrl:argument1>
+                      <swrl:Variable rdf:ID="Name"/>
+                    </swrl:argument1>
+                    <swrl:propertyPredicate rdf:resource="http://localhost:8080/PublicServices/ResidentRegistry/ResidentRegistryOntology.owl#hasGivenName"/>
+                    <swrl:argument2>
+                      <swrl:Variable rdf:ID="GivenName"/>
+                    </swrl:argument2>
+                  </swrl:IndividualPropertyAtom>
+                </rdf:first>
+                <rdf:rest>
+                  <swrl:AtomList>
+                    <rdf:rest>
+                      <swrl:AtomList>
+                        <rdf:rest>
+                          <swrl:AtomList>
+                            <rdf:first>
+                              <swrl:DatavaluedPropertyAtom>
+                                <swrl:argument1>
+                                  <swrl:Variable rdf:ID="Surname"/>
+                                </swrl:argument1>
+                                <swrl:argument2>
+                                  <swrl:Variable rdf:ID="SurnameRef"/>
+                                </swrl:argument2>
+                                <swrl:propertyPredicate rdf:resource="http://localhost:8080/PublicServices/ResidentRegistry/ResidentRegistryOntology.owl#hasRef"/>
+                              </swrl:DatavaluedPropertyAtom>
+                            </rdf:first>
+                            <rdf:rest>
+                              <swrl:AtomList>
+                                <rdf:rest>
+                                  <swrl:AtomList>
+                                    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                    <rdf:first>
+                                      <swrl:BuiltinAtom>
+                                        <swrl:arguments>
+                                          <rdf:List>
+                                            <rdf:first rdf:resource="#Recipient"/>
+                                            <rdf:rest>
+                                              <rdf:List>
+                                                <rdf:first rdf:resource="#Address"/>
+                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                              </rdf:List>
+                                            </rdf:rest>
+                                          </rdf:List>
+                                        </swrl:arguments>
+                                        <swrl:builtin rdf:resource="http://swrl.stanford.edu/ontologies/built-ins/3.3/swrlx.owl#makeOWLThing"/>
+                                      </swrl:BuiltinAtom>
+                                    </rdf:first>
+                                  </swrl:AtomList>
+                                </rdf:rest>
+                                <rdf:first>
+                                  <swrl:BuiltinAtom>
+                                    <swrl:arguments>
+                                      <rdf:List>
+                                        <rdf:rest>
+                                          <rdf:List>
+                                            <rdf:rest>
+                                              <rdf:List>
+                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                <rdf:first rdf:resource="#SurnameRef"/>
+                                              </rdf:List>
+                                            </rdf:rest>
+                                            <rdf:first>
+                                              <swrl:Variable rdf:ID="GivenNameRef"/>
+                                            </rdf:first>
+                                          </rdf:List>
+                                        </rdf:rest>
+                                        <rdf:first rdf:resource="#RecipientRef"/>
+                                      </rdf:List>
+                                    </swrl:arguments>
+                                    <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#stringConcat"/>
+                                  </swrl:BuiltinAtom>
+                                </rdf:first>
+                              </swrl:AtomList>
+                            </rdf:rest>
+                          </swrl:AtomList>
+                        </rdf:rest>
+                        <rdf:first>
+                          <swrl:IndividualPropertyAtom>
+                            <swrl:argument2 rdf:resource="#Surname"/>
+                            <swrl:propertyPredicate rdf:resource="http://localhost:8080/PublicServices/ResidentRegistry/ResidentRegistryOntology.owl#hasSurname"/>
+                            <swrl:argument1 rdf:resource="#Name"/>
+                          </swrl:IndividualPropertyAtom>
+                        </rdf:first>
+                      </swrl:AtomList>
+                    </rdf:rest>
+                    <rdf:first>
+                      <swrl:DatavaluedPropertyAtom>
+                        <swrl:argument2 rdf:resource="#GivenNameRef"/>
+                        <swrl:propertyPredicate rdf:resource="http://localhost:8080/PublicServices/ResidentRegistry/ResidentRegistryOntology.owl#hasRef"/>
+                        <swrl:argument1 rdf:resource="#GivenName"/>
+                      </swrl:DatavaluedPropertyAtom>
+                    </rdf:first>
+                  </swrl:AtomList>
+                </rdf:rest>
+              </swrl:AtomList>
+            </rdf:rest>
+            <rdf:first>
+              <swrl:IndividualPropertyAtom>
+                <swrl:propertyPredicate rdf:resource="http://localhost:8080/PublicServices/ResidentRegistry/ResidentRegistryOntology.owl#hasName"/>
+                <swrl:argument1 rdf:resource="#X"/>
+                <swrl:argument2 rdf:resource="#Name"/>
+              </swrl:IndividualPropertyAtom>
+            </rdf:first>
+          </swrl:AtomList>
+        </rdf:rest>
+      </swrl:AtomList>
+    </swrl:body>
+  </swrl:Imp>
+  <rdf:List>
+    <rdf:rest>
+      <rdf:List>
+        <rdf:first rdf:resource="#givenNameRef"/>
+        <rdf:rest>
+          <rdf:List>
+            <rdf:first rdf:resource="#surnameRef"/>
+            <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+          </rdf:List>
+        </rdf:rest>
+      </rdf:List>
+    </rdf:rest>
+    <rdf:first rdf:resource="#accountOwnerRef"/>
+  </rdf:List>
+  <swrl:Imp rdf:ID="newPersonRule">
+    <swrl:head>
+      <swrl:AtomList>
+        <rdf:rest>
+          <swrl:AtomList>
+            <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            <rdf:first>
+              <swrl:ClassAtom>
+                <swrl:argument1 rdf:resource="#Person"/>
+                <swrl:classPredicate rdf:resource="http://localhost:8080/PublicServices/VitalRecordsOffice/VitalRecordsOfficeOntology.owl#Person"/>
+              </swrl:ClassAtom>
+            </rdf:first>
+          </swrl:AtomList>
+        </rdf:rest>
+        <rdf:first>
+          <swrl:IndividualPropertyAtom>
+            <swrl:argument1 rdf:resource="#X"/>
+            <swrl:propertyPredicate rdf:resource="http://localhost:8080/PublicServices/VitalRecordsOffice/VitalRecordsOfficeOntology.owl#hasPerson"/>
+            <swrl:argument2 rdf:resource="#Person"/>
+          </swrl:IndividualPropertyAtom>
+        </rdf:first>
+      </swrl:AtomList>
+    </swrl:head>
+    <swrl:body>
+      <swrl:AtomList>
+        <rdf:first>
+          <swrl:ClassAtom>
+            <swrl:argument1 rdf:resource="#X"/>
+            <swrl:classPredicate rdf:resource="http://localhost:8080/PublicServices/ResidentRegistry/ResidentRegistryOntology.owl#ResidentInfo"/>
+          </swrl:ClassAtom>
+        </rdf:first>
+        <rdf:rest>
+          <swrl:AtomList>
+            <rdf:first>
+              <swrl:BuiltinAtom>
+                <swrl:arguments>
+                  <rdf:List>
+                    <rdf:rest>
+                      <rdf:List>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                        <rdf:first rdf:resource="#X"/>
+                      </rdf:List>
+                    </rdf:rest>
+                    <rdf:first rdf:resource="#Person"/>
+                  </rdf:List>
+                </swrl:arguments>
+                <swrl:builtin rdf:resource="http://swrl.stanford.edu/ontologies/built-ins/3.3/swrlx.owl#makeOWLThing"/>
+              </swrl:BuiltinAtom>
+            </rdf:first>
+            <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+          </swrl:AtomList>
+        </rdf:rest>
+      </swrl:AtomList>
+    </swrl:body>
+  </swrl:Imp>
+  <rdf:List>
+    <rdf:rest>
+      <rdf:List>
+        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+        <rdf:first rdf:resource="#name"/>
+      </rdf:List>
+    </rdf:rest>
+    <rdf:first>
+      <swrl:Variable rdf:ID="newThing"/>
+    </rdf:first>
+  </rdf:List>
+  <swrl:Variable rdf:ID="dateOfBirthString"/>
+  <swrl:Variable rdf:ID="person"/>
+  <swrl:Variable rdf:ID="birth"/>
+  <rdf:List>
+    <rdf:rest>
+      <rdf:List>
+        <rdf:first rdf:resource="#name"/>
+        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+      </rdf:List>
+    </rdf:rest>
+    <rdf:first rdf:resource="#accountOwner"/>
+  </rdf:List>
+  <rdf:List>
+    <rdf:first rdf:resource="#accountOwner"/>
+    <rdf:rest>
+      <rdf:List>
+        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+        <rdf:first rdf:resource="#name"/>
+      </rdf:List>
+    </rdf:rest>
+  </rdf:List>
+  <rdf:List>
+    <rdf:first rdf:resource="#accountOwnerRef"/>
+    <rdf:rest>
+      <rdf:List>
+        <rdf:rest>
+          <rdf:List>
+            <rdf:first rdf:resource="#surnameRef"/>
+            <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+          </rdf:List>
+        </rdf:rest>
+        <rdf:first rdf:resource="#givenNameRef"/>
+      </rdf:List>
+    </rdf:rest>
+  </rdf:List>
+  <rdf:List>
+    <rdf:first rdf:resource="#accountOwnerRef"/>
+    <rdf:rest>
+      <rdf:List>
+        <rdf:rest>
+          <rdf:List>
+            <rdf:first rdf:resource="#surnameRef"/>
+            <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+          </rdf:List>
+        </rdf:rest>
+        <rdf:first rdf:resource="#givenNameRef"/>
+      </rdf:List>
+    </rdf:rest>
+  </rdf:List>
+  <swrl:Variable rdf:ID="LastName"/>
+  <rdf:List>
+    <rdf:rest>
+      <rdf:List>
+        <rdf:first rdf:resource="#name"/>
+        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+      </rdf:List>
+    </rdf:rest>
+    <rdf:first rdf:resource="#accountOwner"/>
+  </rdf:List>
+  <swrl:Variable rdf:ID="AccountOwner"/>
+  <swrl:Variable rdf:ID="FirstName"/>
+  <rdf:List>
+    <rdf:rest>
+      <rdf:List>
+        <rdf:rest>
+          <rdf:List>
+            <rdf:first rdf:resource="#surnameRef"/>
+            <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+          </rdf:List>
+        </rdf:rest>
+        <rdf:first rdf:resource="#givenNameRef"/>
+      </rdf:List>
+    </rdf:rest>
+    <rdf:first rdf:resource="#accountOwnerRef"/>
+  </rdf:List>
+  <rdf:List>
+    <rdf:rest>
+      <rdf:List>
+        <rdf:first rdf:resource="#name"/>
+        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+      </rdf:List>
+    </rdf:rest>
+    <rdf:first rdf:resource="#accountOwner"/>
+  </rdf:List>
+  <rdf:List>
+    <rdf:rest>
+      <rdf:List>
+        <rdf:first rdf:resource="#givenNameRef"/>
+        <rdf:rest>
+          <rdf:List>
+            <rdf:first rdf:resource="#surnameRef"/>
+            <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+          </rdf:List>
+        </rdf:rest>
+      </rdf:List>
+    </rdf:rest>
+    <rdf:first rdf:resource="#accountOwnerRef"/>
+  </rdf:List>
+  <swrl:Imp rdf:ID="GivenName_2_FirstName">
+    <swrl:body>
+      <swrl:AtomList>
+        <rdf:rest>
+          <swrl:AtomList>
+            <rdf:first>
+              <swrl:IndividualPropertyAtom>
+                <swrl:argument2 rdf:resource="#Name"/>
+                <swrl:argument1 rdf:resource="#X"/>
+                <swrl:propertyPredicate rdf:resource="http://localhost:8080/PublicServices/ResidentRegistry/ResidentRegistryOntology.owl#hasName"/>
+              </swrl:IndividualPropertyAtom>
+            </rdf:first>
+            <rdf:rest>
+              <swrl:AtomList>
+                <rdf:first>
+                  <swrl:IndividualPropertyAtom>
+                    <swrl:argument1 rdf:resource="#Name"/>
+                    <swrl:argument2 rdf:resource="#GivenName"/>
+                    <swrl:propertyPredicate rdf:resource="http://localhost:8080/PublicServices/ResidentRegistry/ResidentRegistryOntology.owl#hasGivenName"/>
+                  </swrl:IndividualPropertyAtom>
+                </rdf:first>
+                <rdf:rest>
+                  <swrl:AtomList>
+                    <rdf:first>
+                      <swrl:DatavaluedPropertyAtom>
+                        <swrl:argument1 rdf:resource="#GivenName"/>
+                        <swrl:propertyPredicate rdf:resource="http://localhost:8080/PublicServices/ResidentRegistry/ResidentRegistryOntology.owl#hasRef"/>
+                        <swrl:argument2 rdf:resource="#GivenNameRef"/>
+                      </swrl:DatavaluedPropertyAtom>
+                    </rdf:first>
+                    <rdf:rest>
+                      <swrl:AtomList>
+                        <rdf:first>
+                          <swrl:IndividualPropertyAtom>
+                            <swrl:argument1 rdf:resource="#X"/>
+                            <swrl:argument2 rdf:resource="#Person"/>
+                            <swrl:propertyPredicate rdf:resource="http://localhost:8080/PublicServices/VitalRecordsOffice/VitalRecordsOfficeOntology.owl#hasPerson"/>
+                          </swrl:IndividualPropertyAtom>
+                        </rdf:first>
+                        <rdf:rest>
+                          <swrl:AtomList>
+                            <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            <rdf:first>
+                              <swrl:BuiltinAtom>
+                                <swrl:builtin rdf:resource="http://swrl.stanford.edu/ontologies/built-ins/3.3/swrlx.owl#makeOWLThing"/>
+                                <swrl:arguments>
+                                  <rdf:List>
+                                    <rdf:first rdf:resource="#FirstName"/>
+                                    <rdf:rest>
+                                      <rdf:List>
+                                        <rdf:first rdf:resource="#Person"/>
+                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                      </rdf:List>
+                                    </rdf:rest>
+                                  </rdf:List>
+                                </swrl:arguments>
+                              </swrl:BuiltinAtom>
+                            </rdf:first>
+                          </swrl:AtomList>
+                        </rdf:rest>
+                      </swrl:AtomList>
+                    </rdf:rest>
+                  </swrl:AtomList>
+                </rdf:rest>
+              </swrl:AtomList>
+            </rdf:rest>
+          </swrl:AtomList>
+        </rdf:rest>
+        <rdf:first>
+          <swrl:ClassAtom>
+            <swrl:argument1 rdf:resource="#X"/>
+            <swrl:classPredicate rdf:resource="http://localhost:8080/PublicServices/ResidentRegistry/ResidentRegistryOntology.owl#ResidentInfo"/>
+          </swrl:ClassAtom>
+        </rdf:first>
+      </swrl:AtomList>
+    </swrl:body>
+    <swrl:head>
+      <swrl:AtomList>
+        <rdf:rest>
+          <swrl:AtomList>
+            <rdf:rest>
+              <swrl:AtomList>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                <rdf:first>
+                  <swrl:DatavaluedPropertyAtom>
+                    <swrl:propertyPredicate rdf:resource="http://localhost:8080/PublicServices/VitalRecordsOffice/VitalRecordsOfficeOntology.owl#hasRef"/>
+                    <swrl:argument2 rdf:resource="#GivenNameRef"/>
+                    <swrl:argument1 rdf:resource="#FirstName"/>
+                  </swrl:DatavaluedPropertyAtom>
+                </rdf:first>
+              </swrl:AtomList>
+            </rdf:rest>
+            <rdf:first>
+              <swrl:IndividualPropertyAtom>
+                <swrl:argument2 rdf:resource="#FirstName"/>
+                <swrl:propertyPredicate rdf:resource="http://localhost:8080/PublicServices/VitalRecordsOffice/VitalRecordsOfficeOntology.owl#hasFirstName"/>
+                <swrl:argument1 rdf:resource="#Person"/>
+              </swrl:IndividualPropertyAtom>
+            </rdf:first>
+          </swrl:AtomList>
+        </rdf:rest>
+        <rdf:first>
+          <swrl:ClassAtom>
+            <swrl:argument1 rdf:resource="#FirstName"/>
+            <swrl:classPredicate rdf:resource="http://localhost:8080/PublicServices/VitalRecordsOffice/VitalRecordsOfficeOntology.owl#FirstName"/>
+          </swrl:ClassAtom>
+        </rdf:first>
+      </swrl:AtomList>
+    </swrl:head>
+  </swrl:Imp>
+  <rdf:List>
+    <rdf:first rdf:resource="#accountOwnerRef"/>
+    <rdf:rest>
+      <rdf:List>
+        <rdf:first rdf:resource="#givenNameRef"/>
+        <rdf:rest>
+          <rdf:List>
+            <rdf:first rdf:resource="#surnameRef"/>
+            <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+          </rdf:List>
+        </rdf:rest>
+      </rdf:List>
+    </rdf:rest>
+  </rdf:List>
+  <swrl:Imp rdf:ID="Surname_2_LastName">
+    <swrl:head>
+      <swrl:AtomList>
+        <rdf:first>
+          <swrl:ClassAtom>
+            <swrl:classPredicate rdf:resource="http://localhost:8080/PublicServices/VitalRecordsOffice/VitalRecordsOfficeOntology.owl#LastName"/>
+            <swrl:argument1 rdf:resource="#LastName"/>
+          </swrl:ClassAtom>
+        </rdf:first>
+        <rdf:rest>
+          <swrl:AtomList>
+            <rdf:first>
+              <swrl:IndividualPropertyAtom>
+                <swrl:argument1 rdf:resource="#Person"/>
+                <swrl:propertyPredicate rdf:resource="http://localhost:8080/PublicServices/VitalRecordsOffice/VitalRecordsOfficeOntology.owl#hasLastName"/>
+                <swrl:argument2 rdf:resource="#LastName"/>
+              </swrl:IndividualPropertyAtom>
+            </rdf:first>
+            <rdf:rest>
+              <swrl:AtomList>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                <rdf:first>
+                  <swrl:DatavaluedPropertyAtom>
+                    <swrl:propertyPredicate rdf:resource="http://localhost:8080/PublicServices/VitalRecordsOffice/VitalRecordsOfficeOntology.owl#hasRef"/>
+                    <swrl:argument1 rdf:resource="#LastName"/>
+                    <swrl:argument2 rdf:resource="#SurnameRef"/>
+                  </swrl:DatavaluedPropertyAtom>
+                </rdf:first>
+              </swrl:AtomList>
+            </rdf:rest>
+          </swrl:AtomList>
+        </rdf:rest>
+      </swrl:AtomList>
+    </swrl:head>
+    <swrl:body>
+      <swrl:AtomList>
+        <rdf:rest>
+          <swrl:AtomList>
+            <rdf:first>
+              <swrl:IndividualPropertyAtom>
+                <swrl:argument2 rdf:resource="#Name"/>
+                <swrl:argument1 rdf:resource="#X"/>
+                <swrl:propertyPredicate rdf:resource="http://localhost:8080/PublicServices/ResidentRegistry/ResidentRegistryOntology.owl#hasName"/>
+              </swrl:IndividualPropertyAtom>
+            </rdf:first>
+            <rdf:rest>
+              <swrl:AtomList>
+                <rdf:first>
+                  <swrl:IndividualPropertyAtom>
+                    <swrl:argument1 rdf:resource="#Name"/>
+                    <swrl:propertyPredicate rdf:resource="http://localhost:8080/PublicServices/ResidentRegistry/ResidentRegistryOntology.owl#hasSurname"/>
+                    <swrl:argument2 rdf:resource="#Surname"/>
+                  </swrl:IndividualPropertyAtom>
+                </rdf:first>
+                <rdf:rest>
+                  <swrl:AtomList>
+                    <rdf:first>
+                      <swrl:DatavaluedPropertyAtom>
+                        <swrl:argument1 rdf:resource="#Surname"/>
+                        <swrl:propertyPredicate rdf:resource="http://localhost:8080/PublicServices/ResidentRegistry/ResidentRegistryOntology.owl#hasRef"/>
+                        <swrl:argument2 rdf:resource="#SurnameRef"/>
+                      </swrl:DatavaluedPropertyAtom>
+                    </rdf:first>
+                    <rdf:rest>
+                      <swrl:AtomList>
+                        <rdf:rest>
+                          <swrl:AtomList>
+                            <rdf:first>
+                              <swrl:BuiltinAtom>
+                                <swrl:arguments>
+                                  <rdf:List>
+                                    <rdf:rest>
+                                      <rdf:List>
+                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                        <rdf:first rdf:resource="#Person"/>
+                                      </rdf:List>
+                                    </rdf:rest>
+                                    <rdf:first rdf:resource="#LastName"/>
+                                  </rdf:List>
+                                </swrl:arguments>
+                                <swrl:builtin rdf:resource="http://swrl.stanford.edu/ontologies/built-ins/3.3/swrlx.owl#makeOWLThing"/>
+                              </swrl:BuiltinAtom>
+                            </rdf:first>
+                            <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                          </swrl:AtomList>
+                        </rdf:rest>
+                        <rdf:first>
+                          <swrl:IndividualPropertyAtom>
+                            <swrl:argument2 rdf:resource="#Person"/>
+                            <swrl:propertyPredicate rdf:resource="http://localhost:8080/PublicServices/VitalRecordsOffice/VitalRecordsOfficeOntology.owl#hasPerson"/>
+                            <swrl:argument1 rdf:resource="#X"/>
+                          </swrl:IndividualPropertyAtom>
+                        </rdf:first>
+                      </swrl:AtomList>
+                    </rdf:rest>
+                  </swrl:AtomList>
+                </rdf:rest>
+              </swrl:AtomList>
+            </rdf:rest>
+          </swrl:AtomList>
+        </rdf:rest>
+        <rdf:first>
+          <swrl:ClassAtom>
+            <swrl:classPredicate rdf:resource="http://localhost:8080/PublicServices/ResidentRegistry/ResidentRegistryOntology.owl#ResidentInfo"/>
+            <swrl:argument1 rdf:resource="#X"/>
+          </swrl:ClassAtom>
+        </rdf:first>
+      </swrl:AtomList>
+    </swrl:body>
+  </swrl:Imp>
+  <rdf:List>
+    <rdf:first rdf:resource="#accountOwnerRef"/>
+    <rdf:rest>
+      <rdf:List>
+        <rdf:first rdf:resource="#givenNameRef"/>
+        <rdf:rest>
+          <rdf:List>
+            <rdf:first rdf:resource="#surnameRef"/>
+            <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+          </rdf:List>
+        </rdf:rest>
+      </rdf:List>
+    </rdf:rest>
+  </rdf:List>
+  <rdf:List>
+    <rdf:rest>
+      <rdf:List>
+        <rdf:first rdf:resource="#givenNameRef"/>
+        <rdf:rest>
+          <rdf:List>
+            <rdf:first rdf:resource="#surnameRef"/>
+            <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+          </rdf:List>
+        </rdf:rest>
+      </rdf:List>
+    </rdf:rest>
+    <rdf:first rdf:resource="#accountOwnerRef"/>
+  </rdf:List>
+  <swrl:Imp rdf:ID="DateOfBirth-String_2_hasRef">
+    <swrl:head>
+      <swrl:AtomList>
+        <rdf:rest>
+          <swrl:AtomList>
+            <rdf:rest>
+              <swrl:AtomList>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                <rdf:first>
+                  <swrl:DatavaluedPropertyAtom>
+                    <swrl:propertyPredicate rdf:resource="http://localhost:8080/PublicServices/VitalRecordsOffice/VitalRecordsOfficeOntology.owl#hasRef"/>
+                    <swrl:argument2 rdf:resource="#dateOfBirthString"/>
+                    <swrl:argument1>
+                      <swrl:Variable rdf:ID="dateOfBirth"/>
+                    </swrl:argument1>
+                  </swrl:DatavaluedPropertyAtom>
+                </rdf:first>
+              </swrl:AtomList>
+            </rdf:rest>
+            <rdf:first>
+              <swrl:IndividualPropertyAtom>
+                <swrl:propertyPredicate rdf:resource="http://localhost:8080/PublicServices/VitalRecordsOffice/VitalRecordsOfficeOntology.owl#hasDateOfBirth"/>
+                <swrl:argument2 rdf:resource="#dateOfBirth"/>
+                <swrl:argument1 rdf:resource="#person"/>
+              </swrl:IndividualPropertyAtom>
+            </rdf:first>
+          </swrl:AtomList>
+        </rdf:rest>
+        <rdf:first>
+          <swrl:ClassAtom>
+            <swrl:classPredicate rdf:resource="http://localhost:8080/PublicServices/VitalRecordsOffice/VitalRecordsOfficeOntology.owl#DateOfBirth"/>
+            <swrl:argument1 rdf:resource="#dateOfBirth"/>
+          </swrl:ClassAtom>
+        </rdf:first>
+      </swrl:AtomList>
+    </swrl:head>
+    <swrl:body>
+      <swrl:AtomList>
+        <rdf:first>
+          <swrl:ClassAtom>
+            <swrl:classPredicate rdf:resource="http://localhost:8080/PublicServices/ResidentRegistry/ResidentRegistryOntology.owl#ResidentInfo"/>
+            <swrl:argument1 rdf:resource="#x"/>
+          </swrl:ClassAtom>
+        </rdf:first>
+        <rdf:rest>
+          <swrl:AtomList>
+            <rdf:rest>
+              <swrl:AtomList>
+                <rdf:first>
+                  <swrl:DatavaluedPropertyAtom>
+                    <swrl:argument2 rdf:resource="#dateOfBirthString"/>
+                    <swrl:argument1 rdf:resource="#birth"/>
+                    <swrl:propertyPredicate rdf:resource="http://localhost:8080/PublicServices/ResidentRegistry/ResidentRegistryOntology.owl#hasDateOfBirth"/>
+                  </swrl:DatavaluedPropertyAtom>
+                </rdf:first>
+                <rdf:rest>
+                  <swrl:AtomList>
+                    <rdf:first>
+                      <swrl:IndividualPropertyAtom>
+                        <swrl:argument2 rdf:resource="#person"/>
+                        <swrl:propertyPredicate rdf:resource="http://localhost:8080/PublicServices/VitalRecordsOffice/VitalRecordsOfficeOntology.owl#hasPerson"/>
+                        <swrl:argument1 rdf:resource="#x"/>
+                      </swrl:IndividualPropertyAtom>
+                    </rdf:first>
+                    <rdf:rest>
+                      <swrl:AtomList>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                        <rdf:first>
+                          <swrl:BuiltinAtom>
+                            <swrl:builtin rdf:resource="http://swrl.stanford.edu/ontologies/built-ins/3.3/swrlx.owl#makeOWLThing"/>
+                            <swrl:arguments>
+                              <rdf:List>
+                                <rdf:rest>
+                                  <rdf:List>
+                                    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                    <rdf:first rdf:resource="#person"/>
+                                  </rdf:List>
+                                </rdf:rest>
+                                <rdf:first rdf:resource="#dateOfBirth"/>
+                              </rdf:List>
+                            </swrl:arguments>
+                          </swrl:BuiltinAtom>
+                        </rdf:first>
+                      </swrl:AtomList>
+                    </rdf:rest>
+                  </swrl:AtomList>
+                </rdf:rest>
+              </swrl:AtomList>
+            </rdf:rest>
+            <rdf:first>
+              <swrl:IndividualPropertyAtom>
+                <swrl:argument1 rdf:resource="#x"/>
+                <swrl:propertyPredicate rdf:resource="http://localhost:8080/PublicServices/ResidentRegistry/ResidentRegistryOntology.owl#hasBirth"/>
+                <swrl:argument2 rdf:resource="#birth"/>
+              </swrl:IndividualPropertyAtom>
+            </rdf:first>
+          </swrl:AtomList>
+        </rdf:rest>
+      </swrl:AtomList>
+    </swrl:body>
+  </swrl:Imp>
+  <rdf:List>
+    <rdf:rest>
+      <rdf:List>
+        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+        <rdf:first rdf:resource="#name"/>
+      </rdf:List>
+    </rdf:rest>
+    <rdf:first rdf:resource="#accountOwner"/>
+  </rdf:List>
+  <swrl:Imp rdf:ID="PlaceOfBirth-String_2_hasRef">
+    <swrl:head>
+      <swrl:AtomList>
+        <rdf:rest>
+          <swrl:AtomList>
+            <rdf:rest>
+              <swrl:AtomList>
+                <rdf:first>
+                  <swrl:DatavaluedPropertyAtom>
+                    <swrl:propertyPredicate rdf:resource="http://localhost:8080/PublicServices/VitalRecordsOffice/VitalRecordsOfficeOntology.owl#hasRef"/>
+                    <swrl:argument2 rdf:resource="#placeOfBirthString"/>
+                    <swrl:argument1 rdf:resource="#placeOfBirth"/>
+                  </swrl:DatavaluedPropertyAtom>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+              </swrl:AtomList>
+            </rdf:rest>
+            <rdf:first>
+              <swrl:IndividualPropertyAtom>
+                <swrl:argument1 rdf:resource="#person"/>
+                <swrl:argument2 rdf:resource="#placeOfBirth"/>
+                <swrl:propertyPredicate rdf:resource="http://localhost:8080/PublicServices/VitalRecordsOffice/VitalRecordsOfficeOntology.owl#hasPlaceOfBirth"/>
+              </swrl:IndividualPropertyAtom>
+            </rdf:first>
+          </swrl:AtomList>
+        </rdf:rest>
+        <rdf:first>
+          <swrl:ClassAtom>
+            <swrl:classPredicate rdf:resource="http://localhost:8080/PublicServices/VitalRecordsOffice/VitalRecordsOfficeOntology.owl#PlaceOfBirth"/>
+            <swrl:argument1 rdf:resource="#placeOfBirth"/>
+          </swrl:ClassAtom>
+        </rdf:first>
+      </swrl:AtomList>
+    </swrl:head>
+    <swrl:body>
+      <swrl:AtomList>
+        <rdf:rest>
+          <swrl:AtomList>
+            <rdf:rest>
+              <swrl:AtomList>
+                <rdf:rest>
+                  <swrl:AtomList>
+                    <rdf:first>
+                      <swrl:IndividualPropertyAtom>
+                        <swrl:argument1 rdf:resource="#x"/>
+                        <swrl:propertyPredicate rdf:resource="http://localhost:8080/PublicServices/VitalRecordsOffice/VitalRecordsOfficeOntology.owl#hasPerson"/>
+                        <swrl:argument2 rdf:resource="#person"/>
+                      </swrl:IndividualPropertyAtom>
+                    </rdf:first>
+                    <rdf:rest>
+                      <swrl:AtomList>
+                        <rdf:first>
+                          <swrl:BuiltinAtom>
+                            <swrl:arguments>
+                              <rdf:List>
+                                <rdf:rest>
+                                  <rdf:List>
+                                    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                    <rdf:first rdf:resource="#person"/>
+                                  </rdf:List>
+                                </rdf:rest>
+                                <rdf:first rdf:resource="#placeOfBirth"/>
+                              </rdf:List>
+                            </swrl:arguments>
+                            <swrl:builtin rdf:resource="http://swrl.stanford.edu/ontologies/built-ins/3.3/swrlx.owl#makeOWLThing"/>
+                          </swrl:BuiltinAtom>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                      </swrl:AtomList>
+                    </rdf:rest>
+                  </swrl:AtomList>
+                </rdf:rest>
+                <rdf:first>
+                  <swrl:DatavaluedPropertyAtom>
+                    <swrl:propertyPredicate rdf:resource="http://localhost:8080/PublicServices/ResidentRegistry/ResidentRegistryOntology.owl#hasPlaceOfBirth"/>
+                    <swrl:argument1 rdf:resource="#birth"/>
+                    <swrl:argument2 rdf:resource="#placeOfBirthString"/>
+                  </swrl:DatavaluedPropertyAtom>
+                </rdf:first>
+              </swrl:AtomList>
+            </rdf:rest>
+            <rdf:first>
+              <swrl:IndividualPropertyAtom>
+                <swrl:propertyPredicate rdf:resource="http://localhost:8080/PublicServices/ResidentRegistry/ResidentRegistryOntology.owl#hasBirth"/>
+                <swrl:argument1 rdf:resource="#x"/>
+                <swrl:argument2 rdf:resource="#birth"/>
+              </swrl:IndividualPropertyAtom>
+            </rdf:first>
+          </swrl:AtomList>
+        </rdf:rest>
+        <rdf:first>
+          <swrl:ClassAtom>
+            <swrl:classPredicate rdf:resource="http://localhost:8080/PublicServices/ResidentRegistry/ResidentRegistryOntology.owl#ResidentInfo"/>
+            <swrl:argument1 rdf:resource="#x"/>
+          </swrl:ClassAtom>
+        </rdf:first>
+      </swrl:AtomList>
+    </swrl:body>
+  </swrl:Imp>
+  <rdf:List>
+    <rdf:rest>
+      <rdf:List>
+        <rdf:rest>
+          <rdf:List>
+            <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            <rdf:first rdf:resource="#surnameRef"/>
+          </rdf:List>
+        </rdf:rest>
+        <rdf:first rdf:resource="#givenNameRef"/>
+      </rdf:List>
+    </rdf:rest>
+    <rdf:first rdf:resource="#accountOwnerRef"/>
+  </rdf:List>
+  <rdf:List>
+    <rdf:first rdf:resource="#accountOwnerRef"/>
+    <rdf:rest>
+      <rdf:List>
+        <rdf:rest>
+          <rdf:List>
+            <rdf:first rdf:resource="#surnameRef"/>
+            <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+          </rdf:List>
+        </rdf:rest>
+        <rdf:first rdf:resource="#givenNameRef"/>
+      </rdf:List>
+    </rdf:rest>
+  </rdf:List>
+  <rdf:List>
+    <rdf:first rdf:resource="#newThing"/>
+    <rdf:rest>
+      <rdf:List>
+        <rdf:first rdf:resource="#name"/>
+        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+      </rdf:List>
+    </rdf:rest>
+  </rdf:List>
+  <rdf:List>
+    <rdf:first rdf:resource="#newThing"/>
+    <rdf:rest>
+      <rdf:List>
+        <rdf:first rdf:resource="http://localhost:8080/PublicServices/VitalRecordsOffice/VitalRecordsOfficeOntology.owl#hasAccountOwner"/>
+        <rdf:rest>
+          <rdf:List>
+            <rdf:first rdf:resource="http://localhost:8080/PublicServices/VitalRecordsOffice/VitalRecordsOfficeOntology.owl#AccountOwner"/>
+            <rdf:rest>
+              <rdf:List>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                <rdf:first rdf:resource="#AccountOwner"/>
+              </rdf:List>
+            </rdf:rest>
+          </rdf:List>
+        </rdf:rest>
+      </rdf:List>
+    </rdf:rest>
+  </rdf:List>
+  <rdf:List>
+    <rdf:first rdf:resource="#X"/>
+    <rdf:rest>
+      <rdf:List>
+        <rdf:rest>
+          <rdf:List>
+            <rdf:first rdf:resource="http://localhost:8080/PublicServices/VitalRecordsOffice/VitalRecordsOfficeOntology.owl#AccountOwner"/>
+            <rdf:rest>
+              <rdf:List>
+                <rdf:first rdf:resource="#AccountOwner"/>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+              </rdf:List>
+            </rdf:rest>
+          </rdf:List>
+        </rdf:rest>
+        <rdf:first rdf:resource="http://localhost:8080/PublicServices/VitalRecordsOffice/VitalRecordsOfficeOntology.owl#hasAccountOwner"/>
+      </rdf:List>
+    </rdf:rest>
+  </rdf:List>
+  <rdf:List>
+    <rdf:first rdf:resource="#accountOwner"/>
+    <rdf:rest>
+      <rdf:List>
+        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+        <rdf:first rdf:resource="#name"/>
+      </rdf:List>
+    </rdf:rest>
+  </rdf:List>
+  <rdf:List>
+    <rdf:first rdf:resource="#newThing"/>
+    <rdf:rest>
+      <rdf:List>
+        <rdf:first rdf:resource="http://localhost:8080/PublicServices/VitalRecordsOffice/VitalRecordsOfficeOntology.owl#hasAccountOwner"/>
+        <rdf:rest>
+          <rdf:List>
+            <rdf:first rdf:resource="http://localhost:8080/PublicServices/VitalRecordsOffice/VitalRecordsOfficeOntology.owl#AccountOwner"/>
+            <rdf:rest>
+              <rdf:List>
+                <rdf:first rdf:resource="#AccountOwner"/>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+              </rdf:List>
+            </rdf:rest>
+          </rdf:List>
+        </rdf:rest>
+      </rdf:List>
+    </rdf:rest>
+  </rdf:List>
+</rdf:RDF>
+
+<!-- Created with Protege (with OWL Plugin 3.4, Build 130)  http://protege.stanford.edu -->

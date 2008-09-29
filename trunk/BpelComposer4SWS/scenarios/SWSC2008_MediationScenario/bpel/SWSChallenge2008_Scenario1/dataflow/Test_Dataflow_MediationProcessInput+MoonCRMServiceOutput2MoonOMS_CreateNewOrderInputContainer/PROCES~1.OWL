@@ -1,0 +1,1528 @@
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+            xmlns:swrlxml="http://swrl.stanford.edu/ontologies/built-ins/3.4/swrlxml.owl#"
+            xmlns:p1="http://localhost:8080/ontologies/semantic-bridges/SemanticBridge_RosettaNetOntology2MoonOntology.owl#"
+            xmlns:sqwrl="http://sqwrl.stanford.edu/ontologies/built-ins/3.4/sqwrl.owl#"
+            xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+            xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+            xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
+            xmlns:temporal="http://swrl.stanford.edu/ontologies/built-ins/3.3/temporal.owl#"
+            xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+            xmlns:swrlx="http://swrl.stanford.edu/ontologies/built-ins/3.3/swrlx.owl#"
+            xmlns:owl="http://www.w3.org/2002/07/owl#"
+            xmlns:rosetta="http://localhost:8080/ontologies/RosettaNetOntology.owl#"
+            xmlns:abox="http://swrl.stanford.edu/ontologies/built-ins/3.3/abox.owl#"
+            xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"
+            xmlns:tbox="http://swrl.stanford.edu/ontologies/built-ins/3.3/tbox.owl#"
+            xmlns:swrl="http://www.w3.org/2003/11/swrl#" 
+            xmlns:moon="http://localhost:8080/ontologies/MoonOntology.owl#"
+            xmlns:swrlm="http://swrl.stanford.edu/ontologies/built-ins/3.4/swrlm.owl#"
+            xmlns="http://localhost:8080/process/MediationProcessInput.owl#"
+            xmlns:anchor="http://localhost:8080/ontologies/ServiceAnchor.owl#"> 
+      <rdf:Description rdf:about="http://localhost:8080/ontologies/MoonOntology.owl#hasTelephone">
+         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+      </rdf:Description>
+      <rdf:Description rdf:nodeID="A0">
+         <rdf:first rdf:nodeID="A1"/>
+         <rdf:rest rdf:nodeID="A2"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://swrl.stanford.edu/ontologies/built-ins/3.3/temporal.owl#notContains">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Builtin"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://swrl.stanford.edu/ontologies/built-ins/3.3/temporal.owl#Proposition">
+         <rdfs:subClassOf rdf:resource="http://swrl.stanford.edu/ontologies/built-ins/3.3/temporal.owl#Entity"/>
+         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://localhost:8080/ontologies/ServiceAnchor.owl#Output">
+         <owl:disjointWith rdf:resource="http://localhost:8080/ontologies/ServiceAnchor.owl#Local"/>
+         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+         <rdfs:subClassOf rdf:resource="http://localhost:8080/ontologies/ServiceAnchor.owl#Parameter"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://localhost:8080/ontologies/MoonOntology.owl">
+         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://swrl.stanford.edu/ontologies/built-ins/3.3/tbox.owl#hasComment">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Builtin"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://swrl.stanford.edu/ontologies/built-ins/3.3/temporal.owl#hasTime">
+         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+         <rdfs:domain rdf:resource="http://swrl.stanford.edu/ontologies/built-ins/3.3/temporal.owl#ValidInstant"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://swrl.stanford.edu/ontologies/built-ins/3.3/abox.owl#notNumeric">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Builtin"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://swrl.stanford.edu/ontologies/built-ins/3.3/temporal.owl#intersects">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Builtin"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://localhost:8080/ontologies/MoonOntology.owl#hasCustomerID">
+         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://swrl.stanford.edu/ontologies/built-ins/3.3/abox.owl#hasIndividual">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Builtin"/>
+         <swrlb:minArgs rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</swrlb:minArgs>
+         <swrlb:args rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</swrlb:args>
+         <swrlb:maxArgs rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</swrlb:maxArgs>
+      </rdf:Description>
+      <rdf:Description rdf:nodeID="A3">
+         <swrl:argument2 rdf:resource="http://localhost:8080/ontologies/semantic-bridges/SemanticBridge_RosettaNetOntology2MoonOntology.owl#addressLine1"/>
+         <swrl:propertyPredicate rdf:resource="http://localhost:8080/ontologies/MoonOntology.owl#hasStreet"/>
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+         <swrl:argument1 rdf:resource="http://localhost:8080/ontologies/semantic-bridges/SemanticBridge_RosettaNetOntology2MoonOntology.owl#physicalAddress"/>
+      </rdf:Description>
+      <rdf:Description rdf:nodeID="A4">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+         <rdf:first rdf:nodeID="A5"/>
+         <rdf:rest rdf:nodeID="A6"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://swrl.stanford.edu/ontologies/built-ins/3.3/temporal.owl#Entity">
+         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://swrl.stanford.edu/ontologies/built-ins/3.3/temporal.owl#durationLessThanOrEqualTo">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Builtin"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://swrl.stanford.edu/ontologies/built-ins/3.3/tbox.owl">
+         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://swrl.stanford.edu/ontologies/built-ins/3.3/tbox.owl#hasMaxCardinality">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Builtin"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://swrl.stanford.edu/ontologies/built-ins/3.3/tbox.owl#isEquivalentProperty">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Builtin"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://swrl.stanford.edu/ontologies/built-ins/3.3/temporal.owl#hasValidTime">
+         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+         <rdfs:domain rdf:resource="http://swrl.stanford.edu/ontologies/built-ins/3.3/temporal.owl#ExtendedProposition"/>
+         <rdfs:range rdf:resource="http://swrl.stanford.edu/ontologies/built-ins/3.3/temporal.owl#ValidTime"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://swrl.stanford.edu/ontologies/built-ins/3.3/tbox.owl#isClass">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Builtin"/>
+      </rdf:Description>
+      <rdf:Description rdf:nodeID="A7">
+         <swrl:propertyPredicate rdf:resource="http://localhost:8080/ontologies/RosettaNetOntology.owl#hasContactName"/>
+         <swrl:argument1 rdf:resource="http://localhost:8080/ontologies/semantic-bridges/SemanticBridge_RosettaNetOntology2MoonOntology.owl#rosettaContactInformation"/>
+         <swrl:argument2 rdf:resource="http://localhost:8080/ontologies/semantic-bridges/SemanticBridge_RosettaNetOntology2MoonOntology.owl#name"/>
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://localhost:8080/ontologies/MoonOntology.owl#hasEmail">
+         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://sqwrl.stanford.edu/ontologies/built-ins/3.4/sqwrl.owl#sum">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Builtin"/>
+         <swrlb:args rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</swrlb:args>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://swrl.stanford.edu/ontologies/built-ins/3.3/tbox.owl#isTransitiveProperty">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Builtin"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://localhost:8080/ontologies/semantic-bridges/SemanticBridge_RosettaNetOntology2MoonOntology.owl#email">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://localhost:8080/ontologies/MoonOntology.owl#hasCity">
+         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://localhost:8080/ontologies/semantic-bridges/SemanticBridge_RosettaNetOntology2MoonOntology.owl">
+         <owl:imports rdf:resource="http://localhost:8080/ontologies/RosettaNetOntology.owl"/>
+         <owl:imports rdf:resource="http://sqwrl.stanford.edu/ontologies/built-ins/3.4/sqwrl.owl"/>
+         <owl:imports rdf:resource="http://swrl.stanford.edu/ontologies/3.3/swrla.owl"/>
+         <owl:imports rdf:resource="http://swrl.stanford.edu/ontologies/built-ins/3.3/swrlx.owl"/>
+         <owl:imports rdf:resource="http://swrl.stanford.edu/ontologies/built-ins/3.4/swrlxml.owl"/>
+         <owl:imports rdf:resource="http://swrl.stanford.edu/ontologies/built-ins/3.3/tbox.owl"/>
+         <owl:imports rdf:resource="http://localhost:8080/ontologies/MoonOntology.owl"/>
+         <owl:imports rdf:resource="http://swrl.stanford.edu/ontologies/built-ins/3.3/abox.owl"/>
+         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+         <owl:imports rdf:resource="http://swrl.stanford.edu/ontologies/built-ins/3.4/swrlm.owl"/>
+         <owl:imports rdf:resource="http://swrl.stanford.edu/ontologies/built-ins/3.3/temporal.owl"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://localhost:8080/process/MediationProcessInput.owl#ContactInformation_3">
+         <moon:hasContactName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Stefan Blue</moon:hasContactName>
+         <rosetta:hasContactName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Stefan Blue</rosetta:hasContactName>
+         <rosetta:hasEmailAddress rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stefan.blue@blue.com</rosetta:hasEmailAddress>
+         <rosetta:hasTelephoneNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">+43(650)89930011</rosetta:hasTelephoneNumber>
+         <moon:hasTelephone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">+43(650)89930011</moon:hasTelephone>
+         <rdf:type rdf:resource="http://localhost:8080/ontologies/MoonOntology.owl#ContactInfo"/>
+         <rdf:type rdf:resource="http://localhost:8080/ontologies/RosettaNetOntology.owl#ContactInformation"/>
+         <moon:hasEmail rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stefan.blue@blue.com</moon:hasEmail>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://swrl.stanford.edu/ontologies/built-ins/3.3/temporal.owl#finishes">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Builtin"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://swrl.stanford.edu/ontologies/built-ins/3.3/tbox.owl#isLabelAnnotation">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Builtin"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://swrl.stanford.edu/ontologies/built-ins/3.3/tbox.owl#isIntersectionOfDescription">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Builtin"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://swrl.stanford.edu/ontologies/built-ins/3.3/tbox.owl#equalTo">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Builtin"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://swrl.stanford.edu/ontologies/built-ins/3.3/tbox.owl#isEquivalentClassAxiom">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Builtin"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://swrl.stanford.edu/ontologies/built-ins/3.3/tbox.owl#isEquivalentPropertyDescription">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Builtin"/>
+      </rdf:Description>
+      <rdf:Description rdf:nodeID="A8">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+         <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+         <rdf:first rdf:nodeID="A9"/>
+      </rdf:Description>
+      <rdf:Description rdf:nodeID="A10">
+         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+         <owl:unionOf rdf:nodeID="A11"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://swrl.stanford.edu/ontologies/built-ins/3.3/temporal.owl#notEquals">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Builtin"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://swrl.stanford.edu/ontologies/built-ins/3.3/tbox.owl#isAllDifferents">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Builtin"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://swrl.stanford.edu/ontologies/built-ins/3.3/temporal.owl#startedBy">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Builtin"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://localhost:8080/ontologies/semantic-bridges/SemanticBridge_RosettaNetOntology2MoonOntology.owl#postCode">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://swrl.stanford.edu/ontologies/built-ins/3.4/swrlxml.owl#Entity">
+         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+      </rdf:Description>
+      <rdf:Description rdf:nodeID="A12">
+         <swrl:propertyPredicate rdf:resource="http://localhost:8080/ontologies/MoonOntology.owl#hasContactInfo"/>
+         <swrl:argument2 rdf:resource="http://localhost:8080/ontologies/semantic-bridges/SemanticBridge_RosettaNetOntology2MoonOntology.owl#contactInformation"/>
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+         <swrl:argument1 rdf:resource="http://localhost:8080/ontologies/semantic-bridges/SemanticBridge_RosettaNetOntology2MoonOntology.owl#partner"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://sqwrl.stanford.edu/ontologies/built-ins/3.4/sqwrl.owl#avg">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Builtin"/>
+         <swrlb:args rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</swrlb:args>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://localhost:8080/ontologies/ServiceAnchor.owl#Process">
+         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+         <owl:equivalentClass rdf:nodeID="A10"/>
+         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+    A Process can have at most one name, but names need not be unique.
+  </rdfs:comment>
+         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> The most general class of processes </rdfs:comment>
+      </rdf:Description>
+      <rdf:Description rdf:nodeID="A13">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+         <rdf:first rdf:nodeID="A14"/>
+         <rdf:rest rdf:nodeID="A15"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://swrl.stanford.edu/ontologies/built-ins/3.3/tbox.owl#isInDomainOf">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Builtin"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://swrl.stanford.edu/ontologies/built-ins/3.3/temporal.owl#notBefore">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Builtin"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://localhost:8080/process/MediationProcessInput.owl#MediationProcess">
+         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MediationProcess</rdfs:label>
+         <anchor:hasInput rdf:resource="http://localhost:8080/process/MediationProcessInput.owl#Input"/>
+         <rdf:type rdf:resource="http://localhost:8080/ontologies/ServiceAnchor.owl#Process"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://swrl.stanford.edu/ontologies/built-ins/3.4/swrlm.owl#eval">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Builtin"/>
+      </rdf:Description>
+      <rdf:Description rdf:nodeID="A16">
+         <swrl:argument1 rdf:resource="http://localhost:8080/ontologies/semantic-bridges/SemanticBridge_RosettaNetOntology2MoonOntology.owl#businessDesc"/>
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+         <swrl:propertyPredicate rdf:resource="http://localhost:8080/ontologies/RosettaNetOntology.owl#hasBusinessName"/>
+         <swrl:argument2 rdf:resource="http://localhost:8080/ontologies/semantic-bridges/SemanticBridge_RosettaNetOntology2MoonOntology.owl#businessName"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://localhost:8080/ontologies/MoonOntology.owl#ExistingCustomer">
+         <owl:equivalentClass rdf:nodeID="A17"/>
+         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+         <rdfs:subClassOf rdf:resource="http://localhost:8080/ontologies/MoonOntology.owl#Customer"/>
+      </rdf:Description>
+      <rdf:Description rdf:nodeID="A18">
+         <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:cardinality>
+         <owl:onProperty rdf:resource="http://localhost:8080/ontologies/RosettaNetOntology.owl#hasBusinessName"/>
+         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://swrl.stanford.edu/ontologies/built-ins/3.3/tbox.owl#isOntology">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Builtin"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://swrl.stanford.edu/ontologies/built-ins/3.3/tbox.owl#isVersionInfoAnnotation">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Builtin"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://swrl.stanford.edu/ontologies/built-ins/3.3/tbox.owl#isDirectSubPropertyOf">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Builtin"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://localhost:8080/ontologies/RosettaNetOntology.owl#Partner">
+         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+         <owl:equivalentClass rdf:nodeID="A19"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://swrl.stanford.edu/ontologies/built-ins/3.3/tbox.owl#isSomeValuesFromRestriction">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Builtin"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://localhost:8080/ontologies/MoonOntology.owl#hasStreet">
+         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+      </rdf:Description>
+      <rdf:Description rdf:nodeID="A20">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+         <rdf:first rdf:nodeID="A3"/>
+         <rdf:rest rdf:nodeID="A21"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://sqwrl.stanford.edu/ontologies/built-ins/3.4/sqwrl.owl">
+         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://localhost:8080/ontologies/RosettaNetOntology.owl#hasTelephoneNumber">
+         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://swrl.stanford.edu/ontologies/built-ins/3.3/abox.owl#isNumeric">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Builtin"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://swrl.stanford.edu/ontologies/built-ins/3.3/temporal.owl#notDuring">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Builtin"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://swrl.stanford.edu/ontologies/built-ins/3.4/swrlxml.owl#hasContent">
+         <rdfs:domain rdf:resource="http://swrl.stanford.edu/ontologies/built-ins/3.4/swrlxml.owl#XMLElement"/>
+         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://localhost:8080/process/MediationProcessInput.owl#BusinessDescription_5">
+         <rdf:type rdf:resource="http://localhost:8080/ontologies/RosettaNetOntology.owl#BusinessDescription"/>
+         <rosetta:hasBusinessName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Blue Company</rosetta:hasBusinessName>
+      </rdf:Description>
+      <rdf:Description rdf:nodeID="A22">
+         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+         <owl:intersectionOf rdf:nodeID="A0"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://localhost:8080/ontologies/semantic-bridges/SemanticBridge_RosettaNetOntology2MoonOntology.owl#phone">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://localhost:8080/ontologies/MoonOntology.owl#Order">
+         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+      </rdf:Description>
+      <rdf:Description rdf:nodeID="A23">
+         <swrl:argument1 rdf:resource="http://localhost:8080/ontologies/semantic-bridges/SemanticBridge_RosettaNetOntology2MoonOntology.owl#physicalAddress"/>
+         <swrl:propertyPredicate rdf:resource="http://localhost:8080/ontologies/RosettaNetOntology.owl#hasCityName"/>
+         <swrl:argument2 rdf:resource="http://localhost:8080/ontologies/semantic-bridges/SemanticBridge_RosettaNetOntology2MoonOntology.owl#city"/>
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://swrl.stanford.edu/ontologies/built-ins/3.3/tbox.owl#isDefinedByAnnotation">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Builtin"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://localhost:8080/ontologies/MoonOntology.owl#PostalAddress">
+         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://localhost:8080/ontologies/MoonOntology.owl#hasContactName">
+         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+      </rdf:Description>
+      <rdf:Description rdf:nodeID="A24">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+         <rdf:first rdf:nodeID="A25"/>
+         <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+      </rdf:Description>
+      <rdf:Description rdf:nodeID="A26">
+         <swrl:argument1 rdf:resource="http://localhost:8080/ontologies/semantic-bridges/SemanticBridge_RosettaNetOntology2MoonOntology.owl#physicalAddress"/>
+         <swrl:argument2 rdf:resource="http://localhost:8080/ontologies/semantic-bridges/SemanticBridge_RosettaNetOntology2MoonOntology.owl#city"/>
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+         <swrl:propertyPredicate rdf:resource="http://localhost:8080/ontologies/MoonOntology.owl#hasCity"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://swrl.stanford.edu/ontologies/built-ins/3.3/tbox.owl#isSuperPropertyOf">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Builtin"/>
+      </rdf:Description>
+      <rdf:Description rdf:nodeID="A27">
+         <swrl:propertyPredicate rdf:resource="http://localhost:8080/ontologies/RosettaNetOntology.owl#hasContactInformation"/>
+         <swrl:argument2 rdf:resource="http://localhost:8080/ontologies/semantic-bridges/SemanticBridge_RosettaNetOntology2MoonOntology.owl#contactInformation"/>
+         <swrl:argument1 rdf:resource="http://localhost:8080/ontologies/semantic-bridges/SemanticBridge_RosettaNetOntology2MoonOntology.owl#partner"/>
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://swrl.stanford.edu/ontologies/built-ins/3.3/temporal.owl#notDurationGreaterThan">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Builtin"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://swrl.stanford.edu/ontologies/built-ins/3.3/tbox.owl#hasIsDefinedBy">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Builtin"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://swrl.stanford.edu/ontologies/built-ins/3.3/tbox.owl#isSeeAlsoAnnotation">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Builtin"/>
+      </rdf:Description>
+      <rdf:Description rdf:nodeID="A28">
+         <swrl:argument1 rdf:resource="http://localhost:8080/ontologies/semantic-bridges/SemanticBridge_RosettaNetOntology2MoonOntology.owl#physicalAddress"/>
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+         <swrl:classPredicate rdf:resource="http://localhost:8080/ontologies/RosettaNetOntology.owl#PhysicalAddress"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://swrl.stanford.edu/ontologies/built-ins/3.3/swrlx.owl#createOWLThing">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Builtin"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://localhost:8080/ontologies/semantic-bridges/SemanticBridge_RosettaNetOntology2MoonOntology.owl#SemanticBridge_RosettaNetPhysicalAddress2MoonPostalAddress">
+         <swrl:head rdf:nodeID="A29"/>
+         <swrl:body rdf:nodeID="A30"/>
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://swrl.stanford.edu/ontologies/built-ins/3.3/temporal.owl#add">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Builtin"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://swrl.stanford.edu/ontologies/built-ins/3.3/tbox.owl#isObjectProperty">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Builtin"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://sqwrl.stanford.edu/ontologies/built-ins/3.4/sqwrl.owl#count">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Builtin"/>
+         <swrlb:args rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</swrlb:args>
+      </rdf:Description>
+      <rdf:Description rdf:nodeID="A31">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+         <swrl:classPredicate rdf:resource="http://localhost:8080/ontologies/RosettaNetOntology.owl#ContactInformation"/>
+         <swrl:argument1 rdf:resource="http://localhost:8080/ontologies/semantic-bridges/SemanticBridge_RosettaNetOntology2MoonOntology.owl#rosettaContactInformation"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://swrl.stanford.edu/ontologies/built-ins/3.3/temporal.owl#Days">
+         <rdf:type rdf:resource="http://swrl.stanford.edu/ontologies/built-ins/3.3/temporal.owl#Granularity"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://swrl.stanford.edu/ontologies/built-ins/3.3/tbox.owl#onClassDescription">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Builtin"/>
+      </rdf:Description>
+      <rdf:Description rdf:nodeID="A32">
+         <rdf:first rdf:nodeID="A33"/>
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+         <rdf:rest rdf:nodeID="A34"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://localhost:8080/ontologies/ServiceAnchor.owl#AtomicProcess">
+         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+         <rdfs:subClassOf rdf:resource="http://localhost:8080/ontologies/ServiceAnchor.owl#Process"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://swrl.stanford.edu/ontologies/built-ins/3.3/temporal.owl#Years">
+         <rdf:type rdf:resource="http://swrl.stanford.edu/ontologies/built-ins/3.3/temporal.owl#Granularity"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://swrl.stanford.edu/ontologies/built-ins/3.3/abox.owl#isIndividual">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Builtin"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://swrl.stanford.edu/ontologies/built-ins/3.3/tbox.owl#isDifferentIndividualsAxiom">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Builtin"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://swrl.stanford.edu/ontologies/built-ins/3.4/swrlxml.owl">
+         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://swrl.stanford.edu/ontologies/built-ins/3.3/tbox.owl#isEnumeratedDatatypeAxiom">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Builtin"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://swrl.stanford.edu/ontologies/built-ins/3.3/tbox.owl#isInverseFunctionalProperty">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Builtin"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://localhost:8080/ontologies/semantic-bridges/SemanticBridge_RosettaNetOntology2MoonOntology.owl#contactInformation">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+      </rdf:Description>
+      <rdf:Description rdf:nodeID="A35">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+         <rdf:first rdf:nodeID="A36"/>
+         <rdf:rest rdf:nodeID="A8"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://swrl.stanford.edu/ontologies/built-ins/3.3/tbox.owl#isMaxCardinalityRestriction">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Builtin"/>
+      </rdf:Description>
+      <rdf:Description rdf:nodeID="A37">
+         <rdf:first rdf:nodeID="A38"/>
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+         <rdf:rest rdf:nodeID="A39"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://swrl.stanford.edu/ontologies/built-ins/3.3/swrlx.owl#makeOWLThing">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Builtin"/>
+      </rdf:Description>
+      <rdf:Description rdf:nodeID="A40">
+         <rdf:first rdf:resource="http://swrl.stanford.edu/ontologies/built-ins/3.4/swrlxml.owl#XMLElement"/>
+         <rdf:rest rdf:nodeID="A41"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://localhost:8080/ontologies/RosettaNetOntology.owl#BusinessDescription">
+         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+         <owl:equivalentClass rdf:nodeID="A18"/>
+      </rdf:Description>
+      <rdf:Description rdf:nodeID="A38">
+         <swrl:argument1 rdf:resource="http://localhost:8080/ontologies/semantic-bridges/SemanticBridge_RosettaNetOntology2MoonOntology.owl#rosettaContactInformation"/>
+         <swrl:argument2 rdf:resource="http://localhost:8080/ontologies/semantic-bridges/SemanticBridge_RosettaNetOntology2MoonOntology.owl#name"/>
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+         <swrl:propertyPredicate rdf:resource="http://localhost:8080/ontologies/MoonOntology.owl#hasContactName"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://swrl.stanford.edu/ontologies/built-ins/3.3/temporal.owl#notOverlaps">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Builtin"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://swrl.stanford.edu/ontologies/built-ins/3.3/tbox.owl#isDifferentFromAxiom">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Builtin"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://sqwrl.stanford.edu/ontologies/built-ins/3.4/sqwrl.owl#countDistinct">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Builtin"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://swrl.stanford.edu/ontologies/built-ins/3.3/temporal.owl#durationEqualTo">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Builtin"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://localhost:8080/ontologies/RosettaNetOntology.owl#hasToRole">
+         <rdfs:range rdf:resource="http://localhost:8080/ontologies/RosettaNetOntology.owl#PartnerRole"/>
+         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://swrl.stanford.edu/ontologies/built-ins/3.3/tbox.owl#isCardinalityRestriction">
+         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.w3.org/TR/owl-ref, Section 3.2.1.1.1</rdfs:comment>
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Builtin"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://swrl.stanford.edu/ontologies/built-ins/3.3/temporal.owl#notDurationLessThanOrEqualTo">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Builtin"/>
+      </rdf:Description>
+      <rdf:Description rdf:nodeID="A42">
+         <swrl:argument1 rdf:resource="http://localhost:8080/ontologies/semantic-bridges/SemanticBridge_RosettaNetOntology2MoonOntology.owl#physicalAddress"/>
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+         <swrl:argument2 rdf:resource="http://localhost:8080/ontologies/semantic-bridges/SemanticBridge_RosettaNetOntology2MoonOntology.owl#addressLine1"/>
+         <swrl:propertyPredicate rdf:resource="http://localhost:8080/ontologies/RosettaNetOntology.owl#hasAddressLine1"/>
+      </rdf:Description>
+      <rdf:Description rdf:nodeID="A43">
+         <rdf:rest rdf:nodeID="A44"/>
+         <rdf:first rdf:resource="http://swrl.stanford.edu/ontologies/built-ins/3.4/swrlxml.owl#XMLElement"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://swrl.stanford.edu/ontologies/built-ins/3.3/tbox.owl#isProperty">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Builtin"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://swrl.stanford.edu/ontologies/built-ins/3.3/temporal.owl#metBy">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Builtin"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://localhost:8080/ontologies/RosettaNetOntology.owl#hasAddressLine1">
+         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled">
+         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+         <rdfs:domain rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://swrl.stanford.edu/ontologies/built-ins/3.3/temporal.owl#notMetBy">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Builtin"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://localhost:8080/ontologies/MoonOntology.owl#RegisteredOrder">
+         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+         <owl:equivalentClass rdf:nodeID="A45"/>
+         <rdfs:subClassOf rdf:resource="http://localhost:8080/ontologies/MoonOntology.owl#Order"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://swrl.stanford.edu/ontologies/built-ins/3.4/swrlxml.owl#hasNamespaceURI">
+         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+         <rdfs:domain rdf:nodeID="A46"/>
+         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://localhost:8080/ontologies/semantic-bridges/SemanticBridge_RosettaNetOntology2MoonOntology.owl#rosettaContactInformation">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+      </rdf:Description>
+      <rdf:Description rdf:nodeID="A47">
+         <swrl:propertyPredicate rdf:resource="http://localhost:8080/ontologies/RosettaNetOntology.owl#hasNationalPostalCode"/>
+         <swrl:argument2 rdf:resource="http://localhost:8080/ontologies/semantic-bridges/SemanticBridge_RosettaNetOntology2MoonOntology.owl#postalCode"/>
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+         <swrl:argument1 rdf:resource="http://localhost:8080/ontologies/semantic-bridges/SemanticBridge_RosettaNetOntology2MoonOntology.owl#physicalAddress"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://localhost:8080/ontologies/semantic-bridges/SemanticBridge_RosettaNetOntology2MoonOntology.owl#Rule-4">
+         <swrl:head rdf:nodeID="A48"/>
+         <swrl:body rdf:nodeID="A13"/>
+         <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://swrl.stanford.edu/ontologies/built-ins/3.3/temporal.owl#ExtendedProposition">
+         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+         <rdfs:subClassOf rdf:resource="http://swrl.stanford.edu/ontologies/built-ins/3.3/temporal.owl#Proposition"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://swrl.stanford.edu/ontologies/built-ins/3.3/temporal.owl#durationGreaterThan">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Builtin"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://swrl.stanford.edu/ontologies/built-ins/3.3/tbox.owl#hasAxiom">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Builtin"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://localhost:8080/ontologies/semantic-bridges/SemanticBridge_RosettaNetOntology2MoonOntology.owl#postalCode">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+      </rdf:Description>
+      <rdf:Description rdf:nodeID="A49">
+         <swrl:argument1 rdf:resource="http://localhost:8080/ontologies/semantic-bridges/SemanticBridge_RosettaNetOntology2MoonOntology.owl#physicalAddress"/>
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+         <swrl:propertyPredicate rdf:resource="http://localhost:8080/ontologies/MoonOntology.owl#hasCountryCode"/>
+         <swrl:argument2 rdf:resource="http://localhost:8080/ontologies/semantic-bridges/SemanticBridge_RosettaNetOntology2MoonOntology.owl#countryCode"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://swrl.stanford.edu/ontologies/built-ins/3.3/tbox.owl#hasVersionInfo">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Builtin"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://swrl.stanford.edu/ontologies/built-ins/3.3/tbox.owl#onIndividual">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Builtin"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://swrl.stanford.edu/ontologies/built-ins/3.3/tbox.owl#hasValue">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Builtin"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://swrl.stanford.edu/ontologies/built-ins/3.3/temporal.owl#notIntersects">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Builtin"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://swrl.stanford.edu/ontologies/built-ins/3.3/tbox.owl#isInverseOfAxiom">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Builtin"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://swrl.stanford.edu/ontologies/built-ins/3.4/swrlxml.owl#hasMappedIndividuals">
+         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+         <rdfs:domain rdf:resource="http://swrl.stanford.edu/ontologies/built-ins/3.4/swrlxml.owl#XMLElement"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://swrl.stanford.edu/ontologies/built-ins/3.3/temporal.owl#equals">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Builtin"/>
+      </rdf:Description>
+      <rdf:Description rdf:nodeID="A48">
+         <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+         <rdf:first rdf:nodeID="A50"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://swrl.stanford.edu/ontologies/built-ins/3.3/tbox.owl#hasFirstyProperty">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Builtin"/>
+         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://swrl.stanford.edu/ontologies/built-ins/3.3/temporal.owl#notStarts">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Builtin"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://swrl.stanford.edu/ontologies/built-ins/3.3/tbox.owl#isSubClassOf">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Builtin"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://swrl.stanford.edu/ontologies/built-ins/3.3/tbox.owl#isDatatypeProperty">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Builtin"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://swrl.stanford.edu/ontologies/built-ins/3.3/tbox.owl#hasMinCardinality">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Builtin"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://swrl.stanford.edu/ontologies/built-ins/3.3/temporal.owl#ValidTime">
+         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+         <rdfs:subClassOf rdf:resource="http://swrl.stanford.edu/ontologies/built-ins/3.3/temporal.owl#Entity"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://localhost:8080/ontologies/RosettaNetOntology.owl">
+         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://sqwrl.stanford.edu/ontologies/built-ins/3.4/sqwrl.owl#orderByDescending">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Builtin"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://localhost:8080/process/MediationProcessInput.owl#Pip3A4PurchaseOrderRequest_1">
+         <rdf:type rdf:resource="http://localhost:8080/ontologies/RosettaNetOntology.owl#Pip3A4PurchaseOrderRequest"/>
+         <rosetta:hasFromRole rdf:resource="http://localhost:8080/process/MediationProcessInput.owl#Buyer_2"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://localhost:8080/ontologies/RosettaNetOntology.owl#hasContactInformation">
+         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+         <rdfs:range rdf:resource="http://localhost:8080/ontologies/RosettaNetOntology.owl#ContactInformation"/>
+      </rdf:Description>
+      <rdf:Description rdf:nodeID="A19">
+         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+         <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:cardinality>
+         <owl:onProperty rdf:resource="http://localhost:8080/ontologies/RosettaNetOntology.owl#hasBusinessDescription"/>
+      </rdf:Description>
+      <rdf:Description rdf:nodeID="A51">
+         <swrl:argument1 rdf:resource="http://localhost:8080/ontologies/semantic-bridges/SemanticBridge_RosettaNetOntology2MoonOntology.owl#physicalAddress"/>
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+         <swrl:argument2 rdf:resource="http://localhost:8080/ontologies/semantic-bridges/SemanticBridge_RosettaNetOntology2MoonOntology.owl#postalCode"/>
+         <swrl:propertyPredicate rdf:resource="http://localhost:8080/ontologies/MoonOntology.owl#hasPostalCode"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://localhost:8080/ontologies/RosettaNetOntology.owl#hasBusinessDescription">
+         <rdfs:range rdf:resource="http://localhost:8080/ontologies/RosettaNetOntology.owl#BusinessDescription"/>
+         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://localhost:8080/ontologies/RosettaNetOntology.owl#hasPhysicalLocation">
+         <rdfs:range rdf:resource="http://localhost:8080/ontologies/RosettaNetOntology.owl#PhysicalAddress"/>
+         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://sqwrl.stanford.edu/ontologies/built-ins/3.4/sqwrl.owl#min">
+         <swrlb:args rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</swrlb:args>
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Builtin"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://swrl.stanford.edu/ontologies/built-ins/3.3/temporal.owl#notDurationLessThan">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Builtin"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://swrl.stanford.edu/ontologies/built-ins/3.3/tbox.owl#isComplementOf">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Builtin"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://swrl.stanford.edu/ontologies/built-ins/3.3/tbox.owl#isDirectSuperClassOf">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Builtin"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://swrl.stanford.edu/ontologies/built-ins/3.3/tbox.owl#isDisjointWith">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Builtin"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://swrl.stanford.edu/ontologies/built-ins/3.3/temporal.owl#Seconds">
+         <rdf:type rdf:resource="http://swrl.stanford.edu/ontologies/built-ins/3.3/temporal.owl#Granularity"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://swrl.stanford.edu/ontologies/built-ins/3.3/abox.owl#hasURI">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Builtin"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://swrl.stanford.edu/ontologies/built-ins/3.3/abox.owl">
+         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+      </rdf:Description>
+      <rdf:Description rdf:nodeID="A34">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+         <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+         <rdf:first rdf:nodeID="A52"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://sqwrl.stanford.edu/ontologies/built-ins/3.4/sqwrl.owl#select">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Builtin"/>
+         <swrlb:minArgs rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</swrlb:minArgs>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://swrl.stanford.edu/ontologies/built-ins/3.3/temporal.owl#overlappedBy">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Builtin"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://swrl.stanford.edu/ontologies/built-ins/3.3/abox.owl#isConstant">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Builtin"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://localhost:8080/process/MediationProcessInput.owl#Input">
+         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pip3A4PurchaseOrderRequest</rdfs:label>
+         <rdf:type rdf:resource="http://localhost:8080/ontologies/ServiceAnchor.owl#Input"/>
+         <anchor:parameterObject rdf:resource="http://localhost:8080/process/MediationProcessInput.owl#Pip3A4PurchaseOrderRequest_1"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://localhost:8080/ontologies/semantic-bridges/SemanticBridge_RosettaNetOntology2MoonOntology.owl#businessDesc">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://swrl.stanford.edu/ontologies/built-ins/3.3/temporal.owl#hasGranularity">
+         <rdfs:domain rdf:resource="http://swrl.stanford.edu/ontologies/built-ins/3.3/temporal.owl#ValidTime"/>
+         <rdfs:range rdf:resource="http://swrl.stanford.edu/ontologies/built-ins/3.3/temporal.owl#Granularity"/>
+         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://swrl.stanford.edu/ontologies/built-ins/3.3/tbox.owl#isMinCardinalityRestriction">
+         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"/>
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Builtin"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://localhost:8080/ontologies/ServiceAnchor.owl#Parameter">
+         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+      </rdf:Description>
+      <rdf:Description rdf:nodeID="A53">
+         <rdf:rest rdf:nodeID="A54"/>
+         <rdf:first rdf:nodeID="A31"/>
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+      </rdf:Description>
+      <rdf:Description rdf:nodeID="A55">
+         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+         <owl:unionOf rdf:nodeID="A56"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://swrl.stanford.edu/ontologies/built-ins/3.4/swrlm.owl#sqrt">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Builtin"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://sqwrl.stanford.edu/ontologies/built-ins/3.4/sqwrl.owl#selectDistinct">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Builtin"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://swrl.stanford.edu/ontologies/built-ins/3.3/tbox.owl#isInDomainOfAxiom">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Builtin"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://sqwrl.stanford.edu/ontologies/built-ins/3.4/sqwrl.owl#columnNames">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Builtin"/>
+         <swrlb:minArgs rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</swrlb:minArgs>
+      </rdf:Description>
+      <rdf:Description rdf:nodeID="A41">
+         <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+         <rdf:first rdf:resource="http://swrl.stanford.edu/ontologies/built-ins/3.4/swrlxml.owl#XMLAttribute"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://swrl.stanford.edu/ontologies/built-ins/3.3/tbox.owl#hasAnnotation">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Builtin"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://swrl.stanford.edu/ontologies/built-ins/3.3/tbox.owl#isInRangeOf">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Builtin"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://localhost:8080/ontologies/MoonOntology.owl#hasContactInfo">
+         <rdfs:range rdf:resource="http://localhost:8080/ontologies/MoonOntology.owl#ContactInfo"/>
+         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://sqwrl.stanford.edu/ontologies/built-ins/3.4/sqwrl.owl#orderBy">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Builtin"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://swrl.stanford.edu/ontologies/built-ins/3.3/tbox.owl#isSuperClassOf">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Builtin"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://localhost:8080/ontologies/MoonOntology.owl#hasRoleCode">
+         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://localhost:8080/ontologies/MoonOntology.owl#ContactInfo">
+         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://localhost:8080/ontologies/semantic-bridges/SemanticBridge_RosettaNetOntology2MoonOntology.owl#name">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+      </rdf:Description>
+      <rdf:Description rdf:nodeID="A15">
+         <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+         <rdf:first rdf:nodeID="A57"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://swrl.stanford.edu/ontologies/built-ins/3.3/tbox.owl#hasLabel">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Builtin"/>
+      </rdf:Description>
+      <rdf:Description rdf:nodeID="A11">
+         <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+         <rdf:first rdf:resource="http://localhost:8080/ontologies/ServiceAnchor.owl#AtomicProcess"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://swrl.stanford.edu/ontologies/built-ins/3.3/temporal.owl#hasFinishTime">
+         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+         <rdfs:domain rdf:resource="http://swrl.stanford.edu/ontologies/built-ins/3.3/temporal.owl#ValidPeriod"/>
+         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://swrl.stanford.edu/ontologies/built-ins/3.4/swrlxml.owl#XMLElement">
+         <rdfs:subClassOf rdf:resource="http://swrl.stanford.edu/ontologies/built-ins/3.4/swrlxml.owl#Entity"/>
+         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://swrl.stanford.edu/ontologies/built-ins/3.4/swrlxml.owl#hasNamespacePrefix">
+         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+         <rdfs:domain rdf:nodeID="A55"/>
+      </rdf:Description>
+      <rdf:Description rdf:nodeID="A17">
+         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+         <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:cardinality>
+         <owl:onProperty rdf:resource="http://localhost:8080/ontologies/MoonOntology.owl#hasCustomerID"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://swrl.stanford.edu/ontologies/built-ins/3.3/abox.owl#hasValue">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Builtin"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://localhost:8080/ontologies/ServiceAnchor.owl#Local">
+         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://localhost:8080/ontologies/MoonOntology.owl#CreateNewOrderResponse">
+         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://swrl.stanford.edu/ontologies/built-ins/3.3/tbox.owl#isComplementOfClassDescription">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Builtin"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://swrl.stanford.edu/ontologies/built-ins/3.4/swrlxml.owl#makeXMLDocument">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Builtin"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://swrl.stanford.edu/ontologies/built-ins/3.3/tbox.owl#isInDirectDomainOf">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Builtin"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://swrl.stanford.edu/ontologies/built-ins/3.3/tbox.owl#isDatavalue">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Builtin"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://localhost:8080/ontologies/RosettaNetOntology.owl#hasNationalPostalCode">
+         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#hasRuleGroup">
+         <rdfs:range rdf:resource="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#RuleGroup"/>
+         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+         <rdfs:domain rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://swrl.stanford.edu/ontologies/built-ins/3.3/tbox.owl#isFunctionalPropertyDescription">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Builtin"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://swrl.stanford.edu/ontologies/built-ins/3.4/swrlxml.owl#hasElements">
+         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+         <rdfs:domain rdf:resource="http://swrl.stanford.edu/ontologies/built-ins/3.4/swrlxml.owl#XMLDocument"/>
+         <rdfs:range rdf:resource="http://swrl.stanford.edu/ontologies/built-ins/3.4/swrlxml.owl#XMLElement"/>
+      </rdf:Description>
+      <rdf:Description rdf:nodeID="A58">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+         <swrl:classPredicate rdf:resource="http://localhost:8080/ontologies/MoonOntology.owl#ContactInfo"/>
+         <swrl:argument1 rdf:resource="http://localhost:8080/ontologies/semantic-bridges/SemanticBridge_RosettaNetOntology2MoonOntology.owl#rosettaContactInformation"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://swrl.stanford.edu/ontologies/built-ins/3.3/tbox.owl#hasDescription">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Builtin"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://localhost:8080/ontologies/RosettaNetOntology.owl#hasGlobalCountryCode">
+         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">untryCode as class and defined by one of individuals "de, en, ..."</rdfs:comment>
+         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://localhost:8080/ontologies/RosettaNetOntology.owl#Pip3A4PurchaseOrderRequest">
+         <owl:equivalentClass rdf:nodeID="A22"/>
+         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://swrl.stanford.edu/ontologies/built-ins/3.4/swrlxml.owl#XMLDocument">
+         <rdfs:subClassOf rdf:resource="http://swrl.stanford.edu/ontologies/built-ins/3.4/swrlxml.owl#Entity"/>
+         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://localhost:8080/ontologies/MoonOntology.owl#hasOrderID">
+         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://swrl.stanford.edu/ontologies/built-ins/3.3/temporal.owl#hasStartTime">
+         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+         <rdfs:domain rdf:resource="http://swrl.stanford.edu/ontologies/built-ins/3.3/temporal.owl#ValidPeriod"/>
+         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://sqwrl.stanford.edu/ontologies/built-ins/3.4/sqwrl.owl#intersect">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Builtin"/>
+      </rdf:Description>
+      <rdf:Description rdf:nodeID="A59">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+         <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+         <rdf:first rdf:nodeID="A27"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://localhost:8080/ontologies/semantic-bridges/SemanticBridge_RosettaNetOntology2MoonOntology.owl#partner">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://localhost:8080/ontologies/ServiceAnchor.owl#Input">
+         <owl:disjointWith rdf:resource="http://localhost:8080/ontologies/ServiceAnchor.owl#Local"/>
+         <owl:disjointWith rdf:resource="http://localhost:8080/ontologies/ServiceAnchor.owl#Output"/>
+         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+         <rdfs:subClassOf rdf:resource="http://localhost:8080/ontologies/ServiceAnchor.owl#Parameter"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://localhost:8080/ontologies/MoonOntology.owl#hasPostalAddress">
+         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+         <rdfs:range rdf:resource="http://localhost:8080/ontologies/MoonOntology.owl#PostalAddress"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://www.w3.org/2003/11/swrl#argument2">
+         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+      </rdf:Description>
+      <rdf:Description rdf:nodeID="A1">
+         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+         <owl:onProperty rdf:resource="http://localhost:8080/ontologies/RosettaNetOntology.owl#hasFromRole"/>
+         <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:cardinality>
+      </rdf:Description>
+      <rdf:Description rdf:nodeID="A36">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+         <swrl:argument1 rdf:resource="http://localhost:8080/ontologies/semantic-bridges/SemanticBridge_RosettaNetOntology2MoonOntology.owl#rosettaContactInformation"/>
+         <swrl:propertyPredicate rdf:resource="http://localhost:8080/ontologies/RosettaNetOntology.owl#hasEmailAddress"/>
+         <swrl:argument2 rdf:resource="http://localhost:8080/ontologies/semantic-bridges/SemanticBridge_RosettaNetOntology2MoonOntology.owl#email"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://localhost:8080/process/MediationProcessInput.owl#Buyer_2">
+         <rosetta:hasContactInformation rdf:resource="http://localhost:8080/process/MediationProcessInput.owl#ContactInformation_3"/>
+         <rosetta:relatesToPartner rdf:resource="http://localhost:8080/process/MediationProcessInput.owl#Partner_4"/>
+         <rdf:type rdf:resource="http://localhost:8080/ontologies/RosettaNetOntology.owl#Buyer"/>
+      </rdf:Description>
+      <rdf:Description rdf:nodeID="A56">
+         <rdf:rest rdf:nodeID="A60"/>
+         <rdf:first rdf:resource="http://swrl.stanford.edu/ontologies/built-ins/3.4/swrlxml.owl#XMLElement"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://swrl.stanford.edu/ontologies/built-ins/3.3/temporal.owl#Hours">
+         <rdf:type rdf:resource="http://swrl.stanford.edu/ontologies/built-ins/3.3/temporal.owl#Granularity"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://swrl.stanford.edu/ontologies/built-ins/3.3/temporal.owl#notOverlappedBy">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Builtin"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://sqwrl.stanford.edu/ontologies/built-ins/3.4/sqwrl.owl#first">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Builtin"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://localhost:8080/ontologies/semantic-bridges/SemanticBridge_RosettaNetOntology2MoonOntology.owl#SemanticBridge_RosettaNetBusinessName2MoonBusinessName">
+         <swrl:head rdf:nodeID="A32"/>
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+         <swrl:body rdf:nodeID="A61"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://swrl.stanford.edu/ontologies/built-ins/3.3/tbox.owl#isClassDescription">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Builtin"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://swrl.stanford.edu/ontologies/built-ins/3.3/tbox.owl#isAllValuesFromRestriction">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Builtin"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://localhost:8080/ontologies/semantic-bridges/SemanticBridge_RosettaNetOntology2MoonOntology.owl#SemanticBridge_RosettaNetContactInformation2MoonContactInfo">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+         <swrl:body rdf:nodeID="A53"/>
+         <swrl:head rdf:nodeID="A62"/>
+      </rdf:Description>
+      <rdf:Description rdf:nodeID="A63">
+         <rdf:rest rdf:nodeID="A64"/>
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+         <rdf:first rdf:nodeID="A23"/>
+      </rdf:Description>
+      <rdf:Description rdf:nodeID="A65">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+         <rdf:first rdf:nodeID="A66"/>
+         <rdf:rest rdf:nodeID="A59"/>
+      </rdf:Description>
+      <rdf:Description rdf:nodeID="A46">
+         <owl:unionOf rdf:nodeID="A40"/>
+         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://swrl.stanford.edu/ontologies/built-ins/3.3/tbox.owl#isInverseOf">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Builtin"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://swrl.stanford.edu/ontologies/built-ins/3.4/swrlm.owl">
+         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+      </rdf:Description>
+      <rdf:Description rdf:nodeID="A67">
+         <swrl:propertyPredicate rdf:resource="http://localhost:8080/ontologies/MoonOntology.owl#hasEmail"/>
+         <swrl:argument1 rdf:resource="http://localhost:8080/ontologies/semantic-bridges/SemanticBridge_RosettaNetOntology2MoonOntology.owl#rosettaContactInformation"/>
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+         <swrl:argument2 rdf:resource="http://localhost:8080/ontologies/semantic-bridges/SemanticBridge_RosettaNetOntology2MoonOntology.owl#email"/>
+      </rdf:Description>
+      <rdf:Description rdf:nodeID="A52">
+         <swrl:argument2 rdf:resource="http://localhost:8080/ontologies/semantic-bridges/SemanticBridge_RosettaNetOntology2MoonOntology.owl#businessName"/>
+         <swrl:argument1 rdf:resource="http://localhost:8080/ontologies/semantic-bridges/SemanticBridge_RosettaNetOntology2MoonOntology.owl#partner"/>
+         <swrl:propertyPredicate rdf:resource="http://localhost:8080/ontologies/MoonOntology.owl#hasBusinessName"/>
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://swrl.stanford.edu/ontologies/built-ins/3.3/abox.owl#hasClass">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Builtin"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://localhost:8080/ontologies/ServiceAnchor.owl#parameterObject">
+         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+    ADDED BY RALF!!! If an Input parameter has a constant value, or (as in the case of
+    Output) is a description in terms of of some other process parameters,
+    then supply it here. Note that it must be interpreted after reading it
+    as an XMLLiteral.
+
+    In future, the interpretation of this literal may be extended to allow
+    more flexibility, such as functional expressions.
+  </rdfs:comment>
+         <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+         <rdfs:domain rdf:resource="http://localhost:8080/ontologies/ServiceAnchor.owl#Parameter"/>
+      </rdf:Description>
+      <rdf:Description rdf:nodeID="A64">
+         <rdf:first rdf:nodeID="A68"/>
+         <rdf:rest rdf:nodeID="A69"/>
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://localhost:8080/ontologies/MoonOntology.owl#CustomerLookupResponse">
+         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+      </rdf:Description>
+      <rdf:Description rdf:nodeID="A50">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+         <swrl:propertyPredicate rdf:resource="http://localhost:8080/ontologies/MoonOntology.owl#hasPostalAddress"/>
+         <swrl:argument1 rdf:resource="http://localhost:8080/ontologies/semantic-bridges/SemanticBridge_RosettaNetOntology2MoonOntology.owl#partner"/>
+         <swrl:argument2 rdf:resource="http://localhost:8080/ontologies/semantic-bridges/SemanticBridge_RosettaNetOntology2MoonOntology.owl#physicalLocation"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://swrl.stanford.edu/ontologies/built-ins/3.3/temporal.owl#durationGreaterThanOrEqualTo">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Builtin"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://swrl.stanford.edu/ontologies/built-ins/3.3/temporal.owl#Milliseconds">
+         <rdf:type rdf:resource="http://swrl.stanford.edu/ontologies/built-ins/3.3/temporal.owl#Granularity"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://swrl.stanford.edu/ontologies/built-ins/3.3/tbox.owl#hasSeeAlso">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Builtin"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://localhost:8080/ontologies/semantic-bridges/SemanticBridge_RosettaNetOntology2MoonOntology.owl#addressLine1">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://swrl.stanford.edu/ontologies/built-ins/3.3/tbox.owl#isEquivalentClass">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Builtin"/>
+      </rdf:Description>
+      <rdf:Description rdf:nodeID="A9">
+         <swrl:argument1 rdf:resource="http://localhost:8080/ontologies/semantic-bridges/SemanticBridge_RosettaNetOntology2MoonOntology.owl#rosettaContactInformation"/>
+         <swrl:propertyPredicate rdf:resource="http://localhost:8080/ontologies/RosettaNetOntology.owl#hasTelephoneNumber"/>
+         <swrl:argument2 rdf:resource="http://localhost:8080/ontologies/semantic-bridges/SemanticBridge_RosettaNetOntology2MoonOntology.owl#phone"/>
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+      </rdf:Description>
+      <rdf:Description rdf:nodeID="A2">
+         <rdf:first rdf:nodeID="A70"/>
+         <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://swrl.stanford.edu/ontologies/built-ins/3.3/temporal.owl#notFinishedBy">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Builtin"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://swrl.stanford.edu/ontologies/built-ins/3.3/tbox.owl#isUnionOfDescription">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Builtin"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://localhost:8080/ontologies/RosettaNetOntology.owl#Buyer">
+         <rdfs:subClassOf rdf:resource="http://localhost:8080/ontologies/RosettaNetOntology.owl#PartnerRole"/>
+         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://swrl.stanford.edu/ontologies/built-ins/3.3/temporal.owl#overlaps">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Builtin"/>
+      </rdf:Description>
+      <rdf:Description rdf:nodeID="A71">
+         <rdf:first rdf:nodeID="A51"/>
+         <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+      </rdf:Description>
+      <rdf:Description rdf:nodeID="A25">
+         <swrl:argument2 rdf:resource="http://localhost:8080/ontologies/semantic-bridges/SemanticBridge_RosettaNetOntology2MoonOntology.owl#phone"/>
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+         <swrl:argument1 rdf:resource="http://localhost:8080/ontologies/semantic-bridges/SemanticBridge_RosettaNetOntology2MoonOntology.owl#rosettaContactInformation"/>
+         <swrl:propertyPredicate rdf:resource="http://localhost:8080/ontologies/MoonOntology.owl#hasTelephone"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://swrl.stanford.edu/ontologies/built-ins/3.3/tbox.owl#hasIndividual">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Builtin"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://swrl.stanford.edu/ontologies/built-ins/3.3/temporal.owl#notStartedBy">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Builtin"/>
+      </rdf:Description>
+      <rdf:Description rdf:nodeID="A44">
+         <rdf:first rdf:resource="http://swrl.stanford.edu/ontologies/built-ins/3.4/swrlxml.owl#XMLAttribute"/>
+         <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://swrl.stanford.edu/ontologies/built-ins/3.4/swrlm.owl#log">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Builtin"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://swrl.stanford.edu/ontologies/built-ins/3.3/temporal.owl#notAfter">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Builtin"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://swrl.stanford.edu/ontologies/built-ins/3.3/tbox.owl#hasCardinality">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Builtin"/>
+      </rdf:Description>
+      <rdf:Description rdf:nodeID="A72">
+         <swrl:argument1 rdf:resource="http://localhost:8080/ontologies/semantic-bridges/SemanticBridge_RosettaNetOntology2MoonOntology.owl#partner"/>
+         <swrl:classPredicate rdf:resource="http://localhost:8080/ontologies/RosettaNetOntology.owl#Partner"/>
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+      </rdf:Description>
+      <rdf:Description rdf:nodeID="A73">
+         <rdf:first rdf:nodeID="A12"/>
+         <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://localhost:8080/ontologies/ServiceAnchor.owl">
+         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://sqwrl.stanford.edu/ontologies/built-ins/3.4/sqwrl.owl#empty">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Builtin"/>
+      </rdf:Description>
+      <rdf:Description rdf:nodeID="A30">
+         <rdf:rest rdf:nodeID="A74"/>
+         <rdf:first rdf:nodeID="A28"/>
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://localhost:8080/ontologies/semantic-bridges/SemanticBridge_RosettaNetOntology2MoonOntology.owl#physicalAddress">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://localhost:8080/ontologies/RosettaNetOntology.owl#PartnerRole">
+         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+      </rdf:Description>
+      <rdf:Description rdf:nodeID="A70">
+         <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:cardinality>
+         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+         <owl:onProperty rdf:resource="http://localhost:8080/ontologies/RosettaNetOntology.owl#hasToRole"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://swrl.stanford.edu/ontologies/built-ins/3.3/tbox.owl#isOneOfClassDescription">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Builtin"/>
+         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.w3.org/TR/owl-ref, Section 3.1.1</rdfs:comment>
+      </rdf:Description>
+      <rdf:Description rdf:nodeID="A54">
+         <rdf:first rdf:nodeID="A7"/>
+         <rdf:rest rdf:nodeID="A35"/>
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+      </rdf:Description>
+      <rdf:Description rdf:nodeID="A66">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+         <swrl:argument1 rdf:resource="http://localhost:8080/ontologies/semantic-bridges/SemanticBridge_RosettaNetOntology2MoonOntology.owl#partner"/>
+         <swrl:classPredicate rdf:resource="http://localhost:8080/ontologies/RosettaNetOntology.owl#Partner"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://localhost:8080/ontologies/semantic-bridges/SemanticBridge_RosettaNetOntology2MoonOntology.owl#city">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://swrl.stanford.edu/ontologies/built-ins/3.3/tbox.owl#isHasValueRestriction">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Builtin"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://localhost:8080/ontologies/MoonOntology.owl#hasOrder">
+         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+         <rdfs:range rdf:resource="http://localhost:8080/ontologies/MoonOntology.owl#Order"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://swrl.stanford.edu/ontologies/built-ins/3.3/tbox.owl#notEqualTo">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Builtin"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://swrl.stanford.edu/ontologies/built-ins/3.3/tbox.owl#isDirectSuperPropertyOf">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Builtin"/>
+      </rdf:Description>
+      <rdf:Description rdf:nodeID="A6">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+         <rdf:first rdf:nodeID="A16"/>
+         <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+      </rdf:Description>
+      <rdf:Description rdf:nodeID="A5">
+         <swrl:propertyPredicate rdf:resource="http://localhost:8080/ontologies/RosettaNetOntology.owl#hasBusinessDescription"/>
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+         <swrl:argument2 rdf:resource="http://localhost:8080/ontologies/semantic-bridges/SemanticBridge_RosettaNetOntology2MoonOntology.owl#businessDesc"/>
+         <swrl:argument1 rdf:resource="http://localhost:8080/ontologies/semantic-bridges/SemanticBridge_RosettaNetOntology2MoonOntology.owl#partner"/>
+      </rdf:Description>
+      <rdf:Description rdf:nodeID="A21">
+         <rdf:first rdf:nodeID="A26"/>
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+         <rdf:rest rdf:nodeID="A75"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleGroupEnabled">
+         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+         <rdfs:domain rdf:resource="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#RuleGroup"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://swrl.stanford.edu/ontologies/built-ins/3.3/temporal.owl#before">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Builtin"/>
+         <swrlb:minArgs rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</swrlb:minArgs>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://swrl.stanford.edu/ontologies/built-ins/3.3/abox.owl#setValue">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Builtin"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://swrl.stanford.edu/ontologies/built-ins/3.3/tbox.owl#isAnnotation">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Builtin"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://swrl.stanford.edu/ontologies/built-ins/3.4/swrlxml.owl#hasAttributes">
+         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+         <rdfs:domain rdf:resource="http://swrl.stanford.edu/ontologies/built-ins/3.4/swrlxml.owl#XMLElement"/>
+         <rdfs:range rdf:resource="http://swrl.stanford.edu/ontologies/built-ins/3.4/swrlxml.owl#XMLAttribute"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://sqwrl.stanford.edu/ontologies/built-ins/3.4/sqwrl.owl#element">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Builtin"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://swrl.stanford.edu/ontologies/built-ins/3.3/temporal.owl#meets">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Builtin"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://localhost:8080/ontologies/MoonOntology.owl#CustomerLookupRequest">
+         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+      </rdf:Description>
+      <rdf:Description rdf:nodeID="A45">
+         <owl:onProperty rdf:resource="http://localhost:8080/ontologies/MoonOntology.owl#hasOrderID"/>
+         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+         <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:cardinality>
+      </rdf:Description>
+      <rdf:Description rdf:nodeID="A61">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+         <rdf:rest rdf:nodeID="A4"/>
+         <rdf:first rdf:nodeID="A72"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://swrl.stanford.edu/ontologies/built-ins/3.3/tbox.owl#isInRangeOfAxiom">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Builtin"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://localhost:8080/ontologies/MoonOntology.owl#Customer">
+         <owl:equivalentClass rdf:nodeID="A76"/>
+         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://localhost:8080/ontologies/RosettaNetOntology.owl#hasCityName">
+         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://swrl.stanford.edu/ontologies/built-ins/3.4/swrlxml.owl#hasName">
+         <rdfs:domain rdf:nodeID="A77"/>
+         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://swrl.stanford.edu/ontologies/built-ins/3.3/tbox.owl#isSymmetricPropertyDescription">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Builtin"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://localhost:8080/ontologies/RosettaNetOntology.owl#ProductProvider">
+         <rdfs:subClassOf rdf:resource="http://localhost:8080/ontologies/RosettaNetOntology.owl#PartnerRole"/>
+         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+      </rdf:Description>
+      <rdf:Description rdf:nodeID="A29">
+         <rdf:rest rdf:nodeID="A20"/>
+         <rdf:first rdf:nodeID="A78"/>
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://swrl.stanford.edu/ontologies/built-ins/3.3/temporal.owl#notDurationGreaterThanOrEqualTo">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Builtin"/>
+      </rdf:Description>
+      <rdf:Description rdf:nodeID="A78">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+         <swrl:argument1 rdf:resource="http://localhost:8080/ontologies/semantic-bridges/SemanticBridge_RosettaNetOntology2MoonOntology.owl#physicalAddress"/>
+         <swrl:classPredicate rdf:resource="http://localhost:8080/ontologies/MoonOntology.owl#PostalAddress"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://localhost:8080/ontologies/ServiceAnchor.owl#hasOutput">
+         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+         <rdfs:domain rdf:resource="http://localhost:8080/ontologies/ServiceAnchor.owl#Process"/>
+         <rdfs:range rdf:resource="http://localhost:8080/ontologies/ServiceAnchor.owl#Output"/>
+      </rdf:Description>
+      <rdf:Description rdf:nodeID="A75">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+         <rdf:first rdf:nodeID="A49"/>
+         <rdf:rest rdf:nodeID="A71"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://swrl.stanford.edu/ontologies/built-ins/3.3/tbox.owl#isSameAsAxiom">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Builtin"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://localhost:8080/ontologies/MoonOntology.owl#hasBusinessName">
+         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+      </rdf:Description>
+      <rdf:Description rdf:nodeID="A69">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+         <rdf:first rdf:nodeID="A47"/>
+         <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+      </rdf:Description>
+      <rdf:Description rdf:nodeID="A14">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+         <swrl:argument1 rdf:resource="http://localhost:8080/ontologies/semantic-bridges/SemanticBridge_RosettaNetOntology2MoonOntology.owl#partner"/>
+         <swrl:classPredicate rdf:resource="http://localhost:8080/ontologies/RosettaNetOntology.owl#Partner"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://localhost:8080/process/MediationProcessInput.owl#Partner_4">
+         <moon:hasContactInfo rdf:resource="http://localhost:8080/process/MediationProcessInput.owl#ContactInformation_6"/>
+         <rosetta:hasPhysicalLocation rdf:resource="http://localhost:8080/process/MediationProcessInput.owl#PhysicalAddress_7"/>
+         <moon:hasBusinessName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Blue Company</moon:hasBusinessName>
+         <rosetta:hasContactInformation rdf:resource="http://localhost:8080/process/MediationProcessInput.owl#ContactInformation_6"/>
+         <rdf:type rdf:resource="http://localhost:8080/ontologies/MoonOntology.owl#Customer"/>
+         <rdf:type rdf:resource="http://localhost:8080/ontologies/RosettaNetOntology.owl#Partner"/>
+         <rosetta:hasBusinessDescription rdf:resource="http://localhost:8080/process/MediationProcessInput.owl#BusinessDescription_5"/>
+         <moon:hasPostalAddress rdf:resource="http://localhost:8080/process/MediationProcessInput.owl#PhysicalAddress_7"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://swrl.stanford.edu/ontologies/built-ins/3.3/tbox.owl#onProperty">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Builtin"/>
+      </rdf:Description>
+      <rdf:Description rdf:nodeID="A62">
+         <rdf:rest rdf:nodeID="A37"/>
+         <rdf:first rdf:nodeID="A58"/>
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://sqwrl.stanford.edu/ontologies/built-ins/3.4/sqwrl.owl#makeSortedSet">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Builtin"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://swrl.stanford.edu/ontologies/built-ins/3.3/abox.owl#hasProperty">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Builtin"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://swrl.stanford.edu/ontologies/built-ins/3.3/tbox.owl#isDirectSubClassOf">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Builtin"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://swrl.stanford.edu/ontologies/built-ins/3.3/tbox.owl#isInverseFunctionalPropertyDescription">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Builtin"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://swrl.stanford.edu/ontologies/built-ins/3.4/swrlxml.owl#hasSubElements">
+         <rdfs:domain rdf:resource="http://swrl.stanford.edu/ontologies/built-ins/3.4/swrlxml.owl#XMLElement"/>
+         <rdfs:range rdf:resource="http://swrl.stanford.edu/ontologies/built-ins/3.4/swrlxml.owl#XMLElement"/>
+         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+      </rdf:Description>
+      <rdf:Description rdf:nodeID="A39">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+         <rdf:rest rdf:nodeID="A24"/>
+         <rdf:first rdf:nodeID="A67"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://swrl.stanford.edu/ontologies/built-ins/3.3/tbox.owl#isInDirectRangeOf">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Builtin"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://swrl.stanford.edu/ontologies/built-ins/3.3/tbox.owl#isFunctionalProperty">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Builtin"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://sqwrl.stanford.edu/ontologies/built-ins/3.4/sqwrl.owl#max">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Builtin"/>
+         <swrlb:args rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</swrlb:args>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://swrl.stanford.edu/ontologies/built-ins/3.3/tbox.owl#isSymmetricProperty">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Builtin"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://localhost:8080/ontologies/RosettaNetOntology.owl#hasFromRole">
+         <rdfs:range rdf:resource="http://localhost:8080/ontologies/RosettaNetOntology.owl#PartnerRole"/>
+         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://swrl.stanford.edu/ontologies/built-ins/3.3/temporal.owl#ValidPeriod">
+         <rdfs:subClassOf rdf:resource="http://swrl.stanford.edu/ontologies/built-ins/3.3/temporal.owl#ValidTime"/>
+         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://swrl.stanford.edu/ontologies/built-ins/3.3/temporal.owl#after">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Builtin"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://sqwrl.stanford.edu/ontologies/built-ins/3.4/sqwrl.owl#makeSet">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Builtin"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://swrl.stanford.edu/ontologies/built-ins/3.3/tbox.owl#isDisjointWithAxiom">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Builtin"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://swrl.stanford.edu/ontologies/built-ins/3.3/swrlx.owl">
+         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://localhost:8080/ontologies/MoonOntology.owl#hasCustomer">
+         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://swrl.stanford.edu/ontologies/built-ins/3.3/tbox.owl#hasSecondProperty">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Builtin"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://swrl.stanford.edu/ontologies/built-ins/3.3/temporal.owl#Minutes">
+         <rdf:type rdf:resource="http://swrl.stanford.edu/ontologies/built-ins/3.3/temporal.owl#Granularity"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://swrl.stanford.edu/ontologies/built-ins/3.4/swrlxml.owl#XMLAttribute">
+         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+         <rdfs:subClassOf rdf:resource="http://swrl.stanford.edu/ontologies/built-ins/3.4/swrlxml.owl#Entity"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://swrl.stanford.edu/ontologies/built-ins/3.3/temporal.owl#starts">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Builtin"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://localhost:8080/ontologies/MoonOntology.owl#hasPostalCode">
+         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+      </rdf:Description>
+      <rdf:Description rdf:nodeID="A74">
+         <rdf:first rdf:nodeID="A42"/>
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+         <rdf:rest rdf:nodeID="A63"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://swrl.stanford.edu/ontologies/3.3/swrla.owl">
+         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://localhost:8080/ontologies/semantic-bridges/SemanticBridge_RosettaNetOntology2MoonOntology.owl#physicalLocation">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://localhost:8080/ontologies/semantic-bridges/SemanticBridge_RosettaNetOntology2MoonOntology.owl#countryCode">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://localhost:8080/ontologies/RosettaNetOntology.owl#hasEmailAddress">
+         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://localhost:8080/process/MediationProcessInput.owl">
+         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+         <owl:imports rdf:resource="http://localhost:8080/ontologies/semantic-bridges/SemanticBridge_RosettaNetOntology2MoonOntology.owl"/>
+         <owl:imports rdf:resource="http://localhost:8080/ontologies/RosettaNetOntology.owl"/>
+         <owl:imports rdf:resource="http://localhost:8080/ontologies/ServiceAnchor.owl"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://swrl.stanford.edu/ontologies/built-ins/3.3/temporal.owl">
+         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://localhost:8080/ontologies/RosettaNetOntology.owl#PhysicalAddress">
+         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+      </rdf:Description>
+      <rdf:Description rdf:nodeID="A33">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+         <swrl:classPredicate rdf:resource="http://localhost:8080/ontologies/MoonOntology.owl#Customer"/>
+         <swrl:argument1 rdf:resource="http://localhost:8080/ontologies/semantic-bridges/SemanticBridge_RosettaNetOntology2MoonOntology.owl#partner"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://swrl.stanford.edu/ontologies/built-ins/3.3/tbox.owl#isTransitivePropertyDescription">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Builtin"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://localhost:8080/ontologies/semantic-bridges/SemanticBridge_RosettaNetOntology2MoonOntology.owl#Rule-3">
+         <swrl:body rdf:nodeID="A65"/>
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+         <swrl:head rdf:nodeID="A73"/>
+         <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://swrl.stanford.edu/ontologies/built-ins/3.3/temporal.owl#ValidInstant">
+         <rdfs:subClassOf rdf:resource="http://swrl.stanford.edu/ontologies/built-ins/3.3/temporal.owl#ValidTime"/>
+         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+      </rdf:Description>
+      <rdf:Description rdf:nodeID="A57">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+         <swrl:argument2 rdf:resource="http://localhost:8080/ontologies/semantic-bridges/SemanticBridge_RosettaNetOntology2MoonOntology.owl#physicalLocation"/>
+         <swrl:argument1 rdf:resource="http://localhost:8080/ontologies/semantic-bridges/SemanticBridge_RosettaNetOntology2MoonOntology.owl#partner"/>
+         <swrl:propertyPredicate rdf:resource="http://localhost:8080/ontologies/RosettaNetOntology.owl#hasPhysicalLocation"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://swrl.stanford.edu/ontologies/built-ins/3.3/temporal.owl#during">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Builtin"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#Entity">
+         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://swrl.stanford.edu/ontologies/built-ins/3.3/temporal.owl#finishedBy">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Builtin"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://swrl.stanford.edu/ontologies/built-ins/3.3/temporal.owl#Months">
+         <rdf:type rdf:resource="http://swrl.stanford.edu/ontologies/built-ins/3.3/temporal.owl#Granularity"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://localhost:8080/ontologies/RosettaNetOntology.owl#ContactInformation">
+         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://localhost:8080/ontologies/ServiceAnchor.owl#parameterValue">
+         <rdfs:domain rdf:resource="http://localhost:8080/ontologies/ServiceAnchor.owl#Parameter"/>
+         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+    If an Input parameter has a constant value, or (as in the case of
+    Output) is a description in terms of of some other process parameters,
+    then supply it here. Note that it must be interpreted after reading it
+    as an XMLLiteral.
+
+    In future, the interpretation of this literal may be extended to allow
+    more flexibility, such as functional expressions.
+  </rdfs:comment>
+         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+         <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://localhost:8080/process/MediationProcessInput.owl#ContactInformation_6">
+         <rosetta:hasTelephoneNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">+43(650)89930023</rosetta:hasTelephoneNumber>
+         <moon:hasTelephone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">+43(650)89930023</moon:hasTelephone>
+         <rdf:type rdf:resource="http://localhost:8080/ontologies/MoonOntology.owl#ContactInfo"/>
+         <rdf:type rdf:resource="http://localhost:8080/ontologies/RosettaNetOntology.owl#ContactInformation"/>
+         <rosetta:hasContactName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Stefania Wolf</rosetta:hasContactName>
+         <rosetta:hasEmailAddress rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stefania.wolf@blue.com</rosetta:hasEmailAddress>
+         <moon:hasEmail rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stefania.wolf@blue.com</moon:hasEmail>
+         <moon:hasContactName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Stefania Wolf</moon:hasContactName>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://localhost:8080/ontologies/ServiceAnchor.owl#hasInput">
+         <rdfs:domain rdf:resource="http://localhost:8080/ontologies/ServiceAnchor.owl#Process"/>
+         <rdfs:range rdf:resource="http://localhost:8080/ontologies/ServiceAnchor.owl#Input"/>
+         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://sqwrl.stanford.edu/ontologies/built-ins/3.4/sqwrl.owl#makeList">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Builtin"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://sqwrl.stanford.edu/ontologies/built-ins/3.4/sqwrl.owl#nth">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Builtin"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://localhost:8080/ontologies/semantic-bridges/SemanticBridge_RosettaNetOntology2MoonOntology.owl#businessName">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://localhost:8080/ontologies/MoonOntology.owl#hasCountryCode">
+         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://swrl.stanford.edu/ontologies/built-ins/3.3/temporal.owl#notMeets">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Builtin"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://swrl.stanford.edu/ontologies/built-ins/3.3/temporal.owl#contains">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Builtin"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://swrl.stanford.edu/ontologies/built-ins/3.3/temporal.owl#notFinishes">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Builtin"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://localhost:8080/ontologies/RosettaNetOntology.owl#relatesToPartner">
+         <rdfs:range rdf:resource="http://localhost:8080/ontologies/RosettaNetOntology.owl#Partner"/>
+         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://sqwrl.stanford.edu/ontologies/built-ins/3.4/sqwrl.owl#size">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Builtin"/>
+      </rdf:Description>
+      <rdf:Description rdf:nodeID="A60">
+         <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+         <rdf:first rdf:resource="http://swrl.stanford.edu/ontologies/built-ins/3.4/swrlxml.owl#XMLAttribute"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://swrl.stanford.edu/ontologies/built-ins/3.3/temporal.owl#durationLessThan">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Builtin"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://swrl.stanford.edu/ontologies/built-ins/3.3/tbox.owl#isCommentAnnotation">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Builtin"/>
+      </rdf:Description>
+      <rdf:Description rdf:nodeID="A77">
+         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+         <owl:unionOf rdf:nodeID="A43"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://swrl.stanford.edu/ontologies/built-ins/3.4/swrlxml.owl#hasRootElement">
+         <rdfs:range rdf:resource="http://swrl.stanford.edu/ontologies/built-ins/3.4/swrlxml.owl#XMLElement"/>
+         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+         <rdfs:domain rdf:resource="http://swrl.stanford.edu/ontologies/built-ins/3.4/swrlxml.owl#XMLDocument"/>
+      </rdf:Description>
+      <rdf:Description rdf:nodeID="A68">
+         <swrl:argument2 rdf:resource="http://localhost:8080/ontologies/semantic-bridges/SemanticBridge_RosettaNetOntology2MoonOntology.owl#countryCode"/>
+         <swrl:argument1 rdf:resource="http://localhost:8080/ontologies/semantic-bridges/SemanticBridge_RosettaNetOntology2MoonOntology.owl#physicalAddress"/>
+         <swrl:propertyPredicate rdf:resource="http://localhost:8080/ontologies/RosettaNetOntology.owl#hasGlobalCountryCode"/>
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://swrl.stanford.edu/ontologies/built-ins/3.3/temporal.owl#duration">
+         <swrlb:args rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</swrlb:args>
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Builtin"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://localhost:8080/process/MediationProcessInput.owl#PhysicalAddress_7">
+         <moon:hasCity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Innsbruck</moon:hasCity>
+         <rosetta:hasAddressLine1 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">North Business Center, Block 9</rosetta:hasAddressLine1>
+         <rosetta:hasGlobalCountryCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AT</rosetta:hasGlobalCountryCode>
+         <moon:hasPostalCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A-6020</moon:hasPostalCode>
+         <rdf:type rdf:resource="http://localhost:8080/ontologies/RosettaNetOntology.owl#PhysicalAddress"/>
+         <moon:hasCountryCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AT</moon:hasCountryCode>
+         <moon:hasStreet rdf:datatype="http://www.w3.org/2001/XMLSchema#string">North Business Center, Block 9</moon:hasStreet>
+         <rdf:type rdf:resource="http://localhost:8080/ontologies/MoonOntology.owl#PostalAddress"/>
+         <rosetta:hasCityName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Innsbruck</rosetta:hasCityName>
+         <rosetta:hasNationalPostalCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A-6020</rosetta:hasNationalPostalCode>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://swrl.stanford.edu/ontologies/built-ins/3.3/temporal.owl#Granularity">
+         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+         <rdfs:subClassOf rdf:resource="http://swrl.stanford.edu/ontologies/built-ins/3.3/temporal.owl#Entity"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://swrl.stanford.edu/ontologies/built-ins/3.3/tbox.owl#isSubPropertyOf">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Builtin"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://localhost:8080/ontologies/RosettaNetOntology.owl#hasBusinessName">
+         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+      </rdf:Description>
+      <rdf:Description rdf:nodeID="A76">
+         <owl:onProperty rdf:resource="http://localhost:8080/ontologies/MoonOntology.owl#hasBusinessName"/>
+         <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:cardinality>
+         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://swrl.stanford.edu/ontologies/built-ins/3.4/swrlxml.owl#hasValue">
+         <rdfs:domain rdf:resource="http://swrl.stanford.edu/ontologies/built-ins/3.4/swrlxml.owl#XMLAttribute"/>
+         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://localhost:8080/ontologies/RosettaNetOntology.owl#hasContactName">
+         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://localhost:8080/ontologies/MoonOntology.owl#CreateNewOrderRequest">
+         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://sqwrl.stanford.edu/ontologies/built-ins/3.4/sqwrl.owl#last">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Builtin"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://swrl.stanford.edu/ontologies/built-ins/3.3/temporal.owl#notDurationEqualTo">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Builtin"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#RuleGroup">
+         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+         <rdfs:subClassOf rdf:resource="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#Entity"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://swrl.stanford.edu/ontologies/built-ins/3.3/tbox.owl#onValue">
+         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Builtin"/>
+      </rdf:Description>
+   </rdf:RDF>

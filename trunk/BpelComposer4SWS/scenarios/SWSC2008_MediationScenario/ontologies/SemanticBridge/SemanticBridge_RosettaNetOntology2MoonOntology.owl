@@ -1,0 +1,692 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:temporal="http://swrl.stanford.edu/ontologies/built-ins/3.3/temporal.owl#"
+    xmlns="http://localhost:8080/ontologies/semantic-bridges/SemanticBridge_RosettaNetOntology2MoonOntology.owl#"
+    xmlns:rosetta="http://localhost:8080/ontologies/RosettaNetOntology.owl#"
+    xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"
+    xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+    xmlns:swrlxml="http://swrl.stanford.edu/ontologies/built-ins/3.4/swrlxml.owl#"
+    xmlns:swrlx="http://swrl.stanford.edu/ontologies/built-ins/3.3/swrlx.owl#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:swrlm="http://swrl.stanford.edu/ontologies/built-ins/3.4/swrlm.owl#"
+    xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+    xmlns:abox="http://swrl.stanford.edu/ontologies/built-ins/3.3/abox.owl#"
+    xmlns:moon="http://localhost:8080/ontologies/MoonOntology.owl#"
+    xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:sqwrl="http://sqwrl.stanford.edu/ontologies/built-ins/3.4/sqwrl.owl#"
+    xmlns:tbox="http://swrl.stanford.edu/ontologies/built-ins/3.3/tbox.owl#"
+  xml:base="http://localhost:8080/ontologies/semantic-bridges/SemanticBridge_RosettaNetOntology2MoonOntology.owl">
+  <owl:Ontology rdf:about="">
+    <owl:imports rdf:resource="http://localhost:8080/ontologies/RosettaNetOntology.owl"/>
+    <owl:imports rdf:resource="http://sqwrl.stanford.edu/ontologies/built-ins/3.4/sqwrl.owl"/>
+    <owl:imports rdf:resource="http://swrl.stanford.edu/ontologies/3.3/swrla.owl"/>
+    <owl:imports rdf:resource="http://swrl.stanford.edu/ontologies/built-ins/3.3/swrlx.owl"/>
+    <owl:imports rdf:resource="http://swrl.stanford.edu/ontologies/built-ins/3.4/swrlxml.owl"/>
+    <owl:imports rdf:resource="http://swrl.stanford.edu/ontologies/built-ins/3.3/tbox.owl"/>
+    <owl:imports rdf:resource="http://localhost:8080/ontologies/MoonOntology.owl"/>
+    <owl:imports rdf:resource="http://swrl.stanford.edu/ontologies/built-ins/3.3/abox.owl"/>
+    <owl:imports rdf:resource="http://swrl.stanford.edu/ontologies/built-ins/3.3/temporal.owl"/>
+    <owl:imports rdf:resource="http://swrl.stanford.edu/ontologies/built-ins/3.4/swrlm.owl"/>
+  </owl:Ontology>
+  <swrl:Imp rdf:ID="SemanticBridge_hasContactInformation2hasContactInfo">
+    <swrl:body>
+      <swrl:AtomList>
+        <rdf:rest>
+          <swrl:AtomList>
+            <rdf:first>
+              <swrl:ClassAtom>
+                <swrl:classPredicate rdf:resource="http://localhost:8080/ontologies/MoonOntology.owl#ContactInfo"/>
+                <swrl:argument1>
+                  <swrl:Variable rdf:ID="contactInformation"/>
+                </swrl:argument1>
+              </swrl:ClassAtom>
+            </rdf:first>
+            <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+          </swrl:AtomList>
+        </rdf:rest>
+        <rdf:first>
+          <swrl:IndividualPropertyAtom>
+            <swrl:argument2 rdf:resource="#contactInformation"/>
+            <swrl:argument1>
+              <swrl:Variable rdf:ID="thing"/>
+            </swrl:argument1>
+            <swrl:propertyPredicate rdf:resource="http://localhost:8080/ontologies/RosettaNetOntology.owl#hasContactInformation"/>
+          </swrl:IndividualPropertyAtom>
+        </rdf:first>
+      </swrl:AtomList>
+    </swrl:body>
+    <swrl:head>
+      <swrl:AtomList>
+        <rdf:first>
+          <swrl:IndividualPropertyAtom>
+            <swrl:argument2 rdf:resource="#contactInformation"/>
+            <swrl:argument1 rdf:resource="#thing"/>
+            <swrl:propertyPredicate rdf:resource="http://localhost:8080/ontologies/MoonOntology.owl#hasContactInfo"/>
+          </swrl:IndividualPropertyAtom>
+        </rdf:first>
+        <rdf:rest>
+          <swrl:AtomList>
+            <rdf:first>
+              <swrl:DatavaluedPropertyAtom>
+                <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                >firedRule_SemanticBridge_hasContactInformation2hasContactInfo</swrl:argument2>
+                <swrl:argument1 rdf:resource="#thing"/>
+                <swrl:propertyPredicate rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+              </swrl:DatavaluedPropertyAtom>
+            </rdf:first>
+            <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+          </swrl:AtomList>
+        </rdf:rest>
+      </swrl:AtomList>
+    </swrl:head>
+    <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</swrla:isRuleEnabled>
+  </swrl:Imp>
+  <swrl:Variable rdf:ID="email"/>
+  <swrl:Variable rdf:ID="partner"/>
+  <swrl:Variable rdf:ID="postCode"/>
+  <swrl:Imp rdf:ID="SemanticBridge_RosettaNetBusinessName2MoonBusinessName">
+    <swrl:body>
+      <swrl:AtomList>
+        <rdf:rest>
+          <swrl:AtomList>
+            <rdf:first>
+              <swrl:IndividualPropertyAtom>
+                <swrl:propertyPredicate rdf:resource="http://localhost:8080/ontologies/RosettaNetOntology.owl#hasBusinessDescription"/>
+                <swrl:argument1 rdf:resource="#partner"/>
+                <swrl:argument2>
+                  <swrl:Variable rdf:ID="businessDesc"/>
+                </swrl:argument2>
+              </swrl:IndividualPropertyAtom>
+            </rdf:first>
+            <rdf:rest>
+              <swrl:AtomList>
+                <rdf:first>
+                  <swrl:DatavaluedPropertyAtom>
+                    <swrl:propertyPredicate rdf:resource="http://localhost:8080/ontologies/RosettaNetOntology.owl#hasBusinessName"/>
+                    <swrl:argument1 rdf:resource="#businessDesc"/>
+                    <swrl:argument2>
+                      <swrl:Variable rdf:ID="businessName"/>
+                    </swrl:argument2>
+                  </swrl:DatavaluedPropertyAtom>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+              </swrl:AtomList>
+            </rdf:rest>
+          </swrl:AtomList>
+        </rdf:rest>
+        <rdf:first>
+          <swrl:ClassAtom>
+            <swrl:argument1 rdf:resource="#partner"/>
+            <swrl:classPredicate rdf:resource="http://localhost:8080/ontologies/RosettaNetOntology.owl#Partner"/>
+          </swrl:ClassAtom>
+        </rdf:first>
+      </swrl:AtomList>
+    </swrl:body>
+    <swrl:head>
+      <swrl:AtomList>
+        <rdf:first>
+          <swrl:ClassAtom>
+            <swrl:classPredicate rdf:resource="http://localhost:8080/ontologies/MoonOntology.owl#Customer"/>
+            <swrl:argument1 rdf:resource="#partner"/>
+          </swrl:ClassAtom>
+        </rdf:first>
+        <rdf:rest>
+          <swrl:AtomList>
+            <rdf:first>
+              <swrl:DatavaluedPropertyAtom>
+                <swrl:propertyPredicate rdf:resource="http://localhost:8080/ontologies/MoonOntology.owl#hasBusinessName"/>
+                <swrl:argument1 rdf:resource="#partner"/>
+                <swrl:argument2 rdf:resource="#businessName"/>
+              </swrl:DatavaluedPropertyAtom>
+            </rdf:first>
+            <rdf:rest>
+              <swrl:AtomList>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                <rdf:first>
+                  <swrl:DatavaluedPropertyAtom>
+                    <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                    >firedRule_SemanticBridge_RosettaNetBusinessName2MoonBusinessName</swrl:argument2>
+                    <swrl:propertyPredicate rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+                    <swrl:argument1 rdf:resource="#partner"/>
+                  </swrl:DatavaluedPropertyAtom>
+                </rdf:first>
+              </swrl:AtomList>
+            </rdf:rest>
+          </swrl:AtomList>
+        </rdf:rest>
+      </swrl:AtomList>
+    </swrl:head>
+  </swrl:Imp>
+  <swrl:Imp rdf:ID="SemanticBridge_RosettaNetContactInformation2MoonContactInfo">
+    <swrl:head>
+      <swrl:AtomList>
+        <rdf:first>
+          <swrl:ClassAtom>
+            <swrl:classPredicate rdf:resource="http://localhost:8080/ontologies/MoonOntology.owl#ContactInfo"/>
+            <swrl:argument1>
+              <swrl:Variable rdf:ID="rosettaContactInformation"/>
+            </swrl:argument1>
+          </swrl:ClassAtom>
+        </rdf:first>
+        <rdf:rest>
+          <swrl:AtomList>
+            <rdf:rest>
+              <swrl:AtomList>
+                <rdf:first>
+                  <swrl:DatavaluedPropertyAtom>
+                    <swrl:propertyPredicate rdf:resource="http://localhost:8080/ontologies/MoonOntology.owl#hasEmail"/>
+                    <swrl:argument2 rdf:resource="#email"/>
+                    <swrl:argument1 rdf:resource="#rosettaContactInformation"/>
+                  </swrl:DatavaluedPropertyAtom>
+                </rdf:first>
+                <rdf:rest>
+                  <swrl:AtomList>
+                    <rdf:first>
+                      <swrl:DatavaluedPropertyAtom>
+                        <swrl:argument2>
+                          <swrl:Variable rdf:ID="phone"/>
+                        </swrl:argument2>
+                        <swrl:argument1 rdf:resource="#rosettaContactInformation"/>
+                        <swrl:propertyPredicate rdf:resource="http://localhost:8080/ontologies/MoonOntology.owl#hasTelephone"/>
+                      </swrl:DatavaluedPropertyAtom>
+                    </rdf:first>
+                    <rdf:rest>
+                      <swrl:AtomList>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                        <rdf:first>
+                          <swrl:DatavaluedPropertyAtom>
+                            <swrl:propertyPredicate rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+                            <swrl:argument1 rdf:resource="#rosettaContactInformation"/>
+                            <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                            >firedRule_SemanticBridge_RosettaNetContactInformation2MoonContactInfo</swrl:argument2>
+                          </swrl:DatavaluedPropertyAtom>
+                        </rdf:first>
+                      </swrl:AtomList>
+                    </rdf:rest>
+                  </swrl:AtomList>
+                </rdf:rest>
+              </swrl:AtomList>
+            </rdf:rest>
+            <rdf:first>
+              <swrl:DatavaluedPropertyAtom>
+                <swrl:propertyPredicate rdf:resource="http://localhost:8080/ontologies/MoonOntology.owl#hasContactName"/>
+                <swrl:argument2>
+                  <swrl:Variable rdf:ID="name"/>
+                </swrl:argument2>
+                <swrl:argument1 rdf:resource="#rosettaContactInformation"/>
+              </swrl:DatavaluedPropertyAtom>
+            </rdf:first>
+          </swrl:AtomList>
+        </rdf:rest>
+      </swrl:AtomList>
+    </swrl:head>
+    <swrl:body>
+      <swrl:AtomList>
+        <rdf:first>
+          <swrl:ClassAtom>
+            <swrl:argument1 rdf:resource="#rosettaContactInformation"/>
+            <swrl:classPredicate rdf:resource="http://localhost:8080/ontologies/RosettaNetOntology.owl#ContactInformation"/>
+          </swrl:ClassAtom>
+        </rdf:first>
+        <rdf:rest>
+          <swrl:AtomList>
+            <rdf:rest>
+              <swrl:AtomList>
+                <rdf:rest>
+                  <swrl:AtomList>
+                    <rdf:first>
+                      <swrl:DatavaluedPropertyAtom>
+                        <swrl:propertyPredicate rdf:resource="http://localhost:8080/ontologies/RosettaNetOntology.owl#hasTelephoneNumber"/>
+                        <swrl:argument1 rdf:resource="#rosettaContactInformation"/>
+                        <swrl:argument2 rdf:resource="#phone"/>
+                      </swrl:DatavaluedPropertyAtom>
+                    </rdf:first>
+                    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                  </swrl:AtomList>
+                </rdf:rest>
+                <rdf:first>
+                  <swrl:DatavaluedPropertyAtom>
+                    <swrl:propertyPredicate rdf:resource="http://localhost:8080/ontologies/RosettaNetOntology.owl#hasEmailAddress"/>
+                    <swrl:argument2 rdf:resource="#email"/>
+                    <swrl:argument1 rdf:resource="#rosettaContactInformation"/>
+                  </swrl:DatavaluedPropertyAtom>
+                </rdf:first>
+              </swrl:AtomList>
+            </rdf:rest>
+            <rdf:first>
+              <swrl:DatavaluedPropertyAtom>
+                <swrl:propertyPredicate rdf:resource="http://localhost:8080/ontologies/RosettaNetOntology.owl#hasContactName"/>
+                <swrl:argument2 rdf:resource="#name"/>
+                <swrl:argument1 rdf:resource="#rosettaContactInformation"/>
+              </swrl:DatavaluedPropertyAtom>
+            </rdf:first>
+          </swrl:AtomList>
+        </rdf:rest>
+      </swrl:AtomList>
+    </swrl:body>
+  </swrl:Imp>
+  <swrl:Variable rdf:ID="newCustomerInfo"/>
+  <swrl:Variable rdf:ID="quantity"/>
+  <swrl:Variable rdf:ID="addressLine1"/>
+  <swrl:Imp rdf:ID="SemanticBridge_hasPhysicalLocation2hasPostalAddress">
+    <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</swrla:isRuleEnabled>
+    <swrl:body>
+      <swrl:AtomList>
+        <rdf:rest>
+          <swrl:AtomList>
+            <rdf:first>
+              <swrl:ClassAtom>
+                <swrl:classPredicate rdf:resource="http://localhost:8080/ontologies/MoonOntology.owl#PostalAddress"/>
+                <swrl:argument1>
+                  <swrl:Variable rdf:ID="physicalLocation"/>
+                </swrl:argument1>
+              </swrl:ClassAtom>
+            </rdf:first>
+            <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+          </swrl:AtomList>
+        </rdf:rest>
+        <rdf:first>
+          <swrl:IndividualPropertyAtom>
+            <swrl:propertyPredicate rdf:resource="http://localhost:8080/ontologies/RosettaNetOntology.owl#hasPhysicalLocation"/>
+            <swrl:argument2 rdf:resource="#physicalLocation"/>
+            <swrl:argument1 rdf:resource="#thing"/>
+          </swrl:IndividualPropertyAtom>
+        </rdf:first>
+      </swrl:AtomList>
+    </swrl:body>
+    <swrl:head>
+      <swrl:AtomList>
+        <rdf:rest>
+          <swrl:AtomList>
+            <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            <rdf:first>
+              <swrl:DatavaluedPropertyAtom>
+                <swrl:argument1 rdf:resource="#thing"/>
+                <swrl:propertyPredicate rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+                <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                >firedRule_SemanticBridge_hasPhysicalLocation2hasPostalAddress</swrl:argument2>
+              </swrl:DatavaluedPropertyAtom>
+            </rdf:first>
+          </swrl:AtomList>
+        </rdf:rest>
+        <rdf:first>
+          <swrl:IndividualPropertyAtom>
+            <swrl:argument2 rdf:resource="#physicalLocation"/>
+            <swrl:propertyPredicate rdf:resource="http://localhost:8080/ontologies/MoonOntology.owl#hasPostalAddress"/>
+            <swrl:argument1 rdf:resource="#thing"/>
+          </swrl:IndividualPropertyAtom>
+        </rdf:first>
+      </swrl:AtomList>
+    </swrl:head>
+  </swrl:Imp>
+  <swrl:Imp rdf:ID="SemanticBridge_RosettaNetPhysicalAddress2MoonPostalAddress">
+    <swrl:body>
+      <swrl:AtomList>
+        <rdf:first>
+          <swrl:ClassAtom>
+            <swrl:argument1>
+              <swrl:Variable rdf:ID="physicalAddress"/>
+            </swrl:argument1>
+            <swrl:classPredicate rdf:resource="http://localhost:8080/ontologies/RosettaNetOntology.owl#PhysicalAddress"/>
+          </swrl:ClassAtom>
+        </rdf:first>
+        <rdf:rest>
+          <swrl:AtomList>
+            <rdf:first>
+              <swrl:DatavaluedPropertyAtom>
+                <swrl:argument1 rdf:resource="#physicalAddress"/>
+                <swrl:argument2 rdf:resource="#addressLine1"/>
+                <swrl:propertyPredicate rdf:resource="http://localhost:8080/ontologies/RosettaNetOntology.owl#hasAddressLine1"/>
+              </swrl:DatavaluedPropertyAtom>
+            </rdf:first>
+            <rdf:rest>
+              <swrl:AtomList>
+                <rdf:rest>
+                  <swrl:AtomList>
+                    <rdf:rest>
+                      <swrl:AtomList>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                        <rdf:first>
+                          <swrl:DatavaluedPropertyAtom>
+                            <swrl:argument2>
+                              <swrl:Variable rdf:ID="postalCode"/>
+                            </swrl:argument2>
+                            <swrl:argument1 rdf:resource="#physicalAddress"/>
+                            <swrl:propertyPredicate rdf:resource="http://localhost:8080/ontologies/RosettaNetOntology.owl#hasNationalPostalCode"/>
+                          </swrl:DatavaluedPropertyAtom>
+                        </rdf:first>
+                      </swrl:AtomList>
+                    </rdf:rest>
+                    <rdf:first>
+                      <swrl:DatavaluedPropertyAtom>
+                        <swrl:propertyPredicate rdf:resource="http://localhost:8080/ontologies/RosettaNetOntology.owl#hasGlobalCountryCode"/>
+                        <swrl:argument1 rdf:resource="#physicalAddress"/>
+                        <swrl:argument2>
+                          <swrl:Variable rdf:ID="countryCode"/>
+                        </swrl:argument2>
+                      </swrl:DatavaluedPropertyAtom>
+                    </rdf:first>
+                  </swrl:AtomList>
+                </rdf:rest>
+                <rdf:first>
+                  <swrl:DatavaluedPropertyAtom>
+                    <swrl:argument2>
+                      <swrl:Variable rdf:ID="city"/>
+                    </swrl:argument2>
+                    <swrl:argument1 rdf:resource="#physicalAddress"/>
+                    <swrl:propertyPredicate rdf:resource="http://localhost:8080/ontologies/RosettaNetOntology.owl#hasCityName"/>
+                  </swrl:DatavaluedPropertyAtom>
+                </rdf:first>
+              </swrl:AtomList>
+            </rdf:rest>
+          </swrl:AtomList>
+        </rdf:rest>
+      </swrl:AtomList>
+    </swrl:body>
+    <swrl:head>
+      <swrl:AtomList>
+        <rdf:first>
+          <swrl:ClassAtom>
+            <swrl:classPredicate rdf:resource="http://localhost:8080/ontologies/MoonOntology.owl#PostalAddress"/>
+            <swrl:argument1 rdf:resource="#physicalAddress"/>
+          </swrl:ClassAtom>
+        </rdf:first>
+        <rdf:rest>
+          <swrl:AtomList>
+            <rdf:rest>
+              <swrl:AtomList>
+                <rdf:rest>
+                  <swrl:AtomList>
+                    <rdf:first>
+                      <swrl:DatavaluedPropertyAtom>
+                        <swrl:propertyPredicate rdf:resource="http://localhost:8080/ontologies/MoonOntology.owl#hasCountryCode"/>
+                        <swrl:argument1 rdf:resource="#physicalAddress"/>
+                        <swrl:argument2 rdf:resource="#countryCode"/>
+                      </swrl:DatavaluedPropertyAtom>
+                    </rdf:first>
+                    <rdf:rest>
+                      <swrl:AtomList>
+                        <rdf:first>
+                          <swrl:DatavaluedPropertyAtom>
+                            <swrl:argument2 rdf:resource="#postalCode"/>
+                            <swrl:propertyPredicate rdf:resource="http://localhost:8080/ontologies/MoonOntology.owl#hasPostalCode"/>
+                            <swrl:argument1 rdf:resource="#physicalAddress"/>
+                          </swrl:DatavaluedPropertyAtom>
+                        </rdf:first>
+                        <rdf:rest>
+                          <swrl:AtomList>
+                            <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            <rdf:first>
+                              <swrl:DatavaluedPropertyAtom>
+                                <swrl:argument1 rdf:resource="#physicalAddress"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+                                <swrl:argument2 rdf:datatype=
+                                "http://www.w3.org/2001/XMLSchema#string"
+                                >firedRule_SemanticBridge_RosettaNetPhysicalAddress2MoonPostalAddress</swrl:argument2>
+                              </swrl:DatavaluedPropertyAtom>
+                            </rdf:first>
+                          </swrl:AtomList>
+                        </rdf:rest>
+                      </swrl:AtomList>
+                    </rdf:rest>
+                  </swrl:AtomList>
+                </rdf:rest>
+                <rdf:first>
+                  <swrl:DatavaluedPropertyAtom>
+                    <swrl:argument2 rdf:resource="#city"/>
+                    <swrl:propertyPredicate rdf:resource="http://localhost:8080/ontologies/MoonOntology.owl#hasCity"/>
+                    <swrl:argument1 rdf:resource="#physicalAddress"/>
+                  </swrl:DatavaluedPropertyAtom>
+                </rdf:first>
+              </swrl:AtomList>
+            </rdf:rest>
+            <rdf:first>
+              <swrl:DatavaluedPropertyAtom>
+                <swrl:argument1 rdf:resource="#physicalAddress"/>
+                <swrl:argument2 rdf:resource="#addressLine1"/>
+                <swrl:propertyPredicate rdf:resource="http://localhost:8080/ontologies/MoonOntology.owl#hasStreet"/>
+              </swrl:DatavaluedPropertyAtom>
+            </rdf:first>
+          </swrl:AtomList>
+        </rdf:rest>
+      </swrl:AtomList>
+    </swrl:head>
+  </swrl:Imp>
+  <swrl:Variable rdf:ID="order"/>
+  <swrl:Imp rdf:ID="SemanticBridge_hasBusinessName_hasContactInformation2hasContactInfo">
+    <swrl:head>
+      <swrl:AtomList>
+        <rdf:first>
+          <swrl:IndividualPropertyAtom>
+            <swrl:propertyPredicate rdf:resource="http://localhost:8080/ontologies/MoonOntology.owl#hasContactInfo"/>
+            <swrl:argument1 rdf:resource="#partner"/>
+            <swrl:argument2 rdf:resource="#newCustomerInfo"/>
+          </swrl:IndividualPropertyAtom>
+        </rdf:first>
+        <rdf:rest>
+          <swrl:AtomList>
+            <rdf:first>
+              <swrl:DatavaluedPropertyAtom>
+                <swrl:argument1 rdf:resource="#newCustomerInfo"/>
+                <swrl:argument2 rdf:resource="#businessName"/>
+                <swrl:propertyPredicate rdf:resource="http://localhost:8080/ontologies/MoonOntology.owl#hasBusinessName"/>
+              </swrl:DatavaluedPropertyAtom>
+            </rdf:first>
+            <rdf:rest>
+              <swrl:AtomList>
+                <rdf:first>
+                  <swrl:DatavaluedPropertyAtom>
+                    <swrl:argument1 rdf:resource="#newCustomerInfo"/>
+                    <swrl:propertyPredicate rdf:resource="http://localhost:8080/ontologies/MoonOntology.owl#hasEmail"/>
+                    <swrl:argument2 rdf:resource="#email"/>
+                  </swrl:DatavaluedPropertyAtom>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+              </swrl:AtomList>
+            </rdf:rest>
+          </swrl:AtomList>
+        </rdf:rest>
+      </swrl:AtomList>
+    </swrl:head>
+    <swrl:body>
+      <swrl:AtomList>
+        <rdf:first>
+          <swrl:IndividualPropertyAtom>
+            <swrl:propertyPredicate rdf:resource="http://localhost:8080/ontologies/RosettaNetOntology.owl#hasBusinessDescription"/>
+            <swrl:argument2 rdf:resource="#businessDesc"/>
+            <swrl:argument1 rdf:resource="#partner"/>
+          </swrl:IndividualPropertyAtom>
+        </rdf:first>
+        <rdf:rest>
+          <swrl:AtomList>
+            <rdf:rest>
+              <swrl:AtomList>
+                <rdf:rest>
+                  <swrl:AtomList>
+                    <rdf:first>
+                      <swrl:DatavaluedPropertyAtom>
+                        <swrl:argument2 rdf:resource="#email"/>
+                        <swrl:propertyPredicate rdf:resource="http://localhost:8080/ontologies/RosettaNetOntology.owl#hasEmailAddress"/>
+                        <swrl:argument1>
+                          <swrl:Variable rdf:ID="contactInfo"/>
+                        </swrl:argument1>
+                      </swrl:DatavaluedPropertyAtom>
+                    </rdf:first>
+                    <rdf:rest>
+                      <swrl:AtomList>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                        <rdf:first>
+                          <swrl:BuiltinAtom>
+                            <swrl:builtin rdf:resource="http://swrl.stanford.edu/ontologies/built-ins/3.3/swrlx.owl#makeOWLThing"/>
+                            <swrl:arguments>
+                              <rdf:List>
+                                <rdf:rest>
+                                  <rdf:List>
+                                    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                    <rdf:first rdf:resource="#partner"/>
+                                  </rdf:List>
+                                </rdf:rest>
+                                <rdf:first rdf:resource="#newCustomerInfo"/>
+                              </rdf:List>
+                            </swrl:arguments>
+                          </swrl:BuiltinAtom>
+                        </rdf:first>
+                      </swrl:AtomList>
+                    </rdf:rest>
+                  </swrl:AtomList>
+                </rdf:rest>
+                <rdf:first>
+                  <swrl:IndividualPropertyAtom>
+                    <swrl:argument1 rdf:resource="#businessDesc"/>
+                    <swrl:propertyPredicate rdf:resource="http://localhost:8080/ontologies/RosettaNetOntology.owl#hasContactInformation"/>
+                    <swrl:argument2 rdf:resource="#contactInfo"/>
+                  </swrl:IndividualPropertyAtom>
+                </rdf:first>
+              </swrl:AtomList>
+            </rdf:rest>
+            <rdf:first>
+              <swrl:DatavaluedPropertyAtom>
+                <swrl:argument1 rdf:resource="#businessDesc"/>
+                <swrl:propertyPredicate rdf:resource="http://localhost:8080/ontologies/RosettaNetOntology.owl#hasBusinessName"/>
+                <swrl:argument2 rdf:resource="#businessName"/>
+              </swrl:DatavaluedPropertyAtom>
+            </rdf:first>
+          </swrl:AtomList>
+        </rdf:rest>
+      </swrl:AtomList>
+    </swrl:body>
+  </swrl:Imp>
+  <swrl:Variable rdf:ID="item"/>
+  <swrl:Imp rdf:ID="SemanticBridge_RosettaNetProductLineItem2OrderItem">
+    <swrl:head>
+      <swrl:AtomList>
+        <rdf:rest>
+          <swrl:AtomList>
+            <rdf:rest>
+              <swrl:AtomList>
+                <rdf:rest>
+                  <swrl:AtomList>
+                    <rdf:first>
+                      <swrl:DatavaluedPropertyAtom>
+                        <swrl:argument2>
+                          <swrl:Variable rdf:ID="itemID"/>
+                        </swrl:argument2>
+                        <swrl:propertyPredicate rdf:resource="http://localhost:8080/ontologies/MoonOntology.owl#hasArticleID"/>
+                        <swrl:argument1 rdf:resource="#item"/>
+                      </swrl:DatavaluedPropertyAtom>
+                    </rdf:first>
+                    <rdf:rest>
+                      <swrl:AtomList>
+                        <rdf:first>
+                          <swrl:DatavaluedPropertyAtom>
+                            <swrl:argument1 rdf:resource="#item"/>
+                            <swrl:argument2 rdf:resource="#quantity"/>
+                            <swrl:propertyPredicate rdf:resource="http://localhost:8080/ontologies/MoonOntology.owl#hasQuantity"/>
+                          </swrl:DatavaluedPropertyAtom>
+                        </rdf:first>
+                        <rdf:rest>
+                          <swrl:AtomList>
+                            <rdf:first>
+                              <swrl:DatavaluedPropertyAtom>
+                                <swrl:argument1 rdf:resource="#item"/>
+                                <swrl:argument2 rdf:datatype=
+                                "http://www.w3.org/2001/XMLSchema#string"
+                                >firedRule_SemanticBridge_RosettaNetProductLineItem2OrderItem</swrl:argument2>
+                                <swrl:propertyPredicate rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+                              </swrl:DatavaluedPropertyAtom>
+                            </rdf:first>
+                            <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                          </swrl:AtomList>
+                        </rdf:rest>
+                      </swrl:AtomList>
+                    </rdf:rest>
+                  </swrl:AtomList>
+                </rdf:rest>
+                <rdf:first>
+                  <swrl:ClassAtom>
+                    <swrl:classPredicate rdf:resource="http://localhost:8080/ontologies/MoonOntology.owl#OrderItem"/>
+                    <swrl:argument1 rdf:resource="#item"/>
+                  </swrl:ClassAtom>
+                </rdf:first>
+              </swrl:AtomList>
+            </rdf:rest>
+            <rdf:first>
+              <swrl:IndividualPropertyAtom>
+                <swrl:argument2 rdf:resource="#item"/>
+                <swrl:propertyPredicate rdf:resource="http://localhost:8080/ontologies/MoonOntology.owl#hasItem"/>
+                <swrl:argument1 rdf:resource="#order"/>
+              </swrl:IndividualPropertyAtom>
+            </rdf:first>
+          </swrl:AtomList>
+        </rdf:rest>
+        <rdf:first>
+          <swrl:ClassAtom>
+            <swrl:argument1 rdf:resource="#order"/>
+            <swrl:classPredicate rdf:resource="http://localhost:8080/ontologies/MoonOntology.owl#Order"/>
+          </swrl:ClassAtom>
+        </rdf:first>
+      </swrl:AtomList>
+    </swrl:head>
+    <swrl:body>
+      <swrl:AtomList>
+        <rdf:rest>
+          <swrl:AtomList>
+            <rdf:first>
+              <swrl:IndividualPropertyAtom>
+                <swrl:argument2 rdf:resource="#item"/>
+                <swrl:argument1 rdf:resource="#order"/>
+                <swrl:propertyPredicate rdf:resource="http://localhost:8080/ontologies/RosettaNetOntology.owl#hasProductLineItem"/>
+              </swrl:IndividualPropertyAtom>
+            </rdf:first>
+            <rdf:rest>
+              <swrl:AtomList>
+                <rdf:rest>
+                  <swrl:AtomList>
+                    <rdf:first>
+                      <swrl:DatavaluedPropertyAtom>
+                        <swrl:argument2 rdf:resource="#itemID"/>
+                        <swrl:argument1 rdf:resource="#item"/>
+                        <swrl:propertyPredicate rdf:resource="http://localhost:8080/ontologies/RosettaNetOntology.owl#hasGlobalProductIdentifier"/>
+                      </swrl:DatavaluedPropertyAtom>
+                    </rdf:first>
+                    <rdf:rest>
+                      <swrl:AtomList>
+                        <rdf:first>
+                          <swrl:DatavaluedPropertyAtom>
+                            <swrl:argument2 rdf:resource="#quantity"/>
+                            <swrl:argument1 rdf:resource="#item"/>
+                            <swrl:propertyPredicate rdf:resource="http://localhost:8080/ontologies/RosettaNetOntology.owl#hasRequestedQuantity"/>
+                          </swrl:DatavaluedPropertyAtom>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                      </swrl:AtomList>
+                    </rdf:rest>
+                  </swrl:AtomList>
+                </rdf:rest>
+                <rdf:first>
+                  <swrl:ClassAtom>
+                    <swrl:argument1 rdf:resource="#item"/>
+                    <swrl:classPredicate rdf:resource="http://localhost:8080/ontologies/RosettaNetOntology.owl#ProductLineItem"/>
+                  </swrl:ClassAtom>
+                </rdf:first>
+              </swrl:AtomList>
+            </rdf:rest>
+          </swrl:AtomList>
+        </rdf:rest>
+        <rdf:first>
+          <swrl:ClassAtom>
+            <swrl:classPredicate rdf:resource="http://localhost:8080/ontologies/RosettaNetOntology.owl#PurchaseOrder"/>
+            <swrl:argument1 rdf:resource="#order"/>
+          </swrl:ClassAtom>
+        </rdf:first>
+      </swrl:AtomList>
+    </swrl:body>
+  </swrl:Imp>
+</rdf:RDF>
+
+<!-- Created with Protege (with OWL Plugin 3.4, Build 130)  http://protege.stanford.edu -->

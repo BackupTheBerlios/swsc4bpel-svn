@@ -1,0 +1,162 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:anchor="http://localhost:8080/ontologies/ServiceAnchor.owl#"
+    xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
+    xmlns:swrlx="http://swrl.stanford.edu/ontologies/built-ins/3.3/swrlx.owl#"
+    xmlns:myPrefix0="http://localhost:8080/PublicServices/ResidentRegistry/ResidentRegistryOntology.owl#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+    xmlns="http://process.dataflow.GetResidentInfoDataflow.owl#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"
+  xml:base="http://process.dataflow.GetResidentInfoDataflow.owl">
+  <owl:Ontology rdf:about="">
+    <owl:imports rdf:resource="http://localhost:8080/PublicServices/ResidentRegistry/ResidentRegistryOntology.owl"/>
+    <owl:imports rdf:resource="http://localhost:8080/ontologies/ServiceAnchor.owl"/>
+    <owl:imports rdf:resource="http://swrl.stanford.edu/ontologies/built-ins/3.3/swrlx.owl"/>
+    <owl:imports rdf:resource="http://swrl.stanford.edu/ontologies/3.3/swrla.owl"/>
+  </owl:Ontology>
+  <swrl:Variable rdf:ID="copyAllIndividualsToJess"/>
+  <swrl:Variable rdf:ID="GetResidentInfo"/>
+  <swrl:Imp rdf:ID="dataflowGetResidentInfoAssignment1">
+    <swrl:body>
+      <swrl:AtomList>
+        <rdf:rest>
+          <swrl:AtomList>
+            <rdf:rest>
+              <swrl:AtomList>
+                <rdf:first>
+                  <swrl:DatavaluedPropertyAtom>
+                    <swrl:argument1>
+                      <swrl:Variable rdf:ID="Composition1"/>
+                    </swrl:argument1>
+                    <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                    >Composition1Process</swrl:argument2>
+                    <swrl:propertyPredicate rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+                  </swrl:DatavaluedPropertyAtom>
+                </rdf:first>
+                <rdf:rest>
+                  <swrl:AtomList>
+                    <rdf:first>
+                      <swrl:IndividualPropertyAtom>
+                        <swrl:argument1 rdf:resource="#Composition1"/>
+                        <swrl:propertyPredicate rdf:resource="http://localhost:8080/ontologies/ServiceAnchor.owl#hasInput"/>
+                        <swrl:argument2>
+                          <swrl:Variable rdf:ID="Composition1IN"/>
+                        </swrl:argument2>
+                      </swrl:IndividualPropertyAtom>
+                    </rdf:first>
+                    <rdf:rest>
+                      <swrl:AtomList>
+                        <rdf:rest>
+                          <swrl:AtomList>
+                            <rdf:rest>
+                              <swrl:AtomList>
+                                <rdf:first>
+                                  <swrl:ClassAtom>
+                                    <swrl:argument1 rdf:resource="#GetResidentInfo"/>
+                                    <swrl:classPredicate rdf:resource="http://localhost:8080/ontologies/ServiceAnchor.owl#Process"/>
+                                  </swrl:ClassAtom>
+                                </rdf:first>
+                                <rdf:rest>
+                                  <swrl:AtomList>
+                                    <rdf:first>
+                                      <swrl:DatavaluedPropertyAtom>
+                                        <swrl:propertyPredicate rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+                                        <swrl:argument2 rdf:datatype=
+                                        "http://www.w3.org/2001/XMLSchema#string"
+                                        >GetResidentInfoProcess</swrl:argument2>
+                                        <swrl:argument1 rdf:resource="#GetResidentInfo"/>
+                                      </swrl:DatavaluedPropertyAtom>
+                                    </rdf:first>
+                                    <rdf:rest>
+                                      <swrl:AtomList>
+                                        <rdf:rest>
+                                          <swrl:AtomList>
+                                            <rdf:first>
+                                              <swrl:DatavaluedPropertyAtom>
+                                                <swrl:propertyPredicate rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+                                                <swrl:argument1>
+                                                  <swrl:Variable rdf:ID="GetResidentInfoIN"/>
+                                                </swrl:argument1>
+                                                <swrl:argument2
+                                                 rdf:datatype=
+                                                "http://www.w3.org/2001/XMLSchema#string"
+                                                >ResidentSearchProfile</swrl:argument2>
+                                              </swrl:DatavaluedPropertyAtom>
+                                            </rdf:first>
+                                            <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                          </swrl:AtomList>
+                                        </rdf:rest>
+                                        <rdf:first>
+                                          <swrl:IndividualPropertyAtom>
+                                            <swrl:propertyPredicate rdf:resource="http://localhost:8080/ontologies/ServiceAnchor.owl#hasInput"/>
+                                            <swrl:argument2 rdf:resource="#GetResidentInfoIN"/>
+                                            <swrl:argument1 rdf:resource="#GetResidentInfo"/>
+                                          </swrl:IndividualPropertyAtom>
+                                        </rdf:first>
+                                      </swrl:AtomList>
+                                    </rdf:rest>
+                                  </swrl:AtomList>
+                                </rdf:rest>
+                              </swrl:AtomList>
+                            </rdf:rest>
+                            <rdf:first>
+                              <swrl:IndividualPropertyAtom>
+                                <swrl:argument1 rdf:resource="#Composition1IN"/>
+                                <swrl:argument2>
+                                  <swrl:Variable rdf:ID="X0"/>
+                                </swrl:argument2>
+                                <swrl:propertyPredicate rdf:resource="http://localhost:8080/ontologies/ServiceAnchor.owl#parameterObject"/>
+                              </swrl:IndividualPropertyAtom>
+                            </rdf:first>
+                          </swrl:AtomList>
+                        </rdf:rest>
+                        <rdf:first>
+                          <swrl:DatavaluedPropertyAtom>
+                            <swrl:propertyPredicate rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+                            <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                            >ResidentSearchProfile</swrl:argument2>
+                            <swrl:argument1 rdf:resource="#Composition1IN"/>
+                          </swrl:DatavaluedPropertyAtom>
+                        </rdf:first>
+                      </swrl:AtomList>
+                    </rdf:rest>
+                  </swrl:AtomList>
+                </rdf:rest>
+              </swrl:AtomList>
+            </rdf:rest>
+            <rdf:first>
+              <swrl:ClassAtom>
+                <swrl:argument1 rdf:resource="#Composition1"/>
+                <swrl:classPredicate rdf:resource="http://localhost:8080/ontologies/ServiceAnchor.owl#Process"/>
+              </swrl:ClassAtom>
+            </rdf:first>
+          </swrl:AtomList>
+        </rdf:rest>
+        <rdf:first>
+          <swrl:ClassAtom>
+            <swrl:argument1 rdf:resource="#copyAllIndividualsToJess"/>
+            <swrl:classPredicate rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+          </swrl:ClassAtom>
+        </rdf:first>
+      </swrl:AtomList>
+    </swrl:body>
+    <swrl:head>
+      <swrl:AtomList>
+        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+        <rdf:first>
+          <swrl:IndividualPropertyAtom>
+            <swrl:propertyPredicate rdf:resource="http://localhost:8080/ontologies/ServiceAnchor.owl#parameterObject"/>
+            <swrl:argument1 rdf:resource="#GetResidentInfoIN"/>
+            <swrl:argument2 rdf:resource="#X0"/>
+          </swrl:IndividualPropertyAtom>
+        </rdf:first>
+      </swrl:AtomList>
+    </swrl:head>
+  </swrl:Imp>
+</rdf:RDF>
+
+<!-- Created with Protege (with OWL Plugin 3.4, Build 130)  http://protege.stanford.edu -->

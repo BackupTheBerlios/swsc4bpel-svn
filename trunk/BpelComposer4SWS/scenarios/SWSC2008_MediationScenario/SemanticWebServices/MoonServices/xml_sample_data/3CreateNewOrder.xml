@@ -1,0 +1,25 @@
+<createNewOrder xmlns="mooncompany">
+  <Order>
+    <authToken>authtoken</authToken>
+    <contact>
+      <name>Mr Blue</name>
+      <telephone>+99 12234586846</telephone>
+      <email>moon@example.org</email>
+    </contact>
+    <shipTo>
+      <name>Moon Company</name>
+      <street>moon road 13</street>
+      <city>Moon City</city>
+      <postalCode>1234</postalCode>
+      <country>US</country>
+    </shipTo>
+    <!-- optional -->
+    <billTo>
+      <name></name>
+      <street></street>
+      <city></city>
+      <postalCode></postalCode>
+      <country></country>
+    </billTo>
+  </Order>
+</createNewOrder>

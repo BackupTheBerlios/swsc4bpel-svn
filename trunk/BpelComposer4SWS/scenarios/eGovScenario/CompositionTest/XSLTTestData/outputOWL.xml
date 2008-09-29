@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:process="http://www.daml.org/services/owl-s/1.1/Process.owl#" xmlns:list="http://www.daml.org/services/owl-s/1.1/generic/ObjectList.owl#" xmlns:j.0="http://localhost:8080/PublicServices/ResidentRegistry/ResidentRegistryOntology.owl#" xmlns:swrl="http://www.w3.org/2003/11/swrl#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:expression="http://www.daml.org/services/owl-s/1.1/generic/Expression.owl#" xmlns:service="http://www.daml.org/services/owl-s/1.1/Service.owl#" xmlns:grounding="http://www.daml.org/services/owl-s/1.1/Grounding.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xsd="http://www.w3.org/2001/XMLSchema#" xmlns:daml="http://www.daml.org/2001/03/daml+oil#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:profile="http://www.daml.org/services/owl-s/1.1/Profile.owl#">
+	<j.0:ResidentInfo>
+		<j.0:hasName>
+			<j.0:Name>
+				<j.0:hasTitles rdf:datatype="http://www.w3.org/2001/XMLSchema#string">anyString</j.0:hasTitles>
+				<j.0:hasGivenName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">anyString</j.0:hasGivenName>
+				<j.0:hasSurname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">anyString</j.0:hasSurname>
+				<j.0:hasMiddleNames rdf:datatype="http://www.w3.org/2001/XMLSchema#string">anyString</j.0:hasMiddleNames>
+			</j.0:Name>
+		</j.0:hasName>
+		<j.0:hasAddress>
+			<j.0:Address>
+				<j.0:hasMoreAddress rdf:datatype="http://www.w3.org/2001/XMLSchema#string">anyString</j.0:hasMoreAddress>
+				<j.0:hasStreet rdf:datatype="http://www.w3.org/2001/XMLSchema#string">anyString</j.0:hasStreet>
+				<j.0:hasZipCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">anyString</j.0:hasZipCode>
+				<j.0:hasLocality rdf:datatype="http://www.w3.org/2001/XMLSchema#string">anyString</j.0:hasLocality>
+				<j.0:hasStreetNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">anyString</j.0:hasStreetNumber>
+			</j.0:Address>
+		</j.0:hasAddress>
+		<j.0:hasDeath>
+			<j.0:Death>
+				<j.0:hasDateOfDeath rdf:datatype="http://www.w3.org/2001/XMLSchema#date">3872-01-03</j.0:hasDateOfDeath>
+				<j.0:hasPlaceOfDeath rdf:datatype="http://www.w3.org/2001/XMLSchema#string">anyString</j.0:hasPlaceOfDeath>
+			</j.0:Death>
+		</j.0:hasDeath>
+		<j.0:hasRelegion>
+			<j.0:Relegion>
+				<j.0:hasRelegionKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">anyString</j.0:hasRelegionKey>
+			</j.0:Relegion>
+		</j.0:hasRelegion>
+		<j.0:hasBirth>
+			<j.0:Birth>
+				<j.0:hasPlaceOfBirth rdf:datatype="http://www.w3.org/2001/XMLSchema#string">anyString</j.0:hasPlaceOfBirth>
+				<j.0:hasDateOfBirth rdf:datatype="http://www.w3.org/2001/XMLSchema#date">3872-01-03</j.0:hasDateOfBirth>
+			</j.0:Birth>
+		</j.0:hasBirth>
+		<j.0:hasNationality>
+			<j.0:Nationality>
+				<j.0:hasNationalityKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">anyString</j.0:hasNationalityKey>
+			</j.0:Nationality>
+		</j.0:hasNationality>
+	</j.0:ResidentInfo>
+</rdf:RDF>

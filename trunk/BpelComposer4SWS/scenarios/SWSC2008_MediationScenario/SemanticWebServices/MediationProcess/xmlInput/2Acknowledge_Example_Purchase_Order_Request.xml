@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ack:ReceiptAcknowledgment xmlns:ack="http://www.sws-challenge.org/schemas/rnet/ACK" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sws-challenge.org/schemas/rnet/ACK
+http://www.sws-challenge.org/schemas/rnet/AcknowledgementOfReceipt.xsd">
+	<ack:NonRepudiationInformation>
+		<ack:OriginalMessageDigest>
+			<po:Pip3A4PurchaseOrderRequest xmlns:po="http://www.sws-challenge.org/schemas/rnet/POR" xmlns:core="http://www.sws-challenge.org/schemas/rnet/coreElements" xmlns:dict="http://www.sws-challenge.org/schemas/rnet/dictionary" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sws-challenge.org/schemas/rnet/POR
+http://www.sws-challenge.org/schemas/rnet/3A4_Simplified_PurchaseOrderRequest.xsd">
+	<core:fromRole>
+		<core:PartnerRoleDescription>
+			<core:ContactInformation>
+					<core:contactName>
+						<core:FreeFormText>Stefan Blue</core:FreeFormText>
+					</core:contactName>
+					<core:EmailAddress>stefan.blue@blue.com</core:EmailAddress>
+					<core:telephoneNumber>
+						<core:CommunicationsNumber>+43(650)89930011</core:CommunicationsNumber>
+					</core:telephoneNumber>
+			</core:ContactInformation>
+			<dict:GlobalPartnerRoleClassificationCode>Buyer</dict:GlobalPartnerRoleClassificationCode>
+			<core:PartnerDescription>
+				<core:BusinessDescription>
+					<core:businessName>
+						<core:FreeFormText>Blue Company</core:FreeFormText>
+					</core:businessName>
+				</core:BusinessDescription>
+				<core:ContactInformation>
+					<core:contactName>
+						<core:FreeFormText>Stefania Wolf</core:FreeFormText>
+					</core:contactName>
+					<core:EmailAddress>stefania.wolf@blue.com</core:EmailAddress>
+					<core:telephoneNumber>
+						<core:CommunicationsNumber>+43(650)89930023</core:CommunicationsNumber>
+					</core:telephoneNumber>
+				</core:ContactInformation>
+				<core:PhysicalLocation>
+						<core:PhysicalAddress>
+								<core:addressLine1>
+									<core:FreeFormText>North Business Center, Block 9</core:FreeFormText>
+								</core:addressLine1>
+								<core:cityName>
+									<core:FreeFormText>Innsbruck</core:FreeFormText>
+								</core:cityName>
+								<dict:GlobalCountryCode>AT</dict:GlobalCountryCode>
+								<core:NationalPostalCode>A-6020</core:NationalPostalCode>
+						</core:PhysicalAddress>
+				</core:PhysicalLocation>
+			</core:PartnerDescription>
+		</core:PartnerRoleDescription>
+	</core:fromRole>
+	<po:PurchaseOrder>
+		<dict:GlobalPurchaseOrderTypeCode>Packaged product</dict:GlobalPurchaseOrderTypeCode>
+		<core:isDropShip>
+			<core:AffirmationIndicator>Yes</core:AffirmationIndicator>
+		</core:isDropShip>
+		<po:ProductLineItem>
+			<dict:GlobalProductUnitOfMeasureCode>Unit</dict:GlobalProductUnitOfMeasureCode>
+			<core:isDropShip>
+				<core:AffirmationIndicator>Yes</core:AffirmationIndicator>
+			</core:isDropShip>
+			<core:LineNumber>1</core:LineNumber>
+			<po:OrderQuantity>
+				<core:requestedQuantity>
+					<core:ProductQuantity>1</core:ProductQuantity>
+				</core:requestedQuantity>
+			</po:OrderQuantity>
+			<core:ProductIdentification>
+				<core:GlobalProductIdentifier>00614141000012</core:GlobalProductIdentifier>
+			</core:ProductIdentification>
+			<core:requestedEvent>
+				<core:TransportationEvent>
+					<core:DateStamp>200603061</core:DateStamp>
+					<dict:GlobalTransportEventCode>Ship</dict:GlobalTransportEventCode>
+				</core:TransportationEvent>
+			</core:requestedEvent>
+			<core:requestedUnitPrice>
+				<core:FinancialAmount>
+					<dict:GlobalCurrencyCode>EUR</dict:GlobalCurrencyCode>
+					<core:MonetaryAmount>1067.54</core:MonetaryAmount>
+				</core:FinancialAmount>
+			</core:requestedUnitPrice>
+
+			<core:totalLineItemAmount>
+				<core:FinancialAmount>
+					<dict:GlobalCurrencyCode>EUR</dict:GlobalCurrencyCode>
+					<core:MonetaryAmount>1067.54</core:MonetaryAmount>
+				</core:FinancialAmount>
+			</core:totalLineItemAmount>
+		</po:ProductLineItem>
+		<core:requestedEvent>
+			<core:TransportationEvent>
+				<core:DateStamp>200603061</core:DateStamp>
+				<dict:GlobalTransportEventCode>Ship</dict:GlobalTransportEventCode>
+			</core:TransportationEvent>
+		</core:requestedEvent>
+		<core:shipTo>
+<core:PartnerDescription>
+				<core:BusinessDescription>
+					<core:businessName>
+						<core:FreeFormText>Blue Company</core:FreeFormText>
+					</core:businessName>
+				</core:BusinessDescription>
+				<core:ContactInformation>
+					<core:contactName>
+						<core:FreeFormText>Stefania Wolf</core:FreeFormText>
+					</core:contactName>
+					<core:EmailAddress>stefania.wolf@blue.com</core:EmailAddress>
+					<core:telephoneNumber>
+						<core:CommunicationsNumber>+43(650)89930023</core:CommunicationsNumber>
+					</core:telephoneNumber>
+				</core:ContactInformation>
+				<core:PhysicalLocation>
+						<core:PhysicalAddress>
+								<core:addressLine1>
+									<core:FreeFormText>North Business Center, Block 9</core:FreeFormText>
+								</core:addressLine1>
+								<core:cityName>
+									<core:FreeFormText>Innsbruck</core:FreeFormText>
+								</core:cityName>
+								<dict:GlobalCountryCode>AT</dict:GlobalCountryCode>
+								<core:NationalPostalCode>A-6020</core:NationalPostalCode>
+						</core:PhysicalAddress>
+				</core:PhysicalLocation>
+			</core:PartnerDescription>
+		</core:shipTo>
+		<core:totalAmount>
+			<core:FinancialAmount>
+					<dict:GlobalCurrencyCode>EUR</dict:GlobalCurrencyCode>
+					<core:MonetaryAmount>1067.54</core:MonetaryAmount>
+			</core:FinancialAmount>
+		</core:totalAmount>
+	</po:PurchaseOrder>
+	<core:thisDocumentGenerationDateTime>
+		<core:DateTimeStamp>20060306T151245</core:DateTimeStamp>
+	</core:thisDocumentGenerationDateTime>
+	<core:thisDocumentIdentifier>
+		<core:ProprietaryDocumentIdentifier>BLUE12345</core:ProprietaryDocumentIdentifier>
+	</core:thisDocumentIdentifier>
+	<core:toRole>
+		<core:PartnerRoleDescription>
+			<core:ContactInformation>
+				<core:contactName>
+					<core:FreeFormText>Michael Moon</core:FreeFormText>
+				</core:contactName>
+				<core:EmailAddress>michael.moon@moon.ie</core:EmailAddress>
+				<core:telephoneNumber>
+					<core:CommunicationsNumber>+353(86)3882777</core:CommunicationsNumber>
+				</core:telephoneNumber>
+			</core:ContactInformation>
+			<dict:GlobalPartnerRoleClassificationCode>Product Provider</dict:GlobalPartnerRoleClassificationCode>
+			<core:PartnerDescription>
+				<core:BusinessDescription>
+					<core:businessName>
+						<core:FreeFormText>Moon Company</core:FreeFormText>
+					</core:businessName>
+				</core:BusinessDescription>
+					<core:ContactInformation>
+					<core:contactName>
+						<core:FreeFormText>Elizabeth Brown</core:FreeFormText>
+					</core:contactName>
+					<core:EmailAddress>elizabeth.brown@moon.ie</core:EmailAddress>
+					<core:telephoneNumber><core:CommunicationsNumber>+353(86)3882777</core:CommunicationsNumber></core:telephoneNumber>
+				</core:ContactInformation>
+				<core:PhysicalLocation>
+					<core:PhysicalAddress>
+						<core:addressLine1>
+							<core:FreeFormText>Moon Company, IDEA Business Park</core:FreeFormText>
+						</core:addressLine1>
+						<core:cityName>
+							<core:FreeFormText>Galway</core:FreeFormText>
+						</core:cityName>
+						<dict:GlobalCountryCode>IE</dict:GlobalCountryCode>
+						<core:NationalPostalCode>N/A</core:NationalPostalCode>
+					</core:PhysicalAddress>
+				</core:PhysicalLocation>
+			</core:PartnerDescription>
+		</core:PartnerRoleDescription>
+	</core:toRole>
+</po:Pip3A4PurchaseOrderRequest>
+		</ack:OriginalMessageDigest>
+	</ack:NonRepudiationInformation>
+</ack:ReceiptAcknowledgment>

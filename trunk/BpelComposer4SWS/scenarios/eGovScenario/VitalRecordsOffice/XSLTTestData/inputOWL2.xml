@@ -1,0 +1,113 @@
+<rdf:RDF xmlns:j.0="http://localhost:8080/PublicServices/VitalRecordsOffice/VitalRecordsOfficeOntology.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xsd="http://www.w3.org/2001/XMLSchema#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:sto="http://localhost:8080/PublicServices/StatisticalOffice/StatisticalOfficeOntology.owl#" xmlns:psp="http://localhost:8080/PublicServices/PublicServicePayment/PublicServicePaymentOntology.owl#" xmlns:daml="http://www.daml.org/2001/03/daml+oil#" xmlns:dc="http://purl.org/dc/elements/1.1/">
+	<rdf:Description rdf:nodeID="A40">
+		<j.0:hasPaymentReceipt rdf:nodeID="A41"/>
+		<j.0:hasPerson rdf:nodeID="A42"/>
+		<j.0:hasPostalAddress rdf:nodeID="A29"/>
+		<rdf:type rdf:resource="http://localhost:8080/PublicServices/VitalRecordsOffice/VitalRecordsOfficeOntology.owl#BirthCertificateOrder"/>
+	</rdf:Description>
+	<!--Person-->
+	<rdf:Description rdf:nodeID="A42">
+		<j.0:hasDateOfBirth rdf:nodeID="A53"/>
+		<j.0:hasFirstName rdf:nodeID="A9"/>
+		<j.0:hasLastName rdf:nodeID="A92"/>
+		<rdf:type rdf:resource="http://localhost:8080/PublicServices/VitalRecordsOffice/VitalRecordsOfficeOntology.owl#Person"/>
+		<j.0:hasPlaceOfBirth rdf:nodeID="A94"/>
+	</rdf:Description>
+	<rdf:Description rdf:nodeID="A53">
+		<rdf:type rdf:resource="http://localhost:8080/PublicServices/VitalRecordsOffice/VitalRecordsOfficeOntology.owl#DateOfBirth"/>
+		<j.0:hasRef rdf:datatype="http://www.w3.org/2001/XMLSchema#string">11-11-1111</j.0:hasRef>
+	</rdf:Description>
+	<rdf:Description rdf:nodeID="A94">
+		<rdf:type rdf:resource="http://localhost:8080/PublicServices/VitalRecordsOffice/VitalRecordsOfficeOntology.owl#PlaceOfBirth"/>
+		<j.0:hasRef rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Berlin</j.0:hasRef>
+	</rdf:Description>
+	<rdf:Description rdf:nodeID="A9">
+		<j.0:hasRef rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hans</j.0:hasRef>
+		<rdf:type rdf:resource="http://localhost:8080/PublicServices/VitalRecordsOffice/VitalRecordsOfficeOntology.owl#FirstName"/>
+	</rdf:Description>
+	<rdf:Description rdf:nodeID="A92">
+		<j.0:hasRef rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jochen</j.0:hasRef>
+		<rdf:type rdf:resource="http://localhost:8080/PublicServices/VitalRecordsOffice/VitalRecordsOfficeOntology.owl#LastName"/>
+	</rdf:Description>
+	<!--PostalAddress-->
+	<rdf:Description rdf:nodeID="A29">
+		<j.0:hasStreetAddress rdf:nodeID="A30"/>
+		<j.0:hasZipcodeAndPostalDistrict rdf:nodeID="A31"/>
+		<j.0:hasRecipient rdf:nodeID="A14"/>
+		<rdf:type rdf:resource="http://localhost:8080/PublicServices/VitalRecordsOffice/VitalRecordsOfficeOntology.owl#PostalAddress"/>
+	</rdf:Description>
+	<rdf:Description rdf:nodeID="A14">
+		<rdf:type rdf:resource="http://localhost:8080/PublicServices/VitalRecordsOffice/VitalRecordsOfficeOntology.owl#Recipient"/>
+		<j.0:hasRef rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hans Jochen</j.0:hasRef>
+	</rdf:Description>
+	<rdf:Description rdf:nodeID="A30">
+		<j.0:hasRef rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kantstr. 3</j.0:hasRef>
+		<rdf:type rdf:resource="http://localhost:8080/PublicServices/VitalRecordsOffice/VitalRecordsOfficeOntology.owl#StreetAddress"/>
+	</rdf:Description>
+	<rdf:Description rdf:nodeID="A31">
+		<j.0:hasRef rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10629 Berlin</j.0:hasRef>
+		<rdf:type rdf:resource="http://localhost:8080/PublicServices/VitalRecordsOffice/VitalRecordsOfficeOntology.owl#ZipcodeAndPostalDistrict"/>
+	</rdf:Description>
+	<!--Receipt-->
+	<rdf:Description rdf:nodeID="A41">
+		<rdf:type rdf:resource="http://localhost:8080/PublicServices/PublicServicePayment/PublicServicePaymentOntology.owl#Receipt"/>
+		<psp:hasConfirmedPayment rdf:nodeID="A34"/>
+		<psp:hasConfirmation rdf:nodeID="A45"/>
+	</rdf:Description>
+	<rdf:Description rdf:nodeID="A45">
+		<psp:hasRef rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RSA#3H7A4B9F3H7A4B9F3H7A4B9F3H7A4B9F3H7A4B9F3H7A4B9F3H7A4B9F</psp:hasRef>
+		<rdf:type rdf:resource="http://localhost:8080/PublicServices/PublicServicePayment/PublicServicePaymentOntology.owl#Confirmation"/>
+	</rdf:Description>
+	<!--Payment-->
+	<!--rdf:Description rdf:nodeID="A34">
+		<hasReasonForPayment rdf:nodeID="A877"/>
+		<hasDestinationAccount rdf:nodeID="A977"/>
+		<hasAmount rdf:nodeID="A1077"/>
+		<hasSourceAccount rdf:nodeID="A1177"/>
+		<rdf:type rdf:resource="http://localhost:8080/PublicServices/PublicServicePayment/PublicServicePaymentOntology.owl#Payment"/>
+	</rdf:Description>
+	<rdf:Description rdf:nodeID="A877">
+		<rdf:type rdf:resource="http://localhost:8080/PublicServices/PublicServicePayment/PublicServicePaymentOntology.owl#ReasonForPayment"/>
+		<hasRef rdf:datatype="http://www.w3.org/2001/XMLSchema#string">aReason</hasRef>
+	</rdf:Description>
+	<rdf:Description rdf:nodeID="A977">
+		<hasAccountNumber rdf:nodeID="A3677"/>
+		<hasBankID rdf:nodeID="A1477"/>
+		<hasAccountOwner rdf:nodeID="A3777"/>
+		<rdf:type rdf:resource="http://localhost:8080/PublicServices/PublicServicePayment/PublicServicePaymentOntology.owl#Account"/>
+	</rdf:Description>
+	<rdf:Description rdf:nodeID="A1077">
+		<rdf:type rdf:resource="http://localhost:8080/PublicServices/PublicServicePayment/PublicServicePaymentOntology.owl#Amount"/>
+		<hasRef rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10.00</hasRef>
+	</rdf:Description>
+	<rdf:Description rdf:nodeID="A1177">
+		<rdf:type rdf:resource="http://localhost:8080/PublicServices/PublicServicePayment/PublicServicePaymentOntology.owl#Account"/>
+		<hasBankID rdf:nodeID="A677"/>
+		<hasAccountOwner rdf:nodeID="A1677"/>
+		<hasAccountNumber rdf:nodeID="A177"/>
+	</rdf:Description>
+	<rdf:Description rdf:nodeID="A3677">
+		<rdf:type rdf:resource="http://localhost:8080/PublicServices/PublicServicePayment/PublicServicePaymentOntology.owl#AccountNumber"/>
+		<hasRef rdf:datatype="http://www.w3.org/2001/XMLSchema#string">destNumber</hasRef>
+	</rdf:Description>
+	<rdf:Description rdf:nodeID="A3777">
+		<hasRef rdf:datatype="http://www.w3.org/2001/XMLSchema#string">destOwner</hasRef>
+		<rdf:type rdf:resource="http://localhost:8080/PublicServices/PublicServicePayment/PublicServicePaymentOntology.owl#AccountOwner"/>
+	</rdf:Description>
+	<rdf:Description rdf:nodeID="A1477">
+		<hasRef rdf:datatype="http://www.w3.org/2001/XMLSchema#string">destbankID</hasRef>
+		<rdf:type rdf:resource="http://localhost:8080/PublicServices/PublicServicePayment/PublicServicePaymentOntology.owl#BankID"/>
+	</rdf:Description>
+	<rdf:Description rdf:nodeID="A177">
+		<hasRef rdf:datatype="http://www.w3.org/2001/XMLSchema#string">srcNumber</hasRef>
+		<rdf:type rdf:resource="http://localhost:8080/PublicServices/PublicServicePayment/PublicServicePaymentOntology.owl#AccountNumber"/>
+	</rdf:Description>
+	<rdf:Description rdf:nodeID="A677">
+		<hasRef rdf:datatype="http://www.w3.org/2001/XMLSchema#string">srcBankID</hasRef>
+		<rdf:type rdf:resource="http://localhost:8080/PublicServices/PublicServicePayment/PublicServicePaymentOntology.owl#BankID"/>
+	</rdf:Description>
+	<rdf:Description rdf:nodeID="A1677">
+		<rdf:type rdf:resource="http://localhost:8080/PublicServices/PublicServicePayment/PublicServicePaymentOntology.owl#AccountOwner"/>
+		<hasRef rdf:datatype="http://www.w3.org/2001/XMLSchema#string">srcOwner</hasRef>
+	</rdf:Description-->
+</rdf:RDF>

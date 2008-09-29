@@ -1,0 +1,91 @@
+<!-- Use this file to deploy some handlers/chains and services      -->
+<!-- Two ways to do this:                                           -->
+<!--   java org.apache.axis.client.AdminClient deploy.wsdd          -->
+<!--      after the axis server is running                          -->
+<!-- or                                                             -->
+<!--   java org.apache.axis.utils.Admin client|server deploy.wsdd   -->
+<!--      from the same directory that the Axis engine runs         -->
+
+<deployment
+    xmlns="http://xml.apache.org/axis/wsdd/"
+    xmlns:java="http://xml.apache.org/axis/wsdd/providers/java">
+
+  <!-- Services from ResidentRegistryService WSDL service -->
+
+  <service name="ResidentRegistry" provider="java:RPC" style="rpc" use="encoded">
+      <parameter name="wsdlTargetNamespace" value="urn:ResidentRegistry"/>
+      <parameter name="wsdlServiceElement" value="ResidentRegistryService"/>
+      <parameter name="wsdlServicePort" value="ResidentRegistry"/>
+      <parameter name="className" value="ResidentRegistry_pkg.ResidentRegistrySoapBindingImpl"/>
+      <parameter name="wsdlPortType" value="ResidentRegistry"/>
+      <operation name="getResidentInfo" qname="operNS:getResidentInfo" xmlns:operNS="urn:ResidentRegistry" returnQName="getResidentInfoReturn" returnType="rtns:residentInfo" xmlns:rtns="http://localhost:8080/PublicServices/ResidentRegistry/XResidentRegistry" >
+        <parameter name="in0" type="tns:residentSearchProfile" xmlns:tns="http://localhost:8080/PublicServices/ResidentRegistry/XResidentRegistry"/>
+      </operation>
+      <parameter name="allowedMethods" value="getResidentInfo"/>
+
+      <typeMapping
+        xmlns:ns="http://localhost:8080/PublicServices/ResidentRegistry/XResidentRegistry"
+        qname="ns:nationality"
+        type="java:localhost.PublicServices.ResidentRegistry.XResidentRegistry.Nationality"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+      />
+      <typeMapping
+        xmlns:ns="http://localhost:8080/PublicServices/ResidentRegistry/XResidentRegistry"
+        qname="ns:address"
+        type="java:localhost.PublicServices.ResidentRegistry.XResidentRegistry.Address"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+      />
+      <typeMapping
+        xmlns:ns="http://localhost:8080/PublicServices/ResidentRegistry/XResidentRegistry"
+        qname="ns:residentSearchProfile"
+        type="java:localhost.PublicServices.ResidentRegistry.XResidentRegistry.ResidentSearchProfile"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+      />
+      <typeMapping
+        xmlns:ns="http://localhost:8080/PublicServices/ResidentRegistry/XResidentRegistry"
+        qname="ns:death"
+        type="java:localhost.PublicServices.ResidentRegistry.XResidentRegistry.Death"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+      />
+      <typeMapping
+        xmlns:ns="http://localhost:8080/PublicServices/ResidentRegistry/XResidentRegistry"
+        qname="ns:residentInfo"
+        type="java:localhost.PublicServices.ResidentRegistry.XResidentRegistry.ResidentInfo"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+      />
+      <typeMapping
+        xmlns:ns="http://localhost:8080/PublicServices/ResidentRegistry/XResidentRegistry"
+        qname="ns:religion"
+        type="java:localhost.PublicServices.ResidentRegistry.XResidentRegistry.Religion"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+      />
+      <typeMapping
+        xmlns:ns="http://localhost:8080/PublicServices/ResidentRegistry/XResidentRegistry"
+        qname="ns:name"
+        type="java:localhost.PublicServices.ResidentRegistry.XResidentRegistry.Name"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+      />
+      <typeMapping
+        xmlns:ns="http://localhost:8080/PublicServices/ResidentRegistry/XResidentRegistry"
+        qname="ns:birth"
+        type="java:localhost.PublicServices.ResidentRegistry.XResidentRegistry.Birth"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+      />
+  </service>
+</deployment>

@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:moon="http://localhost:8080/ontologies/MoonOntology.owl#"
+    xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns="http://www.owl-ontologies.com/Ontology1209777686.owl#"
+  xml:base="http://www.owl-ontologies.com/Ontology1209777686.owl">
+  <owl:Ontology rdf:about="">
+    <owl:imports rdf:resource="http://localhost:8080/ontologies/MoonOntology.owl"/>
+  </owl:Ontology>
+  <moon:CustomerLookupResponse rdf:ID="CustomerLookupResponse_1">
+    <moon:hasCustomer>
+      <moon:Customer rdf:ID="Customer_3">
+        <moon:hasCustomerID rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</moon:hasCustomerID>
+        <moon:hasBusinessName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Blue Company</moon:hasBusinessName>
+      </moon:Customer>
+    </moon:hasCustomer>
+  </moon:CustomerLookupResponse>
+</rdf:RDF>
+
+<!-- Created with Protege (with OWL Plugin 3.4, Build 130)  http://protege.stanford.edu -->

@@ -1,0 +1,7 @@
+[Dublin Core DL Redirect]
+file:/E:/SWSC2008_MediationScenario/bpel/SWSChallenge2008_Scenario1/dataflow/Dataflow_MediationProcessInput2MoonCRMServiceInput.owl?forceReadOnly=false
+http://localhost:8080/ontologies/ServiceAnchor.owl
+http://localhost:8080/ontologies/MoonOntology.owl
+http://localhost:8080/ontologies/RosettaNetOntology.owl
+file:/E:/SWSC2008_MediationScenario/SemanticWebServices/MediationProcess/MediationProcessInputWithAnchor.owl?forceReadOnly=false
+file:/E:/SWSC2008_MediationScenario/SemanticWebServices/MoonServices/MoonCRMServiceInputAnchor.owl?forceReadOnly=false

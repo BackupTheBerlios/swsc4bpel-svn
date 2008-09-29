@@ -1,0 +1,456 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:temporal="http://swrl.stanford.edu/ontologies/built-ins/3.3/temporal.owl#"
+    xmlns:rosetta="http://localhost:8080/ontologies/RosettaNetOntology.owl#"
+    xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"
+    xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+    xmlns:swrlxml="http://swrl.stanford.edu/ontologies/built-ins/3.4/swrlxml.owl#"
+    xmlns:swrlx="http://swrl.stanford.edu/ontologies/built-ins/3.3/swrlx.owl#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns="http://localhost:8080/process/MediationProcess/dataflow/Dataflow_MediationProcessConfirmLineItemInput2MediationProcessInputContainer.owl#"
+    xmlns:swrlm="http://swrl.stanford.edu/ontologies/built-ins/3.4/swrlm.owl#"
+    xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+    xmlns:abox="http://swrl.stanford.edu/ontologies/built-ins/3.3/abox.owl#"
+    xmlns:moon="http://localhost:8080/ontologies/MoonOntology.owl#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:sqwrl="http://sqwrl.stanford.edu/ontologies/built-ins/3.4/sqwrl.owl#"
+    xmlns:tbox="http://swrl.stanford.edu/ontologies/built-ins/3.3/tbox.owl#"
+    xmlns:p1="http://localhost:8080/process/MediationProcess/Dataflow_MediationProcessInput+MoonCRMServiceOutput2MoonOMS_CreateNewOrderInputContainer.owl#"
+  xml:base="http://localhost:8080/process/MediationProcess/dataflow/Dataflow_MediationProcessConfirmLineItemInput2MediationProcessInputContainer.owl">
+  <owl:Ontology rdf:about="http://localhost:8080/process/MediationProcess/dataflow/Dataflow_MediationProcessConfirmLineItemInput2MediationProcessInputContainer.owl">
+    <owl:imports rdf:resource="http://sqwrl.stanford.edu/ontologies/built-ins/3.4/sqwrl.owl"/>
+    <owl:imports rdf:resource="http://swrl.stanford.edu/ontologies/built-ins/3.4/swrlxml.owl"/>
+    <owl:imports rdf:resource="http://swrl.stanford.edu/ontologies/built-ins/3.3/abox.owl"/>
+    <owl:imports rdf:resource="http://localhost:8080/ontologies/ServiceAnchor.owl"/>
+    <owl:imports rdf:resource="http://swrl.stanford.edu/ontologies/3.3/swrla.owl"/>
+    <owl:imports rdf:resource="http://localhost:8080/ontologies/RosettaNetOntology.owl"/>
+    <owl:imports rdf:resource="http://swrl.stanford.edu/ontologies/built-ins/3.4/swrlm.owl"/>
+    <owl:imports rdf:resource="http://localhost:8080/ontologies/MoonOntology.owl"/>
+    <owl:imports rdf:resource="http://swrl.stanford.edu/ontologies/built-ins/3.3/temporal.owl"/>
+    <owl:imports rdf:resource="http://swrl.stanford.edu/ontologies/built-ins/3.3/swrlx.owl"/>
+    <owl:imports rdf:resource="http://swrl.stanford.edu/ontologies/built-ins/3.3/tbox.owl"/>
+  </owl:Ontology>
+  <swrl:Variable rdf:about="http://localhost:8080/process/MediationProcess/Dataflow_MediationProcessInput+MoonCRMServiceOutput2MoonOMS_CreateNewOrderInputContainer.owl#customerID"/>
+  <swrl:Variable rdf:ID="itemID"/>
+  <swrl:Variable rdf:ID="addLineItemRequest"/>
+  <swrl:Variable rdf:about="http://localhost:8080/process/MediationProcess/Dataflow_MediationProcessInput+MoonCRMServiceOutput2MoonOMS_CreateNewOrderInputContainer.owl#processedItemID"/>
+  <swrl:Variable rdf:ID="addLineItemOutputProcess"/>
+  <swrl:Variable rdf:ID="processInput"/>
+  <swrl:Variable rdf:ID="addLineItemInputProcess"/>
+  <swrl:Variable rdf:ID="mediationProcess"/>
+  <swrl:Variable rdf:ID="poRequest"/>
+  <rdf:List>
+    <rdf:rest>
+      <rdf:List>
+        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+        <rdf:first>
+          <swrl:Variable rdf:about="http://localhost:8080/process/MediationProcess/Dataflow_MediationProcessInput+MoonCRMServiceOutput2MoonOMS_CreateNewOrderInputContainer.owl#serviceInput"/>
+        </rdf:first>
+      </rdf:List>
+    </rdf:rest>
+    <rdf:first>
+      <swrl:Variable rdf:about="http://localhost:8080/process/MediationProcess/Dataflow_MediationProcessInput+MoonCRMServiceOutput2MoonOMS_CreateNewOrderInputContainer.owl#lookupRequest"/>
+    </rdf:first>
+  </rdf:List>
+  <swrl:Imp rdf:ID="dataflow_map_ItemID_2_articleID">
+    <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</swrla:isRuleEnabled>
+    <swrl:head>
+      <swrl:AtomList>
+        <rdf:first>
+          <swrl:DatavaluedPropertyAtom>
+            <swrl:argument2 rdf:resource="#itemID"/>
+            <swrl:argument1>
+              <swrl:Variable rdf:ID="lineItem"/>
+            </swrl:argument1>
+            <swrl:propertyPredicate rdf:resource="http://localhost:8080/ontologies/MoonOntology.owl#hasItemID"/>
+          </swrl:DatavaluedPropertyAtom>
+        </rdf:first>
+        <rdf:rest>
+          <swrl:AtomList>
+            <rdf:first>
+              <swrl:DatavaluedPropertyAtom>
+                <swrl:propertyPredicate rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+                <swrl:argument2>
+                  <swrl:Variable rdf:ID="logMessage"/>
+                </swrl:argument2>
+                <swrl:argument1 rdf:resource="#poRequest"/>
+              </swrl:DatavaluedPropertyAtom>
+            </rdf:first>
+            <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+          </swrl:AtomList>
+        </rdf:rest>
+      </swrl:AtomList>
+    </swrl:head>
+    <swrl:body>
+      <swrl:AtomList>
+        <rdf:rest>
+          <swrl:AtomList>
+            <rdf:first>
+              <swrl:DatavaluedPropertyAtom>
+                <swrl:argument1 rdf:resource="#addLineItemInputProcess"/>
+                <swrl:propertyPredicate rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+                <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                >MoonOMSAddLineItemServiceProcess</swrl:argument2>
+              </swrl:DatavaluedPropertyAtom>
+            </rdf:first>
+            <rdf:rest>
+              <swrl:AtomList>
+                <rdf:first>
+                  <swrl:IndividualPropertyAtom>
+                    <swrl:propertyPredicate rdf:resource="http://localhost:8080/ontologies/ServiceAnchor.owl#hasInput"/>
+                    <swrl:argument2>
+                      <swrl:Variable rdf:ID="addLineItemInput"/>
+                    </swrl:argument2>
+                    <swrl:argument1 rdf:resource="#addLineItemInputProcess"/>
+                  </swrl:IndividualPropertyAtom>
+                </rdf:first>
+                <rdf:rest>
+                  <swrl:AtomList>
+                    <rdf:first>
+                      <swrl:DatavaluedPropertyAtom>
+                        <swrl:argument1 rdf:resource="#addLineItemInput"/>
+                        <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                        >AddLineItemRequest</swrl:argument2>
+                        <swrl:propertyPredicate rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+                      </swrl:DatavaluedPropertyAtom>
+                    </rdf:first>
+                    <rdf:rest>
+                      <swrl:AtomList>
+                        <rdf:rest>
+                          <swrl:AtomList>
+                            <rdf:first>
+                              <swrl:IndividualPropertyAtom>
+                                <swrl:propertyPredicate rdf:resource="http://localhost:8080/ontologies/MoonOntology.owl#hasItem"/>
+                                <swrl:argument2>
+                                  <swrl:Variable rdf:ID="item"/>
+                                </swrl:argument2>
+                                <swrl:argument1 rdf:resource="#addLineItemRequest"/>
+                              </swrl:IndividualPropertyAtom>
+                            </rdf:first>
+                            <rdf:rest>
+                              <swrl:AtomList>
+                                <rdf:first>
+                                  <swrl:DatavaluedPropertyAtom>
+                                    <swrl:propertyPredicate rdf:resource="http://localhost:8080/ontologies/MoonOntology.owl#hasArticleID"/>
+                                    <swrl:argument1 rdf:resource="#item"/>
+                                    <swrl:argument2>
+                                      <swrl:Variable rdf:ID="articleID"/>
+                                    </swrl:argument2>
+                                  </swrl:DatavaluedPropertyAtom>
+                                </rdf:first>
+                                <rdf:rest>
+                                  <swrl:AtomList>
+                                    <rdf:first>
+                                      <swrl:ClassAtom>
+                                        <swrl:classPredicate rdf:resource="http://localhost:8080/ontologies/ServiceAnchor.owl#Process"/>
+                                        <swrl:argument1 rdf:resource="#addLineItemOutputProcess"/>
+                                      </swrl:ClassAtom>
+                                    </rdf:first>
+                                    <rdf:rest>
+                                      <swrl:AtomList>
+                                        <rdf:rest>
+                                          <swrl:AtomList>
+                                            <rdf:rest>
+                                              <swrl:AtomList>
+                                                <rdf:rest>
+                                                  <swrl:AtomList>
+                                                    <rdf:rest>
+                                                      <swrl:AtomList>
+                                                        <rdf:first>
+                                                          <swrl:IndividualPropertyAtom>
+                                                            <swrl:propertyPredicate rdf:resource="http://localhost:8080/ontologies/MoonOntology.owl#hasItem"/>
+                                                            <swrl:argument1>
+                                                              <swrl:Variable rdf:ID="addLineItemResponse"/>
+                                                            </swrl:argument1>
+                                                            <swrl:argument2>
+                                                              <swrl:Variable rdf:ID="orderItem"/>
+                                                            </swrl:argument2>
+                                                          </swrl:IndividualPropertyAtom>
+                                                        </rdf:first>
+                                                        <rdf:rest>
+                                                          <swrl:AtomList>
+                                                            <rdf:first>
+                                                              <swrl:DatavaluedPropertyAtom>
+    <swrl:propertyPredicate rdf:resource="http://localhost:8080/ontologies/MoonOntology.owl#hasItemID"/>
+    <swrl:argument2 rdf:resource="#itemID"/>
+    <swrl:argument1 rdf:resource="#orderItem"/>               </swrl:DatavaluedPropertyAtom>
+                                                            </rdf:first>
+                                                            <rdf:rest>
+                                                              <swrl:AtomList>
+    <rdf:rest>
+      <swrl:AtomList>
+        <rdf:first>
+          <swrl:DatavaluedPropertyAtom>
+            <swrl:argument1 rdf:resource="#mediationProcess"/>
+            <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >MediationProcess</swrl:argument2>
+            <swrl:propertyPredicate rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+          </swrl:DatavaluedPropertyAtom>
+        </rdf:first>
+        <rdf:rest>
+          <swrl:AtomList>
+            <rdf:first>
+              <swrl:IndividualPropertyAtom>
+                <swrl:propertyPredicate rdf:resource="http://localhost:8080/ontologies/ServiceAnchor.owl#hasInput"/>
+                <swrl:argument1 rdf:resource="#mediationProcess"/>
+                <swrl:argument2 rdf:resource="#processInput"/>
+              </swrl:IndividualPropertyAtom>
+            </rdf:first>
+            <rdf:rest>
+              <swrl:AtomList>
+                <rdf:rest>
+                  <swrl:AtomList>
+                    <rdf:rest>
+                      <swrl:AtomList>
+                        <rdf:first>
+                          <swrl:IndividualPropertyAtom>
+                            <swrl:argument2>
+                              <swrl:Variable rdf:ID="purchaseOrder"/>
+                            </swrl:argument2>
+                            <swrl:propertyPredicate rdf:resource="http://localhost:8080/ontologies/RosettaNetOntology.owl#hasPurchaseOrder"/>
+                            <swrl:argument1 rdf:resource="#poRequest"/>
+                          </swrl:IndividualPropertyAtom>
+                        </rdf:first>
+                        <rdf:rest>
+                          <swrl:AtomList>
+                            <rdf:rest>
+                              <swrl:AtomList>
+                                <rdf:rest>
+                                  <swrl:AtomList>
+                                    <rdf:first>
+                                      <swrl:BuiltinAtom>
+                                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#stringConcat"/>
+                                        <swrl:arguments>
+                                          <rdf:List>
+                                            <rdf:first rdf:resource="#logMessage"/>
+                                            <rdf:rest>
+                                              <rdf:List>
+                                                <rdf:rest>
+                                                  <rdf:List>
+                                                    <rdf:first rdf:resource="#itemID"/>
+                                                    <rdf:rest>
+                                                      <rdf:List>
+                                                        <rdf:first
+                                                         rdf:datatype=
+                                                        "http://www.w3.org/2001/XMLSchema#string"
+                                                        >_to_articleID</rdf:first>
+                                                        <rdf:rest>
+                                                          <rdf:List>
+                                                            <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                            <rdf:first rdf:resource="#articleID"/>
+                                                          </rdf:List>
+                                                        </rdf:rest>
+                                                      </rdf:List>
+                                                    </rdf:rest>
+                                                  </rdf:List>
+                                                </rdf:rest>
+                                                <rdf:first rdf:datatype=
+                                                "http://www.w3.org/2001/XMLSchema#string"
+                                                >firedRule_dataflow_map_ItemID</rdf:first>
+                                              </rdf:List>
+                                            </rdf:rest>
+                                          </rdf:List>
+                                        </swrl:arguments>
+                                      </swrl:BuiltinAtom>
+                                    </rdf:first>
+                                    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                  </swrl:AtomList>
+                                </rdf:rest>
+                                <rdf:first>
+                                  <swrl:DatavaluedPropertyAtom>
+                                    <swrl:argument1 rdf:resource="#lineItem"/>
+                                    <swrl:propertyPredicate rdf:resource="http://localhost:8080/ontologies/RosettaNetOntology.owl#hasGlobalProductIdentifier"/>
+                                    <swrl:argument2 rdf:resource="#articleID"/>
+                                  </swrl:DatavaluedPropertyAtom>
+                                </rdf:first>
+                              </swrl:AtomList>
+                            </rdf:rest>
+                            <rdf:first>
+                              <swrl:IndividualPropertyAtom>
+                                <swrl:argument2 rdf:resource="#lineItem"/>
+                                <swrl:argument1 rdf:resource="#purchaseOrder"/>
+                                <swrl:propertyPredicate rdf:resource="http://localhost:8080/ontologies/RosettaNetOntology.owl#hasProductLineItem"/>
+                              </swrl:IndividualPropertyAtom>
+                            </rdf:first>
+                          </swrl:AtomList>
+                        </rdf:rest>
+                      </swrl:AtomList>
+                    </rdf:rest>
+                    <rdf:first>
+                      <swrl:IndividualPropertyAtom>
+                        <swrl:argument1 rdf:resource="#processInput"/>
+                        <swrl:argument2 rdf:resource="#poRequest"/>
+                        <swrl:propertyPredicate rdf:resource="http://localhost:8080/ontologies/ServiceAnchor.owl#parameterObject"/>
+                      </swrl:IndividualPropertyAtom>
+                    </rdf:first>
+                  </swrl:AtomList>
+                </rdf:rest>
+                <rdf:first>
+                  <swrl:DatavaluedPropertyAtom>
+                    <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                    >Pip3A4PurchaseOrderRequest</swrl:argument2>
+                    <swrl:argument1 rdf:resource="#processInput"/>
+                    <swrl:propertyPredicate rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+                  </swrl:DatavaluedPropertyAtom>
+                </rdf:first>
+              </swrl:AtomList>
+            </rdf:rest>
+          </swrl:AtomList>
+        </rdf:rest>
+      </swrl:AtomList>
+    </rdf:rest>
+    <rdf:first>
+      <swrl:ClassAtom>
+        <swrl:classPredicate rdf:resource="http://localhost:8080/ontologies/ServiceAnchor.owl#Process"/>
+        <swrl:argument1 rdf:resource="#mediationProcess"/>
+      </swrl:ClassAtom>
+    </rdf:first>                                              </swrl:AtomList>
+                                                            </rdf:rest>
+                                                          </swrl:AtomList>
+                                                        </rdf:rest>
+                                                      </swrl:AtomList>
+                                                    </rdf:rest>
+                                                    <rdf:first>
+                                                      <swrl:IndividualPropertyAtom>
+                                                        <swrl:propertyPredicate rdf:resource="http://localhost:8080/ontologies/ServiceAnchor.owl#parameterObject"/>
+                                                        <swrl:argument2 rdf:resource="#addLineItemResponse"/>
+                                                        <swrl:argument1>
+                                                          <swrl:Variable rdf:ID="addLineItemOutput"/>
+                                                        </swrl:argument1>
+                                                      </swrl:IndividualPropertyAtom>
+                                                    </rdf:first>
+                                                  </swrl:AtomList>
+                                                </rdf:rest>
+                                                <rdf:first>
+                                                  <swrl:DatavaluedPropertyAtom>
+                                                    <swrl:argument2
+                                                     rdf:datatype=
+                                                    "http://www.w3.org/2001/XMLSchema#string"
+                                                    >AddLineItemResponse</swrl:argument2>
+                                                    <swrl:argument1 rdf:resource="#addLineItemOutput"/>
+                                                    <swrl:propertyPredicate rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+                                                  </swrl:DatavaluedPropertyAtom>
+                                                </rdf:first>
+                                              </swrl:AtomList>
+                                            </rdf:rest>
+                                            <rdf:first>
+                                              <swrl:IndividualPropertyAtom>
+                                                <swrl:propertyPredicate rdf:resource="http://localhost:8080/ontologies/ServiceAnchor.owl#hasOutput"/>
+                                                <swrl:argument1 rdf:resource="#addLineItemOutputProcess"/>
+                                                <swrl:argument2 rdf:resource="#addLineItemOutput"/>
+                                              </swrl:IndividualPropertyAtom>
+                                            </rdf:first>
+                                          </swrl:AtomList>
+                                        </rdf:rest>
+                                        <rdf:first>
+                                          <swrl:DatavaluedPropertyAtom>
+                                            <swrl:propertyPredicate rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+                                            <swrl:argument1 rdf:resource="#addLineItemOutputProcess"/>
+                                            <swrl:argument2 rdf:datatype=
+                                            "http://www.w3.org/2001/XMLSchema#string"
+                                            >MoonOMSAddLineItemServiceProcess</swrl:argument2>
+                                          </swrl:DatavaluedPropertyAtom>
+                                        </rdf:first>
+                                      </swrl:AtomList>
+                                    </rdf:rest>
+                                  </swrl:AtomList>
+                                </rdf:rest>
+                              </swrl:AtomList>
+                            </rdf:rest>
+                          </swrl:AtomList>
+                        </rdf:rest>
+                        <rdf:first>
+                          <swrl:IndividualPropertyAtom>
+                            <swrl:argument2 rdf:resource="#addLineItemRequest"/>
+                            <swrl:argument1 rdf:resource="#addLineItemInput"/>
+                            <swrl:propertyPredicate rdf:resource="http://localhost:8080/ontologies/ServiceAnchor.owl#parameterObject"/>
+                          </swrl:IndividualPropertyAtom>
+                        </rdf:first>
+                      </swrl:AtomList>
+                    </rdf:rest>
+                  </swrl:AtomList>
+                </rdf:rest>
+              </swrl:AtomList>
+            </rdf:rest>
+          </swrl:AtomList>
+        </rdf:rest>
+        <rdf:first>
+          <swrl:ClassAtom>
+            <swrl:argument1 rdf:resource="#addLineItemInputProcess"/>
+            <swrl:classPredicate rdf:resource="http://localhost:8080/ontologies/ServiceAnchor.owl#Process"/>
+          </swrl:ClassAtom>
+        </rdf:first>
+      </swrl:AtomList>
+    </swrl:body>
+  </swrl:Imp>
+  <swrl:Variable rdf:about="http://localhost:8080/process/MediationProcess/Dataflow_MediationProcessInput+MoonCRMServiceOutput2MoonOMS_CreateNewOrderInputContainer.owl#logMessage"/>
+  <rdf:List>
+    <rdf:rest>
+      <rdf:List>
+        <rdf:first rdf:resource="http://localhost:8080/process/MediationProcess/Dataflow_MediationProcessInput+MoonCRMServiceOutput2MoonOMS_CreateNewOrderInputContainer.owl#serviceInput"/>
+        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+      </rdf:List>
+    </rdf:rest>
+    <rdf:first rdf:resource="http://localhost:8080/process/MediationProcess/Dataflow_MediationProcessInput+MoonCRMServiceOutput2MoonOMS_CreateNewOrderInputContainer.owl#lookupRequest"/>
+  </rdf:List>
+  <rdf:List>
+    <rdf:rest>
+      <rdf:List>
+        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+        <rdf:first rdf:resource="http://localhost:8080/process/MediationProcess/Dataflow_MediationProcessInput+MoonCRMServiceOutput2MoonOMS_CreateNewOrderInputContainer.owl#serviceInput"/>
+      </rdf:List>
+    </rdf:rest>
+    <rdf:first rdf:resource="http://localhost:8080/process/MediationProcess/Dataflow_MediationProcessInput+MoonCRMServiceOutput2MoonOMS_CreateNewOrderInputContainer.owl#lookupRequest"/>
+  </rdf:List>
+  <rdf:List>
+    <rdf:rest>
+      <rdf:List>
+        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+        <rdf:first rdf:resource="http://localhost:8080/process/MediationProcess/Dataflow_MediationProcessInput+MoonCRMServiceOutput2MoonOMS_CreateNewOrderInputContainer.owl#serviceInput"/>
+      </rdf:List>
+    </rdf:rest>
+    <rdf:first rdf:resource="http://localhost:8080/process/MediationProcess/Dataflow_MediationProcessInput+MoonCRMServiceOutput2MoonOMS_CreateNewOrderInputContainer.owl#lookupRequest"/>
+  </rdf:List>
+  <rdf:List>
+    <rdf:rest>
+      <rdf:List>
+        <rdf:first rdf:resource="http://localhost:8080/process/MediationProcess/Dataflow_MediationProcessInput+MoonCRMServiceOutput2MoonOMS_CreateNewOrderInputContainer.owl#serviceInput"/>
+        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+      </rdf:List>
+    </rdf:rest>
+    <rdf:first rdf:resource="http://localhost:8080/process/MediationProcess/Dataflow_MediationProcessInput+MoonCRMServiceOutput2MoonOMS_CreateNewOrderInputContainer.owl#lookupRequest"/>
+  </rdf:List>
+  <rdf:List>
+    <rdf:first rdf:resource="http://localhost:8080/process/MediationProcess/Dataflow_MediationProcessInput+MoonCRMServiceOutput2MoonOMS_CreateNewOrderInputContainer.owl#lookupRequest"/>
+    <rdf:rest>
+      <rdf:List>
+        <rdf:first rdf:resource="http://localhost:8080/process/MediationProcess/Dataflow_MediationProcessInput+MoonCRMServiceOutput2MoonOMS_CreateNewOrderInputContainer.owl#serviceInput"/>
+        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+      </rdf:List>
+    </rdf:rest>
+  </rdf:List>
+  <rdf:List>
+    <rdf:first rdf:resource="http://localhost:8080/process/MediationProcess/Dataflow_MediationProcessInput+MoonCRMServiceOutput2MoonOMS_CreateNewOrderInputContainer.owl#lookupRequest"/>
+    <rdf:rest>
+      <rdf:List>
+        <rdf:first rdf:resource="http://localhost:8080/process/MediationProcess/Dataflow_MediationProcessInput+MoonCRMServiceOutput2MoonOMS_CreateNewOrderInputContainer.owl#serviceInput"/>
+        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+      </rdf:List>
+    </rdf:rest>
+  </rdf:List>
+  <rdf:List>
+    <rdf:first rdf:resource="http://localhost:8080/process/MediationProcess/Dataflow_MediationProcessInput+MoonCRMServiceOutput2MoonOMS_CreateNewOrderInputContainer.owl#lookupRequest"/>
+    <rdf:rest>
+      <rdf:List>
+        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+        <rdf:first rdf:resource="http://localhost:8080/process/MediationProcess/Dataflow_MediationProcessInput+MoonCRMServiceOutput2MoonOMS_CreateNewOrderInputContainer.owl#serviceInput"/>
+      </rdf:List>
+    </rdf:rest>
+  </rdf:List>
+  <swrl:Variable rdf:about="http://localhost:8080/process/MediationProcess/Dataflow_MediationProcessInput+MoonCRMServiceOutput2MoonOMS_CreateNewOrderInputContainer.owl#processedItemStatus"/>
+</rdf:RDF>
+
+<!-- Created with Protege (with OWL Plugin 3.4, Build 130)  http://protege.stanford.edu -->

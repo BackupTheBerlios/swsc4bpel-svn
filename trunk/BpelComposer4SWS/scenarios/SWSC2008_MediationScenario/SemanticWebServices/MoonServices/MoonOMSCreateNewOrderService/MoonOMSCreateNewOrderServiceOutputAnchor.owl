@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:anchor="http://localhost:8080/ontologies/ServiceAnchor.owl#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns="http://localhost:8080/process/MediationProcess/MoonOMSCreateNewOrderOutputContainer.owl#"
+  xml:base="http://localhost:8080/process/MediationProcess/MoonOMSCreateNewOrderOutputContainer.owl">
+  <owl:Ontology rdf:about="http://localhost:8080/process/MediationProcess/MoonOMSCreateNewOrderOutputContainer.owl">
+    <owl:imports rdf:resource="http://localhost:8080/ontologies/ServiceAnchor.owl"/>
+  </owl:Ontology>
+  <anchor:Process rdf:ID="MoonOMSCreateNewOrderServiceProcess">
+    <anchor:hasOutput>
+      <anchor:Output rdf:ID="Output">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >CreateNewOrderResponse</rdfs:label>
+      </anchor:Output>
+    </anchor:hasOutput>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >MoonOMSCreateNewOrderServiceProcess</rdfs:label>
+  </anchor:Process>
+</rdf:RDF>
+
+<!-- Created with Protege (with OWL Plugin 3.4, Build 130)  http://protege.stanford.edu -->

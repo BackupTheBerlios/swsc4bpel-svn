@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<getVitalRecordsDocumentInfoReturn xsi:type="ns2:vitalRecordsDocumentInfo" xmlns:ns2="http://localhost:8080/PublicServices/VitalRecordsOffice/XVitalRecords" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<price xsi:type="xsd:string">10.00</price>
+	<vitalRecordsDocumentType xsi:type="ns2:vitalRecordsDocumentType">
+		<id xsi:type="xsd:string">VitalRecords.BirthCertificate</id>
+		<description xsi:type="xsd:string">a document description</description>
+	</vitalRecordsDocumentType>
+	<paymentAccount xsi:type="ns3:account" xmlns:ns3="http://localhost:8080/PublicServices/PublicServicePayment/XPublicServicePayment">
+		<accountOwner xsi:type="xsd:string">Berlin Vital Records Office</accountOwner>
+		<accountNumber xsi:type="xsd:string">700101000</accountNumber>
+		<bankID xsi:type="xsd:string">10050000</bankID>
+	</paymentAccount>
+</getVitalRecordsDocumentInfoReturn>

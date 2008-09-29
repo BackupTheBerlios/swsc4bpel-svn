@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:anchor="http://localhost:8080/ontologies/ServiceAnchor.owl#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns="http://www.owl-ontologies.com/Ontology1209407793.owl#"
+  xml:base="http://www.owl-ontologies.com/Ontology1209407793.owl">
+  <owl:Ontology rdf:about="">
+    <owl:imports rdf:resource="http://localhost:8080/ontologies/ServiceAnchor.owl"/>
+  </owl:Ontology>
+  <anchor:Output rdf:ID="Output">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >CustomerLookupResponse</rdfs:label>
+  </anchor:Output>
+  <anchor:Process rdf:ID="MoonCRMService">
+    <anchor:hasOutput rdf:resource="#Output"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >MoonCRMService</rdfs:label>
+  </anchor:Process>
+</rdf:RDF>
+
+<!-- Created with Protege (with OWL Plugin 3.4, Build 130)  http://protege.stanford.edu -->

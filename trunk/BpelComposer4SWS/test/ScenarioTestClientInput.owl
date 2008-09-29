@@ -1,0 +1,42 @@
+<rdf:RDF xmlns:process="http://www.daml.org/services/owl-s/1.1/Process.owl#" xmlns:list="http://www.daml.org/services/owl-s/1.1/generic/ObjectList.owl#" xmlns:rront="http://localhost:8080/PublicServices/ResidentRegistry/ResidentRegistryOntology.owl#" xmlns:vront="http://localhost:8080/PublicServices/VitalRecordsOffice/VitalRecordsOfficeOntology.owl#" xmlns:sto="http://localhost:8080/PublicServices/StatisticalOffice/StatisticalOfficeOntology.owl#" xmlns:psp="http://localhost:8080/PublicServices/PublicServicePayment/PublicServicePaymentOntology.owl#" xmlns:swrl="http://www.w3.org/2003/11/swrl#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:expression="http://www.daml.org/services/owl-s/1.1/generic/Expression.owl#" xmlns:service="http://www.daml.org/services/owl-s/1.1/Service.owl#" xmlns:grounding="http://www.daml.org/services/owl-s/1.1/Grounding.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xsd="http://www.w3.org/2001/XMLSchema#" xmlns:daml="http://www.daml.org/2001/03/daml+oil#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:profile="http://www.daml.org/services/owl-s/1.1/Profile.owl#">
+	<rdf:Description rdf:nodeID="A64">
+		<!--ResidentSearchProfile-->
+		<rront:hasGivenName rdf:nodeID="A63"/>
+		<rront:hasSurname rdf:nodeID="A61"/>
+		<rront:hasBirth rdf:nodeID="A42"/>
+		<rdf:type rdf:resource="http://localhost:8080/PublicServices/ResidentRegistry/ResidentRegistryOntology.owl#ResidentSearchProfile"/>
+	</rdf:Description>
+	<rdf:Description rdf:nodeID="A63">
+		<rront:hasRef rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hans</rront:hasRef>
+		<rdf:type rdf:resource="http://localhost:8080/PublicServices/ResidentRegistry/ResidentRegistryOntology.owl#GivenName"/>
+	</rdf:Description>
+	<rdf:Description rdf:nodeID="A61">
+		<rront:hasRef rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mayer</rront:hasRef>
+		<rdf:type rdf:resource="http://localhost:8080/PublicServices/ResidentRegistry/ResidentRegistryOntology.owl#Surname"/>
+	</rdf:Description>
+	<rdf:Description rdf:nodeID="A42">
+		<rront:hasDateOfBirth rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1111-11-11</rront:hasDateOfBirth>
+		<rdf:type rdf:resource="http://localhost:8080/PublicServices/ResidentRegistry/ResidentRegistryOntology.owl#Birth"/>
+		<rront:hasPlaceOfBirth rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Berlin</rront:hasPlaceOfBirth>
+	</rdf:Description>
+	<!--VitalRecordsDocumentType-->
+	<rdf:Description rdf:nodeID="A65">
+		<sto:hasIdentifier rdf:nodeID="A66"/>
+		<rdf:type rdf:resource="http://localhost:8080/PublicServices/VitalRecordsOffice/VitalRecordsOfficeOntology.owl#VitalRecordsDocumentType"/>
+		<vront:hasVitalRecordsDescription rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Birth Certificate</vront:hasVitalRecordsDescription>
+	</rdf:Description>
+	<rdf:Description rdf:nodeID="A66">
+		<rdf:type rdf:resource="http://localhost:8080/PublicServices/StatisticalOffice/StatisticalOfficeOntology.owl#Identifier"/>
+		<sto:hasRef rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VitalRecords.BirthCertificate</sto:hasRef>
+	</rdf:Description>
+	<!--AccountNumber-->
+	 <rdf:Description rdf:nodeID="A36">
+    <rdf:type rdf:resource="http://localhost:8080/PublicServices/PublicServicePayment/PublicServicePaymentOntology.owl#AccountNumber"/>
+    <psp:hasRef rdf:datatype="http://www.w3.org/2001/XMLSchema#string">720105050</psp:hasRef>
+  </rdf:Description>
+  <!--BankID-->
+  <rdf:Description rdf:nodeID="A6">
+    <psp:hasRef rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10050000</psp:hasRef>
+    <rdf:type rdf:resource="http://localhost:8080/PublicServices/PublicServicePayment/PublicServicePaymentOntology.owl#BankID"/>
+  </rdf:Description>
+</rdf:RDF>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project name="MoonCRM" soapui-version="2.0.2" xmlns:con="http://eviware.com/soapui/config"><con:settings><con:setting id="ProjectSettings@projectRoot">E:\SWSC2008_MediationScenario\SemanticWebServices\MoonServices</con:setting></con:settings><con:interface name="CRMServiceSoapBinding" bindingName="{mooncompany}CRMServiceSoapBinding" soapVersion="1_1" definition="http://sws-challenge.org/services/CRMService?wsdl"><con:settings/><con:endpoints><con:endpoint>http://sws-challenge.org/moon/services/CRMService</con:endpoint></con:endpoints><con:operation isOneWay="false" action="search" name="search" bindingOperationName="search" inputName="" receivesAttachments="false" sendsAttachments="false"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://sws-challenge.org/moon/services/CRMService</con:endpoint><con:request><![CDATA[<soapenv:Envelope soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/">
+  <soapenv:Body>
+    <search xmlns="mooncompany">
+        <searchString xsi:type="xsd:string">Blue Company</searchString>
+    </search>
+  </soapenv:Body>
+</soapenv:Envelope>]]></con:request></con:call><con:call name="Request 2"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://sws-challenge.org/moon/services/CRMService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:moon="mooncompany">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <moon:SearchCustomer>
+         <moon:searchString>?</moon:searchString>
+      </moon:SearchCustomer>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request></con:call></con:operation><con:definitionCache rootPart="http://sws-challenge.org/services/CRMService?wsdl" type="TEXT"><con:part><con:url>http://sws-challenge.org/services/CRMService?wsdl</con:url><con:content><![CDATA[<wsdl:definitions targetNamespace="mooncompany" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="mooncompany" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <wsdl:types>
+    <xsd:schema targetNamespace="mooncompany" elementFormDefault="qualified" xmlns="mooncompany">
+      <xsd:element name="SearchCustomer" type="SearchCustomerType"/>
+      <xsd:complexType name="SearchCustomerType">
+        <xsd:sequence>
+          <xsd:element name="searchString" type="xsd:string" nillable="false"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="SearchCustomerResponse" type="SearchCustomerResponseType"/>
+      <xsd:complexType name="SearchCustomerResponseType">
+        <xsd:sequence>
+          <xsd:element name="customerId" type="xsd:long" nillable="false"/>
+          <xsd:element name="roleCode" type="xsd:string" nillable="false"/>
+          <xsd:element name="contactName" type="xsd:string" nillable="false"/>
+          <xsd:element name="email" type="xsd:string" nillable="false"/>
+          <xsd:element name="telephone" type="xsd:string" nillable="false"/>
+          <xsd:element name="businessName" type="xsd:string" nillable="false"/>
+          <xsd:element name="postalCode" type="xsd:string" nillable="false"/>
+          <xsd:element name="city" type="xsd:string" nillable="false"/>
+          <xsd:element name="street" type="xsd:string" nillable="false"/>
+          <xsd:element name="countryCode" type="xsd:string" nillable="false"/>
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="SearchCustomerResponseMessage">
+    <wsdl:part name="SearchCustomerResponse" element="impl:SearchCustomerResponse"/>
+  </wsdl:message>
+  <wsdl:message name="SearchCustomerRequestMessage">
+    <wsdl:part name="SearchCustomerRequest" element="impl:SearchCustomer"/>
+  </wsdl:message>
+  <wsdl:portType name="CRMServicePortType">
+    <wsdl:operation name="search">
+      <wsdl:documentation>The search operation takes the name of the bussinesName of a customer and returns
+        if known its details</wsdl:documentation>
+      <wsdl:input message="impl:SearchCustomerRequestMessage"/>
+      <wsdl:output message="impl:SearchCustomerResponseMessage"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="CRMServiceSoapBinding" type="impl:CRMServicePortType">
+    <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="search">
+      <wsdlsoap:operation soapAction="search"/>
+      <wsdl:input>
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CRMService_v1">
+    <wsdl:port name="CRMService" binding="impl:CRMServiceSoapBinding">
+      <wsdlsoap:address location="http://sws-challenge.org/moon/services/CRMService"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache></con:interface><con:properties/><con:wssContainer/></con:soapui-project>

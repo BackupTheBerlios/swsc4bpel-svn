@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
+         xmlns:rosetta="http://localhost:8080/ontologies/RosettaNetOntology.owl#"            
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"             
+         xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"             
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"             
+         xmlns:owl="http://www.w3.org/2002/07/owl#"             
+         xmlns:anchor="http://localhost:8080/ontologies/ServiceAnchor.owl#"             
+         xmlns="http://localhost:8080/process/MediationProcessInput.owl#"             
+         xml:base="http://localhost:8080/process/MediationProcessInput.owl">
+  <owl:Ontology rdf:about="http://localhost:8080/process/MediationProcessInput.owl">
+    <owl:imports rdf:resource="http://localhost:8080/ontologies/ServiceAnchor.owl"/>
+    <owl:imports rdf:resource="http://localhost:8080/ontologies/RosettaNetOntology.owl"/>
+  </owl:Ontology>
+  <rosetta:Pip3A4PurchaseOrderRequest rdf:ID="Pip3A4PurchaseOrderRequest_1">
+    <rosetta:hasFromRole>
+      <rosetta:Buyer rdf:ID="Buyer_2">
+        <rosetta:hasContactInformation>
+          <rosetta:ContactInformation rdf:ID="ContactInformation_3">
+            <rosetta:hasTelephoneNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">+43(650)89930011</rosetta:hasTelephoneNumber>
+            <rosetta:hasContactName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Stefan Blue</rosetta:hasContactName>
+            <rosetta:hasEmailAddress rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stefan.blue@blue.com</rosetta:hasEmailAddress>
+          </rosetta:ContactInformation>
+        </rosetta:hasContactInformation>
+        <rosetta:relatesToPartner>
+          <rosetta:Partner rdf:ID="Partner_4">
+            <rosetta:hasPhysicalLocation>
+              <rosetta:PhysicalAddress rdf:ID="PhysicalAddress_7">
+                <rosetta:hasCityName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Innsbruck</rosetta:hasCityName>
+                <rosetta:hasNationalPostalCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A-6020</rosetta:hasNationalPostalCode>
+                <rosetta:hasGlobalCountryCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AT</rosetta:hasGlobalCountryCode>
+                <rosetta:hasAddressLine1 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">North Business Center, Block 9</rosetta:hasAddressLine1>
+              </rosetta:PhysicalAddress>
+            </rosetta:hasPhysicalLocation>
+            <rosetta:hasContactInformation>
+              <rosetta:ContactInformation rdf:ID="ContactInformation_6">
+                <rosetta:hasTelephoneNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">+43(650)89930023</rosetta:hasTelephoneNumber>
+                <rosetta:hasEmailAddress rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stefania.wolf@blue.com</rosetta:hasEmailAddress>
+                <rosetta:hasContactName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Stefania Wolf</rosetta:hasContactName>
+              </rosetta:ContactInformation>
+            </rosetta:hasContactInformation>
+            <rosetta:hasBusinessDescription>
+              <rosetta:BusinessDescription rdf:ID="BusinessDescription_5">
+                <rosetta:hasBusinessName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Blue Company</rosetta:hasBusinessName>
+              </rosetta:BusinessDescription>
+            </rosetta:hasBusinessDescription>
+          </rosetta:Partner>
+        </rosetta:relatesToPartner>
+      </rosetta:Buyer>
+    </rosetta:hasFromRole>
+  </rosetta:Pip3A4PurchaseOrderRequest>
+  <anchor:Process rdf:ID="MediationProcess">
+    <anchor:hasInput>
+      <anchor:Input rdf:ID="Input">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pip3A4PurchaseOrderRequest</rdfs:label>
+        <anchor:parameterObject rdf:resource="#Pip3A4PurchaseOrderRequest_1"/>
+      </anchor:Input>
+    </anchor:hasInput>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MediationProcess</rdfs:label>
+  </anchor:Process>
+</rdf:RDF>

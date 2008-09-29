@@ -1,0 +1,4 @@
+http://localhost:8080/PublicServices/ResidentRegistry/ResidentRegistryOntology.owl
+http://localhost:8080/PublicServices/PublicServicePayment/PublicServicePaymentOntology.owl
+http://localhost:8080/PublicServices/VitalRecordsOffice/VitalRecordsOfficeOntology.owl
+http://localhost:8080/PublicServices/StatisticalOffice/StatisticalOfficeOntology.owl

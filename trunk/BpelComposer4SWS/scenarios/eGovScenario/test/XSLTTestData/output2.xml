@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:j.0="http://localhost:8080/PublicServices/Test/TestOntology.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <j.0:Letter>
+    <j.0:hasTitle>the world formula</j.0:hasTitle>
+    <j.0:hasContent>sdfghfsdgdfdgsdgfgdsg</j.0:hasContent>
+  </j.0:Letter>
+</rdf:RDF>

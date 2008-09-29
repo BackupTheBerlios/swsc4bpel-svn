@@ -1,0 +1,3 @@
+<ns1:NewOrderResponse xmlns="mooncompany" xmlns:ns1="mooncompany">
+  <ns1:orderId>9</ns1:orderId>
+</ns1:NewOrderResponse>

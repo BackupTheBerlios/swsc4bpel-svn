@@ -1,0 +1,304 @@
+# Base: http://localhost:8080/PublicServices/ResidentRegistry/ResidentRegistryOntology.owl#
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix default:  <http://localhost:8080/PublicServices/ResidentRegistry/ResidentRegistryOntology.owl#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+
+default:Religion
+      a       owl:Class ;
+      owl:equivalentClass
+              [ a       owl:Restriction ;
+                owl:cardinality "1"^^xsd:int ;
+                owl:onProperty default:hasReligionKey
+              ] .
+
+default:hasGivenName
+      a       owl:ObjectProperty , owl:FunctionalProperty ;
+      rdfs:range default:GivenName .
+
+default:MiddleNames
+      a       owl:Class ;
+      rdfs:subClassOf owl:Thing ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:cardinality "1"^^xsd:int ;
+                owl:onProperty default:hasRef
+              ] .
+
+default:GivenName
+      a       owl:Class ;
+      rdfs:subClassOf owl:Thing ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:cardinality "1"^^xsd:int ;
+                owl:onProperty default:hasRef
+              ] .
+
+default:StreetNumber
+      a       owl:Class ;
+      rdfs:subClassOf owl:Thing ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:cardinality "1"^^xsd:int ;
+                owl:onProperty default:hasRef
+              ] .
+
+default:hasAddress
+      a       owl:ObjectProperty , owl:FunctionalProperty ;
+      rdfs:range default:Address .
+
+default:hasDeath
+      a       owl:ObjectProperty , owl:FunctionalProperty ;
+      rdfs:range default:Death .
+
+default:hasNationalityKey
+      a       owl:DatatypeProperty , owl:FunctionalProperty ;
+      rdfs:range xsd:string .
+
+default:hasReligionKey
+      a       owl:DatatypeProperty , owl:FunctionalProperty ;
+      rdfs:range xsd:string .
+
+default:hasDateOfBirth
+      a       owl:DatatypeProperty , owl:FunctionalProperty ;
+      rdfs:range xsd:string .
+
+default:Birth
+      a       owl:Class ;
+      owl:equivalentClass
+              [ a       owl:Class ;
+                owl:intersectionOf ([ a       owl:Restriction ;
+                            owl:cardinality "1"^^xsd:int ;
+                            owl:onProperty default:hasDateOfBirth
+                          ] [ a       owl:Restriction ;
+                            owl:cardinality "1"^^xsd:int ;
+                            owl:onProperty default:hasPlaceOfBirth
+                          ])
+              ] .
+
+default:hasStreet
+      a       owl:ObjectProperty , owl:FunctionalProperty ;
+      rdfs:range default:Street .
+
+default:Death
+      a       owl:Class ;
+      owl:equivalentClass
+              [ a       owl:Class ;
+                owl:intersectionOf ([ a       owl:Restriction ;
+                            owl:cardinality "1"^^xsd:int ;
+                            owl:onProperty default:hasDateOfDeath
+                          ] [ a       owl:Restriction ;
+                            owl:cardinality "1"^^xsd:int ;
+                            owl:onProperty default:hasPlaceOfDeath
+                          ])
+              ] .
+
+default:hasDateOfDeath
+      a       owl:FunctionalProperty , owl:DatatypeProperty ;
+      rdfs:range xsd:string .
+
+default:Name
+      a       owl:Class ;
+      owl:equivalentClass
+              [ a       owl:Class ;
+                owl:intersectionOf ([ a       owl:Restriction ;
+                            owl:cardinality "1"^^xsd:int ;
+                            owl:onProperty default:hasGivenName
+                          ] [ a       owl:Restriction ;
+                            owl:cardinality "1"^^xsd:int ;
+                            owl:onProperty default:hasSurname
+                          ] [ a       owl:Restriction ;
+                            owl:minCardinality "0"^^xsd:int ;
+                            owl:onProperty default:hasMiddleNames
+                          ] [ a       owl:Restriction ;
+                            owl:minCardinality "0"^^xsd:int ;
+                            owl:onProperty default:hasTitles
+                          ])
+              ] .
+
+<http://localhost:8080/PublicServices/ResidentRegistry/ResidentRegistryOntology.owl>
+      a       owl:Ontology .
+
+default:ZipCode
+      a       owl:Class ;
+      rdfs:subClassOf owl:Thing ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:cardinality "1"^^xsd:int ;
+                owl:onProperty default:hasRef
+              ] .
+
+default:hasBirth
+      a       owl:ObjectProperty , owl:FunctionalProperty ;
+      rdfs:range default:Birth .
+
+default:hasMoreAddress
+      a       owl:ObjectProperty , owl:FunctionalProperty ;
+      rdfs:range default:MoreAddress .
+
+default:ResidentSearchProfile
+      a       owl:Class ;
+      owl:equivalentClass
+              [ a       owl:Class ;
+                owl:intersectionOf ([ a       owl:Restriction ;
+                            owl:cardinality "1"^^xsd:int ;
+                            owl:onProperty default:hasGivenName
+                          ] [ a       owl:Restriction ;
+                            owl:cardinality "1"^^xsd:int ;
+                            owl:onProperty default:hasSurname
+                          ] [ a       owl:Restriction ;
+                            owl:cardinality "1"^^xsd:int ;
+                            owl:onProperty default:hasBirth
+                          ])
+              ] .
+
+default:hasZipCode
+      a       owl:ObjectProperty , owl:FunctionalProperty ;
+      rdfs:range default:ZipCode .
+
+default:Titles
+      a       owl:Class ;
+      rdfs:subClassOf owl:Thing ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:cardinality "1"^^xsd:int ;
+                owl:onProperty default:hasRef
+              ] .
+
+default:hasName
+      a       owl:ObjectProperty , owl:FunctionalProperty ;
+      rdfs:range default:Name .
+
+default:hasPlaceOfDeath
+      a       owl:FunctionalProperty , owl:DatatypeProperty ;
+      rdfs:range xsd:string .
+
+default:hasPlaceOfBirth
+      a       owl:FunctionalProperty , owl:DatatypeProperty ;
+      rdfs:range xsd:string .
+
+default:hasSurname
+      a       owl:ObjectProperty , owl:FunctionalProperty ;
+      rdfs:range default:Surname .
+
+default:hasRef
+      a       owl:DatatypeProperty ;
+      rdfs:comment """String representing the property's subject.
+"""^^xsd:string ;
+      rdfs:range xsd:string .
+
+default:Address
+      a       owl:Class ;
+      owl:equivalentClass
+              [ a       owl:Class ;
+                owl:intersectionOf ([ a       owl:Restriction ;
+                            owl:cardinality "1"^^xsd:int ;
+                            owl:onProperty default:hasStreet
+                          ] [ a       owl:Restriction ;
+                            owl:cardinality "1"^^xsd:int ;
+                            owl:onProperty default:hasStreetNumber
+                          ] [ a       owl:Restriction ;
+                            owl:minCardinality "0"^^xsd:int ;
+                            owl:onProperty default:hasMoreAddress
+                          ] [ a       owl:Restriction ;
+                            owl:cardinality "1"^^xsd:int ;
+                            owl:onProperty default:hasZipCode
+                          ] [ a       owl:Restriction ;
+                            owl:minCardinality "0"^^xsd:int ;
+                            owl:onProperty default:hasLocality
+                          ])
+              ] .
+
+default:hasStreetNumber
+      a       owl:ObjectProperty , owl:FunctionalProperty ;
+      rdfs:range default:StreetNumber .
+
+default:Street
+      a       owl:Class ;
+      rdfs:subClassOf owl:Thing ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:cardinality "1"^^xsd:int ;
+                owl:onProperty default:hasRef
+              ] .
+
+default:hasReligion
+      a       owl:ObjectProperty , owl:FunctionalProperty ;
+      rdfs:range default:Religion .
+
+default:hasMiddleNames
+      a       owl:ObjectProperty , owl:FunctionalProperty ;
+      rdfs:range default:MiddleNames .
+
+default:Locality
+      a       owl:Class ;
+      rdfs:subClassOf owl:Thing ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:cardinality "1"^^xsd:int ;
+                owl:onProperty default:hasRef
+              ] .
+
+default:MoreAddress
+      a       owl:Class ;
+      rdfs:subClassOf owl:Thing ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:cardinality "1"^^xsd:int ;
+                owl:onProperty default:hasRef
+              ] .
+
+default:hasNationality
+      a       owl:ObjectProperty , owl:FunctionalProperty ;
+      rdfs:range default:Nationality .
+
+default:ResidentInfo
+      a       owl:Class ;
+      owl:equivalentClass
+              [ a       owl:Class ;
+                owl:intersectionOf ([ a       owl:Restriction ;
+                            owl:cardinality "1"^^xsd:int ;
+                            owl:onProperty default:hasName
+                          ] [ a       owl:Restriction ;
+                            owl:minCardinality "0"^^xsd:int ;
+                            owl:onProperty default:hasDeath
+                          ] [ a       owl:Restriction ;
+                            owl:cardinality "1"^^xsd:int ;
+                            owl:onProperty default:hasBirth
+                          ] [ a       owl:Restriction ;
+                            owl:cardinality "1"^^xsd:int ;
+                            owl:onProperty default:hasAddress
+                          ] [ a       owl:Restriction ;
+                            owl:minCardinality "0"^^xsd:int ;
+                            owl:onProperty default:hasNationality
+                          ] [ a       owl:Restriction ;
+                            owl:minCardinality "0"^^xsd:int ;
+                            owl:onProperty default:hasReligion
+                          ])
+              ] .
+
+default:hasLocality
+      a       owl:ObjectProperty , owl:FunctionalProperty ;
+      rdfs:range default:Locality .
+
+default:hasTitles
+      a       owl:ObjectProperty , owl:FunctionalProperty ;
+      rdfs:range default:Titles .
+
+default:Surname
+      a       owl:Class ;
+      rdfs:subClassOf owl:Thing ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:cardinality "1"^^xsd:int ;
+                owl:onProperty default:hasRef
+              ] .
+
+default:Nationality
+      a       owl:Class ;
+      owl:equivalentClass
+              [ a       owl:Restriction ;
+                owl:cardinality "1"^^xsd:int ;
+                owl:onProperty default:hasNationalityKey
+              ] .

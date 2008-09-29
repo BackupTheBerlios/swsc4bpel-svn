@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project basedir="." default="composer" name="axisTest">
+	<path id="classpath">
+		<fileset dir="lib/protege-lib">
+			<include name="*.jar"/>
+		</fileset>
+		<!-- UNCOMMENT TO USE SOURCE -->
+    <pathelement location="${basedir}"/>
+		<pathelement location="${basedir}/target/classes"/> 
+		<!-- UNCOMMENT TO USE DISTRIBUTION - ->
+		<fileset dir="target">
+			<include name="BpelComposer4SWS-1.0-SNAPSHOT.jar"/>
+		</fileset>
+		-->
+		<fileset dir="lib">
+			<include name="*.jar"/>
+		</fileset>
+		<fileset dir="lib/last_in_order_libs">
+			<include name="*.jar"/>
+		</fileset>		
+	</path>
+	<path id="src">
+		<pathelement location="${basedir}/src/main/java"/>
+		<pathelement location="${basedir}/scenarios/eGovScenario/OWL-STestClientScenario"/>
+	</path>
+	<target name="compile">
+		<javac destdir="${basedir}/target/classes" source="1.4" target="1.4">
+			<src path="${basedir}/src/main/java"/>
+			<src path="${basedir}/scenarios/eGovScenario/TestClients/OWL-STestClientScenario"/>
+			<classpath refid="classpath"/>
+		</javac>
+	</target>
+	<target name="composer">
+		<java classname="org.qualipso.interop.semantics.procintegration.bpel.composer.core.Main" 		      
+          fork="true" 
+          maxmemory="512M">
+      <jvmarg value="-Dprotege.dir=${env.PROTEGE_HOME}"/>
+			<classpath refid="classpath"/>
+		</java>
+	</target>
+	<target name="scenario">
+		<java classname="ScenarioTestClient" 
+          fork="true" 
+          maxmemory="512M">
+			<classpath refid="classpath"/>
+		</java>
+	</target>
+</project>

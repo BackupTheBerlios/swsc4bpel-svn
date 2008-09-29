@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:j.0="http://localhost:8080/PublicServices/VitalRecordsOffice/VitalRecordsOfficeOntology.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xsd="http://www.w3.org/2001/XMLSchema#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:sto="http://localhost:8080/PublicServices/StatisticalOffice/StatisticalOfficeOntology.owl#" xmlns:psp="http://localhost:8080/PublicServices/PublicServicePayment/PublicServicePaymentOntology.owl#" xmlns:daml="http://www.daml.org/2001/03/daml+oil#" xmlns:dc="http://purl.org/dc/elements/1.1/">
+	<j.0:DocumentInfo>
+		<j.0:hasDocumentType>
+			<sto:OfficialCitizenDocumentType>
+				<sto:hasIdentifier>
+					<sto:Identifier>
+						<sto:hasRef rdf:datatype="http://www.w3.org/2001/XMLSchema#string">aString</sto:hasRef>
+					</sto:Identifier>
+				</sto:hasIdentifier>
+			</sto:OfficialCitizenDocumentType>
+		</j.0:hasDocumentType>
+		<j.0:hasPaymentAccount>
+			<psp:Account>
+				<psp:hasAccountOwner>
+					<psp:AccountOwner>
+						<psp:hasRef rdf:datatype="http://www.w3.org/2001/XMLSchema#string">aString</psp:hasRef>
+					</psp:AccountOwner>
+				</psp:hasAccountOwner>
+				<psp:hasAccountNumber>
+					<psp:AccountNumber>
+						<psp:hasRef rdf:datatype="http://www.w3.org/2001/XMLSchema#string">aString</psp:hasRef>
+					</psp:AccountNumber>
+				</psp:hasAccountNumber>
+				<psp:hasBankID>
+					<psp:BankID>
+						<psp:hasRef rdf:datatype="http://www.w3.org/2001/XMLSchema#string">aString</psp:hasRef>
+					</psp:BankID>
+				</psp:hasBankID>
+			</psp:Account>
+		</j.0:hasPaymentAccount>
+		<j.0:hasPrice>
+			<j.0:Price>
+				<j.0:hasRef rdf:datatype="http://www.w3.org/2001/XMLSchema#string">aString</j.0:hasRef>
+			</j.0:Price>
+		</j.0:hasPrice>
+	</j.0:DocumentInfo>
+</rdf:RDF>

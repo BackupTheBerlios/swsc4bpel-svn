@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="WINDOWS-1252"?>
+<rdf:RDF xmlns:process="http://www.daml.org/services/owl-s/1.1/Process.owl#" xmlns:list="http://www.daml.org/services/owl-s/1.1/generic/ObjectList.owl#" xmlns:swrl="http://www.w3.org/2003/11/swrl#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns="http://www.example.org/service.owl" xmlns:expression="http://www.daml.org/services/owl-s/1.1/generic/Expression.owl#" xmlns:service="http://www.daml.org/services/owl-s/1.1/Service.owl#" xmlns:grounding="http://www.daml.org/services/owl-s/1.1/Grounding.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xsd="http://www.w3.org/2001/XMLSchema#" xmlns:daml="http://www.daml.org/2001/03/daml+oil#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:profile="http://www.daml.org/services/owl-s/1.1/Profile.owl#" xml:base="http://localhost:8080/PublicServices/PublicServicePayment/MakePayment.owl#">
+	<owl:Ontology rdf:about="">
+		<owl:imports rdf:resource="http://localhost:8080/PublicServices/PublicServicePayment/PublicServicePaymentOntology.owl"/>
+	</owl:Ontology>
+	<!--+++++++++++++++++++++++++++++++++++++++++++++-->
+	<!-- Service description -->
+	<service:Service rdf:ID="MakePaymentService">
+		<service:presents rdf:resource="#MakePaymentProfile"/>
+		<service:describedBy rdf:resource="#MakePaymentProcess"/>
+		<service:supports rdf:resource="#MakePaymentGrounding"/>
+	</service:Service>
+	<!--+++++++++++++++++++++++++++++++++++++++++++++-->
+	<!-- Profile description-->
+	<profile:Profile rdf:ID="MakePaymentProfile">
+		<service:isPresentedBy rdf:resource="#MakePaymentService"/>
+		<profile:serviceName xml:lang="en">MakePayment</profile:serviceName>
+		<profile:textDescription xml:lang="en">Processes a bank transfer.</profile:textDescription>
+		<profile:hasInput rdf:resource="#Payment"/>
+		<profile:hasOutput rdf:resource="#Receipt"/>
+	</profile:Profile>
+	<!--+++++++++++++++++++++++++++++++++++++++++++++-->
+	<!-- Process description -->
+	<process:AtomicProcess rdf:ID="MakePaymentProcess">
+		<service:describes rdf:resource="#MakePaymentService"/>
+		<rdfs:label>MakePaymentProcess</rdfs:label>
+		<process:hasInput rdf:resource="#Payment"/>
+		<process:hasOutput rdf:resource="#Receipt"/>
+	</process:AtomicProcess>
+	<process:Output rdf:ID="Receipt">
+		<process:parameterType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://localhost:8080/PublicServices/PublicServicePayment/PublicServicePaymentOntology.owl#Receipt</process:parameterType>
+		<rdfs:label>Receipt</rdfs:label>
+	</process:Output>
+	<process:Input rdf:ID="Payment">
+		<process:parameterType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://localhost:8080/PublicServices/PublicServicePayment/PublicServicePaymentOntology.owl#Payment</process:parameterType>
+		<rdfs:label>Payment</rdfs:label>
+	</process:Input>
+	<!--+++++++++++++++++++++++++++++++++++++++++++++-->
+	<!-- Grounding description -->
+	<grounding:WsdlGrounding rdf:ID="MakePaymentGrounding">
+		<service:supportedBy rdf:resource="#MakePaymentService"/>
+		<grounding:hasAtomicProcessGrounding rdf:resource="#MakePaymentAtomicProcessGrounding"/>
+	</grounding:WsdlGrounding>
+	<grounding:WsdlAtomicProcessGrounding rdf:ID="MakePaymentAtomicProcessGrounding">
+		<grounding:owlsProcess rdf:resource="#MakePaymentProcess"/>
+		<grounding:wsdlDocument rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://localhost:8080/PublicServices/services/PublicServicePayment?wsdl</grounding:wsdlDocument>
+		<grounding:wsdlOperation>
+			<grounding:WsdlOperationRef>
+				<grounding:portType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://localhost:8080/PublicServices/services/PublicServicePayment?wsdl#PublicServicePayment</grounding:portType>
+				<grounding:operation rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://localhost:8080/PublicServices/services/PublicServicePayment?wsdl#makePayment</grounding:operation>
+			</grounding:WsdlOperationRef>
+		</grounding:wsdlOperation>
+		<grounding:wsdlInputMessage rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://localhost:8080/PublicServices/services/PublicServicePayment?wsdl#makePaymentRequest</grounding:wsdlInputMessage>
+		<grounding:wsdlInput>
+			<grounding:WsdlInputMessageMap>
+				<grounding:owlsParameter rdf:resource="#Payment"/>
+				<grounding:wsdlMessagePart rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://localhost:8080/PublicServices/services/PublicServicePayment?wsdl#in0</grounding:wsdlMessagePart>
+				<grounding:xsltTransformationString><![CDATA[
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:j.0="http://localhost:8080/PublicServices/PublicServicePayment/PublicServicePaymentOntology.owl#" xmlns="http://localhost:8080/PublicServices/PublicServicePayment/XPublicServicePayment">
+	<xsl:template match="/">
+		<in0>
+			<xsl:apply-templates select="//rdf:type[@rdf:resource='http://localhost:8080/PublicServices/PublicServicePayment/PublicServicePaymentOntology.owl#Payment']"/>
+		</in0>
+	</xsl:template>
+	<!--Payment-->
+	<xsl:template match="rdf:type[@rdf:resource='http://localhost:8080/PublicServices/PublicServicePayment/PublicServicePaymentOntology.owl#Payment']">
+		<sourceAccount>
+			<xsl:variable name="srcAccountID" select="../j.0:hasSourceAccount/@rdf:resource"/>
+			<xsl:apply-templates select="//rdf:Description[@rdf:about=$srcAccountID]/rdf:type[@rdf:resource='http://localhost:8080/PublicServices/PublicServicePayment/PublicServicePaymentOntology.owl#Account']"/>
+		</sourceAccount>
+		<destAccount>
+			<xsl:variable name="destAccountID" select="../j.0:hasDestinationAccount/@rdf:resource"/>
+			<xsl:apply-templates select="//rdf:Description[@rdf:about=$destAccountID]/rdf:type[@rdf:resource='http://localhost:8080/PublicServices/PublicServicePayment/PublicServicePaymentOntology.owl#Account']"/>
+		</destAccount>
+		<amount>
+			<xsl:variable name="AmountID" select="../j.0:hasAmount/@rdf:resource"/>
+			<xsl:apply-templates select="//rdf:Description[@rdf:about=$AmountID]/rdf:type[@rdf:resource='http://localhost:8080/PublicServices/PublicServicePayment/PublicServicePaymentOntology.owl#Amount']"/>
+		</amount>
+		<reasonForPayment>
+			<xsl:variable name="ReasonForPaymentID" select="../j.0:hasReasonForPayment/@rdf:resource"/>
+			<xsl:apply-templates select="//rdf:Description[@rdf:about=$ReasonForPaymentID]/rdf:type[@rdf:resource='http://localhost:8080/PublicServices/PublicServicePayment/PublicServicePaymentOntology.owl#ReasonForPayment']"/>
+		</reasonForPayment>
+	</xsl:template>
+	<!--Account-->
+	<xsl:template match="rdf:type[@rdf:resource='http://localhost:8080/PublicServices/PublicServicePayment/PublicServicePaymentOntology.owl#Account']">
+		<accountOwner>
+			<xsl:variable name="AccountOwnerID" select="../j.0:hasAccountOwner/@rdf:resource"/>
+			<xsl:apply-templates select="//rdf:Description[@rdf:about=$AccountOwnerID]/rdf:type[@rdf:resource='http://localhost:8080/PublicServices/PublicServicePayment/PublicServicePaymentOntology.owl#AccountOwner']"/>
+		</accountOwner>
+		<accountNumber>
+			<xsl:variable name="AccountNumberID" select="../j.0:hasAccountNumber/@rdf:resource"/>
+			<xsl:apply-templates select="//rdf:Description[@rdf:about=$AccountNumberID]/rdf:type[@rdf:resource='http://localhost:8080/PublicServices/PublicServicePayment/PublicServicePaymentOntology.owl#AccountNumber']"/>
+		</accountNumber>
+		<bankID>
+			<xsl:variable name="BankIDID" select="../j.0:hasBankID/@rdf:resource"/>
+			<xsl:apply-templates select="//rdf:Description[@rdf:about=$BankIDID]/rdf:type[@rdf:resource='http://localhost:8080/PublicServices/PublicServicePayment/PublicServicePaymentOntology.owl#BankID']"/>
+		</bankID>
+	</xsl:template>
+	<!--AccountOwner,AccountNumber,BankID-->
+	<xsl:template match="rdf:type">
+		<xsl:value-of select="../j.0:hasRef"/>
+	</xsl:template>
+	<!--Amount-->
+	<xsl:template match="rdf:type[@rdf:resource='http://localhost:8080/PublicServices/PublicServicePayment/PublicServicePaymentOntology.owl#Amount']">
+		<xsl:value-of select="../j.0:hasRef"/>
+	</xsl:template>
+	<!--ReasonForPayment-->
+	<xsl:template match="rdf:type[@rdf:resource='http://localhost:8080/PublicServices/PublicServicePayment/PublicServicePaymentOntology.owl#ReasonForPayment']">
+		<xsl:value-of select="../j.0:hasRef"/>
+	</xsl:template>
+</xsl:stylesheet>
+			  ]]></grounding:xsltTransformationString>
+			</grounding:WsdlInputMessageMap>
+		</grounding:wsdlInput>
+		<grounding:wsdlOutputMessage rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://localhost:8080/PublicServices/services/PublicServicePayment?wsdl#makePaymentResponse</grounding:wsdlOutputMessage>
+		<grounding:wsdlOutput>
+			<grounding:WsdlOutputMessageMap>
+				<grounding:owlsParameter rdf:resource="#Receipt"/>
+				<grounding:wsdlMessagePart rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://localhost:8080/PublicServices/services/Test?wsdl#makePaymentReturn</grounding:wsdlMessagePart>
+				<grounding:xsltTransformationString><![CDATA[
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xt="http://localhost:8080/PublicServices/VitalRecordsOffice/XVitalRecordsOffice" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<xsl:template match="//makePaymentReturn">
+		<rdf:RDF xmlns="http://localhost:8080/PublicServices/ResidenRegistry/MakePaymentOutput.owl#" xml:base="http://localhost:8080/PublicServices/ResidenRegistry/MakePaymentOutput.owl" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xsd="http://www.w3.org/2001/XMLSchema#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:daml="http://www.daml.org/2001/03/daml+oil#" xmlns:psp="http://localhost:8080/PublicServices/PublicServicePayment/PublicServicePaymentOntology.owl#" xmlns:dc="http://purl.org/dc/elements/1.1/">
+			<psp:Receipt rdf:ID="Receipt_Y">
+				<!-- ConfirmedPayment -->
+				<psp:hasConfirmedPayment>
+					<psp:Payment rdf:ID="Payment_Y">
+					<!-- DestinationAccount -->
+						<psp:hasDestinationAccount>
+							<psp:Account rdf:ID="Account_Y">
+								<psp:hasAccountNumber>
+									<psp:AccountNumber rdf:ID="AccountNumber_Y">
+										<psp:hasRef rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+											<xsl:value-of select="confirmedPayment/destAccount/accountNumber"/>
+										</psp:hasRef>
+									</psp:AccountNumber>
+								</psp:hasAccountNumber>
+								<psp:hasBankID>
+									<psp:BankID rdf:ID="BankID_Y">
+										<psp:hasRef rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+											<xsl:value-of select="confirmedPayment/destAccount/bankID"/>
+										</psp:hasRef>
+									</psp:BankID>
+								</psp:hasBankID>
+								<psp:hasAccountOwner>
+									<psp:AccountOwner rdf:ID="AccountOwner_Y">
+										<psp:hasRef rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+											<xsl:value-of select="confirmedPayment/destAccount/accountOwner"/>
+										</psp:hasRef>
+									</psp:AccountOwner>
+								</psp:hasAccountOwner>
+							</psp:Account>
+						</psp:hasDestinationAccount>
+						<!-- SourceAccount -->
+						<psp:hasSourceAccount>
+							<psp:Account rdf:ID="Account_Z">
+								<psp:hasAccountOwner>
+									<psp:AccountOwner rdf:ID="AccountOwner_Z">
+										<psp:hasRef rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+											<xsl:value-of select="confirmedPayment/sourceAccount/accountOwner"/>
+										</psp:hasRef>
+									</psp:AccountOwner>
+								</psp:hasAccountOwner>
+								<psp:hasBankID>
+									<psp:BankID rdf:ID="BankID_Z">
+										<psp:hasRef rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+											<xsl:value-of select="confirmedPayment/sourceAccount/bankID"/>
+										</psp:hasRef>
+									</psp:BankID>
+								</psp:hasBankID>
+								<psp:hasAccountNumber>
+									<psp:AccountNumber rdf:ID="AccountNumber_Z">
+										<psp:hasRef rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+											<xsl:value-of select="confirmedPayment/sourceAccount/accountNumber"/>
+										</psp:hasRef>
+									</psp:AccountNumber>
+								</psp:hasAccountNumber>
+							</psp:Account>
+						</psp:hasSourceAccount>
+						<psp:hasAmount>
+							<psp:Amount rdf:ID="Amount_Z">
+								<psp:hasRef rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+									<xsl:value-of select="confirmedPayment/amount"/>
+								</psp:hasRef>
+							</psp:Amount>
+						</psp:hasAmount>
+						<psp:hasReasonForPayment>
+							<psp:ReasonForPayment rdf:ID="ReasonForPayment_Z">
+								<psp:hasRef rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+									<xsl:value-of select="confirmedPayment/reasonForPayment"/>
+								</psp:hasRef>
+							</psp:ReasonForPayment>
+						</psp:hasReasonForPayment>
+					</psp:Payment>
+				</psp:hasConfirmedPayment>
+				<!-- Confirmation-->
+				<psp:hasConfirmation>
+					<psp:Confirmation rdf:ID="Confirmation_Z">
+						<psp:hasRef rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+							<xsl:value-of select="confirmation"/>
+						</psp:hasRef>
+					</psp:Confirmation>
+				</psp:hasConfirmation>
+			</psp:Receipt>
+		</rdf:RDF>
+	</xsl:template>
+</xsl:stylesheet>
+]]></grounding:xsltTransformationString>
+			</grounding:WsdlOutputMessageMap>
+		</grounding:wsdlOutput>
+	</grounding:WsdlAtomicProcessGrounding>
+</rdf:RDF>

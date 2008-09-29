@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema targetNamespace="http://localhost:8080/PublicServices/SemanticBridgeTest/XTest" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xvr="http://localhost:8080/PublicServices/SemanticBridgeTest/XTest">
+	<xs:annotation>
+		<xs:documentation>
+			<para>Official Standard XTest</para>
+		</xs:documentation>
+	</xs:annotation>
+	<xs:complexType name="letter">
+		<xs:sequence>
+			<xs:element name="title" type="xs:string"/>
+			<xs:element name="content" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="address">
+		<xs:sequence>
+			<xs:element name="recipient" type="xs:string"/>
+			<xs:element name="streetAddress" type="xs:string"/>
+			<xs:element name="zipcodeAndPostalDistrict" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

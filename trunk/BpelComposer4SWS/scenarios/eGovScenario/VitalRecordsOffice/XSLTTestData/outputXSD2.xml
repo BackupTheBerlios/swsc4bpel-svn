@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<orderBirthCertificateReturn xsi:type="ns2:acknowledgement" xmlns:ns2="http://localhost:8080/PublicServices/VitalRecordsOffice/XVitalRecords" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<document xsi:type="ns2:vitalRecordsDocumentType">
+		<id xsi:type="xsd:string">XVitalRecords.BirthCertificate</id>
+		<description xsi:type="xsd:string">Official Birth Certificate holding all relevant information about a person&apos;s birth</description>
+	</document>
+	<recipientPostalAddress xsi:type="ns2:postalAddress">
+		<recipient xsi:type="xsd:string">Hans Jochen</recipient>
+		<streetAddress xsi:type="xsd:string">Kantstr. 3</streetAddress>
+		<zipcodeAndPostalDistrict xsi:type="xsd:string">10629 Berlin</zipcodeAndPostalDistrict>
+	</recipientPostalAddress>
+</orderBirthCertificateReturn>

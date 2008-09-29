@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <soapenv:Body>
+    <ns1:SearchCustomerResponse xmlns="mooncompany" xmlns:ns1="mooncompany">
+      <ns1:customerId>1</ns1:customerId>
+      <ns1:roleCode>Buyer</ns1:roleCode>
+      <ns1:contactName>Mr Blue</ns1:contactName>
+      <ns1:email>blue@example.org</ns1:email>
+      <ns1:telephone>+99 121334586846</ns1:telephone>
+      <ns1:businessName>Blue Company</ns1:businessName>
+      <ns1:postalCode>23134</ns1:postalCode>
+      <ns1:city>Blue City</ns1:city>
+      <ns1:street>blue road 13</ns1:street>
+      <ns1:countryCode>US</ns1:countryCode>
+    </ns1:SearchCustomerResponse>
+  </soapenv:Body>
+</soapenv:Envelope>

@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xsd="http://www.w3.org/2001/XMLSchema#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:daml="http://www.daml.org/2001/03/daml+oil#" xmlns="http://localhost:8080/PublicServices/PublicServicePayment/PublicServicePaymentOntology.owl#" xmlns:dc="http://purl.org/dc/elements/1.1/">
+	<Receipt>
+		<hasConfirmedPayment>
+			<Payment>
+				<hasDestinationAccount>
+					<Account>
+						<hasAccountNumber>
+							<AccountNumber>
+								<hasRef rdf:datatype="http://www.w3.org/2001/XMLSchema#string">aString</hasRef>
+							</AccountNumber>
+						</hasAccountNumber>
+						<hasBankID>
+							<BankID>
+								<hasRef rdf:datatype="http://www.w3.org/2001/XMLSchema#string">aString</hasRef>
+							</BankID>
+						</hasBankID>
+						<hasAccountOwner>
+							<AccountOwner>
+								<hasRef rdf:datatype="http://www.w3.org/2001/XMLSchema#string">aString</hasRef>
+							</AccountOwner>
+						</hasAccountOwner>
+					</Account>
+				</hasDestinationAccount>
+				<hasSourceAccount>
+					<Account>
+						<hasAccountOwner>
+							<AccountOwner>
+								<hasRef rdf:datatype="http://www.w3.org/2001/XMLSchema#string">aString</hasRef>
+							</AccountOwner>
+						</hasAccountOwner>
+						<hasBankID>
+							<BankID>
+								<hasRef rdf:datatype="http://www.w3.org/2001/XMLSchema#string">aString</hasRef>
+							</BankID>
+						</hasBankID>
+						<hasAccountNumber>
+							<AccountNumber>
+								<hasRef rdf:datatype="http://www.w3.org/2001/XMLSchema#string">aString</hasRef>
+							</AccountNumber>
+						</hasAccountNumber>
+					</Account>
+				</hasSourceAccount>
+				<hasAmount>
+					<Amount>
+						<hasRef rdf:datatype="http://www.w3.org/2001/XMLSchema#string">aString</hasRef>
+					</Amount>
+				</hasAmount>
+				<hasReasonForPayment>
+					<ReasonForPayment>
+						<hasRef rdf:datatype="http://www.w3.org/2001/XMLSchema#string">aString</hasRef>
+					</ReasonForPayment>
+				</hasReasonForPayment>
+			</Payment>
+		</hasConfirmedPayment>
+		<hasConfirmation>
+			<Confirmation>
+				<hasRef rdf:datatype="http://www.w3.org/2001/XMLSchema#string">aString</hasRef>
+			</Confirmation>
+		</hasConfirmation>
+	</Receipt>
+</rdf:RDF>

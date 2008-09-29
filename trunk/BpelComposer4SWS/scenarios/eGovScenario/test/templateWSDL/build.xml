@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<project basedir="." default="default" name="axisTest">
+	<property name="AXIS_HOME" value="C:/Programme/axis-bin-1_3/axis-1_3"/>
+	<path id="classpath">
+		<pathelement location="${AXIS_HOME}/lib/axis.jar"/>
+		<pathelement location="${AXIS_HOME}/lib/jaxrpc.jar"/>
+		<pathelement location="${AXIS_HOME}/lib/saaj.jar"/>
+		<pathelement location="${AXIS_HOME}/lib/commons-discovery-0.2.jar"/>
+		<pathelement location="${AXIS_HOME}/lib/commons-logging-1.0.4.jar"/>
+		<pathelement location="${AXIS_HOME}/lib/wsdl4j-1.5.1.jar"/>
+		<pathelement location="${AXIS_HOME}/lib/xercesImpl.jar"/>
+		<pathelement location="${AXIS_HOME}"/>
+		<pathelement location="${basedir}"/>
+	</path>
+	<target name="compile">
+		<javac srcdir="${basedir}" destdir="${basedir}" source="1.4"  target="1.4">
+			<classpath refid="classpath"/>
+		</javac>
+	</target>
+	
+	<target name="j2w">
+		<java className="org.apache.axis.wsdl.Java2WSDL">
+		<arg value="-o"/>
+		<arg value="Test.wsdl"/>
+		<arg value="Test"/>
+		<arg value="-lhttp://localhost:8080/active-bpel/Test"/>
+		<arg value="-n"/>
+		<arg value="urn:Test"/>
+			<classpath refid="classpath"/>
+		</java>
+	</target>
+</project>

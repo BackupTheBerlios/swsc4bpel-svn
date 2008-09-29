@@ -1,0 +1,498 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:temporal="http://swrl.stanford.edu/ontologies/built-ins/3.3/temporal.owl#"
+    xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"
+    xmlns:source_rr="http://localhost:8080/PublicServices/ResidentRegistry/ResidentRegistryOntology.owl#"
+    xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+    xmlns:swrlxml="http://swrl.stanford.edu/ontologies/built-ins/3.4/swrlxml.owl#"
+    xmlns:swrlx="http://swrl.stanford.edu/ontologies/built-ins/3.3/swrlx.owl#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:target_psp="http://localhost:8080/PublicServices/PublicServicePayment/PublicServicePaymentOntology.owl#"
+    xmlns:swrlm="http://swrl.stanford.edu/ontologies/built-ins/3.4/swrlm.owl#"
+    xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+    xmlns:abox="http://swrl.stanford.edu/ontologies/built-ins/3.3/abox.owl#"
+    xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:sqwrl="http://sqwrl.stanford.edu/ontologies/built-ins/3.4/sqwrl.owl#"
+    xmlns="http://localhost:8080/PublicServices/ResidentRegistry/SemanticBridgeResidentRegistry2PublicServicePayment.owl#"
+    xmlns:tbox="http://swrl.stanford.edu/ontologies/built-ins/3.3/tbox.owl#"
+  xml:base="http://localhost:8080/PublicServices/ResidentRegistry/SemanticBridgeResidentRegistry2PublicServicePayment.owl">
+  <owl:Ontology rdf:about="">
+    <owl:imports rdf:resource="http://swrl.stanford.edu/ontologies/built-ins/3.3/swrlx.owl"/>
+    <owl:imports rdf:resource="http://swrl.stanford.edu/ontologies/built-ins/3.3/abox.owl"/>
+    <owl:imports rdf:resource="http://swrl.stanford.edu/ontologies/built-ins/3.4/swrlm.owl"/>
+    <owl:imports rdf:resource="http://swrl.stanford.edu/ontologies/built-ins/3.3/temporal.owl"/>
+    <owl:imports rdf:resource="http://localhost:8080/PublicServices/ResidentRegistry/ResidentRegistryOntology.owl"/>
+    <owl:imports rdf:resource="http://swrl.stanford.edu/ontologies/3.3/swrla.owl"/>
+    <owl:imports rdf:resource="http://localhost:8080/PublicServices/PublicServicePayment/PublicServicePaymentOntology.owl"/>
+    <owl:imports rdf:resource="http://sqwrl.stanford.edu/ontologies/built-ins/3.4/sqwrl.owl"/>
+    <owl:imports rdf:resource="http://swrl.stanford.edu/ontologies/built-ins/3.4/swrlxml.owl"/>
+    <owl:imports rdf:resource="http://swrl.stanford.edu/ontologies/built-ins/3.3/tbox.owl"/>
+  </owl:Ontology>
+  <rdf:List>
+    <rdf:rest>
+      <rdf:List>
+        <rdf:rest>
+          <rdf:List>
+            <rdf:rest>
+              <rdf:List>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                <rdf:first>
+                  <swrl:Variable rdf:ID="AccountOwner"/>
+                </rdf:first>
+              </rdf:List>
+            </rdf:rest>
+            <rdf:first rdf:resource="http://localhost:8080/PublicServices/PublicServicePayment/PublicServicePaymentOntology.owl#AccountOwner"/>
+          </rdf:List>
+        </rdf:rest>
+        <rdf:first rdf:resource="http://localhost:8080/PublicServices/PublicServicePayment/PublicServicePaymentOntology.owl#hasAccountOwner"/>
+      </rdf:List>
+    </rdf:rest>
+    <rdf:first>
+      <swrl:Variable rdf:ID="X"/>
+    </rdf:first>
+  </rdf:List>
+  <rdf:List>
+    <rdf:rest>
+      <rdf:List>
+        <rdf:rest>
+          <rdf:List>
+            <rdf:first>
+              <swrl:Variable rdf:ID="surnameRef"/>
+            </rdf:first>
+            <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+          </rdf:List>
+        </rdf:rest>
+        <rdf:first>
+          <swrl:Variable rdf:ID="givenNameRef"/>
+        </rdf:first>
+      </rdf:List>
+    </rdf:rest>
+    <rdf:first>
+      <swrl:Variable rdf:ID="accountOwnerRef"/>
+    </rdf:first>
+  </rdf:List>
+  <rdf:List>
+    <rdf:rest>
+      <rdf:List>
+        <rdf:first rdf:resource="#givenNameRef"/>
+        <rdf:rest>
+          <rdf:List>
+            <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            <rdf:first rdf:resource="#surnameRef"/>
+          </rdf:List>
+        </rdf:rest>
+      </rdf:List>
+    </rdf:rest>
+    <rdf:first rdf:resource="#accountOwnerRef"/>
+  </rdf:List>
+  <swrl:Variable rdf:ID="givenName"/>
+  <rdf:List>
+    <rdf:rest>
+      <rdf:List>
+        <rdf:first>
+          <swrl:Variable rdf:ID="name"/>
+        </rdf:first>
+        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+      </rdf:List>
+    </rdf:rest>
+    <rdf:first>
+      <swrl:Variable rdf:ID="accountOwner"/>
+    </rdf:first>
+  </rdf:List>
+  <rdf:List>
+    <rdf:first rdf:resource="#accountOwnerRef"/>
+    <rdf:rest>
+      <rdf:List>
+        <rdf:first rdf:resource="#givenNameRef"/>
+        <rdf:rest>
+          <rdf:List>
+            <rdf:first rdf:resource="#surnameRef"/>
+            <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+          </rdf:List>
+        </rdf:rest>
+      </rdf:List>
+    </rdf:rest>
+  </rdf:List>
+  <rdf:List>
+    <rdf:first rdf:resource="#accountOwner"/>
+    <rdf:rest>
+      <rdf:List>
+        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+        <rdf:first rdf:resource="#name"/>
+      </rdf:List>
+    </rdf:rest>
+  </rdf:List>
+  <swrl:Variable rdf:ID="newThing"/>
+  <rdf:List>
+    <rdf:first rdf:resource="#accountOwnerRef"/>
+    <rdf:rest>
+      <rdf:List>
+        <rdf:first rdf:resource="#givenNameRef"/>
+        <rdf:rest>
+          <rdf:List>
+            <rdf:first rdf:resource="#surnameRef"/>
+            <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+          </rdf:List>
+        </rdf:rest>
+      </rdf:List>
+    </rdf:rest>
+  </rdf:List>
+  <rdf:List>
+    <rdf:rest>
+      <rdf:List>
+        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+        <rdf:first rdf:resource="#name"/>
+      </rdf:List>
+    </rdf:rest>
+    <rdf:first rdf:resource="#accountOwner"/>
+  </rdf:List>
+  <rdf:List>
+    <rdf:rest>
+      <rdf:List>
+        <rdf:rest>
+          <rdf:List>
+            <rdf:rest>
+              <rdf:List>
+                <rdf:first rdf:resource="#surnameRef"/>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+              </rdf:List>
+            </rdf:rest>
+            <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            > </rdf:first>
+          </rdf:List>
+        </rdf:rest>
+        <rdf:first rdf:resource="#givenNameRef"/>
+      </rdf:List>
+    </rdf:rest>
+    <rdf:first rdf:resource="#accountOwnerRef"/>
+  </rdf:List>
+  <rdf:List>
+    <rdf:rest>
+      <rdf:List>
+        <rdf:rest>
+          <rdf:List>
+            <rdf:first rdf:resource="#surnameRef"/>
+            <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+          </rdf:List>
+        </rdf:rest>
+        <rdf:first rdf:resource="#givenNameRef"/>
+      </rdf:List>
+    </rdf:rest>
+    <rdf:first rdf:resource="#accountOwnerRef"/>
+  </rdf:List>
+  <rdf:List>
+    <rdf:rest>
+      <rdf:List>
+        <rdf:first rdf:resource="http://localhost:8080/PublicServices/PublicServicePayment/PublicServicePaymentOntology.owl#hasAccountOwner"/>
+        <rdf:rest>
+          <rdf:List>
+            <rdf:first rdf:resource="http://localhost:8080/PublicServices/PublicServicePayment/PublicServicePaymentOntology.owl#AccountOwner"/>
+            <rdf:rest>
+              <rdf:List>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                <rdf:first rdf:resource="#AccountOwner"/>
+              </rdf:List>
+            </rdf:rest>
+          </rdf:List>
+        </rdf:rest>
+      </rdf:List>
+    </rdf:rest>
+    <rdf:first rdf:resource="#newThing"/>
+  </rdf:List>
+  <rdf:List>
+    <rdf:rest>
+      <rdf:List>
+        <rdf:first rdf:resource="#name"/>
+        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+      </rdf:List>
+    </rdf:rest>
+    <rdf:first rdf:resource="#newThing"/>
+  </rdf:List>
+  <rdf:List>
+    <rdf:rest>
+      <rdf:List>
+        <rdf:first rdf:resource="#givenNameRef"/>
+        <rdf:rest>
+          <rdf:List>
+            <rdf:first rdf:resource="#surnameRef"/>
+            <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+          </rdf:List>
+        </rdf:rest>
+      </rdf:List>
+    </rdf:rest>
+    <rdf:first rdf:resource="#accountOwnerRef"/>
+  </rdf:List>
+  <rdf:List>
+    <rdf:first rdf:resource="#accountOwner"/>
+    <rdf:rest>
+      <rdf:List>
+        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+        <rdf:first rdf:resource="#name"/>
+      </rdf:List>
+    </rdf:rest>
+  </rdf:List>
+  <rdf:List>
+    <rdf:rest>
+      <rdf:List>
+        <rdf:first rdf:resource="http://localhost:8080/PublicServices/PublicServicePayment/PublicServicePaymentOntology.owl#hasAccountOwner"/>
+        <rdf:rest>
+          <rdf:List>
+            <rdf:first rdf:resource="http://localhost:8080/PublicServices/PublicServicePayment/PublicServicePaymentOntology.owl#AccountOwner"/>
+            <rdf:rest>
+              <rdf:List>
+                <rdf:first rdf:resource="#AccountOwner"/>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+              </rdf:List>
+            </rdf:rest>
+          </rdf:List>
+        </rdf:rest>
+      </rdf:List>
+    </rdf:rest>
+    <rdf:first rdf:resource="#newThing"/>
+  </rdf:List>
+  <swrl:Variable rdf:ID="x"/>
+  <rdf:List>
+    <rdf:first rdf:resource="#accountOwner"/>
+    <rdf:rest>
+      <rdf:List>
+        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+        <rdf:first rdf:resource="#name"/>
+      </rdf:List>
+    </rdf:rest>
+  </rdf:List>
+  <swrl:Variable rdf:ID="surname"/>
+  <rdf:List>
+    <rdf:first rdf:resource="#newThing"/>
+    <rdf:rest>
+      <rdf:List>
+        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+        <rdf:first rdf:resource="#name"/>
+      </rdf:List>
+    </rdf:rest>
+  </rdf:List>
+  <rdf:List>
+    <rdf:rest>
+      <rdf:List>
+        <rdf:first rdf:resource="#givenNameRef"/>
+        <rdf:rest>
+          <rdf:List>
+            <rdf:first rdf:resource="#surnameRef"/>
+            <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+          </rdf:List>
+        </rdf:rest>
+      </rdf:List>
+    </rdf:rest>
+    <rdf:first rdf:resource="#accountOwnerRef"/>
+  </rdf:List>
+  <rdf:List>
+    <rdf:first rdf:resource="#accountOwner"/>
+    <rdf:rest>
+      <rdf:List>
+        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+        <rdf:first rdf:resource="#name"/>
+      </rdf:List>
+    </rdf:rest>
+  </rdf:List>
+  <swrl:Imp rdf:ID="Name-Givenname_Name-Surname2Account-AccountOwner">
+    <swrl:head>
+      <swrl:AtomList>
+        <rdf:first>
+          <swrl:IndividualPropertyAtom>
+            <swrl:propertyPredicate rdf:resource="http://localhost:8080/PublicServices/PublicServicePayment/PublicServicePaymentOntology.owl#hasAccountOwner"/>
+            <swrl:argument1 rdf:resource="#x"/>
+            <swrl:argument2 rdf:resource="#accountOwner"/>
+          </swrl:IndividualPropertyAtom>
+        </rdf:first>
+        <rdf:rest>
+          <swrl:AtomList>
+            <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            <rdf:first>
+              <swrl:DatavaluedPropertyAtom>
+                <swrl:argument2 rdf:resource="#accountOwnerRef"/>
+                <swrl:propertyPredicate rdf:resource="http://localhost:8080/PublicServices/PublicServicePayment/PublicServicePaymentOntology.owl#hasRef"/>
+                <swrl:argument1 rdf:resource="#accountOwner"/>
+              </swrl:DatavaluedPropertyAtom>
+            </rdf:first>
+          </swrl:AtomList>
+        </rdf:rest>
+      </swrl:AtomList>
+    </swrl:head>
+    <swrl:body>
+      <swrl:AtomList>
+        <rdf:rest>
+          <swrl:AtomList>
+            <rdf:rest>
+              <swrl:AtomList>
+                <rdf:first>
+                  <swrl:DatavaluedPropertyAtom>
+                    <swrl:propertyPredicate rdf:resource="http://localhost:8080/PublicServices/ResidentRegistry/ResidentRegistryOntology.owl#hasRef"/>
+                    <swrl:argument1 rdf:resource="#givenName"/>
+                    <swrl:argument2 rdf:resource="#givenNameRef"/>
+                  </swrl:DatavaluedPropertyAtom>
+                </rdf:first>
+                <rdf:rest>
+                  <swrl:AtomList>
+                    <rdf:first>
+                      <swrl:IndividualPropertyAtom>
+                        <swrl:propertyPredicate rdf:resource="http://localhost:8080/PublicServices/ResidentRegistry/ResidentRegistryOntology.owl#hasSurname"/>
+                        <swrl:argument2 rdf:resource="#surname"/>
+                        <swrl:argument1 rdf:resource="#name"/>
+                      </swrl:IndividualPropertyAtom>
+                    </rdf:first>
+                    <rdf:rest>
+                      <swrl:AtomList>
+                        <rdf:first>
+                          <swrl:DatavaluedPropertyAtom>
+                            <swrl:argument1 rdf:resource="#surname"/>
+                            <swrl:argument2 rdf:resource="#surnameRef"/>
+                            <swrl:propertyPredicate rdf:resource="http://localhost:8080/PublicServices/ResidentRegistry/ResidentRegistryOntology.owl#hasRef"/>
+                          </swrl:DatavaluedPropertyAtom>
+                        </rdf:first>
+                        <rdf:rest>
+                          <swrl:AtomList>
+                            <rdf:rest>
+                              <swrl:AtomList>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                <rdf:first>
+                                  <swrl:BuiltinAtom>
+                                    <swrl:arguments>
+                                      <rdf:List>
+                                        <rdf:rest>
+                                          <rdf:List>
+                                            <rdf:first rdf:resource="#name"/>
+                                            <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                          </rdf:List>
+                                        </rdf:rest>
+                                        <rdf:first rdf:resource="#accountOwner"/>
+                                      </rdf:List>
+                                    </swrl:arguments>
+                                    <swrl:builtin rdf:resource="http://swrl.stanford.edu/ontologies/built-ins/3.3/swrlx.owl#makeOWLThing"/>
+                                  </swrl:BuiltinAtom>
+                                </rdf:first>
+                              </swrl:AtomList>
+                            </rdf:rest>
+                            <rdf:first>
+                              <swrl:BuiltinAtom>
+                                <swrl:arguments>
+                                  <rdf:List>
+                                    <rdf:first rdf:resource="#accountOwnerRef"/>
+                                    <rdf:rest>
+                                      <rdf:List>
+                                        <rdf:first rdf:resource="#givenNameRef"/>
+                                        <rdf:rest>
+                                          <rdf:List>
+                                            <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                            <rdf:first rdf:resource="#surnameRef"/>
+                                          </rdf:List>
+                                        </rdf:rest>
+                                      </rdf:List>
+                                    </rdf:rest>
+                                  </rdf:List>
+                                </swrl:arguments>
+                                <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#stringConcat"/>
+                              </swrl:BuiltinAtom>
+                            </rdf:first>
+                          </swrl:AtomList>
+                        </rdf:rest>
+                      </swrl:AtomList>
+                    </rdf:rest>
+                  </swrl:AtomList>
+                </rdf:rest>
+              </swrl:AtomList>
+            </rdf:rest>
+            <rdf:first>
+              <swrl:IndividualPropertyAtom>
+                <swrl:argument1 rdf:resource="#name"/>
+                <swrl:propertyPredicate rdf:resource="http://localhost:8080/PublicServices/ResidentRegistry/ResidentRegistryOntology.owl#hasGivenName"/>
+                <swrl:argument2 rdf:resource="#givenName"/>
+              </swrl:IndividualPropertyAtom>
+            </rdf:first>
+          </swrl:AtomList>
+        </rdf:rest>
+        <rdf:first>
+          <swrl:IndividualPropertyAtom>
+            <swrl:propertyPredicate rdf:resource="http://localhost:8080/PublicServices/ResidentRegistry/ResidentRegistryOntology.owl#hasName"/>
+            <swrl:argument2 rdf:resource="#name"/>
+            <swrl:argument1 rdf:resource="#x"/>
+          </swrl:IndividualPropertyAtom>
+        </rdf:first>
+      </swrl:AtomList>
+    </swrl:body>
+  </swrl:Imp>
+  <rdf:List>
+    <rdf:first rdf:resource="#accountOwner"/>
+    <rdf:rest>
+      <rdf:List>
+        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+        <rdf:first rdf:resource="#name"/>
+      </rdf:List>
+    </rdf:rest>
+  </rdf:List>
+  <rdf:List>
+    <rdf:rest>
+      <rdf:List>
+        <rdf:first rdf:resource="#givenNameRef"/>
+        <rdf:rest>
+          <rdf:List>
+            <rdf:rest>
+              <rdf:List>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                <rdf:first rdf:resource="#surnameRef"/>
+              </rdf:List>
+            </rdf:rest>
+            <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            > </rdf:first>
+          </rdf:List>
+        </rdf:rest>
+      </rdf:List>
+    </rdf:rest>
+    <rdf:first rdf:resource="#accountOwnerRef"/>
+  </rdf:List>
+  <rdf:List>
+    <rdf:rest>
+      <rdf:List>
+        <rdf:first rdf:resource="#givenNameRef"/>
+        <rdf:rest>
+          <rdf:List>
+            <rdf:first rdf:resource="#surnameRef"/>
+            <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+          </rdf:List>
+        </rdf:rest>
+      </rdf:List>
+    </rdf:rest>
+    <rdf:first rdf:resource="#accountOwnerRef"/>
+  </rdf:List>
+  <rdf:List>
+    <rdf:first rdf:resource="#accountOwnerRef"/>
+    <rdf:rest>
+      <rdf:List>
+        <rdf:first rdf:resource="#givenNameRef"/>
+        <rdf:rest>
+          <rdf:List>
+            <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            <rdf:first rdf:resource="#surnameRef"/>
+          </rdf:List>
+        </rdf:rest>
+      </rdf:List>
+    </rdf:rest>
+  </rdf:List>
+  <rdf:List>
+    <rdf:first rdf:resource="#accountOwnerRef"/>
+    <rdf:rest>
+      <rdf:List>
+        <rdf:first rdf:resource="#givenNameRef"/>
+        <rdf:rest>
+          <rdf:List>
+            <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            <rdf:first rdf:resource="#surnameRef"/>
+          </rdf:List>
+        </rdf:rest>
+      </rdf:List>
+    </rdf:rest>
+  </rdf:List>
+</rdf:RDF>
+
+<!-- Created with Protege (with OWL Plugin 3.4, Build 130)  http://protege.stanford.edu -->

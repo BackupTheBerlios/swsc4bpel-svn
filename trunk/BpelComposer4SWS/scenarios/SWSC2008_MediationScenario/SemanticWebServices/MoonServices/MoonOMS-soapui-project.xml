@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project name="MoonOMS" soapui-version="2.0.2" xmlns:con="http://eviware.com/soapui/config"><con:settings><con:setting id="ProjectSettings@projectRoot">E:\SWSC2008_MediationScenario\SemanticWebServices\MoonServices</con:setting></con:settings><con:interface name="OMServiceSoapBinding" bindingName="{mooncompany}OMServiceSoapBinding" soapVersion="1_1" definition="http://sws-challenge.org/services/OMService?wsdl"><con:settings/><con:endpoints><con:endpoint>http://sws-challenge.org/moon/services/OMService</con:endpoint></con:endpoints><con:operation isOneWay="false" action="addLineItem" name="addLineItem" bindingOperationName="addLineItem" inputName="" receivesAttachments="false" sendsAttachments="false"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://sws-challenge.org/moon/services/OMService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:moon="mooncompany">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <moon:addLineItem>
+         <moon:LineItem>
+            <moon:authToken>?</moon:authToken>
+            <moon:orderId>?</moon:orderId>
+            <moon:item>
+               <moon:articleId>?</moon:articleId>
+               <moon:quantity>?</moon:quantity>
+            </moon:item>
+         </moon:LineItem>
+      </moon:addLineItem>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request></con:call></con:operation><con:operation isOneWay="false" action="closeOrder" name="closeOrder" bindingOperationName="closeOrder" inputName="" receivesAttachments="false" sendsAttachments="false"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://sws-challenge.org/moon/services/OMService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:moon="mooncompany">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <moon:closeOrder>
+         <moon:CloseOrder>
+            <moon:authToken>?</moon:authToken>
+            <moon:orderId>?</moon:orderId>
+         </moon:CloseOrder>
+      </moon:closeOrder>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request></con:call></con:operation><con:operation isOneWay="false" action="confirmLineItem" name="confirmLineItem" bindingOperationName="confirmLineItem" inputName="" receivesAttachments="false" sendsAttachments="false"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://sws-challenge.org/moon/services/OMService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns1="mooncompany">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ns1:confirmLineItemResponse>
+<ns1:OrderLineItemConfirmation xmlns:ns1="mooncompany" xmlns="mooncompany">
+	<ns1:authToken>test2w?SwF`[</ns1:authToken>
+	<ns1:orderId>94</ns1:orderId>
+	<ns1:itemId>95</ns1:itemId>
+	<ns1:status>accepted</ns1:status>
+</ns1:OrderLineItemConfirmation>
+</ns1:confirmLineItemResponse>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request></con:call></con:operation><con:operation isOneWay="false" action="createNewOrder" name="createNewOrder" bindingOperationName="createNewOrder" inputName="" receivesAttachments="false" sendsAttachments="false"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://sws-challenge.org/moon/services/OMService</con:endpoint><con:request><![CDATA[<soapenv:Envelope soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/">
+  <soapenv:Body>
+    <createNewOrder xmlns="mooncompany">
+      <Order xsi:type="u:OrderType" xmlns="mooncompany">
+          <authToken xsi:type="xsd:string"></authToken>
+          <contact>
+            <name xsi:type="xsd:string">Stefania Wolf</name>
+            <telephone xsi:type="xsd:string">+43(650)89930023</telephone>
+            <email xsi:type="xsd:string">stefania.wolf@blue.com</email>
+          </contact>
+          <shipTo>
+            <name xsi:type="xsd:string">Blue Company</name>
+            <street xsi:type="xsd:string">North Business Center, Block 9</street>
+            <city xsi:type="xsd:string">Innsbruck</city>
+            <postalCode xsi:type="xsd:string">A-6020</postalCode>
+            <country xsi:type="xsd:string">AT</country>
+          </shipTo>
+          <billTo>
+            <name/>
+            <street/>
+            <city/>
+            <postalCode/>
+            <country/>
+          </billTo>
+        </Order>
+    </createNewOrder>
+  </soapenv:Body>
+</soapenv:Envelope>]]></con:request></con:call></con:operation><con:definitionCache rootPart="http://sws-challenge.org/services/OMService?wsdl" type="TEXT"><con:part><con:url>http://sws-challenge.org/services/OMService?wsdl</con:url><con:content><![CDATA[<wsdl:definitions targetNamespace="mooncompany" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="mooncompany" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <wsdl:types>
+    <xsd:schema targetNamespace="mooncompany" elementFormDefault="qualified" xmlns="mooncompany">
+      <xsd:element name="createNewOrder">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="Order" type="OrderType"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="addLineItem">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="LineItem" type="LineItemType"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="closeOrder">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="CloseOrder" type="CloseOrderType"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="confirmLineItemResponse" type="xsd:string"/>
+      <xsd:element name="confirmLineItemRequest" type="impl:OrderLineItemConfirmationType"></xsd:element>
+      <xsd:element name="Order" type="OrderType"/>
+      <xsd:complexType name="ContactInfo">
+        <xsd:sequence>
+          <xsd:element name="name" type="xsd:string" nillable="false"/>
+          <xsd:element name="telephone" type="xsd:string" nillable="false"/>
+          <xsd:element name="email" type="xsd:string" nillable="false" minOccurs="0"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="Address">
+        <xsd:sequence>
+          <xsd:element name="name" type="xsd:string" nillable="false"/>
+          <xsd:element name="street" type="xsd:string" nillable="false"/>
+          <xsd:element name="city" type="xsd:string" nillable="false"/>
+          <xsd:element name="state" type="xsd:string" nillable="false" minOccurs="0"/>
+          <xsd:element name="postalCode" type="xsd:string" nillable="false"/>
+          <xsd:element name="country" type="xsd:string" nillable="false"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="OrderType">
+        <xsd:sequence>
+          <xsd:element name="authToken" type="xsd:string" nillable="false"/>
+          <xsd:element name="contact" type="ContactInfo" nillable="false"/>
+          <xsd:element name="shipTo" type="Address" nillable="false"/>
+          <xsd:element name="billTo" type="Address" nillable="false" minOccurs="0"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="NewOrderResponse" type="NewOrderResponseType"/>
+      <xsd:complexType name="NewOrderResponseType">
+        <xsd:sequence>
+          <xsd:element name="orderId" type="xsd:long" nillable="false"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="LineItem" type="LineItemType"/>
+      <xsd:complexType name="Item">
+        <xsd:sequence>
+          <xsd:element name="articleId" type="xsd:string" nillable="false"/>
+          <xsd:element name="quantity" type="xsd:int" nillable="false"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="LineItemType">
+        <xsd:sequence>
+          <xsd:element name="authToken" type="xsd:string" nillable="false"/>
+          <xsd:element name="orderId" type="xsd:long" nillable="false"/>
+          <xsd:element name="item" type="Item" nillable="false"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="AddLineItemResponse" type="AddLineItemResponseType"/>
+      <xsd:complexType name="AddLineItemResponseType">
+        <xsd:sequence>
+          <xsd:element name="orderId" type="xsd:long" nillable="false"/>
+          <xsd:element name="lineItemId" type="xsd:long" nillable="false"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="CloseOrder" type="CloseOrderType"/>
+      <xsd:complexType name="CloseOrderType">
+        <xsd:sequence>
+          <xsd:element name="authToken" type="xsd:string" nillable="false"/>
+          <xsd:element name="orderId" type="xsd:long" nillable="false"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="CloseOrderResponse" type="CloseOrderResponseType"/>
+      <xsd:complexType name="CloseOrderResponseType">
+        <xsd:sequence>
+          <xsd:element name="orderId" type="xsd:long" nillable="false"/>
+          <xsd:element name="itemsNo" type="xsd:int" nillable="false"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="OrderLineItemConfirmation" type="OrderLineItemConfirmationType"/>
+      <xsd:complexType name="OrderLineItemConfirmationType">
+        <xsd:sequence>
+          <xsd:element name="authToken" type="xsd:string" nillable="false"/>
+          <xsd:element name="orderId" type="xsd:long" nillable="false"/>
+          <xsd:element name="itemId" type="xsd:long" nillable="false"/>
+          <xsd:element name="status" type="xsd:string" nillable="false"/>
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="CreateNewOrderRequestMessage">
+    <wsdl:part name="OrderPart" element="impl:createNewOrder"/>
+  </wsdl:message>
+  <wsdl:message name="NewOrderResponseMessage">
+    <wsdl:part name="NewOrderResponsePart" element="impl:NewOrderResponse"/>
+  </wsdl:message>
+  <wsdl:message name="AddLineItemRequestMessage">
+    <wsdl:part name="LineItemPart" element="impl:addLineItem"/>
+  </wsdl:message>
+  <wsdl:message name="AddLineItemResponseMessage">
+    <wsdl:part name="AddLineItemResponsePart" element="impl:AddLineItemResponse"/>
+  </wsdl:message>
+  <wsdl:message name="CloseOrderRequestMessage">
+    <wsdl:part name="CloseOrderPart" element="impl:closeOrder"/>
+  </wsdl:message>
+  <wsdl:message name="CloseOrderResponseMessage">
+    <wsdl:part name="CloseOrderResponsePart" element="impl:CloseOrderResponse"/>
+  </wsdl:message>
+  <wsdl:message name="LineItemConfirmationMessage">
+    <wsdl:part name="LineItemConfirmationMessage" element="impl:confirmLineItemRequest"/>
+  </wsdl:message>
+  <wsdl:message name="AcknowledgeLineItemConfirmationMessage">
+    <wsdl:part name="AcknowledgeLineItemConfirmationMessage" element="impl:confirmLineItemResponse"/>
+  </wsdl:message>
+  <wsdl:message name="confirmLineItemResponse">
+    <wsdl:part name="confirmLineItemResponse" element="impl:confirmLineItemResponse"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="confirmLineItemRequest">
+    <wsdl:part name="confirmLineItemRequest" element="impl:confirmLineItemRequest"></wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="OMServicePortType">
+    <wsdl:operation name="createNewOrder">
+      <wsdl:input message="impl:CreateNewOrderRequestMessage"/>
+      <wsdl:output message="impl:NewOrderResponseMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="addLineItem">
+      <wsdl:input message="impl:AddLineItemRequestMessage"/>
+      <wsdl:output message="impl:AddLineItemResponseMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="closeOrder">
+      <wsdl:input message="impl:CloseOrderRequestMessage"/>
+      <wsdl:output message="impl:CloseOrderResponseMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="confirmLineItem">
+      <wsdl:output message="impl:LineItemConfirmationMessage"/>
+      <wsdl:input message="impl:AcknowledgeLineItemConfirmationMessage"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="OMServiceSoapBinding" type="impl:OMServicePortType">
+    <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="createNewOrder">
+      <wsdlsoap:operation soapAction="createNewOrder" style="document"/>
+      <wsdl:input>
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addLineItem">
+      <wsdlsoap:operation soapAction="addLineItem"/>
+      <wsdl:input>
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="closeOrder">
+      <wsdlsoap:operation soapAction="closeOrder"/>
+      <wsdl:input>
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="confirmLineItem">
+      <wsdlsoap:operation soapAction="confirmLineItem"/>
+      <wsdl:input>
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="OMService_v1">
+    <wsdl:port name="OMService" binding="impl:OMServiceSoapBinding">
+      <wsdlsoap:address location="http://sws-challenge.org/moon/services/OMService"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache></con:interface><con:properties/><con:wssContainer/></con:soapui-project>

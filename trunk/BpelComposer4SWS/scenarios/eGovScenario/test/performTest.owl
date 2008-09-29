@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="WINDOWS-1252"?>
+<rdf:RDF xmlns:process="http://www.daml.org/services/owl-s/1.1/Process.owl#" xmlns:list="http://www.daml.org/services/owl-s/1.1/generic/ObjectList.owl#" xmlns:swrl="http://www.w3.org/2003/11/swrl#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns="http://www.example.org/service.owl" xmlns:expression="http://www.daml.org/services/owl-s/1.1/generic/Expression.owl#" xmlns:service="http://www.daml.org/services/owl-s/1.1/Service.owl#" xmlns:grounding="http://www.daml.org/services/owl-s/1.1/Grounding.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xsd="http://www.w3.org/2001/XMLSchema#" xmlns:daml="http://www.daml.org/2001/03/daml+oil#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:profile="http://www.daml.org/services/owl-s/1.1/Profile.owl#" xml:base="http://localhost:8080/PublicServices/SemanticBridgeTest/performTest.owl">
+	<owl:Ontology rdf:about="">
+		<owl:imports rdf:resource="http://localhost:8080/PublicServices/SemanticBridgeTest/TestOntology.owl"/>
+	</owl:Ontology>
+	<!--+++++++++++++++++++++++++++++++++++++++++++++-->
+	<!-- Service description -->
+	<service:Service rdf:ID="performTestService">
+		<service:presents rdf:resource="#performTestProfile"/>
+		<service:describedBy rdf:resource="#performTestProcess"/>
+		<service:supports rdf:resource="#performTestGrounding"/>
+	</service:Service>
+	<!--+++++++++++++++++++++++++++++++++++++++++++++-->
+	<!-- Profile description-->
+	<profile:Profile rdf:ID="performTestProfile">
+		<service:isPresentedBy rdf:resource="#performTestService"/>
+		<profile:serviceName xml:lang="en">performTest</profile:serviceName>
+		<profile:textDescription xml:lang="en">Just a simple test.</profile:textDescription>
+		<profile:hasInput rdf:resource="#InputAddress"/>
+		<profile:hasOutput rdf:resource="#OutputLetter"/>
+	</profile:Profile>
+	<!--+++++++++++++++++++++++++++++++++++++++++++++-->
+	<!-- Process description -->
+	<process:AtomicProcess rdf:ID="performTestProcess">
+		<service:describes rdf:resource="#performTestService"/>
+		<rdfs:label>performTestProcess</rdfs:label>
+		<process:hasInput rdf:resource="#InputAddress"/>
+		<process:hasOutput rdf:resource="#OutputLetter"/>
+	</process:AtomicProcess>
+	<process:Output rdf:ID="OutputLetter">
+		<process:parameterType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://localhost:8080/PublicServices/Test/TestOntology.owl#Letter</process:parameterType>
+		<rdfs:label>OutputLetter</rdfs:label>
+	</process:Output>
+	<process:Input rdf:ID="InputAddress">
+		<process:parameterType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://localhost:8080/PublicServices/Test/TestOntology.owl#PostalAddress</process:parameterType>
+		<rdfs:label>InputAddress</rdfs:label>
+	</process:Input>
+	<!--+++++++++++++++++++++++++++++++++++++++++++++-->
+	<!-- Grounding description -->
+	<grounding:WsdlGrounding rdf:ID="performTestGrounding">
+		<service:supportedBy rdf:resource="#performTestService"/>
+		<grounding:hasAtomicProcessGrounding rdf:resource="#performTestAtomicProcessGrounding"/>
+	</grounding:WsdlGrounding>
+	<grounding:WsdlAtomicProcessGrounding rdf:ID="performTestAtomicProcessGrounding">
+		<grounding:owlsProcess rdf:resource="#performTestProcess"/>
+		<grounding:wsdlDocument rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://localhost:8080/PublicServices/services/Test?wsdl</grounding:wsdlDocument>
+		<grounding:wsdlOperation>
+			<grounding:WsdlOperationRef>
+				<grounding:portType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://localhost:8080/PublicServices/services/Test?wsdl#Test</grounding:portType>
+				<grounding:operation rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://localhost:8080/PublicServices/services/Test?wsdl#performTest</grounding:operation>
+			</grounding:WsdlOperationRef>
+		</grounding:wsdlOperation>
+		<grounding:wsdlInputMessage rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://localhost:8080/PublicServices/services/Test?wsdl#performTestRequest</grounding:wsdlInputMessage>
+		<grounding:wsdlInput>
+			<grounding:WsdlInputMessageMap>
+				<grounding:owlsParameter rdf:resource="#InputAddress"/>
+				<grounding:wsdlMessagePart rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://localhost:8080/PublicServices/services/Test?wsdl#in0</grounding:wsdlMessagePart>
+				<grounding:xsltTransformationString><![CDATA[
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:j.0="http://localhost:8080/PublicServices/Test/TestOntology.owl#" xmlns="http://localhost:8080/PublicServices/Test">
+<xsl:template match="//rdf:Description">
+	<xsl:variable name="X" select="rdf:type/@rdf:resource"/>
+	<xsl:if test="$X='http://localhost:8080/PublicServices/Test/TestOntology.owl#PostalAddress'">
+		<in0>
+			<recipient>
+				<xsl:value-of select="j.0:hasRecipient"/>
+			</recipient>
+			<streetAddress>
+				<xsl:value-of select="j.0:hasStreetAddress"/>
+			</streetAddress>
+			<zipcodeAndPostalDistrict>
+				<xsl:value-of select="j.0:hasZipCodeAndLocality"/>
+			</zipcodeAndPostalDistrict>
+		</in0>
+		</xsl:if>
+		</xsl:template>	
+</xsl:stylesheet>
+			  ]]></grounding:xsltTransformationString>
+			</grounding:WsdlInputMessageMap>
+		</grounding:wsdlInput>
+		<grounding:wsdlOutputMessage rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://localhost:8080/PublicServices/services/Test?wsdl#performTestResponse</grounding:wsdlOutputMessage>
+		<grounding:wsdlOutput>
+			<grounding:WsdlOutputMessageMap>
+				<grounding:owlsParameter rdf:resource="#OutputLetter"/>
+				<grounding:wsdlMessagePart rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://localhost:8080/PublicServices/services/Test?wsdl#performTestReturn</grounding:wsdlMessagePart>
+				<grounding:xsltTransformationString><![CDATA[
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xt="http://localhost:8080/PublicServices/Test/XTest" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+	<xsl:template match="/performTestReturn">
+		<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:to="http://localhost:8080/PublicServices/Test/TestOntology.owl#" >
+			<to:Letter>
+				<to:hasTitle>
+					<xsl:value-of select="title"/>
+				</to:hasTitle>
+				<to:hasContent>
+					<xsl:value-of select="content"/>
+				</to:hasContent>
+			</to:Letter>
+		</rdf:RDF>
+	</xsl:template>
+</xsl:stylesheet>
+]]></grounding:xsltTransformationString>
+			</grounding:WsdlOutputMessageMap>
+		</grounding:wsdlOutput>
+	</grounding:WsdlAtomicProcessGrounding>
+</rdf:RDF>

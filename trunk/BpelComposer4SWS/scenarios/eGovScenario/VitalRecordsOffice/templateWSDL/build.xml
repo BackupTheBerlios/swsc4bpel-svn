@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project basedir="." default="default" name="axisTest">
+<property name="TOMCAT_HOME" value="C:/Programme/Tomcat"/>
+	<path id="classpath">
+		<fileset dir="${TOMCAT_HOME}/webapps/PublicServices/WEB-INF/lib">
+          <include name="**/*.jar"/>
+        </fileset>
+		<pathelement location="${basedir}"/>
+	</path>
+	<target name="compile">
+		<javac srcdir="${basedir}" destdir="${basedir}" source="1.4"  target="1.4">
+			<classpath refid="classpath"/>
+		</javac>
+	</target>
+	
+	<target name="j2w">
+		<java className="org.apache.axis.wsdl.Java2WSDL">
+		<arg value="-o"/>
+		<arg value="VitalRecordsOffice.wsdl"/>
+		<arg value="VitalRecordsOffice"/>
+		<arg value="-lhttp://localhost:8080/active-bpel/VitalRecordsOffice"/>
+		<arg value="-n"/>
+		<arg value="urn:VitalRecordsOffice"/>
+			<classpath refid="classpath"/>
+		</java>
+	</target>
+</project>

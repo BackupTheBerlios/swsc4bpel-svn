@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:rosetta="http://localhost:8080/ontologies/RosettaNetOntology.owl#"
+    xmlns:j.0="http://localhost:8080/ontologies/ServiceAnchor.owl#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns="http://localhost:8080/process/MediationProcessOutputAnchor.owl#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+  xml:base="http://localhost:8080/process/MediationProcessOutputAnchor.owl">
+  <owl:Ontology rdf:about="http://localhost:8080/process/MediationProcessOutputAnchor.owl">
+    <owl:imports rdf:resource="http://localhost:8080/ontologies/RosettaNetOntology.owl"/>
+    <owl:imports rdf:resource="http://localhost:8080/ontologies/ServiceAnchor.owl"/>
+  </owl:Ontology>
+  <j.0:Process rdf:ID="MediationProcess">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >MediationProcess</rdfs:label>
+    <j.0:hasOutput>
+      <j.0:Output rdf:ID="Output">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Pip3A4PurchaseOrderConfirmation</rdfs:label>
+      </j.0:Output>
+    </j.0:hasOutput>
+  </j.0:Process>
+</rdf:RDF>
+
+<!-- Created with Protege (with OWL Plugin 3.4, Build 130)  http://protege.stanford.edu -->

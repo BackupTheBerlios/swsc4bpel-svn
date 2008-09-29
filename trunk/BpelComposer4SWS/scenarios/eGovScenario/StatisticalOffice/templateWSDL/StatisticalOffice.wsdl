@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="urn:StatisticalOffice" xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="urn:StatisticalOffice" xmlns:intf="urn:StatisticalOffice" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xst="http://localhost:8080/PublicServices/StatisticalOffice/XStatistics">
+	<wsdl:types>
+		<xsd:schema targetNamespace="http://localhost:8080/PublicServices/StatisticalOffice/XStatistics">
+			<xsd:import namespace="http://localhost:8080/PublicServices/StatisticalOffice/XStatistics" schemaLocation="http://localhost:8080/PublicServices/StatisticalOffice/XStatistics.xsd"/>
+		</xsd:schema>
+	</wsdl:types>
+	<wsdl:message name="addToOfficialCitizenDocumentsStatisticRequest">
+		<wsdl:part name="in0" type="xst:officialCitizenDocumentType"/>
+	</wsdl:message>
+	<wsdl:message name="addToOfficialCitizenDocumentsStatisticResponse">
+		<wsdl:part name="addToOfficialCitizenDocumentsStatisticReturn" type="xst:acknowledgement"/>
+	</wsdl:message>
+	<wsdl:portType name="StatisticalOffice">
+		<wsdl:operation name="addToOfficialCitizenDocumentsStatistic" parameterOrder="in0">
+			<wsdl:input message="impl:addToOfficialCitizenDocumentsStatisticRequest" name="addToOfficialCitizenDocumentsStatisticRequest"/>
+			<wsdl:output message="impl:addToOfficialCitizenDocumentsStatisticResponse" name="addToOfficialCitizenDocumentsStatisticResponse"/>
+		</wsdl:operation>
+	</wsdl:portType>
+	<wsdl:binding name="StatisticalOfficeSoapBinding" type="impl:StatisticalOffice">
+		<wsdlsoap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+		<wsdl:operation name="addToOfficialCitizenDocumentsStatistic">
+			<wsdlsoap:operation soapAction=""/>
+			<wsdl:input name="addToOfficialCitizenDocumentsStatisticRequest">
+				<wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:StatisticalOffice" use="encoded"/>
+			</wsdl:input>
+			<wsdl:output name="addToOfficialCitizenDocumentsStatisticResponse">
+				<wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:StatisticalOffice" use="encoded"/>
+			</wsdl:output>
+		</wsdl:operation>
+	</wsdl:binding>
+	<wsdl:service name="StatisticalOfficeService">
+		<wsdl:port binding="impl:StatisticalOfficeSoapBinding" name="StatisticalOffice">
+			<wsdlsoap:address location="http://localhost:8080/PublicServices/StatisticalOffice"/>
+		</wsdl:port>
+	</wsdl:service>
+</wsdl:definitions>

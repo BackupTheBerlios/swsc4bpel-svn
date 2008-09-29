@@ -1,0 +1,30 @@
+<!-- Use this file to deploy some handlers/chains and services      -->
+<!-- Two ways to do this:                                           -->
+<!--   java org.apache.axis.client.AdminClient deploy.wsdd          -->
+<!--      after the axis server is running                          -->
+<!-- or                                                             -->
+<!--   java org.apache.axis.utils.Admin client|server deploy.wsdd   -->
+<!--      from the same directory that the Axis engine runs         -->
+<deployment xmlns="http://xml.apache.org/axis/wsdd/" xmlns:java="http://xml.apache.org/axis/wsdd/providers/java">
+	<!-- Services from StatisticalOfficeService WSDL service -->
+	<service name="StatisticalOffice" provider="java:RPC" style="rpc" use="encoded">
+		<requestFlow>
+			<handler type="soapmonitor"/>
+		</requestFlow>
+		<responseFlow>
+			<handler type="soapmonitor"/>
+		</responseFlow>
+		<parameter name="sendMultiRefs" value="false"/>
+		<parameter name="wsdlTargetNamespace" value="urn:StatisticalOffice"/>
+		<parameter name="wsdlServiceElement" value="StatisticalOfficeService"/>
+		<parameter name="wsdlServicePort" value="StatisticalOffice"/>
+		<parameter name="className" value="StatisticalOffice_pkg.StatisticalOfficeSoapBindingImpl"/>
+		<parameter name="wsdlPortType" value="StatisticalOffice"/>
+		<operation name="addToOfficialCitizenDocumentsStatistic" qname="operNS:addToOfficialCitizenDocumentsStatistic" xmlns:operNS="urn:StatisticalOffice" returnQName="addToOfficialCitizenDocumentsStatisticReturn" returnType="rtns:acknowledgement" xmlns:rtns="http://localhost:8080/PublicServices/StatisticalOffice/XStatistics">
+			<parameter name="in0" type="tns:officialCitizenDocumentType" xmlns:tns="http://localhost:8080/PublicServices/StatisticalOffice/XStatistics"/>
+		</operation>
+		<parameter name="allowedMethods" value="addToOfficialCitizenDocumentsStatistic"/>
+		<typeMapping xmlns:ns="http://localhost:8080/PublicServices/StatisticalOffice/XStatistics" qname="ns:officialCitizenDocumentType" type="java:localhost.PublicServices.StatisticalOffice.XStatistics.OfficialCitizenDocumentType" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+		<typeMapping xmlns:ns="http://localhost:8080/PublicServices/StatisticalOffice/XStatistics" qname="ns:acknowledgement" type="java:localhost.PublicServices.StatisticalOffice.XStatistics.Acknowledgement" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+	</service>
+</deployment>

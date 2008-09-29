@@ -1,0 +1,211 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:j.0="http://localhost:8080/ontologies/MoonOntology.owl#"
+    xmlns:j.1="http://localhost:8080/ontologies/ServiceAnchor.owl#"
+    xmlns:j.2="http://www.w3.org/2003/11/swrl#"
+    xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:processInput="http://localhost:8080/process/MediationProcessInput.owl#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:moonInput="http://www.owl-ontologies.com/Ontology1209407793.owl#"
+    xmlns="http://www.owl-ontologies.com/Ontology1209468346.owl#"
+    xmlns:dataflow="http://localhost:8080/process/MediationProcess/Dataflow_MediationProcessInput2MoonCRMServiceInput.owl#"
+  xml:base="http://www.owl-ontologies.com/Ontology1209468346.owl">
+  <owl:Ontology rdf:about="">
+    <owl:imports rdf:resource="http://localhost:8080/process/MediationProcess/Dataflow_MediationProcessInput2MoonCRMServiceInput.owl"/>
+    <owl:imports rdf:resource="http://localhost:8080/process/MediationProcessInput.owl"/>
+  </owl:Ontology>
+  <owl:Thing rdf:ID="SWRLCreated_1">
+    <j.0:hasCustomer rdf:resource="http://localhost:8080/process/MediationProcessInput.owl#Partner_4"/>
+  </owl:Thing>
+  <rdf:Description rdf:about="http://www.owl-ontologies.com/Ontology1209407793.owl#Input">
+    <j.1:parameterObject rdf:resource="#SWRLCreated_1"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://localhost:8080/process/MediationProcess/Dataflow_MediationProcessInput2MoonCRMServiceInput.owl#dataflow_MediationProcessInput2MoonCRMServiceInput">
+    <j.2:head>
+      <j.2:AtomList>
+        <rdf:first>
+          <j.2:IndividualPropertyAtom>
+            <j.2:argument1 rdf:resource="http://localhost:8080/process/MediationProcess/Dataflow_MediationProcessInput2MoonCRMServiceInput.owl#serviceInput"/>
+            <j.2:propertyPredicate rdf:resource="http://localhost:8080/ontologies/ServiceAnchor.owl#parameterObject"/>
+            <j.2:argument2 rdf:resource="http://localhost:8080/process/MediationProcess/Dataflow_MediationProcessInput2MoonCRMServiceInput.owl#lookupRequest"/>
+          </j.2:IndividualPropertyAtom>
+        </rdf:first>
+        <rdf:rest>
+          <j.2:AtomList>
+            <rdf:rest>
+              <j.2:AtomList>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                <rdf:first>
+                  <j.2:IndividualPropertyAtom>
+                    <j.2:propertyPredicate rdf:resource="http://localhost:8080/ontologies/MoonOntology.owl#hasCustomer"/>
+                    <j.2:argument1 rdf:resource="#__deleted__"/>
+                    <j.2:argument2 rdf:resource="#__deleted__"/>
+                  </j.2:IndividualPropertyAtom>
+                </rdf:first>
+              </j.2:AtomList>
+            </rdf:rest>
+            <rdf:first>
+              <j.2:IndividualPropertyAtom>
+                <j.2:propertyPredicate rdf:resource="http://localhost:8080/ontologies/MoonOntology.owl#hasCustomer"/>
+                <j.2:argument2 rdf:resource="#__deleted__"/>
+                <j.2:argument1 rdf:resource="http://localhost:8080/process/MediationProcess/Dataflow_MediationProcessInput2MoonCRMServiceInput.owl#lookupRequest"/>
+              </j.2:IndividualPropertyAtom>
+            </rdf:first>
+          </j.2:AtomList>
+        </rdf:rest>
+      </j.2:AtomList>
+    </j.2:head>
+    <j.2:body>
+      <j.2:AtomList>
+        <rdf:rest>
+          <j.2:AtomList>
+            <rdf:first>
+              <j.2:DatavaluedPropertyAtom>
+                <j.2:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                >MediationProcess</j.2:argument2>
+                <j.2:argument1 rdf:resource="#__deleted__"/>
+                <j.2:propertyPredicate rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+              </j.2:DatavaluedPropertyAtom>
+            </rdf:first>
+            <rdf:rest>
+              <j.2:AtomList>
+                <rdf:rest>
+                  <j.2:AtomList>
+                    <rdf:rest>
+                      <j.2:AtomList>
+                        <rdf:rest>
+                          <j.2:AtomList>
+                            <rdf:rest>
+                              <j.2:AtomList>
+                                <rdf:rest>
+                                  <j.2:AtomList>
+                                    <rdf:rest>
+                                      <j.2:AtomList>
+                                        <rdf:rest>
+                                          <j.2:AtomList>
+                                            <rdf:rest>
+                                              <j.2:AtomList>
+                                                <rdf:first>
+                                                  <j.2:DatavaluedPropertyAtom>
+                                                    <j.2:argument1 rdf:resource="http://localhost:8080/process/MediationProcess/Dataflow_MediationProcessInput2MoonCRMServiceInput.owl#serviceInput"/>
+                                                    <j.2:propertyPredicate rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+                                                    <j.2:argument2
+                                                     rdf:datatype=
+                                                    "http://www.w3.org/2001/XMLSchema#string"
+                                                    >CustomerLookupRequest</j.2:argument2>
+                                                  </j.2:DatavaluedPropertyAtom>
+                                                </rdf:first>
+                                                <rdf:rest>
+                                                  <j.2:AtomList>
+                                                    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                    <rdf:first>
+                                                      <j.2:BuiltinAtom>
+                                                        <j.2:arguments>
+                                                          <rdf:List>
+                                                            <rdf:first rdf:resource="http://localhost:8080/process/MediationProcess/Dataflow_MediationProcessInput2MoonCRMServiceInput.owl#lookupRequest"/>
+                                                            <rdf:rest>
+                                                              <rdf:List>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="http://localhost:8080/process/MediationProcess/Dataflow_MediationProcessInput2MoonCRMServiceInput.owl#serviceInput"/>
+                                                              </rdf:List>
+                                                            </rdf:rest>
+                                                          </rdf:List>
+                                                        </j.2:arguments>
+                                                        <j.2:builtin rdf:resource="http://swrl.stanford.edu/ontologies/built-ins/3.3/swrlx.owl#makeOWLThing"/>
+                                                      </j.2:BuiltinAtom>
+                                                    </rdf:first>
+                                                  </j.2:AtomList>
+                                                </rdf:rest>
+                                              </j.2:AtomList>
+                                            </rdf:rest>
+                                            <rdf:first>
+                                              <j.2:IndividualPropertyAtom>
+                                                <j.2:propertyPredicate rdf:resource="http://localhost:8080/ontologies/ServiceAnchor.owl#hasInput"/>
+                                                <j.2:argument1 rdf:resource="#__deleted__"/>
+                                                <j.2:argument2 rdf:resource="http://localhost:8080/process/MediationProcess/Dataflow_MediationProcessInput2MoonCRMServiceInput.owl#serviceInput"/>
+                                              </j.2:IndividualPropertyAtom>
+                                            </rdf:first>
+                                          </j.2:AtomList>
+                                        </rdf:rest>
+                                        <rdf:first>
+                                          <j.2:DatavaluedPropertyAtom>
+                                            <j.2:argument1 rdf:resource="#__deleted__"/>
+                                            <j.2:argument2 rdf:datatype=
+                                            "http://www.w3.org/2001/XMLSchema#string"
+                                            >MoonCRMService</j.2:argument2>
+                                            <j.2:propertyPredicate rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+                                          </j.2:DatavaluedPropertyAtom>
+                                        </rdf:first>
+                                      </j.2:AtomList>
+                                    </rdf:rest>
+                                    <rdf:first>
+                                      <j.2:ClassAtom>
+                                        <j.2:classPredicate rdf:resource="http://localhost:8080/ontologies/ServiceAnchor.owl#Process"/>
+                                        <j.2:argument1 rdf:resource="#__deleted__"/>
+                                      </j.2:ClassAtom>
+                                    </rdf:first>
+                                  </j.2:AtomList>
+                                </rdf:rest>
+                                <rdf:first>
+                                  <j.2:IndividualPropertyAtom>
+                                    <j.2:propertyPredicate rdf:resource="http://localhost:8080/ontologies/RosettaNetOntology.owl#relatesToPartner"/>
+                                    <j.2:argument2 rdf:resource="#__deleted__"/>
+                                    <j.2:argument1 rdf:resource="#__deleted__"/>
+                                  </j.2:IndividualPropertyAtom>
+                                </rdf:first>
+                              </j.2:AtomList>
+                            </rdf:rest>
+                            <rdf:first>
+                              <j.2:IndividualPropertyAtom>
+                                <j.2:argument2 rdf:resource="#__deleted__"/>
+                                <j.2:argument1 rdf:resource="#__deleted__"/>
+                                <j.2:propertyPredicate rdf:resource="http://localhost:8080/ontologies/RosettaNetOntology.owl#hasFromRole"/>
+                              </j.2:IndividualPropertyAtom>
+                            </rdf:first>
+                          </j.2:AtomList>
+                        </rdf:rest>
+                        <rdf:first>
+                          <j.2:IndividualPropertyAtom>
+                            <j.2:argument2 rdf:resource="#__deleted__"/>
+                            <j.2:propertyPredicate rdf:resource="http://localhost:8080/ontologies/ServiceAnchor.owl#parameterObject"/>
+                            <j.2:argument1 rdf:resource="#__deleted__"/>
+                          </j.2:IndividualPropertyAtom>
+                        </rdf:first>
+                      </j.2:AtomList>
+                    </rdf:rest>
+                    <rdf:first>
+                      <j.2:DatavaluedPropertyAtom>
+                        <j.2:propertyPredicate rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+                        <j.2:argument1 rdf:resource="#__deleted__"/>
+                        <j.2:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                        >Pip3A4PurchaseOrderRequest</j.2:argument2>
+                      </j.2:DatavaluedPropertyAtom>
+                    </rdf:first>
+                  </j.2:AtomList>
+                </rdf:rest>
+                <rdf:first>
+                  <j.2:IndividualPropertyAtom>
+                    <j.2:argument1 rdf:resource="#__deleted__"/>
+                    <j.2:propertyPredicate rdf:resource="http://localhost:8080/ontologies/ServiceAnchor.owl#hasInput"/>
+                    <j.2:argument2 rdf:resource="#__deleted__"/>
+                  </j.2:IndividualPropertyAtom>
+                </rdf:first>
+              </j.2:AtomList>
+            </rdf:rest>
+          </j.2:AtomList>
+        </rdf:rest>
+        <rdf:first>
+          <j.2:ClassAtom>
+            <j.2:classPredicate rdf:resource="http://localhost:8080/ontologies/ServiceAnchor.owl#Process"/>
+            <j.2:argument1 rdf:resource="#__deleted__"/>
+          </j.2:ClassAtom>
+        </rdf:first>
+      </j.2:AtomList>
+    </j.2:body>
+  </rdf:Description>
+</rdf:RDF>
+
+<!-- Created with Protege (with OWL Plugin 3.4, Build 130)  http://protege.stanford.edu -->

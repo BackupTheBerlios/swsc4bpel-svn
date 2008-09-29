@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<process xmlns="http://schemas.active-endpoints.com/pdd/2006/08/pdd.xsd" xmlns:bpelns="http://www.fokus.fraunhofer.de/services/SWSChallenge2008_Scenario1" xmlns:wsa="http://schemas.xmlsoap.org/ws/2003/03/addressing" location="bpel/SWSChallenge2008_Scenario1/SWSChallenge2008_Scenario1.bpel" name="bpelns:SWSChallenge2008_Scenario1" persistenceType="full">
+   <partnerLinks>
+      <partnerLink name="SWSChallenge2008_Scenario1_MediationConfirmationLinkType">
+         <partnerRole endpointReference="static">
+            <wsa:EndpointReference xmlns:s="http://sws-challenge.org/SimplifiedRosettaNet/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2003/03/addressing">
+  <wsa:Address>http://sws-challenge.org/moon/services/RNetService</wsa:Address>
+  <wsa:ServiceName PortName="RNetService">s:RNetService_v1</wsa:ServiceName>
+</wsa:EndpointReference>
+         </partnerRole>
+      </partnerLink>
+      <partnerLink name="SWSChallenge2008_Scenario1_MediationLinkType">
+         <myRole allowedRoles="" binding="MSG" service="SWSChallenge2008_Scenario1_MediationLinkTypeService"/>
+      </partnerLink>
+   </partnerLinks>
+   <references>
+      <wsdl location="http://sws-challenge.org/services/RNetService?wsdl" namespace="http://sws-challenge.org/SimplifiedRosettaNet/"/>
+      <wsdl location="project:/SWSChallenge2008_Scenario1/SWSChallenge2008_Scenario1.wsdl" namespace="urn:SWSChallenge2008_Scenario1_URN"/>
+      <wsdl location="http://sws-challenge.org/moon/services/OMService?wsdl" namespace="mooncompany"/>
+   </references>
+</process>

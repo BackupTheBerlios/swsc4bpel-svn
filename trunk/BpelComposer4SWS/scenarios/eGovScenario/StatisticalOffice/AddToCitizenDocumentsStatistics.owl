@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="WINDOWS-1252"?>
+<rdf:RDF xmlns:process="http://www.daml.org/services/owl-s/1.1/Process.owl#" xmlns:list="http://www.daml.org/services/owl-s/1.1/generic/ObjectList.owl#" xmlns:swrl="http://www.w3.org/2003/11/swrl#" 
+xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns="http://www.example.org/service.owl" 
+xmlns:expression="http://www.daml.org/services/owl-s/1.1/generic/Expression.owl#" xmlns:service="http://www.daml.org/services/owl-s/1.1/Service.owl#" 
+xmlns:grounding="http://www.daml.org/services/owl-s/1.1/Grounding.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
+xmlns:xsd="http://www.w3.org/2001/XMLSchema#" xmlns:daml="http://www.daml.org/2001/03/daml+oil#" xmlns:dc="http://purl.org/dc/elements/1.1/" 
+xmlns:profile="http://www.daml.org/services/owl-s/1.1/Profile.owl#" xml:base="http://localhost:8080/PublicServices/StatisticalOffice/AddToOfficialCitizenDocumentsStatistic.owl#">
+	<owl:Ontology rdf:about="">
+		<owl:imports rdf:resource="http://localhost:8080/PublicServices/StatisticalOffice/StatisticalOfficeOntology.owl"/>
+	</owl:Ontology>
+	<!--+++++++++++++++++++++++++++++++++++++++++++++-->
+	<!-- Service description -->
+	<service:Service rdf:ID="AddToOfficialCitizenDocumentsStatisticService">
+		<service:presents rdf:resource="#AddToOfficialCitizenDocumentsStatisticProfile"/>
+		<service:describedBy rdf:resource="#AddToOfficialCitizenDocumentsStatisticProcess"/>
+		<service:supports rdf:resource="#AddToOfficialCitizenDocumentsStatisticGrounding"/>
+	</service:Service>
+	<!--+++++++++++++++++++++++++++++++++++++++++++++-->
+	<!-- Profile description-->
+	<profile:Profile rdf:ID="AddToOfficialCitizenDocumentsStatisticProfile">
+		<service:isPresentedBy rdf:resource="#AddToOfficialCitizenDocumentsStatisticService"/>
+		<profile:serviceName xml:lang="en">AddToOfficialCitizenDocumentsStatistic</profile:serviceName>
+		<profile:textDescription xml:lang="en">Returns a Confirm for a given OfficialCitizenDocumentType.</profile:textDescription>
+		<profile:hasInput rdf:resource="#OfficialCitizenDocumentType"/>
+		<profile:hasOutput rdf:resource="#Confirm"/>
+	</profile:Profile>
+	<!--+++++++++++++++++++++++++++++++++++++++++++++-->
+	<!-- Process description -->
+	<process:AtomicProcess rdf:ID="AddToOfficialCitizenDocumentsStatisticProcess">
+		<service:describes rdf:resource="#AddToOfficialCitizenDocumentsStatisticService"/>
+		<rdfs:label>AddToOfficialCitizenDocumentsStatisticProcess</rdfs:label>
+		<process:hasInput rdf:resource="#OfficialCitizenDocumentType"/>
+		<process:hasOutput rdf:resource="#Confirm"/>
+	</process:AtomicProcess>
+	<process:Output rdf:ID="Confirm">
+		<process:parameterType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://localhost:8080/PublicServices/StatisticalOffice/StatisticalOfficeOntology.owl#Confirm</process:parameterType>
+		<rdfs:label>Confirm</rdfs:label>
+	</process:Output>
+	<process:Input rdf:ID="OfficialCitizenDocumentType">
+		<process:parameterType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://localhost:8080/PublicServices/StatisticalOffice/StatisticalOfficeOntology.owl#OfficialCitizenDocumentType</process:parameterType>
+		<rdfs:label>OfficialCitizenDocumentType</rdfs:label>
+	</process:Input>
+	<!--+++++++++++++++++++++++++++++++++++++++++++++-->
+	<!-- Grounding description -->
+	<grounding:WsdlGrounding rdf:ID="AddToOfficialCitizenDocumentsStatisticGrounding">
+		<service:supportedBy rdf:resource="#AddToOfficialCitizenDocumentsStatisticService"/>
+		<grounding:hasAtomicProcessGrounding rdf:resource="#AddToOfficialCitizenDocumentsStatisticAtomicProcessGrounding"/>
+	</grounding:WsdlGrounding>
+	<grounding:WsdlAtomicProcessGrounding rdf:ID="AddToOfficialCitizenDocumentsStatisticAtomicProcessGrounding">
+		<grounding:owlsProcess rdf:resource="#AddToOfficialCitizenDocumentsStatisticProcess"/>
+		<grounding:wsdlDocument rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://localhost:8080/PublicServices/services/StatisticalOffice?wsdl</grounding:wsdlDocument>
+		<grounding:wsdlOperation>
+			<grounding:WsdlOperationRef>
+				<grounding:portType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://localhost:8080/PublicServices/services/StatisticalOffice?wsdl#VitalRecordsOffice</grounding:portType>
+				<grounding:operation rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://localhost:8080/PublicServices/services/StatisticalOffice?wsdl#addToOfficialCitizenDocumentsStatistic</grounding:operation>
+			</grounding:WsdlOperationRef>
+		</grounding:wsdlOperation>
+		<grounding:wsdlInputMessage rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://localhost:8080/PublicServices/services/StatisticalOffice?wsdl#addToOfficialCitizenDocumentsStatisticRequest</grounding:wsdlInputMessage>
+		<grounding:wsdlInput>
+			<grounding:WsdlInputMessageMap>
+				<grounding:owlsParameter rdf:resource="#OfficialCitizenDocumentType"/>
+				<grounding:wsdlMessagePart rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://localhost:8080/PublicServices/services/StatisticalOffice?wsdl#in0</grounding:wsdlMessagePart>
+				<grounding:xsltTransformationString><![CDATA[
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:j.0="http://localhost:8080/PublicServices/StatisticalOffice/StatisticalOfficeOntology.owl#">
+	<xsl:template match="/">
+		<in0>
+			<identifier>
+				<xsl:value-of select=" //j.0:hasRef"/>
+			</identifier>
+		</in0>
+	</xsl:template>
+</xsl:stylesheet>
+			  ]]></grounding:xsltTransformationString>
+			</grounding:WsdlInputMessageMap>
+		</grounding:wsdlInput>
+		<grounding:wsdlOutputMessage rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://localhost:8080/PublicServices/services/StatisticalOffice?wsdl#addToOfficialCitizenDocumentsStatisticResponse</grounding:wsdlOutputMessage>
+		<grounding:wsdlOutput>
+			<grounding:WsdlOutputMessageMap>
+				<grounding:owlsParameter rdf:resource="#Confirm"/>
+				<grounding:wsdlMessagePart rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://localhost:8080/PublicServices/services/StatisticalOffice?wsdl#addToOfficialCitizenDocumentsStatisticReturn</grounding:wsdlMessagePart>
+				<grounding:xsltTransformationString><![CDATA[
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<xsl:template match="//addToOfficialCitizenDocumentsStatisticReturn">
+		<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xsd="http://www.w3.org/2001/XMLSchema#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:daml="http://www.daml.org/2001/03/daml+oil#" xmlns="http://localhost:8080/PublicServices/StatisticalOffice/StatisticalOfficeOntology.owl#" xmlns:dc="http://purl.org/dc/elements/1.1/">
+			<Confirm>
+				<hasMessage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+					<xsl:value-of select="message"/>
+				</hasMessage>
+			</Confirm>
+		</rdf:RDF>
+	</xsl:template>
+</xsl:stylesheet>
+]]></grounding:xsltTransformationString>
+			</grounding:WsdlOutputMessageMap>
+		</grounding:wsdlOutput>
+	</grounding:WsdlAtomicProcessGrounding>
+</rdf:RDF>

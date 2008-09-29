@@ -1,0 +1,101 @@
+<!-- Use this file to deploy some handlers/chains and services      -->
+<!-- Two ways to do this:                                           -->
+<!--   java org.apache.axis.client.AdminClient deploy.wsdd          -->
+<!--      after the axis server is running                          -->
+<!-- or                                                             -->
+<!--   java org.apache.axis.utils.Admin client|server deploy.wsdd   -->
+<!--      from the same directory that the Axis engine runs         -->
+
+<deployment
+    xmlns="http://xml.apache.org/axis/wsdd/"
+    xmlns:java="http://xml.apache.org/axis/wsdd/providers/java">
+
+  <!-- Services from VitalRecordsOfficeService WSDL service -->
+
+  <service name="VitalRecordsOffice" provider="java:RPC" style="rpc" use="encoded">
+  <requestFlow>
+			<handler type="soapmonitor"/>
+		</requestFlow>
+		<responseFlow>
+			<handler type="soapmonitor"/>
+		</responseFlow>
+		<parameter name="sendMultiRefs" value="false"/>
+      <parameter name="wsdlTargetNamespace" value="urn:VitalRecordsOffice"/>
+      <parameter name="wsdlServiceElement" value="VitalRecordsOfficeService"/>
+      <parameter name="wsdlServicePort" value="VitalRecordsOffice"/>
+      <parameter name="className" value="VitalRecordsOffice_pkg.VitalRecordsOfficeSoapBindingImpl"/>
+      <parameter name="wsdlPortType" value="VitalRecordsOffice"/>
+      <operation name="orderBirthCertificate" qname="operNS:orderBirthCertificate" xmlns:operNS="urn:VitalRecordsOffice" returnQName="orderBirthCertificateReturn" returnType="rtns:acknowledgement" xmlns:rtns="http://localhost:8080/PublicServices/VitalRecordsOffice/XVitalRecords" >
+        <parameter name="in0" type="tns:birthCertificateOrder" xmlns:tns="http://localhost:8080/PublicServices/VitalRecordsOffice/XVitalRecords"/>
+      </operation>
+      <operation name="getVitalRecordsDocumentInfo" qname="operNS:getVitalRecordsDocumentInfo" xmlns:operNS="urn:VitalRecordsOffice" returnQName="getVitalRecordsDocumentInfoReturn" returnType="rtns:vitalRecordsDocumentInfo" xmlns:rtns="http://localhost:8080/PublicServices/VitalRecordsOffice/XVitalRecords" >
+        <parameter name="in0" type="tns:vitalRecordsDocumentType" xmlns:tns="http://localhost:8080/PublicServices/VitalRecordsOffice/XVitalRecords"/>
+      </operation>
+      <parameter name="allowedMethods" value="orderBirthCertificate getVitalRecordsDocumentInfo"/>
+
+      <typeMapping
+        xmlns:ns="http://localhost:8080/PublicServices/VitalRecordsOffice/XVitalRecords"
+        qname="ns:birthCertificateOrder"
+        type="java:localhost.PublicServices.VitalRecordsOffice.XVitalRecords.BirthCertificateOrder"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+      />
+      <typeMapping
+        xmlns:ns="http://localhost:8080/PublicServices/VitalRecordsOffice/XVitalRecords"
+        qname="ns:vitalRecordsDocumentType"
+        type="java:localhost.PublicServices.VitalRecordsOffice.XVitalRecords.VitalRecordsDocumentType"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+      />
+      <typeMapping
+        xmlns:ns="http://localhost:8080/PublicServices/PublicServicePayment/XPublicServicePayment"
+        qname="ns:account"
+        type="java:localhost.PublicServices.PublicServicePayment.XPublicServicePayment.Account"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+      />
+      <typeMapping
+        xmlns:ns="http://localhost:8080/PublicServices/VitalRecordsOffice/XVitalRecords"
+        qname="ns:person"
+        type="java:localhost.PublicServices.VitalRecordsOffice.XVitalRecords.Person"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+      />
+      <typeMapping
+        xmlns:ns="http://localhost:8080/PublicServices/VitalRecordsOffice/XVitalRecords"
+        qname="ns:paymentReceipt"
+        type="java:localhost.PublicServices.VitalRecordsOffice.XVitalRecords.PaymentReceipt"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+      />
+      <typeMapping
+        xmlns:ns="http://localhost:8080/PublicServices/VitalRecordsOffice/XVitalRecords"
+        qname="ns:acknowledgement"
+        type="java:localhost.PublicServices.VitalRecordsOffice.XVitalRecords.Acknowledgement"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+      />
+      <typeMapping
+        xmlns:ns="http://localhost:8080/PublicServices/VitalRecordsOffice/XVitalRecords"
+        qname="ns:postalAddress"
+        type="java:localhost.PublicServices.VitalRecordsOffice.XVitalRecords.PostalAddress"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+      />
+      <typeMapping
+        xmlns:ns="http://localhost:8080/PublicServices/VitalRecordsOffice/XVitalRecords"
+        qname="ns:vitalRecordsDocumentInfo"
+        type="java:localhost.PublicServices.VitalRecordsOffice.XVitalRecords.VitalRecordsDocumentInfo"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+      />
+  </service>
+</deployment>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema targetNamespace="http://localhost:8080/PublicServices/VitalRecordsOffice/XVitalRecords" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xvr="http://localhost:8080/PublicServices/VitalRecordsOffice/XVitalRecords" xmlns:xpsp="http://localhost:8080/PublicServices/PublicServicePayment/XPublicServicePayment">
+	<!--xs:import namespace="http://localhost:8080/PublicServices/VitalRecordsOffice/XVitalRecords" schemaLocation="http://localhost:8080/PublicServices/VitalRecordsOffice/XVitalRecords.xsd"/-->
+	<xs:import namespace="http://localhost:8080/PublicServices/PublicServicePayment/XPublicServicePayment" schemaLocation="http://localhost:8080/PublicServices/PublicServicePayment/XPublicServicePayment.xsd"/>
+	<xs:annotation>
+		<xs:documentation>
+			<para>Official Standard XVitalRecords</para>
+		</xs:documentation>
+	</xs:annotation>
+	<xs:complexType name="birthCertificate">
+		<xs:sequence>
+			<xs:element name="person" type="xvr:paymentReceipt"/>
+			<xs:element name="mother" type="xvr:person"/>
+			<xs:element name="father" type="xvr:person"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="birthCertificateOrder">
+		<xs:sequence>
+			<xs:element name="paymentReceipt" type="xvr:paymentReceipt"/>
+			<xs:element name="person" type="xvr:person"/>
+			<xs:element name="postalAddress" type="xvr:postalAddress"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="paymentReceipt">
+		<xs:sequence>
+			<xs:element name="confirm" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="person">
+		<xs:sequence>
+			<xs:element name="firstName" type="xs:string"/>
+			<xs:element name="lastName" type="xs:string"/>
+			<xs:element name="nameAtBirth" type="xs:string" minOccurs="0"/>
+			<xs:element name="dateOfBirth" type="xs:string"/>
+			<xs:element name="placeOfBirth" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="postalAddress">
+		<xs:sequence>
+			<xs:element name="recipient" type="xs:string"/>
+			<xs:element name="streetAddress" type="xs:string"/>
+			<xs:element name="zipcodeAndPostalDistrict" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="marriageCertificate">
+		<xs:sequence>
+			<xs:element name="husband" type="xvr:paymentReceipt"/>
+			<xs:element name="wife" type="xvr:person"/>
+			<xs:element name="dateOfMarriage" type="xs:string"/>
+			<xs:element name="placeOfMarriage" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="deathCertificate">
+		<xs:sequence>
+			<xs:element name="husband" type="xvr:paymentReceipt"/>
+			<xs:element name="wife" type="xvr:person"/>
+			<xs:element name="dateOfDeath" type="xs:string"/>
+			<xs:element name="placeOfDeath" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="vitalRecordsDocumentType">
+		<xs:sequence>
+			<xs:element name="id" type="xs:string"/>
+			<xs:element name="description" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="acknowledgement">
+		<xs:sequence>
+			<xs:element name="document" type="xvr:vitalRecordsDocumentType"/>
+			<xs:element name="recipientPostalAddress" type="xvr:postalAddress"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="in0">
+		<xs:complexType name="vitalRecordsDocumentInfo">
+			<xs:sequence>
+				<xs:element name="price" type="xs:string"/>
+				<xs:element name="vitalRecordsDocumentType" type="xvr:vitalRecordsDocumentType"/>
+				<xs:element name="paymentAccount" type="xpsp:account"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.sws-challenge.org/schemas/rnet/POC" xmlns:dict="http://www.sws-challenge.org/schemas/rnet/dictionary" xmlns:core="http://www.sws-challenge.org/schemas/rnet/coreElements" targetNamespace="http://www.sws-challenge.org/schemas/rnet/POC" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:annotation>
+		<xs:documentation>Authors: Michal Zaremba, Holger Lausen
+$Revision: 1.6 $
+$Date: 2006/04/26 11:42:49 $
+
+This XML Schema has been created on the basis of the RosettaNet specification (http://rosettanet.org/) 
+and is solely intended for the Semantic Web Challenge (http://www.sws-challenge.org/). The Schema has 
+been simplified in several aspect, e.g. all Tax related aspect have been deleted for the saint of simplicity.</xs:documentation>
+	</xs:annotation>
+	<xs:import namespace="http://www.sws-challenge.org/schemas/rnet/dictionary" schemaLocation="3A4_PurchaseOrder_Dictionary.xsd"/>
+	<xs:import namespace="http://www.sws-challenge.org/schemas/rnet/coreElements" schemaLocation="3A4_PurchaseOrder_CoreElements.xsd"/>
+	<xs:element name="Pip3A4PurchaseOrderConfirmation">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="core:fromRole"/>
+				<xs:element ref="PurchaseOrder"/>
+				<xs:element ref="core:requestingDocumentDateTime"/>
+				<xs:element ref="core:requestingDocumentIdentifier"/>
+				<xs:element ref="core:thisDocumentGenerationDateTime"/>
+				<xs:element ref="core:thisDocumentIdentifier"/>
+				<xs:element ref="core:toRole"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="PurchaseOrder">
+		<xs:annotation>
+			<xs:documentation>The collection of business properties that describe a buyer's offer to purchase a quantity of products at an agreed price and schedule. Additionally to it the status of each item is provided</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="dict:GlobalConfirmationTypeCode" minOccurs="0"/>
+				<xs:element ref="dict:GlobalPurchaseOrderStatusCode"/>
+				<xs:element ref="dict:GlobalPurchaseOrderTypeCode" maxOccurs="unbounded"/>
+				<xs:element ref="core:isDropShip"/>
+				<xs:element ref="ProductLineItem" maxOccurs="unbounded"/>
+				<xs:element ref="core:requestedEvent" minOccurs="0"/>
+				<xs:element ref="core:shipTo" minOccurs="0"/>
+				<xs:element ref="core:totalAmount" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ProductLineItem">
+		<xs:annotation>
+			<xs:documentation>The collection of business properties that describe a business document entry for a product.</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="core:buyerLineItem"/>
+				<xs:element ref="dict:GlobalProductUnitOfMeasureCode"/>
+				<xs:element ref="dict:GlobalPurchaseOrderStatusCode"/>
+				<xs:element ref="core:isDropShip"/>
+				<xs:element ref="core:LineNumber"/>
+				<xs:element ref="OrderQuantity"/>
+				<xs:element ref="core:ProductIdentification"/>
+				<xs:element ref="core:requestedEvent"/>
+				<xs:element ref="core:requestedUnitPrice" minOccurs="0"/>
+				<xs:element ref="core:ShippedQuantityInformation" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="core:totalLineItemAmount" minOccurs="0"/>
+				<xs:element ref="core:unitPrice" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="OrderQuantity">
+		<xs:annotation>
+			<xs:documentation>The collection of business properties that describe various types of product quantity used in an ordering process.</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="core:requestedQuantity"/>
+				<xs:element ref="core:scheduledShipQuantity" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

@@ -1,0 +1,6 @@
+<ns1:OrderLineItemConfirmation xmlns:ns1="mooncompany" xmlns="mooncompany">
+	<ns1:authToken>test2w?SwF`[</ns1:authToken>
+	<ns1:orderId>94</ns1:orderId>
+	<ns1:itemId>95</ns1:itemId>
+	<ns1:status>accepted</ns1:status>
+</ns1:OrderLineItemConfirmation>

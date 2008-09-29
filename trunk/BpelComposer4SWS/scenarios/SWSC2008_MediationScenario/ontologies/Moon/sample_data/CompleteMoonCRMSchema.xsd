@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="mooncompany" targetNamespace="mooncompany" elementFormDefault="qualified">
+
+	<xsd:element name="SearchCustomer" type="SearchCustomerType"/>
+	<xsd:complexType name="SearchCustomerType">
+		<xsd:sequence>
+			<xsd:element name="searchString" type="xsd:string" nillable="false"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:element name="SearchCustomerResponse" type="SearchCustomerResponseType"/>
+	<xsd:complexType name="SearchCustomerResponseType">
+		<xsd:sequence>
+			<xsd:element name="customerId" type="xsd:long" nillable="false"/>
+			<xsd:element name="roleCode" type="xsd:string" nillable="false"/>
+			<xsd:element name="contactName" type="xsd:string" nillable="false"/>
+			<xsd:element name="email" type="xsd:string" nillable="false"/>
+			<xsd:element name="telephone" type="xsd:string" nillable="false"/>
+			<xsd:element name="businessName" type="xsd:string" nillable="false"/>
+			<xsd:element name="postalCode" type="xsd:string" nillable="false"/>
+			<xsd:element name="city" type="xsd:string" nillable="false"/>
+			<xsd:element name="street" type="xsd:string" nillable="false"/>
+			<xsd:element name="countryCode" type="xsd:string" nillable="false"/>
+		</xsd:sequence>
+	</xsd:complexType>
+
+</xsd:schema>
+
+

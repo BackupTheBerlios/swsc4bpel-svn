@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project basedir="." default="default" name="axisTest">
+	<property name="TOMCAT_HOME" value="C:/Programme/Tomcat"/>
+	<path id="classpath">
+		<fileset dir="${TOMCAT_HOME}/webapps/PublicServices/WEB-INF/lib">
+          <include name="**/*.jar"/>
+        </fileset>
+		<pathelement location="${basedir}"/>
+	</path>
+	<target name="compile">
+		<javac srcdir="${basedir}" destdir="${basedir}/classes" source="1.4"  target="1.4">
+			<classpath refid="classpath"/>
+		</javac>
+	</target>
+	<target name="deploy">
+		<java className="org.apache.axis.client.AdminClient">
+		<arg value="-lhttp://localhost:8080/active-bpel/services/AdminService"/>
+			<arg value="deploy.wsdd"/>
+			<classpath refid="classpath"/>
+		</java>
+	</target>
+	<target name="undeploy">
+		<java className="org.apache.axis.client.AdminClient">
+		<arg value="-lhttp://localhost:8080/active-bpel/services/AdminService"/>
+			<arg value="undeploy.wsdd"/>
+			<classpath refid="classpath"/>
+		</java>
+	</target>
+	<target name="run">
+		<java className="samples.userguide.example5.Client">
+			<classpath refid="classpath"/>
+		</java>
+	</target>
+	<target name="w2j">
+		<java className="org.apache.axis.wsdl.WSDL2Java">
+		<arg value="--server-side"/>
+		<arg value="ResidentRegistry.wsdl"/>
+		<!--arg value="AddressBook.wsdl"/-->
+		
+			<classpath refid="classpath"/>
+		</java>
+	</target>
+	<target name="w2jc">
+		<java className="org.apache.axis.wsdl.WSDL2Java">
+		<arg value="ResidentRegistry.xml"/>
+		<!--arg value="AddressBook.xml"/-->
+		
+			<classpath refid="classpath"/>
+		</java>
+	</target>
+	<target name="j2w">
+		<java className="org.apache.axis.wsdl.Java2WSDL">
+		<arg value="-o"/>
+		<arg value="PublicServicePayment.wsdl"/>
+		<arg value="PublicServicePayment"/>
+		<arg value="-lhttp://localhost:8080/active-bpel/PublicServicePayment"/>
+		<arg value="-n"/>
+		<arg value="urn:PublicServicePayment"/>
+			<classpath refid="classpath"/>
+		</java>
+	</target>
+</project>

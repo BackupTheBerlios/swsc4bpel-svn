@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="urn:ResidentRegistry" xmlns:intf="urn:ResidentRegistry" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xrr="http://localhost:8080/PublicServices/ResidentRegistry/XResidentRegistry" targetNamespace="urn:ResidentRegistry">
+	<wsdl:types>
+		<xsd:schema targetNamespace="urn:XResidentRegistry">
+			<xsd:import namespace="http://localhost:8080/PublicServices/ResidentRegistry/XResidentRegistry" schemaLocation="http://localhost:8080/PublicServices/ResidentRegistry/XResidentRegistry.xsd"/>
+		</xsd:schema>
+	</wsdl:types>
+	<wsdl:message name="getResidentInfoRequest">
+		<wsdl:part name="in0" type="xrr:residentSearchProfile"/>
+	</wsdl:message>
+	<wsdl:message name="getResidentInfoResponse">
+		<wsdl:part name="getResidentInfoReturn" type="xrr:residentInfo"/>
+	</wsdl:message>
+	<wsdl:portType name="ResidentRegistry">
+		<wsdl:operation name="getResidentInfo" parameterOrder="in0">
+			<wsdl:input name="getResidentInfoRequest" message="impl:getResidentInfoRequest"/>
+			<wsdl:output name="getResidentInfoResponse" message="impl:getResidentInfoResponse"/>
+		</wsdl:operation>
+	</wsdl:portType>
+	<wsdl:binding name="ResidentRegistrySoapBinding" type="impl:ResidentRegistry">
+		<wsdlsoap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+		<wsdl:operation name="getResidentInfo">
+			<wsdlsoap:operation soapAction="http://localhost:8080/PublicServices/ResidentRegistry/getResidentInfo"/>
+			<wsdl:input name="getResidentInfoRequest">
+				<wsdlsoap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:ResidentRegistry"/>
+			</wsdl:input>
+			<wsdl:output name="getResidentInfoResponse">
+				<wsdlsoap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:ResidentRegistry"/>
+			</wsdl:output>
+		</wsdl:operation>
+	</wsdl:binding>
+	<wsdl:service name="ResidentRegistryService">
+		<wsdl:port name="ResidentRegistry" binding="impl:ResidentRegistrySoapBinding">
+			<wsdlsoap:address location="http://localhost:8080/PublicServices/ResidentRegistry"/>
+		</wsdl:port>
+	</wsdl:service>
+</wsdl:definitions>

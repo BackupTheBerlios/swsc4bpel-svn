@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+    xmlns:process="http://www.daml.org/services/owl-s/1.1/Process.owl#"
+    xmlns:j.0="http://localhost:8080/ontologies/RosettaNetOntology.owl#"
+    xmlns:list="http://www.daml.org/services/owl-s/1.1/generic/ObjectList.owl#"
+    xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:expression="http://www.daml.org/services/owl-s/1.1/generic/Expression.owl#"
+    xmlns:service="http://www.daml.org/services/owl-s/1.1/Service.owl#"
+    xmlns:j.1="http://localhost:8080/ontologies/MoonOntology.owl#"
+    xmlns:grounding="http://www.daml.org/services/owl-s/1.1/Grounding.owl#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:daml="http://www.daml.org/2001/03/daml+oil#"
+    xmlns:profile="http://www.daml.org/services/owl-s/1.1/Profile.owl#" > 
+  <rdf:Description rdf:about="http://localhost:8080/process/MediationProcess/MoonCRMServiceInputContainer.owl#SWRLCreated_1">
+    <j.1:hasCustomer rdf:resource="http://localhost:8080/process/MediationProcessInput.owl#Partner_4"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://localhost:8080/process/MediationProcessInput.owl#ContactInformation_6">
+    <j.0:hasEmailAddress rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stefania.wolf@blue.com</j.0:hasEmailAddress>
+    <j.1:hasContactName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Stefania Wolf</j.1:hasContactName>
+    <j.1:hasEmail rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stefania.wolf@blue.com</j.1:hasEmail>
+    <j.0:hasContactName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Stefania Wolf</j.0:hasContactName>
+    <j.0:hasTelephoneNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">+43(650)89930023</j.0:hasTelephoneNumber>
+    <j.1:hasTelephone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">+43(650)89930023</j.1:hasTelephone>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">firedRule_SemanticBridge_RosettaNetContactInformation2MoonContactInfo</rdfs:label>
+    <rdf:type rdf:resource="http://localhost:8080/ontologies/MoonOntology.owl#ContactInfo"/>
+    <rdf:type rdf:resource="http://localhost:8080/ontologies/RosettaNetOntology.owl#ContactInformation"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://localhost:8080/process/MediationProcessInput.owl#BusinessDescription_5">
+    <j.0:hasBusinessName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Blue Company</j.0:hasBusinessName>
+    <rdf:type rdf:resource="http://localhost:8080/ontologies/RosettaNetOntology.owl#BusinessDescription"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://localhost:8080/process/MediationProcessInput.owl#PhysicalAddress_7">
+    <j.1:hasCity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Innsbruck</j.1:hasCity>
+    <j.0:hasAddressLine1 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">North Business Center, Block 9</j.0:hasAddressLine1>
+    <j.0:hasGlobalCountryCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AT</j.0:hasGlobalCountryCode>
+    <j.1:hasPostalCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A-6020</j.1:hasPostalCode>
+    <rdf:type rdf:resource="http://localhost:8080/ontologies/RosettaNetOntology.owl#PhysicalAddress"/>
+    <j.1:hasStreet rdf:datatype="http://www.w3.org/2001/XMLSchema#string">North Business Center, Block 9</j.1:hasStreet>
+    <j.1:hasCountryCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AT</j.1:hasCountryCode>
+    <rdf:type rdf:resource="http://localhost:8080/ontologies/MoonOntology.owl#PostalAddress"/>
+    <j.0:hasCityName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Innsbruck</j.0:hasCityName>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">firedRule_SemanticBridge_RosettaNetPhysicalAddress2MoonPostalAddress</rdfs:label>
+    <j.0:hasNationalPostalCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A-6020</j.0:hasNationalPostalCode>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://localhost:8080/process/MediationProcessInput.owl#Partner_4">
+    <j.1:hasPostalAddress rdf:resource="http://localhost:8080/process/MediationProcessInput.owl#PhysicalAddress_7"/>
+    <j.0:hasContactInformation rdf:resource="http://localhost:8080/process/MediationProcessInput.owl#ContactInformation_6"/>
+    <j.0:hasPhysicalLocation rdf:resource="http://localhost:8080/process/MediationProcessInput.owl#PhysicalAddress_7"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">firedRule_SemanticBridge_hasContactInformation2hasContactInfo</rdfs:label>
+    <j.0:hasBusinessDescription rdf:resource="http://localhost:8080/process/MediationProcessInput.owl#BusinessDescription_5"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">firedRule_SemanticBridge_hasPhysicalLocation2hasPostalAddress</rdfs:label>
+    <j.1:hasBusinessName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Blue Company</j.1:hasBusinessName>
+    <rdf:type rdf:resource="http://localhost:8080/ontologies/RosettaNetOntology.owl#Partner"/>
+    <rdf:type rdf:resource="http://localhost:8080/ontologies/MoonOntology.owl#Customer"/>
+    <j.1:hasContactInfo rdf:resource="http://localhost:8080/process/MediationProcessInput.owl#ContactInformation_6"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">firedRule_SemanticBridge_RosettaNetBusinessName2MoonBusinessName</rdfs:label>
+  </rdf:Description>
+</rdf:RDF>

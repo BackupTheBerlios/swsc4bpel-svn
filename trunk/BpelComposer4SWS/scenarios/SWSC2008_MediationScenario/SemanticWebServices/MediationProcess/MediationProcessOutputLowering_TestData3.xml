@@ -1,0 +1,720 @@
+<type xmlns:bpel="http://docs.oasis-open.org/wsbpel/2.0/process/executable" xmlns:ext="http://www.activebpel.org/2006/09/bpel/extension/query_handling" xmlns:moon="http://localhost:8080/ontologies/MoonOntology.owl#" xmlns:ns="http://www.sws-challenge.org/schemas/rnet/ACK" xmlns:ns1="urn:SWSChallenge2008_Scenario1_URN" xmlns:ns1-1="urn:SWSChallenge_Test1" xmlns:ns2="mooncompany" xmlns:ns3="http://sws-challenge.org/SimplifiedRosettaNet/" xmlns:po="http://www.sws-challenge.org/schemas/rnet/POR" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:semBpel="http://org.qualipso.interop.semantic.bpel.extension" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<rdf:RDF xmlns="http://localhost:8080/process/MediationProcessOutputAnchor.owl#" xmlns:daml="http://www.daml.org/2001/03/daml+oil#" xmlns:j.0="http://localhost:8080/ontologies/ServiceAnchor.owl#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:p1="http://localhost:8080/ontologies/semantic-bridges/SemanticBridge_RosettaNetOntology2MoonOntology.owl#" xmlns:p10="http://localhost:8080/process/MediationProcess/dataflow/Dataflow_MoonOMSCloseOrderService2MediationProcessOutput.owl#" xmlns:p11="http://localhost:8080/process/MediationProcess/MediationProcessConfirmLineItemServiceInput_4Item2330.owl#" xmlns:p12="http://localhost:8080/process/MediationProcess/MediationProcessConfirmLineItemServiceInput_4Item.owl#" xmlns:p13="http://localhost:8080/process/MediationProcess/dataflow/Dataflow_MediationProcessConfirmLineItemInput2MediationProcessOutput.owl#" xmlns:p14="http://localhost:8080/process/MediationProcess/MediationProcessConfirmLineItemServiceInput_4Item2331.owl#" xmlns:p15="http://localhost:8080/process/MediationProcess/MediationProcessConfirmLineItemServiceInput_4Item2332.owl#" xmlns:p16="http://localhost:8080/process/MediationProcess/MediationProcessConfirmLineItemServiceInput_4Item2333.owl#" xmlns:p17="http://localhost:8080/process/MediationProcess/MediationProcessConfirmLineItemServiceInput_4Item2334.owl#" xmlns:p18="http://localhost:8080/process/MediationProcess/MediationProcessConfirmLineItemServiceInput_4Item2335.owl#" xmlns:p19="http://localhost:8080/ontologies/semantic-bridges/SemanticBridge_MoonOntology2RosettaNetOntology.owl#" xmlns:p2="http://localhost:8080/process/MediationProcessInput.owl#" xmlns:p3="http://localhost:8080/process/MediationProcess/dataflow/Dataflow_MediationProcessInput2MediationProcessOutput.owl#" xmlns:p4="http://localhost:8080/process/MediationProcess/MoonOMSAddLineItemServiceOutputContainer.owl#" xmlns:p5="http://localhost:8080/process/MediationProcess/MoonOMSAddLineItemServiceOutput.owl#" xmlns:p6="http://localhost:8080/process/MediationProcess/dataflow/Dataflow_MediationProcessConfirmLineItemInput2MediationProcessInputContainer.owl#" xmlns:p7="http://localhost:8080/process/MediationProcess/Dataflow_MediationProcessInput+MoonCRMServiceOutput2MoonOMS_CreateNewOrderInputContainer.owl#" xmlns:p8="http://localhost:8080/process/MediationProcess/MoonOMSCloseOrderServiceOutputContainer.owl#" xmlns:p9="http://localhost:8080/process/MediationProcess/MoonOMSCloseOrderServiceOutput.owl#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:rosetta="http://localhost:8080/ontologies/RosettaNetOntology.owl#" xmlns:xsd="http://www.w3.org/2001/XMLSchema#" xml:base="http://localhost:8080/process/MediationProcessOutputAnchor.owl" xmlns:moon="http://localhost:8080/ontologies/MoonOntology.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+		<rdf:Description rdf:about="http://localhost:8080/process/MediationProcess/MoonOMSAddLineItemServiceOutput.owl#Order_4Item2335">
+			<rdf:type rdf:resource="http://localhost:8080/ontologies/MoonOntology.owl#RegisteredOrder"/>
+			<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+			<rdf:type rdf:resource="http://localhost:8080/ontologies/MoonOntology.owl#Order"/>
+			<rosetta:hasResponseDocumentIdentifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1603</rosetta:hasResponseDocumentIdentifier>
+			<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">firedRule_SemanticBridge_hasOrderID2hasResponseDocumentIdentifier</rdfs:label>
+			<moon:hasOrderID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1603</moon:hasOrderID>
+		</rdf:Description>
+		<rdf:Description rdf:about="http://localhost:8080/process/MediationProcess/MediationProcessConfirmLineItemServiceInput_4Item.owl#ConfirmLineItemRequest_4Item2332">
+			<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+			<rdf:type rdf:resource="http://localhost:8080/ontologies/MoonOntology.owl#ConfirmLineItemRequest"/>
+			<moon:hasItem rdf:resource="http://localhost:8080/process/MediationProcess/MediationProcessConfirmLineItemServiceInput_4Item.owl#ProcessedItem_4Item2332"/>
+		</rdf:Description>
+		<rdf:Description rdf:about="http://localhost:8080/process/MediationProcess/MoonOMSAddLineItemServiceOutput.owl#Order_4Item2330">
+			<rosetta:hasResponseDocumentIdentifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1603</rosetta:hasResponseDocumentIdentifier>
+			<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">firedRule_SemanticBridge_hasOrderID2hasResponseDocumentIdentifier</rdfs:label>
+			<rdf:type rdf:resource="http://localhost:8080/ontologies/MoonOntology.owl#Order"/>
+			<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+			<rdf:type rdf:resource="http://localhost:8080/ontologies/MoonOntology.owl#RegisteredOrder"/>
+			<moon:hasOrderID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1603</moon:hasOrderID>
+		</rdf:Description>
+		<rdf:Description rdf:about="http://localhost:8080/process/MediationProcessInput.owl#TotalLineItemAmountFinancialAmount_5">
+			<rosetta:hasMonetaryAmount rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1067.54</rosetta:hasMonetaryAmount>
+			<rdf:type rdf:resource="http://localhost:8080/ontologies/RosettaNetOntology.owl#FinancialAmount"/>
+			<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+			<rosetta:hasGlobalCurrencyCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EUR</rosetta:hasGlobalCurrencyCode>
+		</rdf:Description>
+		<rdf:Description rdf:about="http://localhost:8080/process/MediationProcess/MediationProcessConfirmLineItemServiceInput_4Item.owl#ProcessedItem_4Item2332">
+			<rosetta:hasGlobalPurchaseOrderStatusCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reject</rosetta:hasGlobalPurchaseOrderStatusCode>
+			<moon:hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rejected</moon:hasStatus>
+			<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">firedRule_SemanticBridge_hasStatus2hasGlobalPurchaseOrderStatusCode_Reject</rdfs:label>
+			<moon:hasItemID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2332</moon:hasItemID>
+			<rdf:type rdf:resource="http://localhost:8080/ontologies/MoonOntology.owl#Item"/>
+			<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+			<rdf:type rdf:resource="http://localhost:8080/ontologies/MoonOntology.owl#ProcessedItem"/>
+		</rdf:Description>
+		<rdf:Description rdf:about="http://localhost:8080/process/MediationProcessInput.owl#PhysicalAddress_077">
+			<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+			<rdf:type rdf:resource="http://localhost:8080/ontologies/MoonOntology.owl#PostalAddress"/>
+			<moon:hasStreet rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Moon Company, IDEA Business Park</moon:hasStreet>
+			<rdf:type rdf:resource="http://localhost:8080/ontologies/RosettaNetOntology.owl#PhysicalAddress"/>
+			<rosetta:hasAddressLine1 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Moon Company, IDEA Business Park</rosetta:hasAddressLine1>
+			<rosetta:hasGlobalCountryCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IE</rosetta:hasGlobalCountryCode>
+			<moon:hasCountryCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IE</moon:hasCountryCode>
+			<rosetta:hasCityName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Galway</rosetta:hasCityName>
+			<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">firedRule_SemanticBridge_RosettaNetPhysicalAddress2MoonPostalAddress</rdfs:label>
+			<moon:hasPostalCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">N/A</moon:hasPostalCode>
+			<rosetta:hasNationalPostalCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">N/A</rosetta:hasNationalPostalCode>
+			<moon:hasCity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Galway</moon:hasCity>
+		</rdf:Description>
+		<rdf:Description rdf:about="http://localhost:8080/process/MediationProcess/MediationProcessConfirmLineItemServiceInput_4Item.owl#ProcessedItem_4Item2330">
+			<rdf:type rdf:resource="http://localhost:8080/ontologies/MoonOntology.owl#Item"/>
+			<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+			<rdf:type rdf:resource="http://localhost:8080/ontologies/MoonOntology.owl#ProcessedItem"/>
+			<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">firedRule_SemanticBridge_hasStatus2hasGlobalPurchaseOrderStatusCode_Reject</rdfs:label>
+			<moon:hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rejected</moon:hasStatus>
+			<rosetta:hasGlobalPurchaseOrderStatusCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reject</rosetta:hasGlobalPurchaseOrderStatusCode>
+			<moon:hasItemID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2330</moon:hasItemID>
+		</rdf:Description>
+		<rdf:Description rdf:about="http://localhost:8080/process/MediationProcess/MoonOMSAddLineItemServiceOutput.owl#Order_4Item2331">
+			<rdf:type rdf:resource="http://localhost:8080/ontologies/MoonOntology.owl#RegisteredOrder"/>
+			<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+			<rdf:type rdf:resource="http://localhost:8080/ontologies/MoonOntology.owl#Order"/>
+			<moon:hasOrderID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1603</moon:hasOrderID>
+			<rosetta:hasResponseDocumentIdentifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1603</rosetta:hasResponseDocumentIdentifier>
+			<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">firedRule_SemanticBridge_hasOrderID2hasResponseDocumentIdentifier</rdfs:label>
+		</rdf:Description>
+		<rdf:Description rdf:about="http://localhost:8080/process/MediationProcess/MediationProcessConfirmLineItemServiceInput_4Item.owl#Process_4Item2335">
+			<j.0:hasInput rdf:resource="http://localhost:8080/process/MediationProcess/MediationProcessConfirmLineItemServiceInput_4Item.owl#Input_4Item2335"/>
+			<rdf:type rdf:resource="http://localhost:8080/ontologies/ServiceAnchor.owl#Process"/>
+			<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+			<rdf:type rdf:resource="http://localhost:8080/ontologies/ServiceAnchor.owl#AtomicProcess"/>
+			<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ConfirmLineItemProcess</rdfs:label>
+		</rdf:Description>
+		<rdf:Description rdf:about="http://localhost:8080/process/MediationProcess/MediationProcessConfirmLineItemServiceInput_4Item.owl#ProcessedItem_4Item2333">
+			<rdf:type rdf:resource="http://localhost:8080/ontologies/MoonOntology.owl#ProcessedItem"/>
+			<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+			<rdf:type rdf:resource="http://localhost:8080/ontologies/MoonOntology.owl#Item"/>
+			<moon:hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rejected</moon:hasStatus>
+			<rosetta:hasGlobalPurchaseOrderStatusCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reject</rosetta:hasGlobalPurchaseOrderStatusCode>
+			<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">firedRule_SemanticBridge_hasStatus2hasGlobalPurchaseOrderStatusCode_Reject</rdfs:label>
+			<moon:hasItemID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2333</moon:hasItemID>
+		</rdf:Description>
+		<rdf:Description rdf:about="http://localhost:8080/process/MediationProcess/MediationProcessConfirmLineItemServiceInput_4Item.owl#ProcessedItem_4Item2331">
+			<rosetta:hasGlobalPurchaseOrderStatusCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Accept</rosetta:hasGlobalPurchaseOrderStatusCode>
+			<rdf:type rdf:resource="http://localhost:8080/ontologies/MoonOntology.owl#ProcessedItem"/>
+			<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+			<rdf:type rdf:resource="http://localhost:8080/ontologies/MoonOntology.owl#Item"/>
+			<moon:hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">accepted</moon:hasStatus>
+			<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">firedRule_SemanticBridge_hasStatus2hasGlobalPurchaseOrderStatusCode_Accept</rdfs:label>
+			<moon:hasItemID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2331</moon:hasItemID>
+		</rdf:Description>
+		<rdf:Description rdf:about="http://localhost:8080/process/MediationProcess/MediationProcessConfirmLineItemServiceInput_4Item.owl#Process_4Item2332">
+			<j.0:hasInput rdf:resource="http://localhost:8080/process/MediationProcess/MediationProcessConfirmLineItemServiceInput_4Item.owl#Input_4Item2332"/>
+			<rdf:type rdf:resource="http://localhost:8080/ontologies/ServiceAnchor.owl#AtomicProcess"/>
+			<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+			<rdf:type rdf:resource="http://localhost:8080/ontologies/ServiceAnchor.owl#Process"/>
+			<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ConfirmLineItemProcess</rdfs:label>
+		</rdf:Description>
+		<rdf:Description rdf:about="http://localhost:8080/process/MediationProcess/MediationProcessConfirmLineItemServiceInput_4Item.owl#Input_4Item2330">
+			<j.0:parameterObject rdf:resource="http://localhost:8080/process/MediationProcess/MediationProcessConfirmLineItemServiceInput_4Item.owl#ConfirmLineItemRequest_4Item2330"/>
+			<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ConfirmLineItemRequest</rdfs:label>
+			<rdf:type rdf:resource="http://localhost:8080/ontologies/ServiceAnchor.owl#Parameter"/>
+			<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+			<rdf:type rdf:resource="http://localhost:8080/ontologies/ServiceAnchor.owl#Input"/>
+		</rdf:Description>
+		<rdf:Description rdf:about="http://localhost:8080/process/MediationProcess/MediationProcessConfirmLineItemServiceInput_4Item.owl#Input_4Item2335">
+			<rdf:type rdf:resource="http://localhost:8080/ontologies/ServiceAnchor.owl#Input"/>
+			<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+			<rdf:type rdf:resource="http://localhost:8080/ontologies/ServiceAnchor.owl#Parameter"/>
+			<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ConfirmLineItemRequest</rdfs:label>
+			<j.0:parameterObject rdf:resource="http://localhost:8080/process/MediationProcess/MediationProcessConfirmLineItemServiceInput_4Item.owl#ConfirmLineItemRequest_4Item2335"/>
+		</rdf:Description>
+		<rdf:Description rdf:about="">
+			<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+			<owl:imports rdf:resource="http://localhost:8080/ontologies/RosettaNetOntology.owl"/>
+			<owl:imports rdf:resource="http://localhost:8080/ontologies/MoonOntology.owl"/>
+			<owl:imports rdf:resource="http://localhost:8080/ontologies/ServiceAnchor.owl"/>
+		</rdf:Description>
+		<rdf:Description rdf:about="http://localhost:8080/process/MediationProcess/MediationProcessConfirmLineItemServiceInput_4Item.owl#Input_4Item2332">
+			<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ConfirmLineItemRequest</rdfs:label>
+			<j.0:parameterObject rdf:resource="http://localhost:8080/process/MediationProcess/MediationProcessConfirmLineItemServiceInput_4Item.owl#ConfirmLineItemRequest_4Item2332"/>
+			<rdf:type rdf:resource="http://localhost:8080/ontologies/ServiceAnchor.owl#Parameter"/>
+			<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+			<rdf:type rdf:resource="http://localhost:8080/ontologies/ServiceAnchor.owl#Input"/>
+		</rdf:Description>
+		<rdf:Description rdf:about="http://localhost:8080/process/MediationProcessInput.owl#Partner_4">
+			<moon:hasPostalAddress rdf:resource="http://localhost:8080/process/MediationProcessInput.owl#PhysicalAddress_7"/>
+			<rosetta:hasContactInformation rdf:resource="http://localhost:8080/process/MediationProcessInput.owl#ContactInformation_6"/>
+			<rosetta:hasPhysicalLocation rdf:resource="http://localhost:8080/process/MediationProcessInput.owl#PhysicalAddress_7"/>
+			<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">firedRule_SemanticBridge_hasContactInformation2hasContactInfo</rdfs:label>
+			<rosetta:hasBusinessDescription rdf:resource="http://localhost:8080/process/MediationProcessInput.owl#BusinessDescription_5"/>
+			<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+			<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">firedRule_SemanticBridge_hasPhysicalLocation2hasPostalAddress</rdfs:label>
+			<moon:hasBusinessName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Blue Company</moon:hasBusinessName>
+			<rdf:type rdf:resource="http://localhost:8080/ontologies/RosettaNetOntology.owl#Partner"/>
+			<rdf:type rdf:resource="http://localhost:8080/ontologies/MoonOntology.owl#Customer"/>
+			<moon:hasContactInfo rdf:resource="http://localhost:8080/process/MediationProcessInput.owl#ContactInformation_6"/>
+			<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">firedRule_SemanticBridge_RosettaNetBusinessName2MoonBusinessName</rdfs:label>
+		</rdf:Description>
+		<rdf:Description rdf:about="http://localhost:8080/process/MediationProcessInput.owl#ContactInformation_3">
+			<rdf:type rdf:resource="http://localhost:8080/ontologies/MoonOntology.owl#ContactInfo"/>
+			<rosetta:hasContactName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Stefan Blue</rosetta:hasContactName>
+			<moon:hasContactName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Stefan Blue</moon:hasContactName>
+			<moon:hasTelephone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">+43(650)89930011</moon:hasTelephone>
+			<rosetta:hasTelephoneNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">+43(650)89930011</rosetta:hasTelephoneNumber>
+			<rdf:type rdf:resource="http://localhost:8080/ontologies/RosettaNetOntology.owl#ContactInformation"/>
+			<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+			<rosetta:hasEmailAddress rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stefan.blue@blue.com</rosetta:hasEmailAddress>
+			<moon:hasEmail rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stefan.blue@blue.com</moon:hasEmail>
+			<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">firedRule_SemanticBridge_RosettaNetContactInformation2MoonContactInfo</rdfs:label>
+		</rdf:Description>
+		<rdf:Description rdf:about="http://localhost:8080/process/MediationProcess/MediationProcessConfirmLineItemServiceInput_4Item.owl#Input_4Item2333">
+			<j.0:parameterObject rdf:resource="http://localhost:8080/process/MediationProcess/MediationProcessConfirmLineItemServiceInput_4Item.owl#ConfirmLineItemRequest_4Item2333"/>
+			<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ConfirmLineItemRequest</rdfs:label>
+			<rdf:type rdf:resource="http://localhost:8080/ontologies/ServiceAnchor.owl#Input"/>
+			<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+			<rdf:type rdf:resource="http://localhost:8080/ontologies/ServiceAnchor.owl#Parameter"/>
+		</rdf:Description>
+		<rdf:Description rdf:about="http://localhost:8080/process/MediationProcessInput.owl#Buyer_2">
+			<rosetta:relatesToPartner rdf:resource="http://localhost:8080/process/MediationProcessInput.owl#Partner_4"/>
+			<rosetta:hasContactInformation rdf:resource="http://localhost:8080/process/MediationProcessInput.owl#ContactInformation_3"/>
+			<rdf:type rdf:resource="http://localhost:8080/ontologies/RosettaNetOntology.owl#Buyer"/>
+			<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+			<rdf:type rdf:resource="http://localhost:8080/ontologies/RosettaNetOntology.owl#PartnerRole"/>
+			<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">firedRule_SemanticBridge_hasContactInformation2hasContactInfo</rdfs:label>
+			<moon:hasContactInfo rdf:resource="http://localhost:8080/process/MediationProcessInput.owl#ContactInformation_3"/>
+		</rdf:Description>
+		<rdf:Description rdf:about="http://localhost:8080/process/MediationProcess/MediationProcessConfirmLineItemServiceInput_4Item.owl#ConfirmLineItemRequest_4Item2331">
+			<moon:hasItem rdf:resource="http://localhost:8080/process/MediationProcess/MediationProcessConfirmLineItemServiceInput_4Item.owl#ProcessedItem_4Item2331"/>
+			<rdf:type rdf:resource="http://localhost:8080/ontologies/MoonOntology.owl#ConfirmLineItemRequest"/>
+			<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+		</rdf:Description>
+		<rdf:Description rdf:about="http://localhost:8080/process/MediationProcess/MoonOMSAddLineItemServiceOutputContainer.owl#AddLineItemResponse_1">
+			<rdf:type rdf:resource="http://localhost:8080/ontologies/MoonOntology.owl#AddLineItemResponse"/>
+			<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+		</rdf:Description>
+		<rdf:Description rdf:about="http://localhost:8080/process/MediationProcessInput.owl#TotalLineItemAmountFinancialAmount_2">
+			<rosetta:hasGlobalCurrencyCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EUR</rosetta:hasGlobalCurrencyCode>
+			<rdf:type rdf:resource="http://localhost:8080/ontologies/RosettaNetOntology.owl#FinancialAmount"/>
+			<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+			<rosetta:hasMonetaryAmount rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1067.54</rosetta:hasMonetaryAmount>
+		</rdf:Description>
+		<rdf:Description rdf:about="http://localhost:8080/process/MediationProcess/MoonOMSAddLineItemServiceOutput.owl#AddLineItemResponse_4Item2331">
+			<moon:hasOrder rdf:resource="http://localhost:8080/process/MediationProcess/MoonOMSAddLineItemServiceOutput.owl#Order_4Item2331"/>
+			<moon:hasItem rdf:resource="http://localhost:8080/process/MediationProcess/MoonOMSAddLineItemServiceOutput.owl#ProcessedItem_X"/>
+			<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+			<rdf:type rdf:resource="http://localhost:8080/ontologies/MoonOntology.owl#AddLineItemResponse"/>
+		</rdf:Description>
+		<rdf:Description rdf:about="http://localhost:8080/process/MediationProcessInput.owl#TotalLineItemAmountFinancialAmount_1">
+			<rosetta:hasGlobalCurrencyCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EUR</rosetta:hasGlobalCurrencyCode>
+			<rdf:type rdf:resource="http://localhost:8080/ontologies/RosettaNetOntology.owl#FinancialAmount"/>
+			<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+			<rosetta:hasMonetaryAmount rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1067.54</rosetta:hasMonetaryAmount>
+		</rdf:Description>
+		<rdf:Description rdf:about="http://localhost:8080/process/MediationProcessInput.owl#ProductLineItem_3">
+			<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+			<rdf:type rdf:resource="http://localhost:8080/ontologies/RosettaNetOntology.owl#ProductLineItem"/>
+			<moon:hasQuantity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3000</moon:hasQuantity>
+			<moon:hasItemID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2333</moon:hasItemID>
+			<rosetta:hasDropShipAffirmationIndicator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yes</rosetta:hasDropShipAffirmationIndicator>
+			<rosetta:hasLineNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3</rosetta:hasLineNumber>
+			<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">firedRule_SemanticBridge_RosettaNetProductLineItem2OrderItem</rdfs:label>
+			<rosetta:hasTotalLineItemAmount rdf:resource="http://localhost:8080/process/MediationProcessInput.owl#TotalLineItemAmountFinancialAmount_3"/>
+			<rdf:type rdf:resource="http://localhost:8080/ontologies/MoonOntology.owl#Item"/>
+			<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">firedRule_SemanticBridge_hasStatus2hasGlobalPurchaseOrderStatusCode_Reject</rdfs:label>
+			<moon:hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rejected</moon:hasStatus>
+			<rosetta:hasRequestedQuantity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3000</rosetta:hasRequestedQuantity>
+			<rosetta:hasGlobalProductIdentifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">00614141000012</rosetta:hasGlobalProductIdentifier>
+			<rdf:type rdf:resource="http://localhost:8080/ontologies/MoonOntology.owl#OrderItem"/>
+			<moon:hasArticleID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">00614141000012</moon:hasArticleID>
+			<rosetta:hasGlobalProductUnitOfMeasureCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Unit</rosetta:hasGlobalProductUnitOfMeasureCode>
+			<rosetta:hasRequestedGlobalTransportEventCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ship</rosetta:hasRequestedGlobalTransportEventCode>
+			<rosetta:hasGlobalPurchaseOrderStatusCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reject</rosetta:hasGlobalPurchaseOrderStatusCode>
+			<rosetta:hasRequestedUnitPrice rdf:resource="http://localhost:8080/process/MediationProcessInput.owl#RequestedUnitPriceFinancialAmount_3"/>
+			<rdf:type rdf:resource="http://localhost:8080/ontologies/MoonOntology.owl#ProcessedItem"/>
+			<rosetta:hasRequestedDateStamp rdf:datatype="http://www.w3.org/2001/XMLSchema#string">200603061</rosetta:hasRequestedDateStamp>
+		</rdf:Description>
+		<rdf:Description rdf:about="http://localhost:8080/process/MediationProcess/MediationProcessConfirmLineItemServiceInput_4Item.owl#ProcessedItem_4Item2334">
+			<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">firedRule_SemanticBridge_hasStatus2hasGlobalPurchaseOrderStatusCode_Accept</rdfs:label>
+			<rdf:type rdf:resource="http://localhost:8080/ontologies/MoonOntology.owl#Item"/>
+			<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+			<rdf:type rdf:resource="http://localhost:8080/ontologies/MoonOntology.owl#ProcessedItem"/>
+			<moon:hasItemID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2334</moon:hasItemID>
+			<rosetta:hasGlobalPurchaseOrderStatusCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Accept</rosetta:hasGlobalPurchaseOrderStatusCode>
+			<moon:hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">accepted</moon:hasStatus>
+		</rdf:Description>
+		<rdf:Description rdf:about="http://localhost:8080/process/MediationProcess/MediationProcessConfirmLineItemServiceInput_4Item.owl#Process_4Item2330">
+			<rdf:type rdf:resource="http://localhost:8080/ontologies/ServiceAnchor.owl#AtomicProcess"/>
+			<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+			<rdf:type rdf:resource="http://localhost:8080/ontologies/ServiceAnchor.owl#Process"/>
+			<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ConfirmLineItemProcess</rdfs:label>
+			<j.0:hasInput rdf:resource="http://localhost:8080/process/MediationProcess/MediationProcessConfirmLineItemServiceInput_4Item.owl#Input_4Item2330"/>
+		</rdf:Description>
+		<rdf:Description rdf:about="http://localhost:8080/process/MediationProcessInput.owl#RequestedUnitPriceFinancialAmount_5">
+			<rdf:type rdf:resource="http://localhost:8080/ontologies/RosettaNetOntology.owl#FinancialAmount"/>
+			<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+			<rosetta:hasMonetaryAmount rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1067.54</rosetta:hasMonetaryAmount>
+			<rosetta:hasGlobalCurrencyCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EUR</rosetta:hasGlobalCurrencyCode>
+		</rdf:Description>
+		<rdf:Description rdf:about="http://localhost:8080/process/MediationProcess/MediationProcessConfirmLineItemServiceInput_4Item.owl#ConfirmLineItemRequest_4Item2334">
+			<moon:hasItem rdf:resource="http://localhost:8080/process/MediationProcess/MediationProcessConfirmLineItemServiceInput_4Item.owl#ProcessedItem_4Item2334"/>
+			<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+			<rdf:type rdf:resource="http://localhost:8080/ontologies/MoonOntology.owl#ConfirmLineItemRequest"/>
+		</rdf:Description>
+		<rdf:Description rdf:about="http://localhost:8080/process/MediationProcess/MediationProcessConfirmLineItemServiceInput_4Item.owl#Input_4Item2334">
+			<j.0:parameterObject rdf:resource="http://localhost:8080/process/MediationProcess/MediationProcessConfirmLineItemServiceInput_4Item.owl#ConfirmLineItemRequest_4Item2334"/>
+			<rdf:type rdf:resource="http://localhost:8080/ontologies/ServiceAnchor.owl#Parameter"/>
+			<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+			<rdf:type rdf:resource="http://localhost:8080/ontologies/ServiceAnchor.owl#Input"/>
+			<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ConfirmLineItemRequest</rdfs:label>
+		</rdf:Description>
+		<rdf:Description rdf:about="http://localhost:8080/process/MediationProcess/MediationProcessConfirmLineItemServiceInput_4Item.owl#ProcessedItem_4Item2335">
+			<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">firedRule_SemanticBridge_hasStatus2hasGlobalPurchaseOrderStatusCode_Accept</rdfs:label>
+			<rdf:type rdf:resource="http://localhost:8080/ontologies/MoonOntology.owl#ProcessedItem"/>
+			<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+			<rdf:type rdf:resource="http://localhost:8080/ontologies/MoonOntology.owl#Item"/>
+			<rosetta:hasGlobalPurchaseOrderStatusCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Accept</rosetta:hasGlobalPurchaseOrderStatusCode>
+			<moon:hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">accepted</moon:hasStatus>
+			<moon:hasItemID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2335</moon:hasItemID>
+		</rdf:Description>
+		<rdf:Description rdf:about="http://localhost:8080/process/MediationProcess/MoonOMSAddLineItemServiceOutput.owl#AddLineItemResponse_4Item2333">
+			<moon:hasItem rdf:resource="http://localhost:8080/process/MediationProcess/MoonOMSAddLineItemServiceOutput.owl#ProcessedItem_X"/>
+			<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+			<rdf:type rdf:resource="http://localhost:8080/ontologies/MoonOntology.owl#AddLineItemResponse"/>
+			<moon:hasOrder rdf:resource="http://localhost:8080/process/MediationProcess/MoonOMSAddLineItemServiceOutput.owl#Order_4Item2333"/>
+		</rdf:Description>
+		<rdf:Description rdf:about="http://localhost:8080/process/MediationProcessInput.owl#TotalLineItemAmountFinancialAmount_4">
+			<rdf:type rdf:resource="http://localhost:8080/ontologies/RosettaNetOntology.owl#FinancialAmount"/>
+			<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+			<rosetta:hasMonetaryAmount rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1067.54</rosetta:hasMonetaryAmount>
+			<rosetta:hasGlobalCurrencyCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EUR</rosetta:hasGlobalCurrencyCode>
+		</rdf:Description>
+		<rdf:Description rdf:about="http://localhost:8080/process/MediationProcess/MoonOMSAddLineItemServiceOutputContainer.owl#MoonOMSAddLineItemServiceProcess">
+			<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MoonOMSAddLineItemServiceProcess</rdfs:label>
+			<rdf:type rdf:resource="http://localhost:8080/ontologies/ServiceAnchor.owl#Process"/>
+			<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+			<rdf:type rdf:resource="http://localhost:8080/ontologies/ServiceAnchor.owl#AtomicProcess"/>
+			<j.0:hasOutput rdf:resource="http://localhost:8080/process/MediationProcess/MoonOMSAddLineItemServiceOutputContainer.owl#Output"/>
+		</rdf:Description>
+		<rdf:Description rdf:about="http://localhost:8080/process/MediationProcess/MoonOMSCloseOrderServiceOutputContainer.owl#MoonOMSCloseOrderServiceProcess">
+			<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MoonOMSCloseOrderServiceProcess</rdfs:label>
+			<j.0:hasOutput rdf:resource="http://localhost:8080/process/MediationProcess/MoonOMSCloseOrderServiceOutputContainer.owl#Output"/>
+			<rdf:type rdf:resource="http://localhost:8080/ontologies/ServiceAnchor.owl#Process"/>
+			<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+			<rdf:type rdf:resource="http://localhost:8080/ontologies/ServiceAnchor.owl#AtomicProcess"/>
+		</rdf:Description>
+		<rdf:Description rdf:about="http://localhost:8080/process/MediationProcess/MoonOMSCloseOrderServiceOutput.owl#CloseOrderResponse_1">
+			<rdf:type rdf:resource="http://localhost:8080/ontologies/MoonOntology.owl#CloseOrderResponse"/>
+			<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+			<moon:hasOrder rdf:resource="http://localhost:8080/process/MediationProcess/MoonOMSCloseOrderServiceOutput.owl#Order_2"/>
+		</rdf:Description>
+		<rdf:Description rdf:about="http://localhost:8080/process/MediationProcessInput.owl#PurchaseOrder_1">
+			<rosetta:hasProductLineItem rdf:resource="http://localhost:8080/process/MediationProcessInput.owl#ProductLineItem_5"/>
+			<moon:hasItem rdf:resource="http://localhost:8080/process/MediationProcessInput.owl#ProductLineItem_3"/>
+			<moon:hasItem rdf:resource="http://localhost:8080/process/MediationProcessInput.owl#ProductLineItem_6"/>
+			<moon:hasItem rdf:resource="http://localhost:8080/process/MediationProcessInput.owl#ProductLineItem_1"/>
+			<rdf:type rdf:resource="http://localhost:8080/ontologies/RosettaNetOntology.owl#PurchaseOrder"/>
+			<moon:hasItem rdf:resource="http://localhost:8080/process/MediationProcessInput.owl#ProductLineItem_2"/>
+			<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+			<moon:hasItem rdf:resource="http://localhost:8080/process/MediationProcessInput.owl#ProductLineItem_5"/>
+			<rosetta:hasDropShipAffirmationIndicator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">         Yes      </rosetta:hasDropShipAffirmationIndicator>
+			<rdf:type rdf:resource="http://localhost:8080/ontologies/MoonOntology.owl#Order"/>
+			<rosetta:hasProductLineItem rdf:resource="http://localhost:8080/process/MediationProcessInput.owl#ProductLineItem_6"/>
+			<rosetta:hasRequestedDateStamp rdf:datatype="http://www.w3.org/2001/XMLSchema#string">200603061</rosetta:hasRequestedDateStamp>
+			<moon:hasItem rdf:resource="http://localhost:8080/process/MediationProcessInput.owl#ProductLineItem_4"/>
+			<rosetta:hasProductLineItem rdf:resource="http://localhost:8080/process/MediationProcessInput.owl#ProductLineItem_1"/>
+			<rosetta:hasProductLineItem rdf:resource="http://localhost:8080/process/MediationProcessInput.owl#ProductLineItem_2"/>
+			<rosetta:hasRequestedGlobalTransportEventCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ship</rosetta:hasRequestedGlobalTransportEventCode>
+			<rosetta:hasProductLineItem rdf:resource="http://localhost:8080/process/MediationProcessInput.owl#ProductLineItem_4"/>
+			<rosetta:hasGlobalPurchaseOrderTypeCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Packaged product</rosetta:hasGlobalPurchaseOrderTypeCode>
+			<rosetta:hasProductLineItem rdf:resource="http://localhost:8080/process/MediationProcessInput.owl#ProductLineItem_3"/>
+		</rdf:Description>
+		<rdf:Description rdf:about="http://localhost:8080/process/MediationProcessInput.owl#MediationProcess">
+			<rdf:type rdf:resource="http://localhost:8080/ontologies/ServiceAnchor.owl#Process"/>
+			<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+			<rdf:type rdf:resource="http://localhost:8080/ontologies/ServiceAnchor.owl#AtomicProcess"/>
+			<j.0:hasInput rdf:resource="http://localhost:8080/process/MediationProcessInput.owl#Input"/>
+			<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MediationProcess</rdfs:label>
+		</rdf:Description>
+		<rdf:Description rdf:about="http://localhost:8080/process/MediationProcessInput.owl#ProductLineItem_1">
+			<rosetta:hasLineNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</rosetta:hasLineNumber>
+			<rosetta:hasGlobalProductUnitOfMeasureCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Unit</rosetta:hasGlobalProductUnitOfMeasureCode>
+			<rosetta:hasGlobalProductIdentifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">00614141000012</rosetta:hasGlobalProductIdentifier>
+			<moon:hasArticleID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">00614141000012</moon:hasArticleID>
+			<rdf:type rdf:resource="http://localhost:8080/ontologies/MoonOntology.owl#ProcessedItem"/>
+			<rosetta:hasRequestedQuantity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</rosetta:hasRequestedQuantity>
+			<rosetta:hasRequestedGlobalTransportEventCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ship</rosetta:hasRequestedGlobalTransportEventCode>
+			<rosetta:hasRequestedDateStamp rdf:datatype="http://www.w3.org/2001/XMLSchema#string">200603061</rosetta:hasRequestedDateStamp>
+			<moon:hasQuantity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</moon:hasQuantity>
+			<rdf:type rdf:resource="http://localhost:8080/ontologies/RosettaNetOntology.owl#ProductLineItem"/>
+			<moon:hasItemID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2335</moon:hasItemID>
+			<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">firedRule_SemanticBridge_hasStatus2hasGlobalPurchaseOrderStatusCode_Accept</rdfs:label>
+			<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+			<rosetta:hasRequestedUnitPrice rdf:resource="http://localhost:8080/process/MediationProcessInput.owl#RequestedUnitPriceFinancialAmount_1"/>
+			<rosetta:hasGlobalPurchaseOrderStatusCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Accept</rosetta:hasGlobalPurchaseOrderStatusCode>
+			<rdf:type rdf:resource="http://localhost:8080/ontologies/MoonOntology.owl#Item"/>
+			<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">firedRule_SemanticBridge_RosettaNetProductLineItem2OrderItem</rdfs:label>
+			<moon:hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">accepted</moon:hasStatus>
+			<rdf:type rdf:resource="http://localhost:8080/ontologies/MoonOntology.owl#OrderItem"/>
+			<rosetta:hasDropShipAffirmationIndicator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yes</rosetta:hasDropShipAffirmationIndicator>
+			<rosetta:hasTotalLineItemAmount rdf:resource="http://localhost:8080/process/MediationProcessInput.owl#TotalLineItemAmountFinancialAmount_1"/>
+		</rdf:Description>
+		<rdf:Description rdf:about="http://localhost:8080/process/MediationProcess/MediationProcessConfirmLineItemServiceInput_4Item.owl#Process_4Item2334">
+			<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ConfirmLineItemProcess</rdfs:label>
+			<j.0:hasInput rdf:resource="http://localhost:8080/process/MediationProcess/MediationProcessConfirmLineItemServiceInput_4Item.owl#Input_4Item2334"/>
+			<rdf:type rdf:resource="http://localhost:8080/ontologies/ServiceAnchor.owl#AtomicProcess"/>
+			<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+			<rdf:type rdf:resource="http://localhost:8080/ontologies/ServiceAnchor.owl#Process"/>
+		</rdf:Description>
+		<rdf:Description rdf:about="#MediationProcess">
+			<rdf:type rdf:resource="http://localhost:8080/ontologies/ServiceAnchor.owl#AtomicProcess"/>
+			<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+			<rdf:type rdf:resource="http://localhost:8080/ontologies/ServiceAnchor.owl#Process"/>
+			<j.0:hasOutput rdf:resource="#Output"/>
+			<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MediationProcess</rdfs:label>
+		</rdf:Description>
+		<rdf:Description rdf:about="http://localhost:8080/process/MediationProcessInput.owl#TotalLineItemAmountFinancialAmount_3">
+			<rosetta:hasMonetaryAmount rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1067.54</rosetta:hasMonetaryAmount>
+			<rdf:type rdf:resource="http://localhost:8080/ontologies/RosettaNetOntology.owl#FinancialAmount"/>
+			<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+			<rosetta:hasGlobalCurrencyCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EUR</rosetta:hasGlobalCurrencyCode>
+		</rdf:Description>
+		<rdf:Description rdf:about="http://localhost:8080/process/MediationProcessInput.owl#RequestedUnitPriceFinancialAmount_3">
+			<rosetta:hasMonetaryAmount rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1067.54</rosetta:hasMonetaryAmount>
+			<rdf:type rdf:resource="http://localhost:8080/ontologies/RosettaNetOntology.owl#FinancialAmount"/>
+			<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+			<rosetta:hasGlobalCurrencyCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EUR</rosetta:hasGlobalCurrencyCode>
+		</rdf:Description>
+		<rdf:Description rdf:about="http://localhost:8080/process/MediationProcessInput.owl#RequestedUnitPriceFinancialAmount_6">
+			<rosetta:hasGlobalCurrencyCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EUR</rosetta:hasGlobalCurrencyCode>
+			<rosetta:hasMonetaryAmount rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1067.54</rosetta:hasMonetaryAmount>
+			<rdf:type rdf:resource="http://localhost:8080/ontologies/RosettaNetOntology.owl#FinancialAmount"/>
+			<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+		</rdf:Description>
+		<rdf:Description rdf:about="http://localhost:8080/process/MediationProcessInput.owl#Pip3A4PurchaseOrderRequest_1">
+			<rosetta:hasPurchaseOrder rdf:resource="http://localhost:8080/process/MediationProcessInput.owl#PurchaseOrder_1"/>
+			<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">firedRule_dataflow_ConfirmLineItemRequest_status2MediationProcessOutput_statusForItemID2333</rdfs:label>
+			<rosetta:hasRequestingDocumentGenerationDateTime rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20060306T151245</rosetta:hasRequestingDocumentGenerationDateTime>
+			<rdf:type rdf:resource="http://localhost:8080/ontologies/RosettaNetOntology.owl#Pip3A4PurchaseOrderRequest"/>
+			<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">firedRule_dataflow_ConfirmLineItemRequest_status2MediationProcessOutput_statusForItemID2334</rdfs:label>
+			<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">firedRule_dataflow_ConfirmLineItemRequest_status2MediationProcessOutput_statusForItemID2330</rdfs:label>
+			<rosetta:hasToRole rdf:resource="http://localhost:8080/process/MediationProcessInput.owl#ProductProvider_022"/>
+			<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">firedRule_dataflow_MediationProcessInput2MediationProcessOutput</rdfs:label>
+			<rosetta:hasFromRole rdf:resource="http://localhost:8080/process/MediationProcessInput.owl#Buyer_2"/>
+			<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+			<rosetta:hasRequestingDocumentIdentifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ralf Weinand1212100712713</rosetta:hasRequestingDocumentIdentifier>
+			<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">firedRule_dataflow_ConfirmLineItemRequest_status2MediationProcessOutput_statusForItemID2332</rdfs:label>
+			<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">firedRule_dataflow_ConfirmLineItemRequest_status2MediationProcessOutput_statusForItemID2335</rdfs:label>
+			<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">firedRule_dataflow_ConfirmLineItemRequest_status2MediationProcessOutput_statusForItemID2331</rdfs:label>
+		</rdf:Description>
+		<rdf:Description rdf:about="http://localhost:8080/process/MediationProcessInput.owl#Partner_044">
+			<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+			<rdf:type rdf:resource="http://localhost:8080/ontologies/MoonOntology.owl#Customer"/>
+			<moon:hasBusinessName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Moon Company</moon:hasBusinessName>
+			<rdf:type rdf:resource="http://localhost:8080/ontologies/RosettaNetOntology.owl#Partner"/>
+			<rosetta:hasContactInformation rdf:resource="http://localhost:8080/process/MediationProcessInput.owl#ContactInformation_066"/>
+			<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">firedRule_SemanticBridge_hasContactInformation2hasContactInfo</rdfs:label>
+			<moon:hasPostalAddress rdf:resource="http://localhost:8080/process/MediationProcessInput.owl#PhysicalAddress_077"/>
+			<rosetta:hasBusinessDescription rdf:resource="http://localhost:8080/process/MediationProcessInput.owl#BusinessDescription_055"/>
+			<rosetta:hasPhysicalLocation rdf:resource="http://localhost:8080/process/MediationProcessInput.owl#PhysicalAddress_077"/>
+			<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">firedRule_SemanticBridge_hasPhysicalLocation2hasPostalAddress</rdfs:label>
+			<moon:hasContactInfo rdf:resource="http://localhost:8080/process/MediationProcessInput.owl#ContactInformation_066"/>
+			<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">firedRule_SemanticBridge_RosettaNetBusinessName2MoonBusinessName</rdfs:label>
+		</rdf:Description>
+		<rdf:Description rdf:about="http://localhost:8080/process/MediationProcess/MediationProcessConfirmLineItemServiceInput_4Item.owl#ConfirmLineItemRequest_4Item2335">
+			<rdf:type rdf:resource="http://localhost:8080/ontologies/MoonOntology.owl#ConfirmLineItemRequest"/>
+			<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+			<moon:hasItem rdf:resource="http://localhost:8080/process/MediationProcess/MediationProcessConfirmLineItemServiceInput_4Item.owl#ProcessedItem_4Item2335"/>
+		</rdf:Description>
+		<rdf:Description rdf:about="http://localhost:8080/process/MediationProcessInput.owl#BusinessDescription_5">
+			<rosetta:hasBusinessName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Blue Company</rosetta:hasBusinessName>
+			<rdf:type rdf:resource="http://localhost:8080/ontologies/RosettaNetOntology.owl#BusinessDescription"/>
+			<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+		</rdf:Description>
+		<rdf:Description rdf:about="http://localhost:8080/process/MediationProcess/MediationProcessConfirmLineItemServiceInput_4Item.owl#ConfirmLineItemRequest_4Item2330">
+			<moon:hasItem rdf:resource="http://localhost:8080/process/MediationProcess/MediationProcessConfirmLineItemServiceInput_4Item.owl#ProcessedItem_4Item2330"/>
+			<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+			<rdf:type rdf:resource="http://localhost:8080/ontologies/MoonOntology.owl#ConfirmLineItemRequest"/>
+		</rdf:Description>
+		<rdf:Description rdf:about="http://localhost:8080/process/MediationProcess/MoonOMSCloseOrderServiceOutputContainer.owl#Output">
+			<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CloseOrderResponse</rdfs:label>
+			<rdf:type rdf:resource="http://localhost:8080/ontologies/ServiceAnchor.owl#Output"/>
+			<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+			<rdf:type rdf:resource="http://localhost:8080/ontologies/ServiceAnchor.owl#Parameter"/>
+			<j.0:parameterObject rdf:resource="http://localhost:8080/process/MediationProcess/MoonOMSCloseOrderServiceOutput.owl#CloseOrderResponse_1"/>
+		</rdf:Description>
+		<rdf:Description rdf:about="http://localhost:8080/process/MediationProcessInput.owl#ProductLineItem_2">
+			<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">firedRule_SemanticBridge_RosettaNetProductLineItem2OrderItem</rdfs:label>
+			<moon:hasQuantity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">-2</moon:hasQuantity>
+			<rosetta:hasDropShipAffirmationIndicator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yes</rosetta:hasDropShipAffirmationIndicator>
+			<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">firedRule_SemanticBridge_hasStatus2hasGlobalPurchaseOrderStatusCode_Reject</rdfs:label>
+			<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+			<rosetta:hasTotalLineItemAmount rdf:resource="http://localhost:8080/process/MediationProcessInput.owl#TotalLineItemAmountFinancialAmount_2"/>
+			<rdf:type rdf:resource="http://localhost:8080/ontologies/MoonOntology.owl#OrderItem"/>
+			<rosetta:hasRequestedUnitPrice rdf:resource="http://localhost:8080/process/MediationProcessInput.owl#RequestedUnitPriceFinancialAmount_2"/>
+			<rosetta:hasGlobalProductUnitOfMeasureCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Unit</rosetta:hasGlobalProductUnitOfMeasureCode>
+			<rdf:type rdf:resource="http://localhost:8080/ontologies/MoonOntology.owl#Item"/>
+			<moon:hasItemID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2330</moon:hasItemID>
+			<rdf:type rdf:resource="http://localhost:8080/ontologies/MoonOntology.owl#ProcessedItem"/>
+			<moon:hasArticleID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10614141000996</moon:hasArticleID>
+			<moon:hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rejected</moon:hasStatus>
+			<rosetta:hasRequestedDateStamp rdf:datatype="http://www.w3.org/2001/XMLSchema#string">200603061</rosetta:hasRequestedDateStamp>
+			<rosetta:hasGlobalProductIdentifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10614141000996</rosetta:hasGlobalProductIdentifier>
+			<rosetta:hasRequestedQuantity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">-2</rosetta:hasRequestedQuantity>
+			<rosetta:hasLineNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2</rosetta:hasLineNumber>
+			<rdf:type rdf:resource="http://localhost:8080/ontologies/RosettaNetOntology.owl#ProductLineItem"/>
+			<rosetta:hasRequestedGlobalTransportEventCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ship</rosetta:hasRequestedGlobalTransportEventCode>
+			<rosetta:hasGlobalPurchaseOrderStatusCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reject</rosetta:hasGlobalPurchaseOrderStatusCode>
+		</rdf:Description>
+		<rdf:Description rdf:about="http://localhost:8080/process/MediationProcess/MoonOMSAddLineItemServiceOutput.owl#AddLineItemResponse_4Item2332">
+			<moon:hasOrder rdf:resource="http://localhost:8080/process/MediationProcess/MoonOMSAddLineItemServiceOutput.owl#Order_4Item2332"/>
+			<rdf:type rdf:resource="http://localhost:8080/ontologies/MoonOntology.owl#AddLineItemResponse"/>
+			<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+			<moon:hasItem rdf:resource="http://localhost:8080/process/MediationProcess/MoonOMSAddLineItemServiceOutput.owl#ProcessedItem_X"/>
+		</rdf:Description>
+		<rdf:Description rdf:about="http://localhost:8080/process/MediationProcess/MediationProcessConfirmLineItemServiceInput_4Item.owl#Input_4Item2331">
+			<rdf:type rdf:resource="http://localhost:8080/ontologies/ServiceAnchor.owl#Input"/>
+			<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+			<rdf:type rdf:resource="http://localhost:8080/ontologies/ServiceAnchor.owl#Parameter"/>
+			<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ConfirmLineItemRequest</rdfs:label>
+			<j.0:parameterObject rdf:resource="http://localhost:8080/process/MediationProcess/MediationProcessConfirmLineItemServiceInput_4Item.owl#ConfirmLineItemRequest_4Item2331"/>
+		</rdf:Description>
+		<rdf:Description rdf:about="#Output">
+			<rdf:type rdf:resource="http://localhost:8080/ontologies/ServiceAnchor.owl#Parameter"/>
+			<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+			<rdf:type rdf:resource="http://localhost:8080/ontologies/ServiceAnchor.owl#Output"/>
+			<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pip3A4PurchaseOrderConfirmation</rdfs:label>
+			<j.0:parameterObject rdf:resource="http://localhost:8080/process/MediationProcessInput.owl#Pip3A4PurchaseOrderRequest_1"/>
+		</rdf:Description>
+		<rdf:Description rdf:about="http://localhost:8080/process/MediationProcessInput.owl#ContactInformation_6">
+			<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+			<rosetta:hasContactName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Stefania Wolf</rosetta:hasContactName>
+			<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">firedRule_SemanticBridge_RosettaNetContactInformation2MoonContactInfo</rdfs:label>
+			<moon:hasContactName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Stefania Wolf</moon:hasContactName>
+			<rosetta:hasEmailAddress rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stefania.wolf@blue.com</rosetta:hasEmailAddress>
+			<rosetta:hasTelephoneNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">+43(650)89930023</rosetta:hasTelephoneNumber>
+			<moon:hasEmail rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stefania.wolf@blue.com</moon:hasEmail>
+			<rdf:type rdf:resource="http://localhost:8080/ontologies/RosettaNetOntology.owl#ContactInformation"/>
+			<rdf:type rdf:resource="http://localhost:8080/ontologies/MoonOntology.owl#ContactInfo"/>
+			<moon:hasTelephone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">+43(650)89930023</moon:hasTelephone>
+		</rdf:Description>
+		<rdf:Description rdf:about="http://localhost:8080/process/MediationProcess/MoonOMSAddLineItemServiceOutput.owl#Order_4Item2332">
+			<moon:hasOrderID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1603</moon:hasOrderID>
+			<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">firedRule_SemanticBridge_hasOrderID2hasResponseDocumentIdentifier</rdfs:label>
+			<rosetta:hasResponseDocumentIdentifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1603</rosetta:hasResponseDocumentIdentifier>
+			<rdf:type rdf:resource="http://localhost:8080/ontologies/MoonOntology.owl#Order"/>
+			<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+			<rdf:type rdf:resource="http://localhost:8080/ontologies/MoonOntology.owl#RegisteredOrder"/>
+		</rdf:Description>
+		<rdf:Description rdf:about="http://localhost:8080/process/MediationProcess/MoonOMSAddLineItemServiceOutputContainer.owl#Output">
+			<j.0:parameterObject rdf:resource="http://localhost:8080/process/MediationProcess/MoonOMSAddLineItemServiceOutput.owl#AddLineItemResponse_4Item2334"/>
+			<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AddLineItemResponse</rdfs:label>
+			<j.0:parameterObject rdf:resource="http://localhost:8080/process/MediationProcess/MoonOMSAddLineItemServiceOutput.owl#AddLineItemResponse_4Item2333"/>
+			<j.0:parameterObject rdf:resource="http://localhost:8080/process/MediationProcess/MoonOMSAddLineItemServiceOutput.owl#AddLineItemResponse_4Item2331"/>
+			<rdf:type rdf:resource="http://localhost:8080/ontologies/ServiceAnchor.owl#Parameter"/>
+			<j.0:parameterObject rdf:resource="http://localhost:8080/process/MediationProcess/MoonOMSAddLineItemServiceOutput.owl#AddLineItemResponse_4Item2330"/>
+			<rdf:type rdf:resource="http://localhost:8080/ontologies/ServiceAnchor.owl#Output"/>
+			<j.0:parameterObject rdf:resource="http://localhost:8080/process/MediationProcess/MoonOMSAddLineItemServiceOutput.owl#AddLineItemResponse_4Item2332"/>
+			<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+			<j.0:parameterObject rdf:resource="http://localhost:8080/process/MediationProcess/MoonOMSAddLineItemServiceOutput.owl#AddLineItemResponse_4Item2335"/>
+		</rdf:Description>
+		<rdf:Description rdf:about="http://localhost:8080/process/MediationProcessInput.owl#Input">
+			<j.0:parameterObject rdf:resource="http://localhost:8080/process/MediationProcessInput.owl#Pip3A4PurchaseOrderRequest_1"/>
+			<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pip3A4PurchaseOrderRequest</rdfs:label>
+			<rdf:type rdf:resource="http://localhost:8080/ontologies/ServiceAnchor.owl#Input"/>
+			<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+			<rdf:type rdf:resource="http://localhost:8080/ontologies/ServiceAnchor.owl#Parameter"/>
+		</rdf:Description>
+		<rdf:Description rdf:about="http://localhost:8080/process/MediationProcessInput.owl#ProductLineItem_6">
+			<rosetta:hasGlobalProductUnitOfMeasureCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Unit</rosetta:hasGlobalProductUnitOfMeasureCode>
+			<rosetta:hasRequestedGlobalTransportEventCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ship</rosetta:hasRequestedGlobalTransportEventCode>
+			<moon:hasItemID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2331</moon:hasItemID>
+			<rdf:type rdf:resource="http://localhost:8080/ontologies/RosettaNetOntology.owl#ProductLineItem"/>
+			<rosetta:hasRequestedUnitPrice rdf:resource="http://localhost:8080/process/MediationProcessInput.owl#RequestedUnitPriceFinancialAmount_6"/>
+			<rosetta:hasDropShipAffirmationIndicator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yes</rosetta:hasDropShipAffirmationIndicator>
+			<rdf:type rdf:resource="http://localhost:8080/ontologies/MoonOntology.owl#ProcessedItem"/>
+			<moon:hasArticleID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10614141000996</moon:hasArticleID>
+			<rosetta:hasRequestedDateStamp rdf:datatype="http://www.w3.org/2001/XMLSchema#string">200603061</rosetta:hasRequestedDateStamp>
+			<rdf:type rdf:resource="http://localhost:8080/ontologies/MoonOntology.owl#OrderItem"/>
+			<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+			<rdf:type rdf:resource="http://localhost:8080/ontologies/MoonOntology.owl#Item"/>
+			<moon:hasQuantity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2</moon:hasQuantity>
+			<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">firedRule_SemanticBridge_hasStatus2hasGlobalPurchaseOrderStatusCode_Accept</rdfs:label>
+			<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">firedRule_SemanticBridge_RosettaNetProductLineItem2OrderItem</rdfs:label>
+			<rosetta:hasLineNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">6</rosetta:hasLineNumber>
+			<moon:hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">accepted</moon:hasStatus>
+			<rosetta:hasGlobalProductIdentifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10614141000996</rosetta:hasGlobalProductIdentifier>
+			<rosetta:hasRequestedQuantity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2</rosetta:hasRequestedQuantity>
+			<rosetta:hasTotalLineItemAmount rdf:resource="http://localhost:8080/process/MediationProcessInput.owl#TotalLineItemAmountFinancialAmount_6"/>
+			<rosetta:hasGlobalPurchaseOrderStatusCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Accept</rosetta:hasGlobalPurchaseOrderStatusCode>
+		</rdf:Description>
+		<rdf:Description rdf:about="http://localhost:8080/process/MediationProcess/MoonOMSAddLineItemServiceOutput.owl#AddLineItemResponse_4Item2330">
+			<moon:hasOrder rdf:resource="http://localhost:8080/process/MediationProcess/MoonOMSAddLineItemServiceOutput.owl#Order_4Item2330"/>
+			<rdf:type rdf:resource="http://localhost:8080/ontologies/MoonOntology.owl#AddLineItemResponse"/>
+			<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+			<moon:hasItem rdf:resource="http://localhost:8080/process/MediationProcess/MoonOMSAddLineItemServiceOutput.owl#ProcessedItem_X"/>
+		</rdf:Description>
+		<rdf:Description rdf:about="http://localhost:8080/process/MediationProcessInput.owl#RequestedUnitPriceFinancialAmount_2">
+			<rdf:type rdf:resource="http://localhost:8080/ontologies/RosettaNetOntology.owl#FinancialAmount"/>
+			<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+			<rosetta:hasMonetaryAmount rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1067.54</rosetta:hasMonetaryAmount>
+			<rosetta:hasGlobalCurrencyCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EUR</rosetta:hasGlobalCurrencyCode>
+		</rdf:Description>
+		<rdf:Description rdf:about="http://localhost:8080/process/MediationProcess/MoonOMSAddLineItemServiceOutput.owl#AddLineItemResponse_4Item2335">
+			<moon:hasItem rdf:resource="http://localhost:8080/process/MediationProcess/MoonOMSAddLineItemServiceOutput.owl#ProcessedItem_X"/>
+			<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+			<rdf:type rdf:resource="http://localhost:8080/ontologies/MoonOntology.owl#AddLineItemResponse"/>
+			<moon:hasOrder rdf:resource="http://localhost:8080/process/MediationProcess/MoonOMSAddLineItemServiceOutput.owl#Order_4Item2335"/>
+		</rdf:Description>
+		<rdf:Description rdf:about="http://localhost:8080/process/MediationProcess/MoonOMSAddLineItemServiceOutput.owl#Order_4Item2334">
+			<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">firedRule_SemanticBridge_hasOrderID2hasResponseDocumentIdentifier</rdfs:label>
+			<rdf:type rdf:resource="http://localhost:8080/ontologies/MoonOntology.owl#Order"/>
+			<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+			<rdf:type rdf:resource="http://localhost:8080/ontologies/MoonOntology.owl#RegisteredOrder"/>
+			<rosetta:hasResponseDocumentIdentifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1603</rosetta:hasResponseDocumentIdentifier>
+			<moon:hasOrderID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1603</moon:hasOrderID>
+		</rdf:Description>
+		<rdf:Description rdf:about="http://localhost:8080/process/MediationProcessInput.owl#ContactInformation_033">
+			<rdf:type rdf:resource="http://localhost:8080/ontologies/MoonOntology.owl#ContactInfo"/>
+			<rosetta:hasTelephoneNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">+353(86)3882777</rosetta:hasTelephoneNumber>
+			<rosetta:hasContactName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Michael Moon</rosetta:hasContactName>
+			<moon:hasContactName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Michael Moon</moon:hasContactName>
+			<rdf:type rdf:resource="http://localhost:8080/ontologies/RosettaNetOntology.owl#ContactInformation"/>
+			<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">firedRule_SemanticBridge_RosettaNetContactInformation2MoonContactInfo</rdfs:label>
+			<moon:hasEmail rdf:datatype="http://www.w3.org/2001/XMLSchema#string">michael.moon@moon.ie</moon:hasEmail>
+			<moon:hasTelephone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">+353(86)3882777</moon:hasTelephone>
+			<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+			<rosetta:hasEmailAddress rdf:datatype="http://www.w3.org/2001/XMLSchema#string">michael.moon@moon.ie</rosetta:hasEmailAddress>
+		</rdf:Description>
+		<rdf:Description rdf:about="http://localhost:8080/process/MediationProcessInput.owl#ProductLineItem_5">
+			<rdf:type rdf:resource="http://localhost:8080/ontologies/MoonOntology.owl#OrderItem"/>
+			<moon:hasItemID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2332</moon:hasItemID>
+			<rosetta:hasRequestedDateStamp rdf:datatype="http://www.w3.org/2001/XMLSchema#string">200603061</rosetta:hasRequestedDateStamp>
+			<rosetta:hasRequestedQuantity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</rosetta:hasRequestedQuantity>
+			<rosetta:hasGlobalProductIdentifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">00614141YAN112</rosetta:hasGlobalProductIdentifier>
+			<rosetta:hasRequestedUnitPrice rdf:resource="http://localhost:8080/process/MediationProcessInput.owl#RequestedUnitPriceFinancialAmount_5"/>
+			<moon:hasQuantity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</moon:hasQuantity>
+			<rosetta:hasGlobalPurchaseOrderStatusCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reject</rosetta:hasGlobalPurchaseOrderStatusCode>
+			<rosetta:hasRequestedGlobalTransportEventCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ship</rosetta:hasRequestedGlobalTransportEventCode>
+			<rosetta:hasTotalLineItemAmount rdf:resource="http://localhost:8080/process/MediationProcessInput.owl#TotalLineItemAmountFinancialAmount_5"/>
+			<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">firedRule_SemanticBridge_RosettaNetProductLineItem2OrderItem</rdfs:label>
+			<rosetta:hasGlobalProductUnitOfMeasureCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Unit</rosetta:hasGlobalProductUnitOfMeasureCode>
+			<moon:hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rejected</moon:hasStatus>
+			<rdf:type rdf:resource="http://localhost:8080/ontologies/RosettaNetOntology.owl#ProductLineItem"/>
+			<rdf:type rdf:resource="http://localhost:8080/ontologies/MoonOntology.owl#ProcessedItem"/>
+			<rdf:type rdf:resource="http://localhost:8080/ontologies/MoonOntology.owl#Item"/>
+			<rosetta:hasLineNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">5</rosetta:hasLineNumber>
+			<moon:hasArticleID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">00614141YAN112</moon:hasArticleID>
+			<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+			<rosetta:hasDropShipAffirmationIndicator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yes</rosetta:hasDropShipAffirmationIndicator>
+			<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">firedRule_SemanticBridge_hasStatus2hasGlobalPurchaseOrderStatusCode_Reject</rdfs:label>
+		</rdf:Description>
+		<rdf:Description rdf:about="http://localhost:8080/process/MediationProcess/MediationProcessConfirmLineItemServiceInput_4Item.owl#ConfirmLineItemRequest_4Item2333">
+			<moon:hasItem rdf:resource="http://localhost:8080/process/MediationProcess/MediationProcessConfirmLineItemServiceInput_4Item.owl#ProcessedItem_4Item2333"/>
+			<rdf:type rdf:resource="http://localhost:8080/ontologies/MoonOntology.owl#ConfirmLineItemRequest"/>
+			<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+		</rdf:Description>
+		<rdf:Description rdf:about="http://localhost:8080/process/MediationProcessInput.owl#ContactInformation_066">
+			<rdf:type rdf:resource="http://localhost:8080/ontologies/MoonOntology.owl#ContactInfo"/>
+			<moon:hasEmail rdf:datatype="http://www.w3.org/2001/XMLSchema#string">elizabeth.brown@moon.ie</moon:hasEmail>
+			<moon:hasTelephone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">+353(86)3882777</moon:hasTelephone>
+			<rdf:type rdf:resource="http://localhost:8080/ontologies/RosettaNetOntology.owl#ContactInformation"/>
+			<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">firedRule_SemanticBridge_RosettaNetContactInformation2MoonContactInfo</rdfs:label>
+			<rosetta:hasEmailAddress rdf:datatype="http://www.w3.org/2001/XMLSchema#string">elizabeth.brown@moon.ie</rosetta:hasEmailAddress>
+			<rosetta:hasTelephoneNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">+353(86)3882777</rosetta:hasTelephoneNumber>
+			<rosetta:hasContactName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Elizabeth Brown</rosetta:hasContactName>
+			<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+			<moon:hasContactName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Elizabeth Brown</moon:hasContactName>
+		</rdf:Description>
+		<rdf:Description rdf:about="http://localhost:8080/process/MediationProcess/MediationProcessConfirmLineItemServiceInput_4Item.owl#Process_4Item2331">
+			<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ConfirmLineItemProcess</rdfs:label>
+			<j.0:hasInput rdf:resource="http://localhost:8080/process/MediationProcess/MediationProcessConfirmLineItemServiceInput_4Item.owl#Input_4Item2331"/>
+			<rdf:type rdf:resource="http://localhost:8080/ontologies/ServiceAnchor.owl#Process"/>
+			<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+			<rdf:type rdf:resource="http://localhost:8080/ontologies/ServiceAnchor.owl#AtomicProcess"/>
+		</rdf:Description>
+		<rdf:Description rdf:about="http://localhost:8080/process/MediationProcessInput.owl#PhysicalAddress_7">
+			<moon:hasCity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Innsbruck</moon:hasCity>
+			<rosetta:hasAddressLine1 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">North Business Center, Block 9</rosetta:hasAddressLine1>
+			<rosetta:hasGlobalCountryCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AT</rosetta:hasGlobalCountryCode>
+			<moon:hasPostalCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A-6020</moon:hasPostalCode>
+			<rdf:type rdf:resource="http://localhost:8080/ontologies/RosettaNetOntology.owl#PhysicalAddress"/>
+			<moon:hasStreet rdf:datatype="http://www.w3.org/2001/XMLSchema#string">North Business Center, Block 9</moon:hasStreet>
+			<moon:hasCountryCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AT</moon:hasCountryCode>
+			<rdf:type rdf:resource="http://localhost:8080/ontologies/MoonOntology.owl#PostalAddress"/>
+			<rosetta:hasCityName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Innsbruck</rosetta:hasCityName>
+			<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">firedRule_SemanticBridge_RosettaNetPhysicalAddress2MoonPostalAddress</rdfs:label>
+			<rosetta:hasNationalPostalCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A-6020</rosetta:hasNationalPostalCode>
+			<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+		</rdf:Description>
+		<rdf:Description rdf:about="http://localhost:8080/process/MediationProcessInput.owl#RequestedUnitPriceFinancialAmount_1">
+			<rosetta:hasGlobalCurrencyCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EUR</rosetta:hasGlobalCurrencyCode>
+			<rdf:type rdf:resource="http://localhost:8080/ontologies/RosettaNetOntology.owl#FinancialAmount"/>
+			<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+			<rosetta:hasMonetaryAmount rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1067.54</rosetta:hasMonetaryAmount>
+		</rdf:Description>
+		<rdf:Description rdf:about="http://localhost:8080/process/MediationProcess/MoonOMSCloseOrderServiceOutput.owl#Order_2">
+			<rosetta:hasResponseDocumentIdentifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1603</rosetta:hasResponseDocumentIdentifier>
+			<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">firedRule_SemanticBridge_hasOrderID2hasResponseDocumentIdentifier</rdfs:label>
+			<moon:hasOrderID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1603</moon:hasOrderID>
+			<rdf:type rdf:resource="http://localhost:8080/ontologies/MoonOntology.owl#Order"/>
+			<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+			<rdf:type rdf:resource="http://localhost:8080/ontologies/MoonOntology.owl#RegisteredOrder"/>
+		</rdf:Description>
+		<rdf:Description rdf:about="http://localhost:8080/process/MediationProcessInput.owl#BusinessDescription_055">
+			<rosetta:hasBusinessName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Moon Company</rosetta:hasBusinessName>
+			<rdf:type rdf:resource="http://localhost:8080/ontologies/RosettaNetOntology.owl#BusinessDescription"/>
+			<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+		</rdf:Description>
+		<rdf:Description rdf:about="http://localhost:8080/process/MediationProcess/MoonOMSAddLineItemServiceOutput.owl#Order_4Item2333">
+			<rdf:type rdf:resource="http://localhost:8080/ontologies/MoonOntology.owl#RegisteredOrder"/>
+			<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+			<rdf:type rdf:resource="http://localhost:8080/ontologies/MoonOntology.owl#Order"/>
+			<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">firedRule_SemanticBridge_hasOrderID2hasResponseDocumentIdentifier</rdfs:label>
+			<rosetta:hasResponseDocumentIdentifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1603</rosetta:hasResponseDocumentIdentifier>
+			<moon:hasOrderID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1603</moon:hasOrderID>
+		</rdf:Description>
+		<rdf:Description rdf:about="http://localhost:8080/process/MediationProcessInput.owl#RequestedUnitPriceFinancialAmount_4">
+			<rosetta:hasGlobalCurrencyCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EUR</rosetta:hasGlobalCurrencyCode>
+			<rdf:type rdf:resource="http://localhost:8080/ontologies/RosettaNetOntology.owl#FinancialAmount"/>
+			<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+			<rosetta:hasMonetaryAmount rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1067.54</rosetta:hasMonetaryAmount>
+		</rdf:Description>
+		<rdf:Description rdf:about="http://localhost:8080/process/MediationProcess/MediationProcessConfirmLineItemServiceInput_4Item.owl#Process_4Item2333">
+			<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ConfirmLineItemProcess</rdfs:label>
+			<j.0:hasInput rdf:resource="http://localhost:8080/process/MediationProcess/MediationProcessConfirmLineItemServiceInput_4Item.owl#Input_4Item2333"/>
+			<rdf:type rdf:resource="http://localhost:8080/ontologies/ServiceAnchor.owl#Process"/>
+			<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+			<rdf:type rdf:resource="http://localhost:8080/ontologies/ServiceAnchor.owl#AtomicProcess"/>
+		</rdf:Description>
+		<rdf:Description rdf:about="http://localhost:8080/process/MediationProcessInput.owl#TotalLineItemAmountFinancialAmount_6">
+			<rosetta:hasGlobalCurrencyCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EUR</rosetta:hasGlobalCurrencyCode>
+			<rdf:type rdf:resource="http://localhost:8080/ontologies/RosettaNetOntology.owl#FinancialAmount"/>
+			<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+			<rosetta:hasMonetaryAmount rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1067.54</rosetta:hasMonetaryAmount>
+		</rdf:Description>
+		<rdf:Description rdf:about="http://localhost:8080/process/MediationProcessInput.owl#ProductLineItem_4">
+			<moon:hasQuantity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2</moon:hasQuantity>
+			<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+			<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">firedRule_SemanticBridge_hasStatus2hasGlobalPurchaseOrderStatusCode_Accept</rdfs:label>
+			<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">firedRule_SemanticBridge_RosettaNetProductLineItem2OrderItem</rdfs:label>
+			<rosetta:hasGlobalPurchaseOrderStatusCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Accept</rosetta:hasGlobalPurchaseOrderStatusCode>
+			<moon:hasItemID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2334</moon:hasItemID>
+			<rdf:type rdf:resource="http://localhost:8080/ontologies/RosettaNetOntology.owl#ProductLineItem"/>
+			<moon:hasStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">accepted</moon:hasStatus>
+			<rosetta:hasRequestedUnitPrice rdf:resource="http://localhost:8080/process/MediationProcessInput.owl#RequestedUnitPriceFinancialAmount_4"/>
+			<rosetta:hasGlobalProductUnitOfMeasureCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Unit</rosetta:hasGlobalProductUnitOfMeasureCode>
+			<rosetta:hasGlobalProductIdentifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10614141000996</rosetta:hasGlobalProductIdentifier>
+			<rosetta:hasRequestedQuantity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2</rosetta:hasRequestedQuantity>
+			<rdf:type rdf:resource="http://localhost:8080/ontologies/MoonOntology.owl#ProcessedItem"/>
+			<rosetta:hasRequestedGlobalTransportEventCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ship</rosetta:hasRequestedGlobalTransportEventCode>
+			<rosetta:hasLineNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">4</rosetta:hasLineNumber>
+			<rosetta:hasDropShipAffirmationIndicator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yes</rosetta:hasDropShipAffirmationIndicator>
+			<rosetta:hasTotalLineItemAmount rdf:resource="http://localhost:8080/process/MediationProcessInput.owl#TotalLineItemAmountFinancialAmount_4"/>
+			<moon:hasArticleID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10614141000996</moon:hasArticleID>
+			<rdf:type rdf:resource="http://localhost:8080/ontologies/MoonOntology.owl#OrderItem"/>
+			<rosetta:hasRequestedDateStamp rdf:datatype="http://www.w3.org/2001/XMLSchema#string">200603061</rosetta:hasRequestedDateStamp>
+			<rdf:type rdf:resource="http://localhost:8080/ontologies/MoonOntology.owl#Item"/>
+		</rdf:Description>
+		<rdf:Description rdf:about="http://localhost:8080/process/MediationProcessInput.owl#ProductProvider_022">
+			<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">firedRule_SemanticBridge_hasContactInformation2hasContactInfo</rdfs:label>
+			<rosetta:relatesToPartner rdf:resource="http://localhost:8080/process/MediationProcessInput.owl#Partner_044"/>
+			<rdf:type rdf:resource="http://localhost:8080/ontologies/RosettaNetOntology.owl#ProductProvider"/>
+			<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+			<rdf:type rdf:resource="http://localhost:8080/ontologies/RosettaNetOntology.owl#PartnerRole"/>
+			<moon:hasContactInfo rdf:resource="http://localhost:8080/process/MediationProcessInput.owl#ContactInformation_033"/>
+			<rosetta:hasContactInformation rdf:resource="http://localhost:8080/process/MediationProcessInput.owl#ContactInformation_033"/>
+		</rdf:Description>
+		<rdf:Description rdf:about="http://localhost:8080/process/MediationProcess/MoonOMSAddLineItemServiceOutput.owl#AddLineItemResponse_4Item2334">
+			<moon:hasOrder rdf:resource="http://localhost:8080/process/MediationProcess/MoonOMSAddLineItemServiceOutput.owl#Order_4Item2334"/>
+			<moon:hasItem rdf:resource="http://localhost:8080/process/MediationProcess/MoonOMSAddLineItemServiceOutput.owl#ProcessedItem_X"/>
+			<rdf:type rdf:resource="http://localhost:8080/ontologies/MoonOntology.owl#AddLineItemResponse"/>
+			<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+		</rdf:Description>
+	</rdf:RDF>
+	<!-- Created with Protege (with OWL Plugin 3.4, Build 130)  http://protege.stanford.edu -->
+</type>

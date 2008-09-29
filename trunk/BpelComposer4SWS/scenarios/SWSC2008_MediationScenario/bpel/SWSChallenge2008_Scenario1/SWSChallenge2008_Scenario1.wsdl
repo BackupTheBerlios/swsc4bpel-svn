@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="urn:SWSChallenge2008_Scenario1_URN" xmlns:xmoon="mooncompany" xmlns:dict="http://www.sws-challenge.org/schemas/rnet/dictionary" xmlns:por="http://www.sws-challenge.org/schemas/rnet/POR" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:core="http://www.sws-challenge.org/schemas/rnet/coreElements" xmlns:plnk="http://schemas.xmlsoap.org/ws/2003/05/partner-link/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:rosettaNet="http://sws-challenge.org/SimplifiedRosettaNet/" xmlns:poc="http://www.sws-challenge.org/schemas/rnet/POC" xmlns:impl="urn:SWSChallenge2008_Scenario1_URN" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:msgtypes="http://www.sws-challenge.org/example/msgtypes" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+<plnk:partnerLinkType xmlns:plnk="http://docs.oasis-open.org/wsbpel/2.0/plnktype" name="SWSChallenge2008_Scenario1_MediationLinkType">
+   <plnk:role name="serviceProvider" portType="impl:SWSChallenge2008_Scenario1_MediationPortType"/>
+</plnk:partnerLinkType>
+<vprop:property xmlns:vprop="http://docs.oasis-open.org/wsbpel/2.0/varprop" name="orderIdProperty" type="xsd:long"/>
+<vprop:propertyAlias xmlns:vprop="http://docs.oasis-open.org/wsbpel/2.0/varprop" messageType="impl:processInputMessage" part="in0" propertyName="impl:orderIdProperty">
+   <vprop:query>number(1)</vprop:query>
+</vprop:propertyAlias>
+<plnk:partnerLinkType xmlns:plnk="http://docs.oasis-open.org/wsbpel/2.0/plnktype" name="SWSChallenge2008_Scenario1_MediationConfirmationLinkType">
+   <plnk:role name="purchaseOrderConfirmationProvider" portType="rosettaNet:RNetServicePortType"/>
+</plnk:partnerLinkType>
+<vprop:propertyAlias xmlns:vprop="http://docs.oasis-open.org/wsbpel/2.0/varprop" messageType="rosettaNet:ACK" part="ACK" propertyName="impl:orderIdProperty">
+   <vprop:query>number(1)</vprop:query>
+</vprop:propertyAlias>
+<vprop:propertyAlias xmlns:vprop="http://docs.oasis-open.org/wsbpel/2.0/varprop" messageType="impl:LineItemConfirmationMessage" part="LineItemConfirmationMessage" propertyName="impl:orderIdProperty">
+   <vprop:query>number(1)</vprop:query>
+</vprop:propertyAlias>
+<vprop:propertyAlias xmlns:vprop="http://docs.oasis-open.org/wsbpel/2.0/varprop" messageType="impl:AcknowledgeLineItemConfirmationMessage" part="AcknowledgeLineItemConfirmationMessage" propertyName="impl:orderIdProperty">
+   <vprop:query>number(1)</vprop:query>
+</vprop:propertyAlias>
+<vprop:property xmlns:vprop="http://docs.oasis-open.org/wsbpel/2.0/varprop" name="itemIdProperty" type="xsd:long"/>
+<vprop:propertyAlias xmlns:vprop="http://docs.oasis-open.org/wsbpel/2.0/varprop" messageType="impl:AcknowledgeLineItemConfirmationMessage" part="AcknowledgeLineItemConfirmationMessage" propertyName="impl:itemIdProperty"/>
+<vprop:propertyAlias xmlns:vprop="http://docs.oasis-open.org/wsbpel/2.0/varprop" messageType="impl:LineItemConfirmationMessage" part="LineItemConfirmationMessage" propertyName="impl:itemIdProperty">
+   <vprop:query>//xmoon:itemId</vprop:query>
+</vprop:propertyAlias>
+  <wsdl:import namespace="http://sws-challenge.org/SimplifiedRosettaNet/" location="http://sws-challenge.org/services/RNetService?wsdl"/>
+  <wsdl:import namespace="mooncompany" location="http://sws-challenge.org/moon/services/OMService?wsdl"/>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://www.sws-challenge.org/example/msgtypes" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+			<xsd:import namespace="http://www.sws-challenge.org/schemas/rnet/dictionary" schemaLocation="http://sws-challenge.org/schemas/rnet/3A4_PurchaseOrder_Dictionary.xsd"/>
+			<xsd:import namespace="http://www.sws-challenge.org/schemas/rnet/coreElements" schemaLocation="http://sws-challenge.org/schemas/rnet/3A4_PurchaseOrder_CoreElements.xsd"/>
+			<xsd:import namespace="http://www.sws-challenge.org/schemas/rnet/POR" schemaLocation="http://sws-challenge.org/schemas/rnet/3A4_Simplified_PurchaseOrderRequest.xsd"/>
+			<xsd:import namespace="http://www.sws-challenge.org/schemas/rnet/POC" schemaLocation="http://sws-challenge.org/schemas/rnet/3A4_Simplified_PurchaseOrderConfirmation.xsd"/>
+		</xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="processInputMessage">
+    <wsdl:part name="in0" element="por:Pip3A4PurchaseOrderRequest"/>
+  </wsdl:message>
+  <wsdl:message name="AcknowledgeLineItemConfirmationMessage">
+    <wsdl:part name="AcknowledgeLineItemConfirmationMessage" element="xmoon:confirmLineItemResponse"/>
+  </wsdl:message>
+  <wsdl:message name="LineItemConfirmationMessage">
+    <wsdl:part name="LineItemConfirmationMessage" element="xmoon:OrderLineItemConfirmation"/>
+  </wsdl:message>
+  <wsdl:portType name="SWSChallenge2008_Scenario1_MediationPortType">
+    <wsdl:operation name="mediatePurchaseOrderRequest">
+      <wsdl:input name="input0" message="impl:processInputMessage"/>
+      <wsdl:output name="output0" message="rosettaNet:ACK"/>
+    </wsdl:operation>
+    <wsdl:operation name="xmoon:confirmLineItem">
+      <wsdl:input message="impl:LineItemConfirmationMessage"/>
+      <wsdl:output message="impl:AcknowledgeLineItemConfirmationMessage"/>
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="WINDOWS-1252"?>
+<rdf:RDF xmlns:process="http://www.daml.org/services/owl-s/1.1/Process.owl#" xmlns:list="http://www.daml.org/services/owl-s/1.1/generic/ObjectList.owl#" xmlns:swrl="http://www.w3.org/2003/11/swrl#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns="http://www.example.org/service.owl" xmlns:expression="http://www.daml.org/services/owl-s/1.1/generic/Expression.owl#" xmlns:service="http://www.daml.org/services/owl-s/1.1/Service.owl#" xmlns:grounding="http://www.daml.org/services/owl-s/1.1/Grounding.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xsd="http://www.w3.org/2001/XMLSchema#" xmlns:daml="http://www.daml.org/2001/03/daml+oil#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:profile="http://www.daml.org/services/owl-s/1.1/Profile.owl#" xml:base="http://localhost:8080/PublicServices/ResidentRegistry/GetResidentInfo.owl#">
+	<owl:Ontology rdf:about="">
+		<owl:imports rdf:resource="http://localhost:8080/PublicServices/ResidentRegistry/ResidentRegistryOntology.owl"/>
+	</owl:Ontology>
+	<!--+++++++++++++++++++++++++++++++++++++++++++++-->
+	<!-- Service description -->
+	<service:Service rdf:ID="GetResidentInfoService">
+		<service:presents rdf:resource="#GetResidentInfoProfile"/>
+		<service:describedBy rdf:resource="#GetResidentInfoProcess"/>
+		<service:supports rdf:resource="#GetResidentInfoGrounding"/>
+	</service:Service>
+	<!--+++++++++++++++++++++++++++++++++++++++++++++-->
+	<!-- Profile description-->
+	<profile:Profile rdf:ID="GetResidentInfoProfile">
+		<service:isPresentedBy rdf:resource="#GetResidentInfoService"/>
+		<profile:serviceName xml:lang="en">GetResidentInfo</profile:serviceName>
+		<profile:textDescription xml:lang="en">Answers a ResidentSearchProfile by a ResidentInfo.</profile:textDescription>
+		<profile:hasInput rdf:resource="#ResidentSearchProfile"/>
+		<profile:hasOutput rdf:resource="#ResidentInfo"/>
+	</profile:Profile>
+	<!--+++++++++++++++++++++++++++++++++++++++++++++-->
+	<!-- Process description -->
+	<process:AtomicProcess rdf:ID="GetResidentInfoProcess">
+		<service:describes rdf:resource="#GetResidentInfoService"/>
+		<rdfs:label>GetResidentInfoProcess</rdfs:label>
+		<process:hasInput rdf:resource="#ResidentSearchProfile"/>
+		<process:hasOutput rdf:resource="#ResidentInfo"/>
+	</process:AtomicProcess>
+	<process:Output rdf:ID="ResidentInfo">
+		<process:parameterType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://localhost:8080/PublicServices/ResidentRegistry/ResidentRegistryOntology.owl#ResidentInfo</process:parameterType>
+		<rdfs:label>ResidentInfo</rdfs:label>
+	</process:Output>
+	<process:Input rdf:ID="ResidentSearchProfile">
+		<process:parameterType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://localhost:8080/PublicServices/ResidentRegistry/ResidentRegistryOntology.owl#ResidentSearchProfile</process:parameterType>
+		<rdfs:label>ResidentSearchProfile</rdfs:label>
+	</process:Input>
+	<!--+++++++++++++++++++++++++++++++++++++++++++++-->
+	<!-- Grounding description -->
+	<grounding:WsdlGrounding rdf:ID="GetResidentInfoGrounding">
+		<service:supportedBy rdf:resource="#GetResidentInfoService"/>
+		<grounding:hasAtomicProcessGrounding rdf:resource="#GetResidentInfoAtomicProcessGrounding"/>
+	</grounding:WsdlGrounding>
+	<grounding:WsdlAtomicProcessGrounding rdf:ID="GetResidentInfoAtomicProcessGrounding">
+		<grounding:owlsProcess rdf:resource="#GetResidentInfoProcess"/>
+		<grounding:wsdlDocument rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://localhost:8080/PublicServices/services/ResidentRegistry?wsdl</grounding:wsdlDocument>
+		<grounding:wsdlOperation>
+			<grounding:WsdlOperationRef>
+				<grounding:portType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://localhost:8080/PublicServices/services/ResidentRegistry?wsdl#ResidentRegistry</grounding:portType>
+				<grounding:operation rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://localhost:8080/PublicServices/services/ResidentRegistry?wsdl#getResidentInfo</grounding:operation>
+			</grounding:WsdlOperationRef>
+		</grounding:wsdlOperation>
+		<grounding:wsdlInputMessage rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://localhost:8080/PublicServices/services/ResidentRegistry?wsdl#getResidentInfoRequest</grounding:wsdlInputMessage>
+		<grounding:wsdlInput>
+			<grounding:WsdlInputMessageMap>
+				<grounding:owlsParameter rdf:resource="#ResidentSearchProfile"/>
+				<grounding:wsdlMessagePart rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://localhost:8080/PublicServices/services/ResidentRegistry?wsdl#in0</grounding:wsdlMessagePart>
+				<grounding:xsltTransformationString><![CDATA[
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:j.0="http://localhost:8080/PublicServices/ResidentRegistry/ResidentRegistryOntology.owl#" xmlns="http://localhost:8080/PublicServices/ResidentRegistry/XResidentRegistry" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+		<xsl:template match="/">
+		<in0>
+			<xsl:apply-templates select="//rdf:type"/>
+		</in0>
+	</xsl:template>
+	<xsl:template match="rdf:type[@rdf:resource='http://localhost:8080/PublicServices/ResidentRegistry/ResidentRegistryOntology.owl#Birth']">
+		<dateOfBirth>
+			<xsl:value-of select="../j.0:hasDateOfBirth"/>
+		</dateOfBirth>
+	</xsl:template>
+	<xsl:template match="rdf:type[@rdf:resource='http://localhost:8080/PublicServices/ResidentRegistry/ResidentRegistryOntology.owl#Surname']">
+		<surname>
+			<xsl:value-of select="../j.0:hasRef"/>
+		</surname>
+	</xsl:template>
+	<xsl:template match="rdf:type[@rdf:resource='http://localhost:8080/PublicServices/ResidentRegistry/ResidentRegistryOntology.owl#GivenName']">
+		<givenName>
+			<xsl:value-of select="../j.0:hasRef"/>
+		</givenName>
+	</xsl:template>
+	</xsl:stylesheet>
+			  ]]></grounding:xsltTransformationString>
+			</grounding:WsdlInputMessageMap>
+		</grounding:wsdlInput>
+		<grounding:wsdlOutputMessage rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://localhost:8080/PublicServices/services/ResidentRegistry?wsdl#getResidentInfoResponse</grounding:wsdlOutputMessage>
+		<grounding:wsdlOutput>
+			<grounding:WsdlOutputMessageMap>
+				<grounding:owlsParameter rdf:resource="#ResidentInfo"/>
+				<grounding:wsdlMessagePart rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://localhost:8080/PublicServices/services/Test?wsdl#getResidentInfoReturn</grounding:wsdlMessagePart>
+				<grounding:xsltTransformationString><![CDATA[
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xt="http://localhost:8080/PublicServices/ResidentRegistry/XResidentRegistry" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<xsl:template match="//getResidentInfoReturn">
+		<rdf:RDF xmlns="http://localhost:8080/PublicServices/ResidenRegistry/GetResidentInfoOutput.owl#" xml:base="http://localhost:8080/PublicServices/ResidenRegistry/GetResidentInfoOutput.owl" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:j.0="http://localhost:8080/PublicServices/ResidentRegistry/ResidentRegistryOntology.owl#">		
+      <j.0:ResidentInfo rdf:ID="ResidentInfo_X">
+			<!-- Name -->
+				<j.0:hasName>
+					<j.0:Name rdf:ID="Name_X">
+						<xsl:if test="not(name/titles[@xsi:nil])">
+							<j.0:hasTitles>
+								<j.0:Titles rdf:ID="Title_X">
+									<j.0:hasRef>
+										<xsl:value-of select="name/titles"/>
+									</j.0:hasRef>
+								</j.0:Titles>
+							</j.0:hasTitles>
+						</xsl:if>
+				            <j.0:hasGivenName>
+								<j.0:GivenName rdf:ID="GivenName_X">
+									<j.0:hasRef>
+										<xsl:value-of select="name/givenName"/>
+									</j.0:hasRef>
+								</j.0:GivenName>
+						</j.0:hasGivenName>
+						<xsl:if test="not(name/middleNames[@xsi:nil])">
+							<j.0:hasMiddleNames>
+								<j.0:MiddleNames rdf:ID="MiddleName_X">
+									<j.0:hasRef>
+										<xsl:value-of select="name/middleNames"/>
+									</j.0:hasRef>
+								</j.0:MiddleNames>
+							</j.0:hasMiddleNames>
+						</xsl:if>
+						<j.0:hasSurname>
+							<j.0:Surname rdf:ID="Surname_X">
+								<j.0:hasRef>
+										<xsl:value-of select="name/surname"/>
+								</j.0:hasRef>
+							</j.0:Surname>
+						</j.0:hasSurname>
+					</j.0:Name>
+				</j.0:hasName>
+				<!-- Address -->
+				<j.0:hasAddress>
+					<j.0:Address rdf:ID="Address_X">
+						<j.0:hasStreet>
+							<j.0:Street rdf:ID="Street_X">
+								<j.0:hasRef>
+									<xsl:value-of select="address/street"/>
+							</j.0:hasRef>
+							</j.0:Street>
+						</j.0:hasStreet>
+						<j.0:hasLocality>
+							<j.0:Locality rdf:ID="Locality_X">
+								<j.0:hasRef>
+									<xsl:value-of select="address/locality"/>
+								</j.0:hasRef>
+							</j.0:Locality>
+						</j.0:hasLocality>
+						<j.0:hasStreetNumber>
+							<j.0:StreetNumber rdf:ID="StreetNumber_X">
+								<j.0:hasRef>
+									<xsl:value-of select="address/streetNumber"/>
+								</j.0:hasRef>
+							</j.0:StreetNumber>
+						</j.0:hasStreetNumber>
+						<j.0:hasZipCode>
+							<j.0:ZipCode rdf:ID="ZipCode_X">
+								<j.0:hasRef>
+									<xsl:value-of select="address/zipCode"/>
+								</j.0:hasRef>
+							</j.0:ZipCode>
+						</j.0:hasZipCode>
+					</j.0:Address>
+				</j.0:hasAddress>
+				<!-- Birth -->
+				<j.0:hasBirth>
+					<j.0:Birth rdf:ID="Birth_X">
+						<j.0:hasDateOfBirth rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+							<xsl:value-of select="birth/dateOfBirth"/>
+						</j.0:hasDateOfBirth>
+						<j.0:hasPlaceOfBirth rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+							<xsl:value-of select="birth/placeOfBirth"/>
+						</j.0:hasPlaceOfBirth>
+					</j.0:Birth>
+				</j.0:hasBirth>
+				<!-- Death -->
+				<xsl:if test="not(death[@xsi:nil])">
+				<j.0:hasDeath>
+					<j.0:Death rdf:ID="Death_X">
+						<j.0:hasDateOfDeath rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+							<xsl:value-of select="death/dateOfDeath"/>
+						</j.0:hasDateOfDeath>
+						<j.0:hasPlaceOfDeath rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+							<xsl:value-of select="death/placeOfDeath"/>
+						</j.0:hasPlaceOfDeath>
+					</j.0:Death>
+				</j.0:hasDeath>
+				</xsl:if>
+				<!-- Nationality -->
+				<j.0:hasNationality>
+					<j.0:Nationality rdf:ID="Nationality_X">
+						<j.0:hasNationalityKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+							<xsl:value-of select="nationality/key"/>
+						</j.0:hasNationalityKey>
+					</j.0:Nationality>
+				</j.0:hasNationality>
+				<!-- Religion -->
+				<xsl:if test="not(religion[@xsi:nil])">
+				<j.0:hasReligion>
+					<j.0:Religion rdf:ID="Religion_X">
+						<j.0:hasReligionKey rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+							<xsl:value-of select="religion/key"/>
+						</j.0:hasReligionKey>
+					</j.0:Religion>
+				</j.0:hasReligion>
+				</xsl:if>
+			</j.0:ResidentInfo>
+		</rdf:RDF>
+	</xsl:template>
+</xsl:stylesheet>
+]]></grounding:xsltTransformationString>
+			</grounding:WsdlOutputMessageMap>
+		</grounding:wsdlOutput>
+	</grounding:WsdlAtomicProcessGrounding>
+</rdf:RDF>

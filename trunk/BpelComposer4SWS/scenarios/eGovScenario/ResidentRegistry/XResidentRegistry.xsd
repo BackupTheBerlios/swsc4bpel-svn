@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema targetNamespace="http://localhost:8080/PublicServices/ResidentRegistry/XResidentRegistry" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xrr="http://localhost:8080/PublicServices/ResidentRegistry/XResidentRegistry">
+	<xs:annotation>
+		<xs:documentation>
+			<para>Official Standard XResidentRegistry</para>
+		</xs:documentation>
+	</xs:annotation>
+	<xs:complexType name="residentSearchProfile">
+		<xs:sequence>
+			<xs:element name="givenName" type="xs:string"/>
+			<xs:element name="surname" type="xs:string"/>
+			<xs:element name="dateOfBirth" type="xs:string" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="residentInfo">
+		<xs:sequence>
+			<xs:element name="name" type="xrr:name"/>
+			<xs:element name="birth" type="xrr:birth"/>
+			<xs:element name="death" type="xrr:death" minOccurs="0"/>
+			<xs:element name="address" type="xrr:address"/>
+			<xs:element name="nationality" type="xrr:nationality"/>
+			<xs:element name="religion" type="xrr:religion" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="name">
+		<xs:sequence>
+			<xs:element name="titles" type="xs:string" minOccurs="0"/>
+			<xs:element name="givenName" type="xs:string"/>
+			<xs:element name="middleNames" type="xs:string" minOccurs="0"/>
+			<xs:element name="surname" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="birth">
+		<xs:sequence>
+			<xs:element name="dateOfBirth" type="xs:string" minOccurs="0"/>
+			<xs:element name="placeOfBirth" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="death">
+		<xs:sequence>
+			<xs:element name="dateOfDeath" type="xs:string" minOccurs="0"/>
+			<xs:element name="placeOfDeath" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="address">
+		<xs:sequence>
+			<xs:element name="street" type="xs:string"/>
+			<xs:element name="streetNumber" type="xs:string"/>
+			<xs:element name="moreAddress" type="xs:string" minOccurs="0"/>
+			<xs:element name="zipCode" type="xs:string"/>
+			<xs:element name="locality" type="xs:string" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="nationality">
+		<xs:sequence>
+			<xs:element name="key" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="religion">
+		<xs:sequence>
+			<xs:element name="key" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

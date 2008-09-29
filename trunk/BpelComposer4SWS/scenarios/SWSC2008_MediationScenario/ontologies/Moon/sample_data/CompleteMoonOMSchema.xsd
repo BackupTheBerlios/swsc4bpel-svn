@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="mooncompany" targetNamespace="mooncompany" elementFormDefault="qualified">
+<xsd:element name="Order" type="OrderType"/>
+	<xsd:complexType name="ContactInfo">
+		<xsd:sequence>
+			<xsd:element name="name" type="xsd:string" nillable="false"/>
+			<xsd:element name="telephone" type="xsd:string" nillable="false"/>
+			<xsd:element name="email" type="xsd:string" nillable="false" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="Address">
+		<xsd:sequence>
+			<xsd:element name="name" type="xsd:string" nillable="false"/>
+			<xsd:element name="street" type="xsd:string" nillable="false"/>
+			<xsd:element name="city" type="xsd:string" nillable="false"/>
+			<xsd:element name="state" type="xsd:string" nillable="false" minOccurs="0"/>
+			<xsd:element name="postalCode" type="xsd:string" nillable="false"/>
+			<xsd:element name="country" type="xsd:string" nillable="false"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="OrderType">
+		<xsd:sequence>
+			<xsd:element name="authToken" type="xsd:string" nillable="false"/>
+			<xsd:element name="contact" type="ContactInfo" nillable="false"/>
+			<xsd:element name="shipTo" type="Address" nillable="false"/>
+			<xsd:element name="billTo" type="Address" nillable="false" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:element name="NewOrderResponse" type="NewOrderResponseType"/>
+	<xsd:complexType name="NewOrderResponseType">
+		<xsd:sequence>
+			<xsd:element name="orderId" type="xsd:long" nillable="false"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:element name="LineItem" type="LineItemType"/>
+	<xsd:complexType name="Item">
+		<xsd:sequence>
+			<xsd:element name="articleId" type="xsd:string" nillable="false"/>
+			<xsd:element name="quantity" type="xsd:int" nillable="false"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="LineItemType">
+		<xsd:sequence>
+			<xsd:element name="authToken" type="xsd:string" nillable="false"/>
+			<xsd:element name="orderId" type="xsd:long" nillable="false"/>
+			<xsd:element name="item" type="Item" nillable="false"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:element name="AddLineItemResponse" type="AddLineItemResponseType"/>
+	<xsd:complexType name="AddLineItemResponseType">
+		<xsd:sequence>
+			<xsd:element name="orderId" type="xsd:long" nillable="false"/>
+			<xsd:element name="lineItemId" type="xsd:long" nillable="false"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:element name="CloseOrder" type="CloseOrderType"/>
+	<xsd:complexType name="CloseOrderType">
+		<xsd:sequence>
+			<xsd:element name="authToken" type="xsd:string" nillable="false"/>
+			<xsd:element name="orderId" type="xsd:long" nillable="false"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:element name="CloseOrderResponse" type="CloseOrderResponseType"/>
+	<xsd:complexType name="CloseOrderResponseType">
+		<xsd:sequence>
+			<xsd:element name="orderId" type="xsd:long" nillable="false"/>
+			<xsd:element name="itemsNo" type="xsd:int" nillable="false"/>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

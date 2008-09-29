@@ -1,0 +1,122 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:rosetta="http://localhost:8080/ontologies/RosettaNetOntology.owl#"
+    xmlns:j.0="http://localhost:8080/ontologies/ServiceAnchor.owl#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns="http://localhost:8080/process/MediationProcessInput.owl#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+  xml:base="http://localhost:8080/process/MediationProcessInput.owl">
+  <owl:Ontology rdf:about="">
+    <owl:imports rdf:resource="http://localhost:8080/ontologies/ServiceAnchor.owl"/>
+    <owl:imports rdf:resource="http://localhost:8080/ontologies/RosettaNetOntology.owl"/>
+  </owl:Ontology>
+  <rosetta:Pip3A4PurchaseOrderRequest rdf:ID="Pip3A4PurchaseOrderRequest_1">
+    <rosetta:hasPurchaseOrder>
+      <rosetta:PurchaseOrder rdf:ID="PurchaseOrder_1">
+        <rosetta:hasRequestedDateStamp rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >200603061</rosetta:hasRequestedDateStamp>
+        <rosetta:hasDropShipAffirmationIndicator rdf:datatype=
+        "http://www.w3.org/2001/XMLSchema#string">Yes</rosetta:hasDropShipAffirmationIndicator>
+        <rosetta:hasRequestedGlobalTransportEventCode rdf:datatype=
+        "http://www.w3.org/2001/XMLSchema#string">Ship</rosetta:hasRequestedGlobalTransportEventCode>
+        <rosetta:hasGlobalPurchaseOrderTypeCode rdf:datatype=
+        "http://www.w3.org/2001/XMLSchema#string">Packaged</rosetta:hasGlobalPurchaseOrderTypeCode>
+        <rosetta:hasProductLineItem>
+          <rosetta:ProductLineItem rdf:ID="ProductLineItem_2">
+            <rosetta:hasDropShipAffirmationIndicator rdf:datatype=
+            "http://www.w3.org/2001/XMLSchema#string">Yes</rosetta:hasDropShipAffirmationIndicator>
+            <rosetta:hasRequestedQuantity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></rosetta:hasRequestedQuantity>
+            <rosetta:hasGlobalProductUnitOfMeasureCode rdf:datatype=
+            "http://www.w3.org/2001/XMLSchema#string">Unit</rosetta:hasGlobalProductUnitOfMeasureCode>
+            <rosetta:hasLineNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></rosetta:hasLineNumber>
+            <rosetta:hasRequestedUnitPrice>
+              <rosetta:FinancialAmount rdf:ID="FinancialAmount_3">
+                <rosetta:hasGlobalCurrencyCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                >EUR</rosetta:hasGlobalCurrencyCode>
+                <rosetta:hasMonetaryAmount rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                >1067.54</rosetta:hasMonetaryAmount>
+              </rosetta:FinancialAmount>
+            </rosetta:hasRequestedUnitPrice>
+            <rosetta:hasGlobalProductIdentifier rdf:datatype=
+            "http://www.w3.org/2001/XMLSchema#string">00614141000012</rosetta:hasGlobalProductIdentifier>
+            <rosetta:hasRequestedDateStamp rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >200603061</rosetta:hasRequestedDateStamp>
+            <rosetta:hasTotalLineItemAmount>
+              <rosetta:FinancialAmount rdf:ID="FinancialAmount_1">
+                <rosetta:hasMonetaryAmount rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                >1067.54</rosetta:hasMonetaryAmount>
+                <rosetta:hasGlobalCurrencyCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                >EUR</rosetta:hasGlobalCurrencyCode>
+              </rosetta:FinancialAmount>
+            </rosetta:hasTotalLineItemAmount>
+            <rosetta:hasRequestedGlobalTransportEventCode rdf:datatype=
+            "http://www.w3.org/2001/XMLSchema#string">Ship</rosetta:hasRequestedGlobalTransportEventCode>
+          </rosetta:ProductLineItem>
+        </rosetta:hasProductLineItem>
+      </rosetta:PurchaseOrder>
+    </rosetta:hasPurchaseOrder>
+    <rosetta:hasFromRole>
+      <rosetta:Buyer rdf:ID="Buyer_2">
+        <rosetta:relatesToPartner>
+          <rosetta:Partner rdf:ID="Partner_4">
+            <rosetta:hasBusinessDescription>
+              <rosetta:BusinessDescription rdf:ID="BusinessDescription_5">
+                <rosetta:hasBusinessName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                >Blue Company</rosetta:hasBusinessName>
+              </rosetta:BusinessDescription>
+            </rosetta:hasBusinessDescription>
+            <rosetta:hasPhysicalLocation>
+              <rosetta:PhysicalAddress rdf:ID="PhysicalAddress_7">
+                <rosetta:hasGlobalCountryCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                >AT</rosetta:hasGlobalCountryCode>
+                <rosetta:hasCityName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                >Innsbruck</rosetta:hasCityName>
+                <rosetta:hasAddressLine1 rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                >North Business Center, Block 9</rosetta:hasAddressLine1>
+                <rosetta:hasNationalPostalCode rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                >A-6020</rosetta:hasNationalPostalCode>
+              </rosetta:PhysicalAddress>
+            </rosetta:hasPhysicalLocation>
+            <rosetta:hasContactInformation>
+              <rosetta:ContactInformation rdf:ID="ContactInformation_6">
+                <rosetta:hasContactName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                >Stefania Wolf</rosetta:hasContactName>
+                <rosetta:hasEmailAddress rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                >Stefania.wolf@blue.com</rosetta:hasEmailAddress>
+                <rosetta:hasTelephoneNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                >+43 34554675678</rosetta:hasTelephoneNumber>
+              </rosetta:ContactInformation>
+            </rosetta:hasContactInformation>
+          </rosetta:Partner>
+        </rosetta:relatesToPartner>
+        <rosetta:hasContactInformation>
+          <rosetta:ContactInformation rdf:ID="ContactInformation_3">
+            <rosetta:hasTelephoneNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >+43 123345456</rosetta:hasTelephoneNumber>
+            <rosetta:hasContactName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Stefan Blue</rosetta:hasContactName>
+            <rosetta:hasEmailAddress rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Stefan.Blue@blue.com</rosetta:hasEmailAddress>
+          </rosetta:ContactInformation>
+        </rosetta:hasContactInformation>
+      </rosetta:Buyer>
+    </rosetta:hasFromRole>
+  </rosetta:Pip3A4PurchaseOrderRequest>
+  <j.0:Process rdf:ID="MediationProcess">
+    <j.0:hasInput>
+      <j.0:Input rdf:ID="Input">
+        <j.0:parameterObject rdf:resource="#Pip3A4PurchaseOrderRequest_1"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Pip3A4PurchaseOrderRequest</rdfs:label>
+      </j.0:Input>
+    </j.0:hasInput>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >MediationProcess</rdfs:label>
+  </j.0:Process>
+</rdf:RDF>
+
+<!-- Created with Protege (with OWL Plugin 3.4, Build 130)  http://protege.stanford.edu -->

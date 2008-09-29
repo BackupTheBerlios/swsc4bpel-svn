@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema targetNamespace="http://localhost:8080/PublicServices/PublicServicePayment/XPublicServicePayment" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xpsp="http://localhost:8080/PublicServices/PublicServicePayment/XPublicServicePayment">
+	<xs:annotation>
+		<xs:documentation>
+			<para>Official Standard XPublicServicePayment</para>
+		</xs:documentation>
+	</xs:annotation>
+	<xs:complexType name="payment">
+		<xs:sequence>
+			<xs:element name="sourceAccount" type="xpsp:account"/>
+			<xs:element name="destAccount" type="xpsp:account"/>
+			<xs:element name="amount" type="xs:string"/>
+			<xs:element name="reasonForPayment" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="account">
+		<xs:sequence>
+			<xs:element name="accountOwner" type="xs:string"/>
+			<xs:element name="accountNumber" type="xs:string"/>
+			<xs:element name="bankID" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="receipt">
+		<xs:sequence>
+			<xs:element name="confirmedPayment" type="xpsp:payment"/>
+			<xs:element name="confirmation" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

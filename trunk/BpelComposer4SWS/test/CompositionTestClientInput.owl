@@ -1,0 +1,21 @@
+<rdf:RDF xmlns:process="http://www.daml.org/services/owl-s/1.1/Process.owl#" xmlns:list="http://www.daml.org/services/owl-s/1.1/generic/ObjectList.owl#" xmlns="http://localhost:8080/PublicServices/ResidentRegistry/ResidentRegistryOntology.owl#" xmlns:swrl="http://www.w3.org/2003/11/swrl#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:expression="http://www.daml.org/services/owl-s/1.1/generic/Expression.owl#" xmlns:service="http://www.daml.org/services/owl-s/1.1/Service.owl#" xmlns:grounding="http://www.daml.org/services/owl-s/1.1/Grounding.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xsd="http://www.w3.org/2001/XMLSchema#" xmlns:daml="http://www.daml.org/2001/03/daml+oil#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:profile="http://www.daml.org/services/owl-s/1.1/Profile.owl#">
+<rdf:Description rdf:nodeID="A64">
+		<hasGivenName rdf:nodeID="A63"/>
+		<hasSurname rdf:nodeID="A61"/>
+		<hasBirth rdf:nodeID="A42"/>
+		<rdf:type rdf:resource="http://localhost:8080/PublicServices/ResidentRegistry/ResidentRegistryOntology.owl#ResidentSearchProfile"/>
+	</rdf:Description>
+	<rdf:Description rdf:nodeID="A63">
+		<hasRef rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hans</hasRef>
+		<rdf:type rdf:resource="http://localhost:8080/PublicServices/ResidentRegistry/ResidentRegistryOntology.owl#GivenName"/>
+	</rdf:Description>
+	<rdf:Description rdf:nodeID="A61">
+		<hasRef rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mayer</hasRef>
+		<rdf:type rdf:resource="http://localhost:8080/PublicServices/ResidentRegistry/ResidentRegistryOntology.owl#Surname"/>
+	</rdf:Description>
+	<rdf:Description rdf:nodeID="A42">
+		<hasDateOfBirth rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1111-11-11</hasDateOfBirth>
+		<rdf:type rdf:resource="http://localhost:8080/PublicServices/ResidentRegistry/ResidentRegistryOntology.owl#Birth"/>
+		<hasPlaceOfBirth rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Berlin</hasPlaceOfBirth>
+	</rdf:Description>
+</rdf:RDF>

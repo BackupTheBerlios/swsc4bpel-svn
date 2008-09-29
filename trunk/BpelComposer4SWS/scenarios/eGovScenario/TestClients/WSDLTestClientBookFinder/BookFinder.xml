@@ -1,0 +1,284 @@
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:mime="http://www.grovelogic.com/xmtp" targetNamespace="http://dinoch.dyndns.org/webservices/books" xmlns:tns="http://dinoch.dyndns.org/webservices/books" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="urn:ResidentRegistry" xmlns:intf="urn:ResidentRegistry" xmlns:http="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns1="http://localhost:8080/PublicServices/ResidentRegistry/XResidentRegistry" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema">
+
+	<wsdl:types>
+		<s:schema elementFormDefault="qualified" targetNamespace="http://dinoch.dyndns.org/webservices/books">
+			<s:element name="GetInfo">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="0" maxOccurs="1" name="ISBN" type="s:string"/>
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:element name="GetInfoResponse">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="0" maxOccurs="1" name="GetInfoResult" type="tns:bookInfo"/>
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:complexType name="bookInfo">
+				<s:sequence>
+					<s:element minOccurs="0" maxOccurs="1" name="isbn" type="s:string"/>
+					<s:element minOccurs="0" maxOccurs="1" name="title" type="s:string"/>
+					<s:element minOccurs="0" maxOccurs="1" name="author" type="s:string"/>
+					<s:element minOccurs="0" maxOccurs="1" name="pubdate" type="s:string"/>
+					<s:element minOccurs="0" maxOccurs="1" name="publisher" type="s:string"/>
+					<s:element minOccurs="0" maxOccurs="1" name="format" type="s:string"/>
+					<s:element minOccurs="0" maxOccurs="1" name="imgUrl" type="s:string"/>
+					<s:element minOccurs="0" maxOccurs="1" name="timestamp" type="s:string"/>
+					<s:element minOccurs="0" maxOccurs="unbounded" name="vendorprice" type="tns:bookInfoVendorprice"/>
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="bookInfoVendorprice">
+				<s:sequence>
+					<s:element minOccurs="0" maxOccurs="1" name="name" type="s:string"/>
+					<s:element minOccurs="0" maxOccurs="1" name="siteUrl" type="s:string"/>
+					<s:element minOccurs="0" maxOccurs="1" name="pricePrefix" type="s:string"/>
+					<s:element minOccurs="0" maxOccurs="1" name="price" type="s:string"/>
+				</s:sequence>
+			</s:complexType>
+			<s:element name="DoKeywordSearch">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="0" maxOccurs="1" name="keyword" type="s:string"/>
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:element name="DoKeywordSearchResponse">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="0" maxOccurs="1" name="DoKeywordSearchResult" type="tns:ArrayOfBookInfo"/>
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:complexType name="ArrayOfBookInfo">
+				<s:sequence>
+					<s:element minOccurs="0" maxOccurs="unbounded" name="bookInfo" nillable="true" type="tns:bookInfo"/>
+				</s:sequence>
+			</s:complexType>
+			<s:element name="DoKeywordSearchEx">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="0" maxOccurs="1" name="keyword" type="s:string"/>
+						<s:element minOccurs="0" maxOccurs="1" name="source" type="s:string"/>
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:element name="DoKeywordSearchExResponse">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="0" maxOccurs="1" name="DoKeywordSearchExResult" type="tns:ArrayOfBookInfo"/>
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:element name="bookInfo" type="tns:bookInfo"/>
+			<s:element name="ArrayOfBookInfo" nillable="true" type="tns:ArrayOfBookInfo"/>
+		</s:schema>
+	</wsdl:types>
+	<wsdl:message name="GetInfoSoapIn">
+		<wsdl:part name="parameters" element="tns:GetInfo"/>
+	</wsdl:message>
+	<wsdl:message name="GetInfoSoapOut">
+		<wsdl:part name="parameters" element="tns:GetInfoResponse"/>
+	</wsdl:message>
+	<wsdl:message name="DoKeywordSearchSoapIn">
+		<wsdl:part name="parameters" element="tns:DoKeywordSearch"/>
+	</wsdl:message>
+	<wsdl:message name="DoKeywordSearchSoapOut">
+		<wsdl:part name="parameters" element="tns:DoKeywordSearchResponse"/>
+	</wsdl:message>
+	<wsdl:message name="DoKeywordSearchExSoapIn">
+		<wsdl:part name="parameters" element="tns:DoKeywordSearchEx"/>
+	</wsdl:message>
+	<wsdl:message name="DoKeywordSearchExSoapOut">
+		<wsdl:part name="parameters" element="tns:DoKeywordSearchExResponse"/>
+	</wsdl:message>
+	<wsdl:message name="GetInfoHttpGetIn">
+		<wsdl:part name="ISBN" type="s:string"/>
+	</wsdl:message>
+	<wsdl:message name="GetInfoHttpGetOut">
+		<wsdl:part name="Body" element="tns:bookInfo"/>
+	</wsdl:message>
+	<wsdl:message name="DoKeywordSearchHttpGetIn">
+		<wsdl:part name="keyword" type="s:string"/>
+	</wsdl:message>
+	<wsdl:message name="DoKeywordSearchHttpGetOut">
+		<wsdl:part name="Body" element="tns:ArrayOfBookInfo"/>
+	</wsdl:message>
+	<wsdl:message name="DoKeywordSearchExHttpGetIn">
+		<wsdl:part name="keyword" type="s:string"/>
+		<wsdl:part name="source" type="s:string"/>
+	</wsdl:message>
+	<wsdl:message name="DoKeywordSearchExHttpGetOut">
+		<wsdl:part name="Body" element="tns:ArrayOfBookInfo"/>
+	</wsdl:message>
+	<wsdl:message name="GetInfoHttpPostIn">
+		<wsdl:part name="ISBN" type="s:string"/>
+	</wsdl:message>
+	<wsdl:message name="GetInfoHttpPostOut">
+		<wsdl:part name="Body" element="tns:bookInfo"/>
+	</wsdl:message>
+	<wsdl:message name="DoKeywordSearchHttpPostIn">
+		<wsdl:part name="keyword" type="s:string"/>
+	</wsdl:message>
+	<wsdl:message name="DoKeywordSearchHttpPostOut">
+		<wsdl:part name="Body" element="tns:ArrayOfBookInfo"/>
+	</wsdl:message>
+	<wsdl:message name="DoKeywordSearchExHttpPostIn">
+		<wsdl:part name="keyword" type="s:string"/>
+		<wsdl:part name="source" type="s:string"/>
+	</wsdl:message>
+	<wsdl:message name="DoKeywordSearchExHttpPostOut">
+		<wsdl:part name="Body" element="tns:ArrayOfBookInfo"/>
+	</wsdl:message>
+	<wsdl:portType name="LookyBookServiceSoap">
+		<wsdl:operation name="GetInfo">
+			<wsdl:input message="tns:GetInfoSoapIn"/>
+			<wsdl:output message="tns:GetInfoSoapOut"/>
+		</wsdl:operation>
+		<wsdl:operation name="DoKeywordSearch">
+						<wsdl:input message="tns:DoKeywordSearchSoapIn"/>
+			<wsdl:output message="tns:DoKeywordSearchSoapOut"/>
+		</wsdl:operation>
+		<wsdl:operation name="DoKeywordSearchEx">
+			
+			<wsdl:input message="tns:DoKeywordSearchExSoapIn"/>
+			<wsdl:output message="tns:DoKeywordSearchExSoapOut"/>
+		</wsdl:operation>
+	</wsdl:portType>
+	<wsdl:portType name="LookyBookServiceHttpGet">
+		<wsdl:operation name="GetInfo">
+			
+			<wsdl:input message="tns:GetInfoHttpGetIn"/>
+			<wsdl:output message="tns:GetInfoHttpGetOut"/>
+		</wsdl:operation>
+		<wsdl:operation name="DoKeywordSearch">
+			
+			<wsdl:input message="tns:DoKeywordSearchHttpGetIn"/>
+			<wsdl:output message="tns:DoKeywordSearchHttpGetOut"/>
+		</wsdl:operation>
+		<wsdl:operation name="DoKeywordSearchEx">
+			
+			<wsdl:input message="tns:DoKeywordSearchExHttpGetIn"/>
+			<wsdl:output message="tns:DoKeywordSearchExHttpGetOut"/>
+		</wsdl:operation>
+	</wsdl:portType>
+	<wsdl:portType name="LookyBookServiceHttpPost">
+		<wsdl:operation name="GetInfo">
+			
+			<wsdl:input message="tns:GetInfoHttpPostIn"/>
+			<wsdl:output message="tns:GetInfoHttpPostOut"/>
+		</wsdl:operation>
+		<wsdl:operation name="DoKeywordSearch">
+			
+			<wsdl:input message="tns:DoKeywordSearchHttpPostIn"/>
+			<wsdl:output message="tns:DoKeywordSearchHttpPostOut"/>
+		</wsdl:operation>
+		<wsdl:operation name="DoKeywordSearchEx">
+			
+			<wsdl:input message="tns:DoKeywordSearchExHttpPostIn"/>
+			<wsdl:output message="tns:DoKeywordSearchExHttpPostOut"/>
+		</wsdl:operation>
+	</wsdl:portType>
+	<wsdl:binding name="LookyBookServiceSoap" type="tns:LookyBookServiceSoap">
+		<soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+		<wsdl:operation name="GetInfo">
+			<soap:operation soapAction="http://dinoch.dyndns.org/webservices/books/GetInfo" style="document"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="DoKeywordSearch">
+			<soap:operation soapAction="http://dinoch.dyndns.org/webservices/books/DoKeywordSearch" style="document"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="DoKeywordSearchEx">
+			<soap:operation soapAction="http://dinoch.dyndns.org/webservices/books/DoKeywordSearchEx" style="document"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+	</wsdl:binding>
+	<wsdl:binding name="LookyBookServiceHttpGet" type="tns:LookyBookServiceHttpGet">
+		<http:binding verb="GET"/>
+		<wsdl:operation name="GetInfo">
+			<http:operation location="/GetInfo"/>
+			<wsdl:input>
+				<http:urlEncoded/>
+			</wsdl:input>
+			<wsdl:output>
+				<mime:mimeXml part="Body"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="DoKeywordSearch">
+			<http:operation location="/DoKeywordSearch"/>
+			<wsdl:input>
+				<http:urlEncoded/>
+			</wsdl:input>
+			<wsdl:output>
+				<mime:mimeXml part="Body"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="DoKeywordSearchEx">
+			<http:operation location="/DoKeywordSearchEx"/>
+			<wsdl:input>
+				<http:urlEncoded/>
+			</wsdl:input>
+			<wsdl:output>
+				<mime:mimeXml part="Body"/>
+			</wsdl:output>
+		</wsdl:operation>
+	</wsdl:binding>
+	<wsdl:binding name="LookyBookServiceHttpPost" type="tns:LookyBookServiceHttpPost">
+		<http:binding verb="POST"/>
+		<wsdl:operation name="GetInfo">
+			<http:operation location="/GetInfo"/>
+			<wsdl:input>
+				<mime:content type="application/x-www-form-urlencoded"/>
+			</wsdl:input>
+			<wsdl:output>
+				<mime:mimeXml part="Body"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="DoKeywordSearch">
+			<http:operation location="/DoKeywordSearch"/>
+			<wsdl:input>
+				<mime:content type="application/x-www-form-urlencoded"/>
+			</wsdl:input>
+			<wsdl:output>
+				<mime:mimeXml part="Body"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="DoKeywordSearchEx">
+			<http:operation location="/DoKeywordSearchEx"/>
+			<wsdl:input>
+				<mime:content type="application/x-www-form-urlencoded"/>
+			</wsdl:input>
+			<wsdl:output>
+				<mime:mimeXml part="Body"/>
+			</wsdl:output>
+		</wsdl:operation>
+	</wsdl:binding>
+	<wsdl:service name="LookyBookService">
+		<wsdl:port name="LookyBookServiceSoap" binding="tns:LookyBookServiceSoap">
+			<soap:address location="http://cheeso.members.winisp.net/books/books.asmx"/>
+		</wsdl:port>
+		<wsdl:port name="LookyBookServiceHttpGet" binding="tns:LookyBookServiceHttpGet">
+			<http:address location="http://cheeso.members.winisp.net/books/books.asmx"/>
+		</wsdl:port>
+		<wsdl:port name="LookyBookServiceHttpPost" binding="tns:LookyBookServiceHttpPost">
+			<http:address location="http://cheeso.members.winisp.net/books/books.asmx"/>
+		</wsdl:port>
+	</wsdl:service>
+</wsdl:definitions>

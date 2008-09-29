@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="urn:VitalRecordsOffice" xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="urn:VitalRecordsOffice" xmlns:intf="urn:VitalRecordsOffice" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns1="http://localhost:8080/PublicServices/VitalRecordsOffice/XVitalRecords" xmlns:tns2="http://localhost:8080/PublicServices/PublicServicePayment/XPublicServicePayment" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><wsdl:types><schema targetNamespace="http://localhost:8080/PublicServices/VitalRecordsOffice/XVitalRecords" xmlns="http://www.w3.org/2001/XMLSchema"><import namespace="http://schemas.xmlsoap.org/soap/encoding/"/><complexType name="postalAddress"><sequence><element name="recipient" nillable="true" type="xsd:string"/><element name="streetAddress" nillable="true" type="xsd:string"/><element name="zipcodeAndPostalDistrict" nillable="true" type="xsd:string"/></sequence></complexType><complexType name="paymentReceipt"><sequence><element name="confirm" nillable="true" type="xsd:string"/></sequence></complexType><complexType name="person"><sequence><element name="firstName" nillable="true" type="xsd:string"/><element name="lastName" nillable="true" type="xsd:string"/><element maxOccurs="1" minOccurs="0" name="nameAtBirth" nillable="true" type="xsd:string"/><element name="dateOfBirth" nillable="true" type="xsd:string"/><element name="placeOfBirth" nillable="true" type="xsd:string"/></sequence></complexType><complexType name="birthCertificateOrder"><sequence><element name="paymentReceipt" nillable="true" type="tns1:paymentReceipt"/><element name="person" nillable="true" type="tns1:person"/><element name="postalAddress" nillable="true" type="tns1:postalAddress"/></sequence></complexType><complexType name="vitalRecordsDocumentType"><sequence><element name="id" nillable="true" type="xsd:string"/><element name="description" nillable="true" type="xsd:string"/></sequence></complexType><complexType name="vitalRecordsDocumentInfo"><sequence><element name="price" nillable="true" type="xsd:string"/><element name="vitalRecordsDocumentType" nillable="true" type="tns1:vitalRecordsDocumentType"/><element name="paymentAccount" nillable="true" type="tns2:account"/></sequence></complexType><complexType name="acknowledgement"><sequence><element name="document" nillable="true" type="tns1:vitalRecordsDocumentType"/><element name="recipientPostalAddress" nillable="true" type="tns1:postalAddress"/></sequence></complexType></schema><schema targetNamespace="http://localhost:8080/PublicServices/PublicServicePayment/XPublicServicePayment" xmlns="http://www.w3.org/2001/XMLSchema"><import namespace="http://schemas.xmlsoap.org/soap/encoding/"/><complexType name="account"><sequence><element name="accountOwner" nillable="true" type="xsd:string"/><element name="accountNumber" nillable="true" type="xsd:string"/><element name="bankID" nillable="true" type="xsd:string"/></sequence></complexType></schema></wsdl:types>
+  <wsdl:message name="getVitalRecordsDocumentInfoRequest">
+    <wsdl:part name="in0" type="tns1:vitalRecordsDocumentType"/>
+  </wsdl:message>
+  <wsdl:message name="getVitalRecordsDocumentInfoResponse">
+    <wsdl:part name="getVitalRecordsDocumentInfoReturn" type="tns1:vitalRecordsDocumentInfo"/>
+  </wsdl:message>
+  <wsdl:message name="orderBirthCertificateRequest">
+    <wsdl:part name="in0" type="tns1:birthCertificateOrder"/>
+  </wsdl:message>
+  <wsdl:message name="orderBirthCertificateResponse">
+    <wsdl:part name="orderBirthCertificateReturn" type="tns1:acknowledgement"/>
+  </wsdl:message>
+  <wsdl:portType name="VitalRecordsOffice">
+    <wsdl:operation name="orderBirthCertificate" parameterOrder="in0">
+      <wsdl:input message="impl:orderBirthCertificateRequest" name="orderBirthCertificateRequest"/>
+      <wsdl:output message="impl:orderBirthCertificateResponse" name="orderBirthCertificateResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="getVitalRecordsDocumentInfo" parameterOrder="in0">
+      <wsdl:input message="impl:getVitalRecordsDocumentInfoRequest" name="getVitalRecordsDocumentInfoRequest"/>
+      <wsdl:output message="impl:getVitalRecordsDocumentInfoResponse" name="getVitalRecordsDocumentInfoResponse"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="VitalRecordsOfficeSoapBinding" type="impl:VitalRecordsOffice">
+    <wsdlsoap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="orderBirthCertificate">
+      <wsdlsoap:operation soapAction=""/>
+      <wsdl:input name="orderBirthCertificateRequest">
+        <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:VitalRecordsOffice" use="encoded"/>
+      </wsdl:input>
+      <wsdl:output name="orderBirthCertificateResponse">
+        <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:VitalRecordsOffice" use="encoded"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getVitalRecordsDocumentInfo">
+      <wsdlsoap:operation soapAction=""/>
+      <wsdl:input name="getVitalRecordsDocumentInfoRequest">
+        <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:VitalRecordsOffice" use="encoded"/>
+      </wsdl:input>
+      <wsdl:output name="getVitalRecordsDocumentInfoResponse">
+        <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:VitalRecordsOffice" use="encoded"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="VitalRecordsOfficeService">
+    <wsdl:port binding="impl:VitalRecordsOfficeSoapBinding" name="VitalRecordsOffice">
+      <wsdlsoap:address location="http://localhost:8080/PublicServices/services/VitalRecordsOffice"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

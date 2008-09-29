@@ -1,0 +1,63 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:daml="http://www.daml.org/2001/03/daml+oil#"
+    xmlns="http://localhost:8080/PublicServices/StatisticalOffice/StatisticalOfficeOntology.owl#"
+    xmlns:dc="http://purl.org/dc/elements/1.1/" >
+  <rdf:Description rdf:nodeID="A0">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://localhost:8080/PublicServices/StatisticalOffice/StatisticalOfficeOntology.owl#hasRef"/>
+    <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:cardinality>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://localhost:8080/PublicServices/StatisticalOffice/StatisticalOfficeOntology.owl#OfficialCitizenDocumentType">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:equivalentClass rdf:nodeID="A1"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://localhost:8080/PublicServices/StatisticalOffice/StatisticalOfficeOntology.owl#hasIdentifier">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:range rdf:resource="http://localhost:8080/PublicServices/StatisticalOffice/StatisticalOfficeOntology.owl#Identifier"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://localhost:8080/PublicServices/StatisticalOffice/StatisticalOfficeOntology.owl#hasRef">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A2">
+    <hasRef rdf:datatype="http://www.w3.org/2001/XMLSchema#string">aString</hasRef>
+    <rdf:type rdf:resource="http://localhost:8080/PublicServices/StatisticalOffice/StatisticalOfficeOntology.owl#Identifier"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://localhost:8080/PublicServices/StatisticalOffice/StatisticalOfficeOntology.owl">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A3">
+    <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:cardinality>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://localhost:8080/PublicServices/StatisticalOffice/StatisticalOfficeOntology.owl#hasMessage"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A1">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://localhost:8080/PublicServices/StatisticalOffice/StatisticalOfficeOntology.owl#hasIdentifier"/>
+    <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:cardinality>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://localhost:8080/PublicServices/StatisticalOffice/StatisticalOfficeOntology.owl#hasMessage">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://localhost:8080/PublicServices/StatisticalOffice/StatisticalOfficeOntology.owl#Confirm"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A4">
+    <hasIdentifier rdf:nodeID="A2"/>
+    <rdf:type rdf:resource="http://localhost:8080/PublicServices/StatisticalOffice/StatisticalOfficeOntology.owl#OfficialCitizenDocumentType"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://localhost:8080/PublicServices/StatisticalOffice/StatisticalOfficeOntology.owl#Identifier">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:nodeID="A0"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://localhost:8080/PublicServices/StatisticalOffice/StatisticalOfficeOntology.owl#Confirm">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdfs:subClassOf rdf:nodeID="A3"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+</rdf:RDF>

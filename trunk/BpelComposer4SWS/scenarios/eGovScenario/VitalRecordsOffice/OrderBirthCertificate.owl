@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="WINDOWS-1252"?>
+<rdf:RDF xmlns:process="http://www.daml.org/services/owl-s/1.1/Process.owl#" xmlns:list="http://www.daml.org/services/owl-s/1.1/generic/ObjectList.owl#" xmlns:swrl="http://www.w3.org/2003/11/swrl#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns="http://www.example.org/service.owl" xmlns:expression="http://www.daml.org/services/owl-s/1.1/generic/Expression.owl#" xmlns:service="http://www.daml.org/services/owl-s/1.1/Service.owl#" xmlns:grounding="http://www.daml.org/services/owl-s/1.1/Grounding.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xsd="http://www.w3.org/2001/XMLSchema#" xmlns:daml="http://www.daml.org/2001/03/daml+oil#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:profile="http://www.daml.org/services/owl-s/1.1/Profile.owl#" xml:base="http://localhost:8080/PublicServices/VitalRecordsOffice/OrderBirthCertificate.owl#">
+	<owl:Ontology rdf:about="">
+		<owl:imports rdf:resource="http://localhost:8080/PublicServices/VitalRecordsOffice/VitalRecordsOfficeOntology.owl"/>
+	</owl:Ontology>
+	<!--+++++++++++++++++++++++++++++++++++++++++++++-->
+	<!-- Service description -->
+	<service:Service rdf:ID="OrderBirthCertificateService">
+		<service:presents rdf:resource="#OrderBirthCertificateProfile"/>
+		<service:describedBy rdf:resource="#OrderBirthCertificateProcess"/>
+		<service:supports rdf:resource="#OrderBirthCertificateGrounding"/>
+	</service:Service>
+	<!--+++++++++++++++++++++++++++++++++++++++++++++-->
+	<!-- Profile description-->
+	<profile:Profile rdf:ID="OrderBirthCertificateProfile">
+		<service:isPresentedBy rdf:resource="#OrderBirthCertificateService"/>
+		<profile:serviceName xml:lang="en">OrderBirthCertificate</profile:serviceName>
+		<profile:textDescription xml:lang="en">Orders a birth certificate ot be sent by post. Returns an acknowledgement</profile:textDescription>
+		<profile:hasInput rdf:resource="#BirthCertificateOrder"/>
+		<profile:hasOutput rdf:resource="#Acknowledgement"/>
+	</profile:Profile>
+	<!--+++++++++++++++++++++++++++++++++++++++++++++-->
+	<!-- Process description -->
+	<process:AtomicProcess rdf:ID="OrderBirthCertificateProcess">
+		<service:describes rdf:resource="#OrderBirthCertificateService"/>
+		<rdfs:label>OrderBirthCertificateProcess</rdfs:label>
+		<process:hasInput rdf:resource="#BirthCertificateOrder"/>
+		<process:hasOutput rdf:resource="#Acknowledgement"/>
+	</process:AtomicProcess>
+	<process:Output rdf:ID="Acknowledgement">
+		<process:parameterType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://localhost:8080/PublicServices/VitalRecordsOffice/VitalRecordsOfficeOntology.owl#Acknowledgement</process:parameterType>
+		<rdfs:label>Acknowledgement</rdfs:label>
+	</process:Output>
+	<process:Input rdf:ID="BirthCertificateOrder">
+		<process:parameterType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://localhost:8080/PublicServices/VitalRecordsOffice/VitalRecordsOfficeOntology.owl#BirthCertificateOrder</process:parameterType>
+		<rdfs:label>BirthCertificateOrder</rdfs:label>
+	</process:Input>
+	<!--+++++++++++++++++++++++++++++++++++++++++++++-->
+	<!-- Grounding description -->
+	<grounding:WsdlGrounding rdf:ID="OrderBirthCertificateGrounding">
+		<service:supportedBy rdf:resource="#OrderBirthCertificateService"/>
+		<grounding:hasAtomicProcessGrounding rdf:resource="#OrderBirthCertificateAtomicProcessGrounding"/>
+	</grounding:WsdlGrounding>
+	<grounding:WsdlAtomicProcessGrounding rdf:ID="OrderBirthCertificateAtomicProcessGrounding">
+		<grounding:owlsProcess rdf:resource="#OrderBirthCertificateProcess"/>
+		<grounding:wsdlDocument rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://localhost:8080/PublicServices/services/VitalRecordsOffice?wsdl</grounding:wsdlDocument>
+		<grounding:wsdlOperation>
+			<grounding:WsdlOperationRef>
+				<grounding:portType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://localhost:8080/PublicServices/services/VitalRecordsOffice?wsdl#VitalRecordsOffice</grounding:portType>
+				<grounding:operation rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://localhost:8080/PublicServices/services/VitalRecordsOffice?wsdl#orderBirthCertificate</grounding:operation>
+			</grounding:WsdlOperationRef>
+		</grounding:wsdlOperation>
+		<grounding:wsdlInputMessage rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://localhost:8080/PublicServices/services/VitalRecordsOffice?wsdl#orderBirthCertificateRequest</grounding:wsdlInputMessage>
+		<grounding:wsdlInput>
+			<grounding:WsdlInputMessageMap>
+				<grounding:owlsParameter rdf:resource="#BirthCertificateOrder"/>
+				<grounding:wsdlMessagePart rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://localhost:8080/PublicServices/services/VitalRecordsOffice?wsdl#in0</grounding:wsdlMessagePart>
+				<grounding:xsltTransformationString><![CDATA[
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:j.0="http://localhost:8080/PublicServices/VitalRecordsOffice/VitalRecordsOfficeOntology.owl#" xmlns:psp="http://localhost:8080/PublicServices/PublicServicePayment/PublicServicePaymentOntology.owl#" xmlns="http://localhost:8080/PublicServices/VitalRecordsOffice/XVitalRecords">
+	<xsl:template match="/">
+		<in0>
+			<xsl:apply-templates select="//rdf:type[@rdf:resource='http://localhost:8080/PublicServices/VitalRecordsOffice/VitalRecordsOfficeOntology.owl#BirthCertificateOrder']"/>
+		</in0>
+	</xsl:template>
+	<!--BirthCerticateOrder-->
+	<xsl:template match="rdf:type[@rdf:resource='http://localhost:8080/PublicServices/VitalRecordsOffice/VitalRecordsOfficeOntology.owl#BirthCertificateOrder']">
+		<person>
+			<xsl:variable name="orderID" select="../j.0:hasPerson/@rdf:resource"/>
+			<xsl:apply-templates select="//rdf:Description[@rdf:about=$orderID]/rdf:type[@rdf:resource='http://localhost:8080/PublicServices/VitalRecordsOffice/VitalRecordsOfficeOntology.owl#Person']"/>
+		</person>
+		<postalAddress>
+			<xsl:variable name="addressID" select="../j.0:hasPostalAddress/@rdf:resource"/>
+			<xsl:apply-templates select="//rdf:Description[@rdf:about=$addressID]/rdf:type[@rdf:resource='http://localhost:8080/PublicServices/VitalRecordsOffice/VitalRecordsOfficeOntology.owl#PostalAddress']"/>
+		</postalAddress>
+		<paymentReceipt>
+			<xsl:variable name="orderID" select="../j.0:hasPaymentReceipt/@rdf:resource"/>
+			<xsl:apply-templates select="//rdf:Description[@rdf:about=$orderID]/rdf:type[@rdf:resource='http://localhost:8080/PublicServices/PublicServicePayment/PublicServicePaymentOntology.owl#Receipt']"/>
+		</paymentReceipt>
+	</xsl:template>
+	<!--Person-->
+	<xsl:template match="rdf:type[@rdf:resource='http://localhost:8080/PublicServices/VitalRecordsOffice/VitalRecordsOfficeOntology.owl#Person']">
+		<firstName>
+			<xsl:variable name="firstNameID" select="../j.0:hasFirstName/@rdf:resource"/>
+			<xsl:apply-templates select="//rdf:Description[@rdf:about=$firstNameID]/rdf:type[@rdf:resource='http://localhost:8080/PublicServices/VitalRecordsOffice/VitalRecordsOfficeOntology.owl#FirstName']"/>
+		</firstName>
+		<lastName>
+			<xsl:variable name="lastNameID" select="../j.0:hasLastName/@rdf:resource"/>
+			<xsl:apply-templates select="//rdf:Description[@rdf:about=$lastNameID]/rdf:type[@rdf:resource='http://localhost:8080/PublicServices/VitalRecordsOffice/VitalRecordsOfficeOntology.owl#LastName']"/>
+		</lastName>
+		<dateOfBirth>
+			<xsl:variable name="birthID" select="../j.0:hasDateOfBirth/@rdf:resource"/>
+			<xsl:apply-templates select="//rdf:Description[@rdf:about=$birthID]/rdf:type[@rdf:resource='http://localhost:8080/PublicServices/VitalRecordsOffice/VitalRecordsOfficeOntology.owl#DateOfBirth']"/>
+		</dateOfBirth>
+		<placeOfBirth>
+			<xsl:variable name="placeID" select="../j.0:hasPlaceOfBirth/@rdf:resource"/>
+			<xsl:apply-templates select="//rdf:Description[@rdf:about=$placeID]/rdf:type[@rdf:resource='http://localhost:8080/PublicServices/VitalRecordsOffice/VitalRecordsOfficeOntology.owl#PlaceOfBirth']"/>
+		</placeOfBirth>
+	</xsl:template>
+	<!--PostalAddress-->
+	<xsl:template match="rdf:type[@rdf:resource='http://localhost:8080/PublicServices/VitalRecordsOffice/VitalRecordsOfficeOntology.owl#PostalAddress']">
+		<recipient>
+			<xsl:variable name="recipientID" select="../j.0:hasRecipient/@rdf:resource"/>
+			<xsl:apply-templates select="//rdf:Description[@rdf:about=$recipientID]/rdf:type[@rdf:resource='http://localhost:8080/PublicServices/VitalRecordsOffice/VitalRecordsOfficeOntology.owl#Recipient']"/>
+		</recipient>
+		<streetAddress>
+			<xsl:variable name="streetAddressID" select="../j.0:hasStreetAddress/@rdf:resource"/>
+			<xsl:apply-templates select="//rdf:Description[@rdf:about=$streetAddressID]/rdf:type[@rdf:resource='http://localhost:8080/PublicServices/VitalRecordsOffice/VitalRecordsOfficeOntology.owl#StreetAddress']"/>
+		</streetAddress>
+		<zipcodeAndPostalDistrict>
+			<xsl:variable name="zipcodeAndPostalDistrictID" select="../j.0:hasZipcodeAndPostalDistrict/@rdf:resource"/>
+			<xsl:apply-templates select="//rdf:Description[@rdf:about=$zipcodeAndPostalDistrictID]/rdf:type[@rdf:resource='http://localhost:8080/PublicServices/VitalRecordsOffice/VitalRecordsOfficeOntology.owl#ZipcodeAndPostalDistrict']"/>
+		</zipcodeAndPostalDistrict>
+	</xsl:template>
+	<!--FirstName,LastName,DateOfBirth,PlaceOfBirth,Recipient,StreetAddress,ZipCodeAndPostalDistrict,Confirmation-->
+	<xsl:template match="rdf:type">
+		<xsl:value-of select="../j.0:hasRef"/>
+		<xsl:value-of select="../psp:hasRef"/>
+	</xsl:template>
+	<!--PaymentReceipt-->
+	<xsl:template match="rdf:type[@rdf:resource='http://localhost:8080/PublicServices/PublicServicePayment/PublicServicePaymentOntology.owl#Receipt']">
+		<confirm>
+			<xsl:variable name="confirmID" select="../psp:hasConfirmation/@rdf:resource"/>
+			<xsl:apply-templates select="//rdf:Description[@rdf:about=$confirmID]/rdf:type[@rdf:resource='http://localhost:8080/PublicServices/PublicServicePayment/PublicServicePaymentOntology.owl#Confirmation']"/>
+		</confirm>
+	</xsl:template>
+</xsl:stylesheet>
+			  ]]></grounding:xsltTransformationString>
+			</grounding:WsdlInputMessageMap>
+		</grounding:wsdlInput>
+		<grounding:wsdlOutputMessage rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://localhost:8080/PublicServices/services/VitalRecordsOffice?wsdl#orderBirthCertificateResponse</grounding:wsdlOutputMessage>
+		<grounding:wsdlOutput>
+			<grounding:WsdlOutputMessageMap>
+				<grounding:owlsParameter rdf:resource="#Acknowledgement"/>
+				<grounding:wsdlMessagePart rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://localhost:8080/PublicServices/services/VitalRecordsOffice?wsdl#orderBirthCertificateReturn</grounding:wsdlMessagePart>
+				<grounding:xsltTransformationString><![CDATA[
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xt="http://localhost:8080/PublicServices/VitalRecordsOffice/XVitalRecordsOffice" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<xsl:template match="//orderBirthCertificateReturn">
+		<rdf:RDF xmlns:j.0="http://localhost:8080/PublicServices/VitalRecordsOffice/VitalRecordsOfficeOntology.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xsd="http://www.w3.org/2001/XMLSchema#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:sto="http://localhost:8080/PublicServices/StatisticalOffice/StatisticalOfficeOntology.owl#" xmlns:psp="http://localhost:8080/PublicServices/PublicServicePayment/PublicServicePaymentOntology.owl#" xmlns:daml="http://www.daml.org/2001/03/daml+oil#" xmlns:dc="http://purl.org/dc/elements/1.1/">
+			<j.0:Acknowledgement>
+				<j.0:hasDocumentType>
+					<j.0:VitalRecordsDocumentType>
+						<j.0:hasVitalRecordsDescription rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+							<xsl:value-of select="document/description"/>
+						</j.0:hasVitalRecordsDescription>
+						<sto:hasIdentifier>
+							<sto:Identifier>
+								<sto:hasRef rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+									<xsl:value-of select="document/id "/>
+								</sto:hasRef>
+							</sto:Identifier>
+						</sto:hasIdentifier>
+					</j.0:VitalRecordsDocumentType>
+				</j.0:hasDocumentType>
+				<j.0:hasRecipientPostalAddress>
+					<j.0:PostalAddress>
+						<j.0:hasStreetAddress>
+							<j.0:StreetAddress>
+								<j.0:hasRef rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+									<xsl:value-of select="recipientPostalAddress/streetAddress"/>
+								</j.0:hasRef>
+							</j.0:StreetAddress>
+						</j.0:hasStreetAddress>
+						<j.0:hasZipcodeAndPostalDistrict>
+							<j.0:ZipcodeAndPostalDistrict>
+								<j.0:hasRef rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+									<xsl:value-of select="recipientPostalAddress/zipcodeAndPostalDistrict"/>
+								</j.0:hasRef>
+							</j.0:ZipcodeAndPostalDistrict>
+						</j.0:hasZipcodeAndPostalDistrict>
+						<j.0:hasRecipient>
+							<j.0:Recipient>
+								<j.0:hasRef rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+									<xsl:value-of select="recipientPostalAddress/recipient"/>
+								</j.0:hasRef>
+							</j.0:Recipient>
+						</j.0:hasRecipient>
+					</j.0:PostalAddress>
+				</j.0:hasRecipientPostalAddress>
+			</j.0:Acknowledgement>
+		</rdf:RDF>
+	</xsl:template>
+</xsl:stylesheet>
+]]></grounding:xsltTransformationString>
+			</grounding:WsdlOutputMessageMap>
+		</grounding:wsdlOutput>
+	</grounding:WsdlAtomicProcessGrounding>
+</rdf:RDF>

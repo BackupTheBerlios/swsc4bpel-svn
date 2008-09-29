@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="WINDOWS-1252"?>
+<rdf:RDF xmlns:process="http://www.daml.org/services/owl-s/1.1/Process.owl#" xmlns:list="http://www.daml.org/services/owl-s/1.1/generic/ObjectList.owl#" xmlns:swrl="http://www.w3.org/2003/11/swrl#" 
+xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns="http://www.example.org/service.owl" 
+xmlns:expression="http://www.daml.org/services/owl-s/1.1/generic/Expression.owl#" xmlns:service="http://www.daml.org/services/owl-s/1.1/Service.owl#" 
+xmlns:grounding="http://www.daml.org/services/owl-s/1.1/Grounding.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
+xmlns:xsd="http://www.w3.org/2001/XMLSchema#" xmlns:daml="http://www.daml.org/2001/03/daml+oil#" xmlns:dc="http://purl.org/dc/elements/1.1/" 
+xmlns:profile="http://www.daml.org/services/owl-s/1.1/Profile.owl#" xml:base="http://localhost:8080/SemanticWebServices/MoonServices/MoonOMSCreateNewOrderService.owl#">
+	<owl:Ontology rdf:about="">
+		<owl:imports rdf:resource="http://localhost:8080/ontologies/MoonOntology.owl"/>
+	</owl:Ontology>
+	<!--+++++++++++++++++++++++++++++++++++++++++++++-->
+	<!-- Service description -->
+	<service:Service rdf:ID="MoonOMSCreateNewOrderServiceService">
+		<service:presents rdf:resource="#MoonOMSCreateNewOrderServiceProfile"/>
+		<service:describedBy rdf:resource="#MoonOMSCreateNewOrderServiceProcess"/>
+		<service:supports rdf:resource="#MoonOMSCreateNewOrderServiceGrounding"/>
+	</service:Service>
+	<!--+++++++++++++++++++++++++++++++++++++++++++++-->
+	<!-- Profile description-->
+	<profile:Profile rdf:ID="MoonOMSCreateNewOrderServiceProfile">
+		<service:isPresentedBy rdf:resource="#MoonOMSCreateNewOrderServiceService"/>
+		<profile:serviceName xml:lang="en">MoonOMSCreateNewOrderService</profile:serviceName>
+		<profile:textDescription xml:lang="en">Returns a CreateNewOrderResponse for a given CreateNewOrderRequest.</profile:textDescription>
+		<profile:hasInput rdf:resource="#CreateNewOrderRequest"/>
+		<profile:hasOutput rdf:resource="#CreateNewOrderResponse"/>
+	</profile:Profile>
+	<!--+++++++++++++++++++++++++++++++++++++++++++++-->
+	<!-- Process description -->
+	<process:AtomicProcess rdf:ID="MoonOMSCreateNewOrderServiceProcess">
+		<service:describes rdf:resource="#MoonOMSCreateNewOrderServiceService"/>
+		<rdfs:label>MoonOMSCreateNewOrderServiceProcess</rdfs:label>
+		<process:hasInput rdf:resource="#CreateNewOrderRequest"/>
+		<process:hasOutput rdf:resource="#CreateNewOrderResponse"/>
+	</process:AtomicProcess>
+	<process:Output rdf:ID="CreateNewOrderResponse">
+		<process:parameterType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://localhost:8080/ontologies/MoonOntology.owl#CreateNewOrderResponse</process:parameterType>
+		<rdfs:label>CreateNewOrderResponse</rdfs:label>
+	</process:Output>
+	<process:Input rdf:ID="CreateNewOrderRequest">
+		<process:parameterType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://localhost:8080/ontologies/MoonOntology.owl#CreateNewOrderRequest</process:parameterType>
+		<rdfs:label>CreateNewOrderRequest</rdfs:label>
+	</process:Input>
+	<!--+++++++++++++++++++++++++++++++++++++++++++++-->
+	<!-- Grounding description -->
+	<grounding:WsdlGrounding rdf:ID="MoonOMSCreateNewOrderServiceGrounding">
+		<service:supportedBy rdf:resource="#MoonOMSCreateNewOrderServiceService"/>
+		<grounding:hasAtomicProcessGrounding rdf:resource="#MoonOMSCreateNewOrderServiceAtomicProcessGrounding"/>
+	</grounding:WsdlGrounding>
+	<grounding:WsdlAtomicProcessGrounding rdf:ID="MoonOMSCreateNewOrderServiceAtomicProcessGrounding">
+		<grounding:owlsProcess rdf:resource="#MoonOMSCreateNewOrderServiceProcess"/>
+		<grounding:wsdlDocument rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://sws-challenge.org/services/OMService?wsdl</grounding:wsdlDocument>
+		<grounding:wsdlOperation>
+			<grounding:WsdlOperationRef>
+				<grounding:portType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://sws-challenge.org/services/OMService?wsdl#OMServicePortType</grounding:portType>
+				<grounding:operation rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://sws-challenge.org/services/OMService?wsdl#createNewOrder</grounding:operation>
+			</grounding:WsdlOperationRef>
+		</grounding:wsdlOperation>
+		<grounding:wsdlInputMessage rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://sws-challenge.org/services/OMService?wsdl#CreateNewOrderRequestMessage</grounding:wsdlInputMessage>
+		<grounding:wsdlInput>
+			<grounding:WsdlInputMessageMap>
+				<grounding:owlsParameter rdf:resource="#CreateNewOrderRequest"/>
+				<grounding:wsdlMessagePart rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://sws-challenge.org/services/OMService?wsdl#OrderPart</grounding:wsdlMessagePart>
+				<grounding:xsltTransformationString><![CDATA[
+<xsl:stylesheet version="1.0" xmlns:moon="http://localhost:8080/ontologies/MoonOntology.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:fo="http://www.w3.org/1999/XSL/Format">
+	<xsl:template match="/">
+		<Order xmlns="mooncompany">
+			<authToken>RalfWeinand</authToken>
+			<contact>
+			  <name><xsl:value-of select="/rdf:RDF/rdf:Description/moon:hasContactName"/></name>
+			  <telephone><xsl:value-of select="/rdf:RDF/rdf:Description/moon:hasTelephone"/></telephone>
+			  <email><xsl:value-of select="/rdf:RDF/rdf:Description/moon:hasEmail"/></email>
+			</contact>
+			<shipTo>
+			  <name><xsl:value-of select="/rdf:RDF/rdf:Description/moon:hasBusinessName"/></name>
+			  <street><xsl:value-of select="/rdf:RDF/rdf:Description/moon:hasStreet"/></street>
+			  <city><xsl:value-of select="/rdf:RDF/rdf:Description/moon:hasCity"/></city>
+			  <postalCode><xsl:value-of select="/rdf:RDF/rdf:Description/moon:hasPostalCode"/></postalCode>
+			  <country><xsl:value-of select="/rdf:RDF/rdf:Description/moon:hasCountryCode"/></country>
+			</shipTo>
+			<!-- optional -->
+			<billTo>
+			  <name></name>
+			  <street></street>
+			  <city></city>
+			  <postalCode></postalCode>
+			  <country></country>
+			</billTo>
+		</Order>
+	</xsl:template>
+</xsl:stylesheet>
+			  ]]></grounding:xsltTransformationString>
+			</grounding:WsdlInputMessageMap>
+		</grounding:wsdlInput>
+		<grounding:wsdlOutputMessage rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://sws-challenge.org/services/OMService?wsdl#NewOrderResponseMessage</grounding:wsdlOutputMessage>
+		<grounding:wsdlOutput>
+			<grounding:WsdlOutputMessageMap>
+				<grounding:owlsParameter rdf:resource="#CreateNewOrderResponse"/>
+				<grounding:wsdlMessagePart rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://sws-challenge.org/services/OMService?wsdl#NewOrderResponsePart</grounding:wsdlMessagePart>
+				<grounding:xsltTransformationString><![CDATA[
+<xsl:stylesheet version="1.0" xmlns:xmoon="mooncompany" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:fo="http://www.w3.org/1999/XSL/Format">
+	<xsl:template match="/">
+		<rdf:RDF
+			xmlns:moon="http://localhost:8080/ontologies/MoonOntology.owl#"
+			xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
+			xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+			xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+			xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+			xmlns:owl="http://www.w3.org/2002/07/owl#"
+			xmlns="http://process.MediationProcess.MoonOMSCreateNewOrderServiceOutput.owl#"
+		  xml:base="http://process.MediationProcess.MoonOMSCreateNewOrderServiceOutput.owl">
+    <owl:Ontology rdf:about="">
+      <owl:imports rdf:resource="http://localhost:8080/ontologies/ServiceAnchor.owl"/>
+      <owl:imports rdf:resource="http://localhost:8080/ontologies/MoonOntology.owl"/>
+    </owl:Ontology>
+		  <moon:CreateNewOrderResponse rdf:ID="CreateNewOrderResponse_X">
+			<moon:hasOrder>
+			  <moon:Order rdf:ID="Order_X">
+				<moon:hasOrderID rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+				><xsl:value-of select="/xmoon:NewOrderResponse/xmoon:orderId"/></moon:hasOrderID>
+			  </moon:Order>
+			</moon:hasOrder>
+		  </moon:CreateNewOrderResponse>
+		</rdf:RDF>
+	</xsl:template>
+</xsl:stylesheet>
+]]></grounding:xsltTransformationString>
+			</grounding:WsdlOutputMessageMap>
+		</grounding:wsdlOutput>
+	</grounding:WsdlAtomicProcessGrounding>
+</rdf:RDF>

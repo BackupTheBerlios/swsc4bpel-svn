@@ -1,0 +1,6 @@
+<closeOrder xmlns="mooncompany">
+  <CloseOrder>
+    <authToken>authtoken</authToken>
+    <orderId>2</orderId>
+  </CloseOrder>
+</closeOrder>

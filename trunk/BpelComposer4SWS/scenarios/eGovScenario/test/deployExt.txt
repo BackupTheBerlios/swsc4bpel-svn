@@ -1,0 +1,7 @@
+ <requestFlow> 
+       <handler type="soapmonitor"/> 
+     </requestFlow> 
+     <responseFlow> 
+       <handler type="soapmonitor"/> 
+     </responseFlow> 
+     <parameter name="sendMultiRefs" value="false"/>

@@ -1,0 +1,58 @@
+<!-- Use this file to deploy some handlers/chains and services      -->
+<!-- Two ways to do this:                                           -->
+<!--   java org.apache.axis.client.AdminClient deploy.wsdd          -->
+<!--      after the axis server is running                          -->
+<!-- or                                                             -->
+<!--   java org.apache.axis.utils.Admin client|server deploy.wsdd   -->
+<!--      from the same directory that the Axis engine runs         -->
+
+<deployment
+    xmlns="http://xml.apache.org/axis/wsdd/"
+    xmlns:java="http://xml.apache.org/axis/wsdd/providers/java">
+
+  <!-- Services from PublicServicePaymentService WSDL service -->
+
+  <service name="PublicServicePayment" provider="java:RPC" style="rpc" use="encoded">
+  <requestFlow>
+		<handler type="soapmonitor"/>
+	</requestFlow>
+	<responseFlow>
+		<handler type="soapmonitor"/>
+	</responseFlow>
+	<parameter name="sendMultiRefs" value="false"/>
+      <parameter name="wsdlTargetNamespace" value="urn:PublicServicePayment"/>
+      <parameter name="wsdlServiceElement" value="PublicServicePaymentService"/>
+      <parameter name="wsdlServicePort" value="PublicServicePayment"/>
+      <parameter name="className" value="PublicServicePayment_pkg.PublicServicePaymentSoapBindingImpl"/>
+      <parameter name="wsdlPortType" value="PublicServicePayment"/>
+      <operation name="makePayment" qname="operNS:makePayment" xmlns:operNS="urn:PublicServicePayment" returnQName="makePaymentReturn" returnType="rtns:receipt" xmlns:rtns="http://localhost:8080/PublicServices/PublicServicePayment/XPublicServicePayment" >
+        <parameter name="in0" type="tns:payment" xmlns:tns="http://localhost:8080/PublicServices/PublicServicePayment/XPublicServicePayment"/>
+      </operation>
+      <parameter name="allowedMethods" value="makePayment"/>
+
+      <typeMapping
+        xmlns:ns="http://localhost:8080/PublicServices/PublicServicePayment/XPublicServicePayment"
+        qname="ns:payment"
+        type="java:localhost.PublicServices.PublicServicePayment.XPublicServicePayment.Payment"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+      />
+      <typeMapping
+        xmlns:ns="http://localhost:8080/PublicServices/PublicServicePayment/XPublicServicePayment"
+        qname="ns:receipt"
+        type="java:localhost.PublicServices.PublicServicePayment.XPublicServicePayment.Receipt"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+      />
+      <typeMapping
+        xmlns:ns="http://localhost:8080/PublicServices/PublicServicePayment/XPublicServicePayment"
+        qname="ns:account"
+        type="java:localhost.PublicServices.PublicServicePayment.XPublicServicePayment.Account"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+      />
+  </service>
+</deployment>

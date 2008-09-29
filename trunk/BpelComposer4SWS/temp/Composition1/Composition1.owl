@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:process="http://www.daml.org/services/owl-s/1.1/Process.owl#"
+    xmlns:service="http://www.daml.org/services/owl-s/1.1/Service.owl#"
+    xmlns:list="http://www.daml.org/services/owl-s/1.1/generic/ObjectList.owl#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:profile="http://www.daml.org/services/owl-s/1.1/Profile.owl#"
+    xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+    xmlns:grounding="http://www.daml.org/services/owl-s/1.1/Grounding.owl#"
+    xmlns:daml="http://www.daml.org/2001/03/daml+oil#"
+    xmlns:expression="http://www.daml.org/services/owl-s/1.1/generic/Expression.owl#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+  <service:Service rdf:nodeID="A0">
+    <service:supports>
+      <grounding:WsdlGrounding>
+        <service:supportedBy rdf:nodeID="A0"/>
+        <grounding:hasAtomicProcessGrounding>
+          <grounding:WsdlAtomicProcessGrounding>
+            <grounding:wsdlOutputMessage rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+            >http://localhost:8080/active-bpel/services/Composition1_PartnerLinkService?wsdl#composition1Response</grounding:wsdlOutputMessage>
+            <grounding:wsdlInput>
+              <grounding:WsdlInputMessageMap>
+                <grounding:xsltTransformationString>&lt;xsl:stylesheet version="1.0"
+ xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+ xmlns="http://localhost:8080/PublicServices/services/Composition1"&gt;
+&lt;xsl:template match="/"&gt;
+&lt;xsl:copy-of select="/"/&gt;
+&lt;/xsl:template&gt;
+&lt;/xsl:stylesheet&gt;
+</grounding:xsltTransformationString>
+                <grounding:wsdlMessagePart rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+                >http://localhost:8080/active-bpel/services/Composition1_PartnerLinkService?wsdl#residentSearchProfile</grounding:wsdlMessagePart>
+                <grounding:owlsParameter>
+                  <process:Input rdf:nodeID="A1">
+                    <process:parameterType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+                    >http://localhost:8080/PublicServices/ResidentRegistry/ResidentRegistryOntology.owl#ResidentSearchProfile</process:parameterType>
+                    <rdfs:label>ResidentSearchProfile</rdfs:label>
+                  </process:Input>
+                </grounding:owlsParameter>
+              </grounding:WsdlInputMessageMap>
+            </grounding:wsdlInput>
+            <grounding:wsdlInputMessage rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+            >http://localhost:8080/active-bpel/services/Composition1_PartnerLinkService?wsdl#composition1Request</grounding:wsdlInputMessage>
+            <grounding:wsdlOperation>
+              <grounding:WsdlOperationRef>
+                <grounding:operation rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+                >http://localhost:8080/active-bpel/services/Composition1_PartnerLinkService?wsdl#composition1</grounding:operation>
+                <grounding:portType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+                >http://localhost:8080/active-bpel/services/Composition1_PartnerLinkService?wsdl#Composition1</grounding:portType>
+              </grounding:WsdlOperationRef>
+            </grounding:wsdlOperation>
+            <grounding:wsdlDocument rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+            >http://localhost:8080/active-bpel/services/Composition1_PartnerLinkService?wsdl</grounding:wsdlDocument>
+            <grounding:owlsProcess>
+              <process:AtomicProcess rdf:nodeID="A2"/>
+            </grounding:owlsProcess>
+          </grounding:WsdlAtomicProcessGrounding>
+        </grounding:hasAtomicProcessGrounding>
+        <rdfs:label>Composition1Grounding</rdfs:label>
+      </grounding:WsdlGrounding>
+    </service:supports>
+    <service:describedBy>
+      <process:AtomicProcess rdf:nodeID="A2"/>
+    </service:describedBy>
+    <service:presents>
+      <profile:Profile>
+        <service:presentedBy rdf:nodeID="A0"/>
+        <profile:hasInput rdf:nodeID="A1"/>
+        <profile:textDescription>Composition1</profile:textDescription>
+        <profile:serviceName>Composition1</profile:serviceName>
+        <rdfs:label>Composition1Profile</rdfs:label>
+      </profile:Profile>
+    </service:presents>
+  </service:Service>
+  <process:AtomicProcess rdf:nodeID="A2">
+    <service:describes rdf:nodeID="A0"/>
+    <process:hasInput rdf:nodeID="A1"/>
+    <rdfs:label>Composition1Process</rdfs:label>
+  </process:AtomicProcess>
+  <owl:Class rdf:about="http://localhost:8080/PublicServices/ResidentRegistry/ResidentRegistryOntology.owl#ResidentSearchProfile"/>
+</rdf:RDF>

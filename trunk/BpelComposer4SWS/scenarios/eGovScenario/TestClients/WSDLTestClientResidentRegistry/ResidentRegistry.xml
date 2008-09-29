@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="urn:ResidentRegistry" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="urn:ResidentRegistry" xmlns:intf="urn:ResidentRegistry" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns1="http://localhost:8080/PublicServices/ResidentRegistry/XResidentRegistry" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<!--WSDL created by Apache Axis version: 1.3
+Built on Oct 05, 2005 (05:23:37 EDT)-->
+ <wsdl:types>
+  <schema targetNamespace="http://localhost:8080/PublicServices/ResidentRegistry/XResidentRegistry" xmlns="http://www.w3.org/2001/XMLSchema">
+   <import namespace="http://schemas.xmlsoap.org/soap/encoding/"/>
+   <complexType name="residentSearchProfile">
+    <sequence>
+     <element name="givenName" type="xsd:string"/>
+     <element name="surname" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="dateOfBirth" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="name">
+    <sequence>
+     <element maxOccurs="1" minOccurs="0" name="titles" type="xsd:string"/>
+     <element name="givenName" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="middleNames" type="xsd:string"/>
+     <element name="surname" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="birth">
+    <sequence>
+     <element maxOccurs="1" minOccurs="0" name="dateOfBirth" type="xsd:string"/>
+     <element name="placeOfBirth" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="death">
+    <sequence>
+     <element maxOccurs="1" minOccurs="0" name="dateOfDeath" type="xsd:string"/>
+     <element name="placeOfDeath" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="address">
+    <sequence>
+     <element name="street" type="xsd:string"/>
+     <element name="streetNumber" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="moreAddress" type="xsd:string"/>
+     <element name="zipCode" type="xsd:string"/>
+     <element maxOccurs="1" minOccurs="0" name="locality" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="nationality">
+    <sequence>
+     <element name="key" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="religion">
+    <sequence>
+     <element name="key" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="residentInfo">
+    <sequence>
+     <element name="name" type="tns1:name"/>
+     <element name="birth" type="tns1:birth"/>
+     <element maxOccurs="1" minOccurs="0" name="death" type="tns1:death"/>
+     <element name="address" type="tns1:address"/>
+     <element name="nationality" type="tns1:nationality"/>
+     <element maxOccurs="1" minOccurs="0" name="religion" type="tns1:religion"/>
+    </sequence>
+   </complexType>
+  </schema>
+ </wsdl:types>
+
+   <wsdl:message name="getResidentInfoRequest">
+
+      <wsdl:part name="in0" type="tns1:residentSearchProfile"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getResidentInfoResponse">
+
+      <wsdl:part name="getResidentInfoReturn" type="tns1:residentInfo"/>
+
+   </wsdl:message>
+
+   <wsdl:portType name="ResidentRegistry">
+
+      <wsdl:operation name="getResidentInfo" parameterOrder="in0">
+
+         <wsdl:input message="impl:getResidentInfoRequest" name="getResidentInfoRequest"/>
+
+         <wsdl:output message="impl:getResidentInfoResponse" name="getResidentInfoResponse"/>
+
+      </wsdl:operation>
+
+   </wsdl:portType>
+
+   <wsdl:binding name="ResidentRegistrySoapBinding" type="impl:ResidentRegistry">
+
+      <wsdlsoap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+      <wsdl:operation name="getResidentInfo">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getResidentInfoRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:ResidentRegistry" use="encoded"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getResidentInfoResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:ResidentRegistry" use="encoded"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:binding>
+
+   <wsdl:service name="ResidentRegistryService">
+
+      <wsdl:port binding="impl:ResidentRegistrySoapBinding" name="ResidentRegistry">
+
+         <wsdlsoap:address location="http://localhost:8080/PublicServices/services/ResidentRegistry"/>
+
+      </wsdl:port>
+
+   </wsdl:service>
+
+</wsdl:definitions>

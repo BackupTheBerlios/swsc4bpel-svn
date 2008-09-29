@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="windows-1250"?>
+<Moon>
+  <SearchCustomer>
+    <searchString>Blue Company</searchString>
+  </SearchCustomer>
+  <SearchCustomerResponse>
+    <customerId>1</customerId>
+    <roleCode>Buyer</roleCode>
+    <contactName>Mr Blue</contactName>
+    <email>blue@example.org</email>
+    <telephone>+99 121334586846</telephone>
+    <businessName>Blue Company</businessName>
+    <postalCode>23134</postalCode>
+    <city>Blue City</city>
+    <street>blue road 13</street>
+    <countryCode>US</countryCode>
+  </SearchCustomerResponse>
+  <Order>
+    <authToken>authtoken</authToken>
+    <contact>
+      <name>Mr Blue</name>
+      <telephone>+99 12234586846</telephone>
+      <email>moon@example.org</email>
+    </contact>
+    <shipTo>
+      <name>Moon Company</name>
+      <street>moon road 13</street>
+      <city>Moon City</city>
+      <postalCode>1234</postalCode>
+      <country>US</country>
+    </shipTo>
+    <!-- optional -->
+    <billTo>
+      <name></name>
+      <street></street>
+      <city></city>
+      <postalCode></postalCode>
+      <country></country>
+    </billTo>
+  </Order>
+  <NewOrderResponse>
+    <orderId>9</orderId>
+  </NewOrderResponse>
+  <LineItem>
+    <authToken>authtoken</authToken>
+    <orderId>2</orderId>
+    <item>
+      <articleId>myitem</articleId>
+      <quantity>1</quantity>
+    </item>
+  </LineItem>
+  <AddLineItemResponse>
+    <orderId>2</orderId>
+    <itemId>4</itemId>
+  </AddLineItemResponse>
+  <CloseOrder>
+    <authToken>authtoken</authToken>
+    <orderId>2</orderId>
+  </CloseOrder>
+  <CloseOrderResponse>
+    <orderId>2</orderId>
+    <itemsNo>1</itemsNo>
+  </CloseOrderResponse>
+  <OrderLineItemConfirmation>
+    <authToken>test2w?SwF`[</authToken>
+    <orderId>94</orderId>
+    <itemId>95</itemId>
+    <status>accepted</status>
+  </OrderLineItemConfirmation>
+</Moon>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="urn:PublicServicePayment" xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="urn:PublicServicePayment" xmlns:intf="urn:PublicServicePayment" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns1="http://localhost:8080/PublicServices/PublicServicePayment/XPublicServicePayment" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><wsdl:types><schema targetNamespace="http://localhost:8080/PublicServices/PublicServicePayment/XPublicServicePayment" xmlns="http://www.w3.org/2001/XMLSchema"><import namespace="http://schemas.xmlsoap.org/soap/encoding/"/><complexType name="account"><sequence><element name="accountOwner" nillable="true" type="xsd:string"/><element name="accountNumber" nillable="true" type="xsd:string"/><element name="bankID" nillable="true" type="xsd:string"/></sequence></complexType><complexType name="payment"><sequence><element name="sourceAccount" nillable="true" type="tns1:account"/><element name="destAccount" nillable="true" type="tns1:account"/><element name="amount" nillable="true" type="xsd:string"/><element name="reasonForPayment" nillable="true" type="xsd:string"/></sequence></complexType><complexType name="receipt"><sequence><element name="confirmedPayment" nillable="true" type="tns1:payment"/><element name="confirmation" nillable="true" type="xsd:string"/></sequence></complexType></schema></wsdl:types>
+  <wsdl:message name="makePaymentResponse">
+    <wsdl:part name="makePaymentReturn" type="tns1:receipt"/>
+  </wsdl:message>
+  <wsdl:message name="makePaymentRequest">
+    <wsdl:part name="in0" type="tns1:payment"/>
+  </wsdl:message>
+  <wsdl:portType name="PublicServicePayment">
+    <wsdl:operation name="makePayment" parameterOrder="in0">
+      <wsdl:input message="impl:makePaymentRequest" name="makePaymentRequest"/>
+      <wsdl:output message="impl:makePaymentResponse" name="makePaymentResponse"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="PublicServicePaymentSoapBinding" type="impl:PublicServicePayment">
+    <wsdlsoap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="makePayment">
+      <wsdlsoap:operation soapAction=""/>
+      <wsdl:input name="makePaymentRequest">
+        <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:PublicServicePayment" use="encoded"/>
+      </wsdl:input>
+      <wsdl:output name="makePaymentResponse">
+        <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:PublicServicePayment" use="encoded"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="PublicServicePaymentService">
+    <wsdl:port binding="impl:PublicServicePaymentSoapBinding" name="PublicServicePayment">
+      <wsdlsoap:address location="http://localhost:8080/PublicServices/services/PublicServicePayment"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

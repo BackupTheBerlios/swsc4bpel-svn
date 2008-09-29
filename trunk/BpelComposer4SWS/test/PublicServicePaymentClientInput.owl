@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xsd="http://www.w3.org/2001/XMLSchema#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:daml="http://www.daml.org/2001/03/daml+oil#" xmlns="http://localhost:8080/PublicServices/PublicServicePayment/PublicServicePaymentOntology.owl#" xmlns:dc="http://purl.org/dc/elements/1.1/">
+	<rdf:Description rdf:nodeID="A7">
+		<hasReasonForPayment rdf:nodeID="A8"/>
+		<hasDestinationAccount rdf:nodeID="A9"/>
+		<hasAmount rdf:nodeID="A10"/>
+		<hasSourceAccount rdf:nodeID="A11"/>
+		<rdf:type rdf:resource="http://localhost:8080/PublicServices/PublicServicePayment/PublicServicePaymentOntology.owl#Payment"/>
+	</rdf:Description>
+	<rdf:Description rdf:nodeID="A8">
+		<rdf:type rdf:resource="http://localhost:8080/PublicServices/PublicServicePayment/PublicServicePaymentOntology.owl#ReasonForPayment"/>
+		<hasRef rdf:datatype="http://www.w3.org/2001/XMLSchema#string">aReason</hasRef>
+	</rdf:Description>
+	<rdf:Description rdf:nodeID="A9">
+		<hasAccountNumber rdf:nodeID="A36"/>
+		<hasBankID rdf:nodeID="A14"/>
+		<hasAccountOwner rdf:nodeID="A37"/>
+		<rdf:type rdf:resource="http://localhost:8080/PublicServices/PublicServicePayment/PublicServicePaymentOntology.owl#Account"/>
+	</rdf:Description>
+	<rdf:Description rdf:nodeID="A10">
+		<rdf:type rdf:resource="http://localhost:8080/PublicServices/PublicServicePayment/PublicServicePaymentOntology.owl#Amount"/>
+		<hasRef rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10.00</hasRef>
+	</rdf:Description>
+	<rdf:Description rdf:nodeID="A11">
+		<rdf:type rdf:resource="http://localhost:8080/PublicServices/PublicServicePayment/PublicServicePaymentOntology.owl#Account"/>
+		<hasBankID rdf:nodeID="A6"/>
+		<hasAccountOwner rdf:nodeID="A16"/>
+		<hasAccountNumber rdf:nodeID="A1"/>
+	</rdf:Description>
+	<rdf:Description rdf:nodeID="A36">
+		<rdf:type rdf:resource="http://localhost:8080/PublicServices/PublicServicePayment/PublicServicePaymentOntology.owl#AccountNumber"/>
+		<hasRef rdf:datatype="http://www.w3.org/2001/XMLSchema#string">destNumber</hasRef>
+	</rdf:Description>
+	<rdf:Description rdf:nodeID="A37">
+		<hasRef rdf:datatype="http://www.w3.org/2001/XMLSchema#string">destOwner</hasRef>
+		<rdf:type rdf:resource="http://localhost:8080/PublicServices/PublicServicePayment/PublicServicePaymentOntology.owl#AccountOwner"/>
+	</rdf:Description>
+	<rdf:Description rdf:nodeID="A14">
+		<hasRef rdf:datatype="http://www.w3.org/2001/XMLSchema#string">destbankID</hasRef>
+		<rdf:type rdf:resource="http://localhost:8080/PublicServices/PublicServicePayment/PublicServicePaymentOntology.owl#BankID"/>
+	</rdf:Description>
+	<rdf:Description rdf:nodeID="A1">
+		<hasRef rdf:datatype="http://www.w3.org/2001/XMLSchema#string">srcNumber</hasRef>
+		<rdf:type rdf:resource="http://localhost:8080/PublicServices/PublicServicePayment/PublicServicePaymentOntology.owl#AccountNumber"/>
+	</rdf:Description>
+	<rdf:Description rdf:nodeID="A6">
+		<hasRef rdf:datatype="http://www.w3.org/2001/XMLSchema#string">srcBankID</hasRef>
+		<rdf:type rdf:resource="http://localhost:8080/PublicServices/PublicServicePayment/PublicServicePaymentOntology.owl#BankID"/>
+	</rdf:Description>
+	<rdf:Description rdf:nodeID="A16">
+		<rdf:type rdf:resource="http://localhost:8080/PublicServices/PublicServicePayment/PublicServicePaymentOntology.owl#AccountOwner"/>
+		<hasRef rdf:datatype="http://www.w3.org/2001/XMLSchema#string">srcOwner</hasRef>
+	</rdf:Description>
+</rdf:RDF>
+

@@ -1,0 +1,104 @@
+<html>
+	<head>
+		<title>Semantic Web Service Composer Help</title>
+		<style type="text/css"> * { font-family: Arial; } </style>
+	</head>
+	<body>
+		<h2>
+			<u>Semantic Web Service Composer Help Content:</u>
+		</h2>
+		<h3>
+			<u>1. Creating a new process</u>
+		</h3>
+		<p>To create a new process select the <i>New</i> menu. After setting the name the top panel will present the new process with its input and output icons.</p>
+		<br></br>
+		<h3>
+			<u>2. Adding Semantic Web Services</u>
+		</h3>
+		<p>
+		To add a semantic Web service select the <i>Add</i> menu. Press the <i>Add New Semantic Web Service</i> icon. 
+		You can select one of the semantic Web services from the scenario or you load another semantic Web service OWL-S description from an URL. 
+		Select the <i>New URL</i> box at the end of the list and press <i>OK</i>.
+		Then enter the OWL-S URL. 
+		After setting a name the service will be displayed in the top panel and the center panel will display its input and output parameters.
+		</p>
+		<br></br>
+		<h3>
+			<u>3. Navigation</u>
+		</h3>
+		<p>
+		To navigate through the process definition you can click on each service displayed in the top panel.
+		The center panels will then display the corresponding input and output parameters of the service including all assignments to or from other parameters.
+		To view the process input or output parameters you can either click the <i>Process Inputs</i> or <i>Process Outputs</i> icon in the top panel.
+		</p>
+		<br></br>		
+		<h3>
+			<u>4. Setting process inputs</u>
+		</h3>
+		<p>
+		To set a service input parameter as an input parameter of the composite process select the chosen service input parameter node in the parameter tree and click the right mouse button. 
+		In the following context menu select <i>Set As Process Input</i>.
+		After setting a name the parameter node is set as a process input with the corresponding assignment information showing the assignment from the new defined process input to the chosen service input parameter node. Consequentially, all child nodes of the service input are marked as <i>derived assignment</i>, because by forwarding the process input parameter root node all child nodes get naturally forwarded as well.
+		</p>
+		<br></br>
+		<h3>
+			<u>5. Setting process outputs</u>
+		</h3>
+		<p>
+		To set a service output parameter as an output parameter of the composite process select the chosen service output parameter node in the parameter tree and click the right mouse button. 
+		In the following context menu select <i>Set As Process Output</i>.
+		If the service output parameter node has several types, one type needs to be selected because only one specific type can be written into the OWL-S service output description of the composite semantic Web service.
+		Then the parameter node is set as a process output with the corresponding assignment information including <i>derived assignments</i> showing the assignment from the chosen service output parameter node to the new defined process output.
+		</p>
+		<br></br>
+		<h3>
+			<u>6. Defining the data flow</u>
+		</h3>
+		<p>
+		To define the data flow assignments between parameters need to be specified. 
+		The <i>Semantic Web Service Composer</i> provides support for this task by giving recommendations for these assignments.
+		The data flow is defined in <i>pull-mode</i> which means that each data flow target specifies from where it receives an assignment.
+		To infer proper assignment candidates select an service input parameter node. Click the right mouse button and select <i>Find Matching</i>.
+		The <i>Semantic Web Service Composer</i> then traverses all parameter nodes of service parameters and process input parameters and presents matching parameter nodes which have an appropriate type to fit for an assignment.
+		The matching parameter nodes are highlighted in green color. Select one of these assignment recommendations and click the right mouse button. 
+		Then choose <i>Assign</i>. 
+		Subsequently, the assignment will be displayed as an outgoing assignment on the left hand side and as an incoming assignment on the service input side.
+		If all child nodes of a particular service input parameter node already hold assignments, then it is not necessary to define an assignment for that particular service input parameter node.
+		As the parameter node is constructed by all of its child nodes it already holds all necessary information. Thus, the parameter node can be build upon them and the parameter node can be regarded as having a <i>derived assignment</i>.
+		</p>
+		<br></br>
+		<h3>
+			<u>7. Applying Semantic Bridges</u>
+		</h3>
+		<p>
+		To mediate between different domain ontologies applied by the semantic Web service involved in the composition, semantic bridges can be loaded.
+		Go into the <i>Edit</i> menu and select <i>Load Semantic Bridge</i>.
+		Select an URL for the semantic bridge which mediates between the domain ontologies of the services you want to interconnect by data flow assignments.
+		You can choose one of the semantic bridges from the scenario or load another semantic bridge from a different URL.
+		The semantic bridge is applied to all these service parameters which are defined in the source ontology of the semantic bridge.
+		These parameters are now additionally expressed in the target ontology of the semantic bridge and thus can be seamlessly utilized to connect to other services defined in that ontology. 
+		To view all loaded semantic bridges select <i>Show Loaded Semantic Bridges</i> in the <i>Edit</i> menu. 
+		</p>
+		<br></br>
+		<h3>
+			<u>8. Deplyoing the composite process</u>
+		</h3>
+		<p>
+			Having finished the data flow design the composite process can be deployed.
+			All root nodes of service input parameters must hold either <i>direct assignments</i> (black arrow) or <i>derived assignments</i> (grey arrow) causing from child assignments.
+			Deploying the composite process can be done in two ways:<br><br>
+			1. <i>Deploy Process Description To File System</i> - to export for external processing or<br><br>
+			2. <i>Deploy To Semantic BPEL Engine</i>- to be published as a new semantic  Web service and to run in the BPEL engine<br><br>
+			If the process is deployed to the file system all composite process descriptions including <i>OWL-S composite process description</i>, 
+			<i>BPEL execution plan</i>, <i>BPEL deployment files</i>, and <i>data flow descriptions </i>are saved in an directory named after the composite process.
+			To do so select <i>Deploy Process Description To File System</i> in the <i>Deploy</i> menu.<br><br>
+			To deploy the process to a Web container select in the <i>Deploy</i> menu the <i>Deploy To Semantic BPEL Engine</i> menu and choose <i>Use ActiveBPEL-Deployment-Writer</i> .
+			There you can choose a deployment adapter. 
+			Default is <i>Deploy To Semantic BPEL Engine</i> which deploys the composite process into the BPEL engine running inside a Tomcat web container.
+			The target directory for the deployment needs to be set to the %TOMCAT_HOME%\bpr directory.
+			The composite process is then deployed to the execution engine.
+			The deployed service itself can be viewed by default at http://localhost:8080/BpelAdmin/deployed_services.jsp.
+		</p>
+		<br></br>
+	</body>
+</html>

@@ -1,0 +1,10 @@
+<addLineItem xmlns="mooncompany">
+  <LineItem>
+    <authToken>authtoken</authToken>
+    <orderId>2</orderId>
+    <item>
+      <articleId>myitem</articleId>
+      <quantity>1</quantity>
+    </item>
+  </LineItem>
+</addLineItem>

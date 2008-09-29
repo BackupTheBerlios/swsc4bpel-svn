@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:p5="http://localhost:8080/process/MediationProcess/MoonCRMServiceOutputContainer.owll#"
+    xmlns:p4="http://localhost:8080/process/MediationProcess/MoonCRMServiceOutput.owl#"
+    xmlns:j.0="http://localhost:8080/ontologies/MoonOntology.owl#"
+    xmlns:anchor="http://localhost:8080/ontologies/ServiceAnchor.owl#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:daml="http://www.daml.org/2001/03/daml+oil#"
+    xmlns:p3="http://localhost:8080/process/MediationProcess/MoonCRMServiceOutputContainer.owl#"
+  xml:base="http://localhost:8080/process/MediationProcess/MoonCRMServiceOutputContainer.owl">
+  <owl:Ontology rdf:about="http://localhost:8080/process/MediationProcess/MoonCRMServiceOutputContainer.owl">
+    <owl:imports rdf:resource="http://localhost:8080/ontologies/ServiceAnchor.owl"/>
+  </owl:Ontology>
+  <owl:Class rdf:about="http://localhost:8080/process/MediationProcess/MoonOMSCreateNewOrderServiceInputContainer.owl#xyz.net"/>
+  <j.0:CustomerLookupResponse rdf:about="http://localhost:8080/process/MediationProcess/MoonCRMServiceOutput.owl#CustomerLookupResponse_X">
+    <j.0:hasCustomer>
+      <j.0:Customer rdf:about="http://localhost:8080/process/MediationProcess/MoonCRMServiceOutput.owl#Customer_X">
+        <j.0:hasCustomerID rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</j.0:hasCustomerID>
+        <j.0:hasBusinessName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Blue Company</j.0:hasBusinessName>
+      </j.0:Customer>
+    </j.0:hasCustomer>
+  </j.0:CustomerLookupResponse>
+  <anchor:Output rdf:about="http://localhost:8080/process/MediationProcess/MoonCRMServiceOutputContainer.owll#Output">
+    <anchor:parameterObject rdf:resource="http://localhost:8080/process/MediationProcess/MoonCRMServiceOutput.owl#CustomerLookupResponse_X"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >CustomerLookupResponse</rdfs:label>
+  </anchor:Output>
+  <anchor:Process rdf:about="http://localhost:8080/process/MediationProcess/MoonCRMServiceOutputContainer.owll#MoonCRMService">
+    <anchor:hasOutput rdf:resource="http://localhost:8080/process/MediationProcess/MoonCRMServiceOutputContainer.owll#Output"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >MoonCRMServiceProcess</rdfs:label>
+  </anchor:Process>
+</rdf:RDF>
+
+<!-- Created with Protege (with OWL Plugin 3.4, Build 130)  http://protege.stanford.edu -->

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <soapenv:Body>
+    <ns1:CloseOrderResponse xmlns="mooncompany" xmlns:ns1="mooncompany">
+      <ns1:orderId>2</ns1:orderId>
+      <ns1:itemsNo>1</ns1:itemsNo>
+    </ns1:CloseOrderResponse>
+  </soapenv:Body>
+</soapenv:Envelope>

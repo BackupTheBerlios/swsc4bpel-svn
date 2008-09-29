@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://sws-challenge.org/SimplifiedRosettaNet/"
+  xmlns="http://sws-challenge.org/SimplifiedRosettaNet/"
+  xmlns:apachesoap="http://xml.apache.org/xml-soap"
+  xmlns:poc="http://www.sws-challenge.org/schemas/rnet/POC"
+  xmlns:ack="http://www.sws-challenge.org/schemas/rnet/ACK"
+  xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+  xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <wsdl:types>
+    <xsd:schema>
+      <xsd:import namespace="http://www.sws-challenge.org/schemas/rnet/POC"
+        schemaLocation="http://sws-challenge.org/schemas/rnet/3A4_Simplified_PurchaseOrderConfirmation.xsd" />
+      <xsd:import
+        schemaLocation="http://sws-challenge.org/schemas/rnet/AcknowledgementOfReceipt.xsd"
+        namespace="http://www.sws-challenge.org/schemas/rnet/ACK" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="Pip3A4PurchaseOrderConfirmationMessage">
+    <wsdl:part element="poc:Pip3A4PurchaseOrderConfirmation"
+      name="Pip3A4PurchaseOrderConfirmation" />
+  </wsdl:message>
+  <wsdl:message name="ACK">
+    <wsdl:part name="ACK" element="ack:ReceiptAcknowledgment" />
+  </wsdl:message>
+  <wsdl:portType name="RNetServicePortType">
+    <wsdl:operation name="receiveConfirmation">
+      <wsdl:documentation>
+        The receiveConfirmation receives order confirmation
+      </wsdl:documentation>
+      <wsdl:input message="Pip3A4PurchaseOrderConfirmationMessage" />
+      <wsdl:output message="ACK" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="RNetServiceSoapBinding" type="RNetServicePortType">
+    <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="receiveConfirmation">
+      <wsdlsoap:operation soapAction="receiveConfirmation" />
+      <wsdl:input>
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="RNetService_v1">
+    <wsdl:port binding="RNetServiceSoapBinding" name="RNetService">
+      <wsdlsoap:address location="http://sws-challenge.org/moon/services/RNetService" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
