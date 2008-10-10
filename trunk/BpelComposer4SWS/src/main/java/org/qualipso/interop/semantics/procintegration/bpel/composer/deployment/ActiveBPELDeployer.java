@@ -44,16 +44,17 @@ public class ActiveBPELDeployer extends FileDeployer {
 
             Runtime.getRuntime().exec(command); 
             
-            // wait until the file was created
+            // wait until the file was created; wait max. 20 seconds
             File processBundleFile = new File("temp/" + processName + "/" + processBundleFilename);
-            int wait = Integer.MAX_VALUE;	            
+            int wait = 20;	            
             while (wait > 0)
             {
-                wait--;
                 if (processBundleFile.exists()) 
                 { 
                     break; 
                 }
+                wait(1000);
+                wait--;
             }	            
             if (wait <= 0)
             {
