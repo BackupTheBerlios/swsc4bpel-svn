@@ -97,8 +97,24 @@
 			Default is <i>Deploy To Semantic BPEL Engine</i> which deploys the composite process into the BPEL engine running inside a Tomcat web container.
 			The target directory for the deployment needs to be set to the %TOMCAT_HOME%\bpr directory.
 			The composite process is then deployed to the execution engine.
-			The deployed service itself can be viewed by default at http://localhost:8080/BpelAdmin/deployed_services.jsp.
+			The deployed service itself can be viewed by default at <a href="http://localhost:8080/BpelAdmin/deployed_services.jsp">http://localhost:8080/BpelAdmin/deployed_services.jsp</a>.
 		</p>
 		<br></br>
+		<h3>
+			<u>9. Testing the composite process</u>
+		</h3>
+		<p>
+			After the process is deployed it can be called as a plain WSDL Web-service. The URL of the WSDL-description can
+			be obtained via the ActiveBPEL management console at <a href="http://localhost:8080/BpelAdmin/deployed_services.jsp">http://localhost:8080/BpelAdmin/deployed_services.jsp</a>.
+			An easy way to test the deployed process is by sending a SOAP-message to the respective service via the tool <a href="http://www.soapui.org">soapUI</a>.
+			For the eGovernment-scenario ("Order Birth Certificate") a <a href="http://prdownload.berlios.de/sembpelext/ManualTest_Composition1-soapui-project.xml">prepared soapUI-configuration file</a> can be downloaded from BerliOS.
+			Using this configuration file it is assumed that the process uses the default name "Composition1" and that the process input parameters
+			have been assigned in the following order: ResidentSearchProfile, VitalRecordsDocumentType, AccountNumber, BankID. 
+			After triggering the process it can take up to one minute until a reply is sent back to soapUI,
+			therefore it is necessary to set the "Socket Timeout" (File-->Preferences) to 0 (no limit) or to a very high value 60000000 (milliseconds).
+			Depending on the process output parameters set during composition the result will be displayed in the right panel,
+			after the successful execution of the composite process.  
+		</p>
+		<br></br>		
 	</body>
 </html>
