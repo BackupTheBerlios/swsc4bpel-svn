@@ -2,6 +2,7 @@ package org.qualipso.interop.semantics.procintegration.bpel.composer.deployment;
 
 
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
@@ -27,47 +28,64 @@ public class ActiveBPELDeployer extends FileDeployer {
 		ProcessModel process = Controller.getInstance().getProcess();
         String processName = process.getProcessName();
 
+        generateAntBuildFile();
+        File batchFile = generateAntDeployBatchFile();
+        String processBundleFilename = processName + ".bpr";
 
-            generateAntBuildFile();
-            File batchFile = generateAntDeployBatchFile();
+        MessagePanel.appendOut("    Generating BPEL Archive File ");
+        MessagePanel.appendOutBlue(processBundleFilename);
+        MessagePanel.appendOut(" ... ");
 
-            MessagePanel.appendOut("    Generating BPEL Archive File ");
-            MessagePanel.appendOutBlue(processName + ".bpr");
-            MessagePanel.appendOut(" ... ");
+		try {
+            String[] command = new String[3];
+            command[0] = "cmd";
+            command[1] = "/c";
+            command[2] = batchFile.getCanonicalPath().toString();
 
-			try {
-	            String[] command = new String[3];
-                command[0] = "cmd";
-                command[1] = "/c";
-	            command[2] = batchFile.getCanonicalPath().toString();
-
-	            Runtime.getRuntime().exec(command); 
-	            
-	            MessagePanel.appendSuccessln("done.");
-            } catch (Exception e) {
-                MessagePanel
-                    .appendErrorln("Error gerating BPEL Archive File!");
-                Logger.error(e.getMessage());
-                e.printStackTrace();
-            }
-			
-			
-            // get BPEL engine deploy dir
-            File deploymentDir = this
-                    .getTargetDir(Constants.DEFAULT_ACTIVE_BPEL_DEPLOYMENT_DIR());
+            Runtime.getRuntime().exec(command); 
             
-            if (deploymentDir == null) {
-                MessagePanel.appendOutln("    No files deloyed.");
-                return;
+            // wait until the file was created
+            File processBundleFile = new File("temp/" + processName + "/" + processBundleFilename);
+            int wait = Integer.MAX_VALUE;	            
+            while (wait > 0)
+            {
+                wait--;
+                if (processBundleFile.exists()) 
+                { 
+                    break; 
+                }
+            }	            
+            if (wait <= 0)
+            {
+                // if the file still not exists an error must have occurred
+                throw new FileNotFoundException();
             }
+            
+            MessagePanel.appendSuccessln("done.");
+        } catch (Exception e) {
+            MessagePanel
+                .appendErrorln("Error generating BPEL Archive File!");
+            Logger.error(e.getMessage());
+            e.printStackTrace();
+        }
+		
+		
+        // get BPEL engine deploy dir
+        File deploymentDir = this
+                .getTargetDir(Constants.DEFAULT_ACTIVE_BPEL_DEPLOYMENT_DIR());
+        
+        if (deploymentDir == null) {
+            MessagePanel.appendOutln("    No files deloyed.");
+            return;
+        }
 
-            // deploy the archive to the BPEL engine
-            File archiveFile = new File("temp/" + processName  + "/" + processName + ".bpr");
-			copy(archiveFile, deploymentDir);
-			
-			MessagePanel.appendOut("    Deploying process to ");
-			MessagePanel.appendOutBlue(deploymentDir.getAbsolutePath());
-			MessagePanel.appendOutln(".");
+        // deploy the archive to the BPEL engine
+        File archiveFile = new File("temp/" + processName + "/" + processBundleFilename);
+		copy(archiveFile, deploymentDir);
+		
+		MessagePanel.appendOut("    Deploying process to ");
+		MessagePanel.appendOutBlue(deploymentDir.getAbsolutePath());
+		MessagePanel.appendOutln(".");
 	}
 
     /**
