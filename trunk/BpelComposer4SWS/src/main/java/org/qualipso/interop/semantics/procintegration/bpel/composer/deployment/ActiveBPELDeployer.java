@@ -53,9 +53,9 @@ public class ActiveBPELDeployer extends FileDeployer {
                 { 
                     break; 
                 }
-                wait(1000);
+                Thread.sleep(1000);
                 wait--;
-            }	            
+            }	
             if (wait <= 0)
             {
                 // if the file still not exists an error must have occurred
